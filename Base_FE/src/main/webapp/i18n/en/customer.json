@@ -1,0 +1,106 @@
+{
+  "customer": {
+    "title": "Quản lý khách hàng",
+    "titleCategories": "Danh mục",
+    "title.table": "Danh sách khách hàng",
+    "customer": "khách hàng",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "unitName": "Tên đơn vị",
+    "customerCode": "Mã khách hàng",
+    "name": "Tên khách hàng",
+    "idNo": "Số giấy tờ",
+    "phoneNumber": "Số điện thoại",
+    "taxCode": "Mã số thuế",
+    "address": "Địa chỉ",
+    "email": "Email",
+    "birthDate": "Ngày sinh",
+    "idType": "Loại giấy tờ",
+    "postalCode": "Mã bưu điện",
+    "districtName": "Tên Quận/Huyện",
+    "cityName": "Tên Tỉnh/Thành phố",
+    "countryCode": "Mã Quốc gia",
+    "bankName": "Tên ngân hàng",
+    "bankAccount": "Số tài khoản ngân hàng",
+    "faxNumber": "Số Fax",
+    "status": "Trạng thái",
+    "status.active": "Hoạt động",
+    "status.deactivate": "Ngừng hoạt động",
+    "delete": " khách hàng không?",
+    "validate": {
+      "unitName": {
+        "required": "Bạn chưa nhập Tên đơn vị.",
+        "maxlength": "Tên đơn vị không được quá 1200 ký tự."
+      },
+      "customerCode": {
+        "maxlength": "Mã khách hàng không được quá 400 ký tự.",
+        "exist": "Mã khách hàng [ {{ customerCode }} ] đã tồn tại trên hệ thống, vui lòng nhập lại!"
+      },
+      "name": {
+        "required": " Bạn chưa nhập Tên khách hàng.",
+        "maxlength": "Tên khách hàng không được quá 800 ký tự."
+      },
+      "taxCode": {
+        "invalidFormat": "Mã số thuế không đúng định dạng, bạn vui lòng nhập lại",
+        "maxlength": "Mã số thuế không được quá 20 ký tự.",
+        "invalid": "Bạn đang nhập sai định dạng Mã số thuế"
+      },
+      "address": {
+        "maxlength": "Địa chỉ không được quá 1200 ký tự."
+      },
+      "idNo": {
+        "required": "Bạn chưa nhập Số giấy tờ.",
+        "maxlength": "Số giấy tờ không được quá 200 ký tự.",
+        "invalid": "Số giấy tờ là chữ cái không dấu, chữ số và các ký tự _ và - "
+      },
+      "cityName": {
+        "maxlength": "Tên Tỉnh/Thành Phố không được quá 200 ký tự."
+      },
+      "districtName": {
+        "maxlength": "Tên Quận/Huyện không được quá 200 ký tự."
+      },
+      "bankName": {
+        "maxlength": "Tên ngân hàng không được quá 200 ký tự.",
+        "invalid": "Tên ngân hàng là chữ cái, chữ số và các ký tự dấu cách _ và -"
+      },
+      "bankAccount": {
+        "maxlength": "Số tài khoản ngân hàng không được quá 100 ký tự."
+      },
+      "idType": {
+        "required": "Bạn chưa chọn Loại giấy tờ."
+      },
+      "postalCode": {
+        "maxlength": "Mã bưu điện không được quá 20 ký tự.",
+        "invalid": "Mã bưu điện là chữ số và ký tự -"
+      },
+      "email": {
+        "maxlength": "Email không được quá 2000 ký tự.",
+        "invalid": "Email có định dạng example@yyy.zzz hoặc example@yyy.zzz.ttt và cách nhau bởi dấu (;)",
+        "placeholder": "Các email cách nhau bởi dấu ;"
+      },
+      "phoneNumber": {
+        "maxlength": "Số điện thoại không được quá 15 ký tự."
+      },
+      "faxNumber": {
+        "maxlength": "Số Fax không được quá 20 ký tự."
+      },
+      "countryCode": {
+        "maxlength": "Mã Quốc gia không được quá 10 ký tự.",
+        "invalid": "Mã Quốc gia là chữ cái và chữ số"
+      },
+      "status": {
+        "required": "Bạn chưa chọn Trạng thái."
+      },
+      "birthDate": {
+        "invalid": "Ngày sinh không được phép lớn hơn ngày hiện tại."
+      }
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới khách hàng",
+        "update": "Cập nhật khách hàng",
+        "detail": "Chi tiết khách hàng"
+      }
+    }
+  }
+}

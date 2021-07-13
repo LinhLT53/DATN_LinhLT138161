@@ -1,0 +1,69 @@
+{
+  "invoiceRevenueContractReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo tổng hợp doanh thu theo số hóa đơn",
+    "status.active": "Hoạt động",
+    "status.deactivate": "Ngừng hoạt động",
+    "cardField": {
+      "title": "Thông tin xuất báo cáo",
+      "unitName": "Tên đơn vị",
+      "year": "Năm",
+      "reportType": "Loại báo cáo",
+      "month": "Tháng",
+      "quarter": "Quý",
+      "fromDate": "Từ ngày lập",
+      "toDate": "Đến ngày lập",
+      "userName": "Tên người dùng",
+      "viewReport": "Xem báo cáo",
+      "exportExcel": "Xuất excel",
+      "exportPdf": "Xuất pdf"
+    },
+
+    "cardGridView": {
+      "title": "Danh sách hóa đơn",
+      "stt": "STT",
+      "mstb": "Mã số thuế bán",
+      "hdctb": "Hóa đơn, chứng từ bán",
+      "mkh": "Mã khách hàng",
+      "tnm": "Tên người mua",
+      "tdv": "Tên đơn vị",
+      "mstnm": "Mã số thuế người mua",
+      "mh": "Mặt hàng",
+      "dsbcct": "Doanh số bán chưa có thuế",
+      "num10": "10",
+      "num5": "5",
+      "num0": "0",
+      "tk": "Thuế khác",
+      "kct": "Không chịu thuế",
+      "kkk": "Không kê khai",
+      "tgtgt": "Thuế GTGT",
+      "ckgt": "Chiết khấu, giảm trừ",
+      "tthd": "Trạng thái hóa đơn",
+      "mhd": "Mẫu hóa đơn",
+      "khhd": "Kí hiệu hóa đơn",
+      "shd": "Số hóa đơn",
+      "ntnph": "Ngày, tháng, năm phát hành"
+    },
+
+    "validate": {
+      "unitName": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "reportType": {
+        "required": "Bạn chưa chọn Loại báo cáo"
+      },
+      "fromDate": {
+        "required": "Bạn chưa nhập Từ ngày lập"
+      },
+      "toDate": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "maxFromDate": {
+        "invalid": "Từ ngày lập phải nhỏ hơn hoặc bằng đến ngày lập!"
+      },
+      "maxToDate": {
+        "invalid": "Khoảng cách xuất báo cáo theo ngày không được vượt quá 6 tháng!"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "detailedContractManagement": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo Quản lý hợp đồng - chi tiết sử dụng nỗ lực sử dụng",
+    "plan-outsource": "Kế hoạch thuê ngoài",
+    "project-code": "Mã dự án",
+    "partner-code": "Mã đối tác",
+    "plan-project-outsource-code": "Mã kế hoạch thuê ngoài",
+    "outsourcedType": "Hình thức thuê ngoài thuê ngoài",
+    "year": "Năm hợp tác",
+    "production-unit": "Đơn vị sản xuất",
+    "production-focal": "Đầu mối sản xuất",
+    "outsource-unit": "Đơn vị thuê ngoài",
+    "business-unit": "Đơn vị kinh doanh",
+    "project-name": "Tên dự án",
+    "contact-point-propose-cooperation": "Đầu mối liên hệ đề nghị hợp tác",
+    "sumMMApproved": "Tổng MM đã phê duyệt",
+    "MMRest": "MM còn lại",
+    "MM-practical-use": "Tổng MM sử dụng thực tế",
+    "MD-practical-use": "Tổng MD sử dụng thực tế ",
+    "Jan": "Tháng 1 (MD)",
+    "Feb": "Tháng 2 (MD)",
+    "Mar": "Tháng 3 (MD)",
+    "Apr": "Tháng 4 (MD)",
+    "May": "Tháng 5 (MD)",
+    "Jun": "Tháng 6 (MD)",
+    "Jul": "Tháng 7 (MD)",
+    "Aug": "Tháng 8 (MD)",
+    "Sep": "Tháng 9 (MD)",
+    "Oct": "Tháng 10 (MD)",
+    "Nov": "Tháng 11 (MD)",
+    "Dec": "Tháng 12 (MD)",
+
+    "popup": {
+      "title-show-detail": "Xem chi tiết dự án"
+    },
+
+    "button": {
+      "createNewContract": "Tạo mới hợp đồng"
+    }
+  }
+}

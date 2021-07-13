@@ -1,0 +1,30 @@
+{
+  "reportProject": {
+    "parentTitle": "Báo cáo",
+    "title": "Báo cáo danh sách dự án",
+    "partnerCode": "Mã đối tác",
+    "projectName": "Tên dự án",
+    "projectCode": "Mã dự án",
+    "customer": "Khách hàng",
+    "productOrganization": "Đơn vị sản xuất",
+    "businessOrganization": "Đơn vị kinh doanh",
+    "outsourcing": "Có/Không thuê ngoài",
+    "startDate": "Ngày bắt đầu",
+    "endDate": "Ngày kết thúc",
+    "expectedDate": "Ngày dự kiến triển khai chính thức",
+    "orderNumber": "STT",
+    "pm": "PM",
+    "am": "AM",
+    "programmingLanguage": "Ngôn ngữ lập trình",
+    "frameworks": "Frameworks",
+    "database": "Database",
+    "version": "Các phiên bản",
+    "note": "Ghi chú",
+    "viewReport": "Xem báo cáo",
+    "export": "Xuất excel",
+    "listReport": "Danh sách báo cáo",
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    }
+  }
+}

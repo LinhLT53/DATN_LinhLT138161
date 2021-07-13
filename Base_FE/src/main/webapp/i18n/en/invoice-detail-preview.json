@@ -1,0 +1,18 @@
+{
+  "invoiceDetailPreview": {
+    "modal": {
+      "title": {
+        "invoiceAdd": "Xem chi tiết hóa đơn đã phát hành",
+        "invoiceDraftAdd": "Xem chi tiết hóa đơn chưa phát hành",
+        "invoiceDetail": "Xem chi tiết hóa đơn"
+      },
+      "button": {
+        "download": "Tải về",
+        "downloadPDF": "Tải về bản thể hiện",
+        "print": "In",
+        "downloadCertificate": "Tải chứng thư số",
+        "downloadFileDelete": "Tải lý do xoá bỏ"
+      }
+    }
+  }
+}

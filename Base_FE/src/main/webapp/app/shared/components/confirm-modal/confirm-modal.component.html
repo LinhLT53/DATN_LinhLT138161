@@ -1,0 +1,112 @@
+<div class="modal-action" jhiModalDrag [handle]="handle">
+  <div class="modal-header" #handle>
+    <h5 *ngIf="type === 'delete'" class="modal-title mt-0"><span>{{'common.modal.confirm.title' | translate}}</span>
+    </h5>
+    <h5 *ngIf="type === 'confirmWithMsg'" class="modal-title mt-0">
+      <span>{{'common.modal.confirm.notification' | translate}}</span></h5>
+    <h5 *ngIf="type !== 'confirmWithMsg' && type !== 'delete'" class="modal-title mt-0">
+      <span>{{'common.modal.confirm.title' | translate}}</span></h5>
+    <button type="button" class="close" aria-label="Close" (click)="onSubmitClose(false)">
+      <span *ngIf="type === 'update'" aria-hidden="true">&times;</span>
+      <span *ngIf="type !== 'update'" aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!--      thanhnb-->
+    <p *ngIf="type === 'import'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.closeImport' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'update'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.update' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'delete'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.delete' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'reset'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.reset' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'create'"><i class="fa fa-exclamation-triangle icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.create' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'approve'"><i class="fa fa-exclamation-triangle icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.approve' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'deleteMultiple'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{message}}
+    </p>
+    <p *ngIf="type === 'confirmModal'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{message}}
+    </p>
+    <p *ngIf="type === 'deactivate'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.deactivate' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'createPassword'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.createPassword' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'active'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.active' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'confirm'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.close' | translate }}
+    </p>
+    <p *ngIf="type === 'confirmAddUser'"><i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.closeAddUser' | translate }}
+    </p>
+    <p *ngIf="type === 'confirmDelete'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.deleteUser' | translate }}
+    </p>
+    <p *ngIf="type === 'undo'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.undo' | translate:{'param': param} }}
+    </p>
+    <p *ngIf="type === 'declineRisk'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.declineRisk' | translate }}
+    </p>
+    <p *ngIf="type === 'acceptRisk'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.acceptRisk' | translate }}
+    </p>
+    <p *ngIf="type === 'receiveBooking'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.receiveBooking' | translate }}
+    </p>
+    <p *ngIf="type === 'deleteBooking'"><i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      {{'common.modal.confirm.messages.deleteBooking' | translate }}
+    </p>
+    <div class="row" *ngIf="type === 'updateMessage'">
+      <div class="col-md-1">
+        <i class="fa fa-question-circle-o icon-confirm" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-11">
+        <p>{{message}}  {{param |  date:'dd/MM/yyyy HH:mm:ss'}}</p>
+      </div>
+    </div>
+    <div class="row" *ngIf="type === 'confirmWithMsg'">
+      <div class="col-md-1">
+        <i class="fa fa-exclamation-triangle icon-warning" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-11">
+        <p>{{message}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="onSubmitClose(false)"
+            *ngIf="type !== 'delete' && type!== 'confirmWithMsg'" jhiAutoFocusField>
+      <i class="fa fa-times mr-2" aria-hidden="true"></i>{{'common.button.confirm.cancel' | translate}}
+    </button>
+    <button type="button" class="btn btn-light" (click)="onSubmitClose(false)" *ngIf="type === 'delete'"
+            jhiAutoFocusField>
+      <i class="fa fa-times mr-2" aria-hidden="true"></i>{{'common.button.confirm.cancel' | translate}}
+    </button>
+    <button type="button" class="btn btn-light" (click)="onSubmitClose(false)" *ngIf="type === 'confirmWithMsg'"
+            jhiAutoFocusField>
+      <i class="fa fa-times mr-2" aria-hidden="true"></i>{{'common.button.close' | translate}}
+    </button>
+    <button #submitBtn type="button"
+            *ngIf="type !== 'loginRequest' && type!== 'confirmWithMsg'"
+            class="btn btn-primary" (click)="onSubmitClose(true)">
+      <i class="fa fa-check mr-2" aria-hidden="true"></i>{{'common.button.confirm.ok' | translate}}
+    </button>
+    <button #submitBtn type="button" class="btn btn-primary" *ngIf="type === 'loginRequest'" (click)="onLogin()">
+      <i class="fa fa fa-sign-in mr-2" aria-hidden="true"></i>{{'common.button.confirm.loginRequest' | translate}}
+    </button>
+  </div>
+</div>

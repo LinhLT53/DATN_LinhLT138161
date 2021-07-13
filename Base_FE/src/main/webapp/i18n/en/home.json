@@ -1,0 +1,25 @@
+{
+  "home": {
+    "title": "Quản lý đầu tư",
+    "subtitle": "This is your homepage",
+    "logged": {
+      "message": "You are logged in as user \"{{username}}\"."
+    },
+    "question": "If you have any question on JHipster:",
+    "link": {
+      "homepage": "JHipster homepage",
+      "stackoverflow": "JHipster on Stack Overflow",
+      "bugtracker": "JHipster bug tracker",
+      "chat": "JHipster public chat room",
+      "follow": "follow @java_hipster on Twitter"
+    },
+    "like": "If you like JHipster, don't forget to give us a star on",
+    "github": "GitHub",
+    "login": "Đăng nhập",
+    "previousPage": "Quay lại trang",
+    "validate": {
+      "userDeactivate": "Tài khoản của bạn đang ở trạng thái không hoạt động.",
+      "tenantDeactivate": "Đơn vị của bạn đang ở trạng thái không hoạt động, vui lòng liên hệ với quản trị viên để được giải quyết."
+    }
+  }
+}

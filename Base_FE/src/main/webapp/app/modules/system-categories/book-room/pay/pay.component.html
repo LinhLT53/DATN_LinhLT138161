@@ -1,0 +1,180 @@
+<div class="modal-import" jhiModalDrag [handle]="handle">
+    <div class="modal-header" #handle>
+      <h5 class="modal-title mt-0">{{title}}</h5>
+      <button #closeBtn type="button" class="close" aria-label="Close" (click)="onCancel()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <perfect-scrollbar class="ps" [style.max-height.px]="450" (window:resize)="onResize()">
+      <div class="modal-body">
+        <form [formGroup]="form" *ngIf="form" novalidate autocomplete="off">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group" >
+                <label class="form-control-label " style="font-size: 18px;">Nhân viên xử lý : </label>
+                <label class="form-control-label " style="font-size: 18px;">{{this.dataShow.nameEmployee}}</label>
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-control-label " style="font-size: 18px;">Người đặt : </label>
+                <label class="form-control-label " style="font-size: 18px;">{{this.dataShow.customName}}</label>
+              </div>  
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group" >
+                <label class="form-control-label " style="font-size: 18px;">Thời gian nhận phòng : </label>
+                <label class="form-control-label " style="font-size: 18px;">{{this.datepipe.transform(this.dataShow.bookingCheckin,"yyyy-MM-dd hh:mm")}}</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group" >
+                <label class="form-control-label " style="font-size: 18px;">Thời gian trả phòng(dự kiến) : </label>
+                <label class="form-control-label " style="font-size: 18px;">{{this.datepipe.transform(this.dataShow.bookingCheckout,"yyyy-MM-dd hh:mm")}}</label>
+              </div>  
+            </div>
+          </div>
+        </form>
+    </div>
+   
+    <div class="row" style="margin-left: 10px;margin-right: 10px;">
+      <label class="form-control-label " style="font-size: 18px;">Danh sách dịch vụ</label>
+        <perfect-scrollbar id="scrollbarTable" class="ps">
+          <table class="table table-bordered table-hover table-striped" id="tableCustoms">
+            <thead>
+            <tr class="text-center" jhiSort [(predicate)]="predicate" [(ascending)]="reverse">
+              <th scope="col" style="width: 10%" class="small-width-table" jhiTranslate="userGroup.orderNumber">STT</th>
+              <th class="large-width-table" style="width: 10%"><span>Tên dịch vụ</span>
+              </th>
+              <th class="large-width-table"style="width: 15%"><span>Đơn giá</span>
+              </th>
+              <th class="large-width-table"  style="width: 15%"><span>Số lượng</span>
+              </th>
+              <th class="large-width-table"><span>Ngày đặt</span>
+              </th>
+              <th class="large-width-table"  style="width:15%"><span>Tổng</span>
+              </th>
+              
+            </tr>
+            </thead>
+            <tbody *ngFor="let item of listService; index as i">
+            <tr>
+              <td>{{item.sum?"":i+1}}</td>
+              <td>{{item.serviceName}}</td>
+              <td>{{item.quantity}}</td>
+              <td>{{item.price}}</td>
+              <td>{{this.datepipe.transform(item.modifiedDate,"yyyy-MM-dd hh:mm")}}</td>
+              <td>{{item.sum?item.sum:item.quantity*item.price }}</td>          
+            </tr>
+            </tbody>
+          </table>
+        </perfect-scrollbar>
+
+    </div>
+      <div class="row" style="margin-left: 10px;margin-right: 10px;">
+        <label class="form-control-label " style="font-size: 18px;">Danh sách dịch vụ</label>
+        <perfect-scrollbar id="scrollbarTable" class="ps">
+          <table class="table table-bordered table-hover table-striped" id="tableCustoms">
+            <thead>
+            <tr class="text-center" jhiSort [(predicate)]="predicate" [(ascending)]="reverse">
+              <th scope="col" style="width: 10%" class="small-width-table" jhiTranslate="userGroup.orderNumber">STT</th>
+              <th class="large-width-table" style="width: 15%"><span>Tên phòng</span>
+              </th>
+              <th class="large-width-table"style="width: 20%"><span>Thể loại đặt</span>
+              </th>
+              <th class="large-width-table"style="width: 18%"><span>Loại phòng</span>
+              </th>
+              <th class="large-width-table"  style="width: 20%"><span>Ngày sư dụng</span>
+              </th>
+              <th class="large-width-table" style="width: 20%"><span>Ngày trả</span>
+              </th>
+              <th class="large-width-table"  style="width:12%"><span>Đơn giá</span>
+              </th>
+              <th class="large-width-table" style="width: 10rem;"><span>Tổng</span>
+              </th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let item of timeBookDTOList; index as i">
+            <tr>
+              <td>{{item.sum?"":i+1}}</td>
+              <td>{{item.nameRoom}}</td>
+              <td>{{item.nameTypeBook}}</td>
+              <td>{{item.nameType}}</td>
+              <td>{{this.datepipe.transform(item.start,"yyyy-MM-dd hh:mm")}}</td>
+              <td>{{this.datepipe.transform(item.end,"yyyy-MM-dd hh:mm")}}</td>
+              <td *ngIf="item.typeBook===1">{{ item.hourPrice}}</td>
+              <td *ngIf="item.typeBook===2">{{ item.dayPrice}}</td>
+              <td *ngIf="item.typeBook===3">{{ item.nightPrice}}</td>
+              <td *ngIf="item.typeBook===1">{{ this.convent(item.hourPrice*item.unit)}}</td>
+              <td *ngIf="item.typeBook===2">{{this.convent(item.dayPrice*item.unit)}}</td>
+              <td *ngIf="item.typeBook===3">{{ this.convent(item.nightPrice*item.unit)}}</td>
+              <td *ngIf="item.sum"></td>
+              <td *ngIf="item.sum">{{item.sum}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </perfect-scrollbar>
+      </div>
+    </perfect-scrollbar>
+      <div class="row">
+        <div class="col-md-4">
+        <div class="row">
+        <div class="col-md-6">
+          <div class="form-group" style="padding-left: 30px;">
+            <label class="form-control-label required">Mã Khuyến Mãi</label>
+            </div>
+        </div>
+            <div class="col-md-6">
+            <ng-select class="cursor-text scroll-ng-select" #ngSelectID
+                       bindLabel="promotionCode" formControlName="discountId" bindValue="discountId"
+                       notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                       placeholder="{{ 'common.select.option.default' | translate }}"
+                       clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                       [items]="listdiscount"
+                       [multiple]="false"
+                       (change)="xetDiscoon($event)"
+                       required>
+              <ng-template ng-option-tmp let-item="item">
+                {{item.promotionCode}} - {{item.percentPromotion+"%"}} <br/>
+              </ng-template>
+            </ng-select>
+          </div>
+        </div>         
+      </div>
+      <div class="col-md-4">
+        <label class="form-control-label">Tiền thanh toán trước :  {{this.bookRoomShow.advanceAmount}}</label>
+      </div>
+      <div class="col-md-4">
+        <label class="form-control-label">Số tiền còn lại thanh toán :  {{this.sumbookRoom===0?(this.sumService +this.sumBoooking-this.bookRoomShow.advanceAmount):(this.sumbookRoom)}}</label>
+      </div>
+      </div>
+    
+    <div class="action-btn" style="text-align: center;margin-bottom: 30px;margin-top: 30px;">
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+        <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>Thanh Toán</span>
+      </button>
+      <button type="submit" class="btn btn-danger" (click)="onCancel()">
+        <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>Hủy</span>
+      </button>
+      <button type="submit" class="btn btn-danger" (click)="print()">
+        <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>In</span>
+      </button>
+   
+  </div>
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      This is example from ItSolutionStuff.com
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    </div>
+  </ng-template>

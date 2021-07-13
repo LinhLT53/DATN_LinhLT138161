@@ -1,0 +1,237 @@
+.modal-open .modal {
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px !important;
+    max-width: 900px;
+  }
+}
+
+.modal {
+  .modal-title {
+    font-family: $base-font-family;
+  }
+
+  .modal-content {
+    border: 1px solid #f2f6f700;
+  }
+
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 9px;
+    color: white;
+    opacity: 1;
+  }
+
+  .modal-header {
+    padding: 10px;
+    background: #0273d4;
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    .modal-title {
+      color: white;
+      font-weight: 500;
+    }
+  }
+
+  .modal-body {
+    padding: 25px;
+
+    .form-group {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .modal-footer {
+    border-top: 1px solid #eceeef;
+    box-shadow: none;
+    padding: 1rem;
+  }
+}
+
+.modal-lg {
+  .modal-body,
+  .modal-footer {
+    padding: 1rem !important;
+  }
+}
+
+.icon-warning {
+  color: $color-danger;
+  font-size: x-large;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.icon-confirm {
+  font-size: x-large;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.input-disabled {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.custom-modal-large {
+  .modal-body {
+    // max-height: 80vh;
+    // overflow-x: hidden;
+  }
+
+  .tab-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: 768px) {
+    .modal-dialog.modal-lg {
+      max-width: 1300px;
+      width: 1300px !important;
+    }
+  }
+}
+
+.modal-action {
+  .modal-footer {
+    .fa {
+      &.fa-times {
+        font-size: initial;
+        color: #000000;
+      }
+
+      &.fa-trash-o {
+        font-size: initial;
+      }
+    }
+  }
+}
+
+.modal-import {
+  @media (min-width: 768px) {
+    .modal-dialog {
+      max-width: 600px;
+      width: 600px !important;
+    }
+  }
+}
+
+.invoice-tab {
+  .nav-tabs .nav-link {
+    margin-right: 8px;
+  }
+
+  .nav-item {
+    i {
+      display: none;
+      position: absolute;
+      color: #6fce3f;
+      right: -0.5rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  .nav-item.is-inputed {
+    i {
+      display: inline;
+    }
+  }
+}
+
+.form-group.has-error {
+  .ng-select-container {
+    border-color: #dc3545;
+    box-shadow: none;
+  }
+}
+
+.input-border-bottom {
+  .ng-select-container {
+    border: none;
+    background-color: transparent !important;
+    margin-bottom: -2px;
+  }
+
+  .ng-arrow-wrapper {
+    display: none;
+  }
+
+  min-height: 35px;
+}
+
+.field-sample {
+  padding-left: 1rem;
+  border: 1px solid #d1d1d1;
+  padding-top: 1rem;
+}
+
+.has-error {
+  .cke {
+    border-color: red;
+  }
+}
+
+.modal-body {
+  label {
+    margin-bottom: 0.2rem;
+  }
+}
+
+.modal-body.auth-modal {
+  .list-symbol.row [class*='col-']:first-child {
+    @media only screen and (min-width: 768px) {
+      padding-left: 7px;
+    }
+  }
+
+  .card {
+    box-shadow: none;
+  }
+}
+
+.auth-group-user.modal-body {
+  .card {
+    box-shadow: none;
+  }
+}
+
+jhi-login-modal {
+  .bg-pic {
+    width: calc(100% - 571px) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    position: relative;
+    z-index: 0;
+    //opacity: 0.6;
+  }
+
+  .login-wrapper .login-container {
+    width: 571px;
+  }
+}
+
+#smsConfigCommon {
+  .card-header {
+    height: 30px;
+  }
+}
+
+.nav-link.active {
+  .icon-active-blue {
+    color: $color-primary;
+  }
+}
+
+#invoiceDelete, #invoiceRestore {
+  .card-body.general {
+    height: 558px;
+  }
+}
+

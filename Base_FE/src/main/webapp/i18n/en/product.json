@@ -1,0 +1,72 @@
+{
+  "product": {
+    "titles": "Danh mục",
+    "title": "Quản lý hàng hóa",
+    "product": "hàng hoá",
+    "title.table": "Danh sách hàng hóa",
+    "productCode": "Mã hàng hóa",
+    "productName": "Tên hàng hóa",
+    "unitName": "Đơn vị tính",
+    "price": "Đơn giá",
+    "vat": "Thuế GTGT (%)",
+    "discount": "Chiết khấu (VND)",
+    "delete": " hàng hóa không?",
+    "validate": {
+      "productCode": {
+        "required": "Bạn chưa nhập Mã hàng hóa",
+        "maxlength": "Mã hàng hóa có độ dài tối đa 50 ký tự"
+      },
+      "productName": {
+        "required": "Bạn chưa nhập Tên hàng hóa",
+        "maxlength": "Tên hàng hóa có độ dài tối đa 1000 ký tự"
+      },
+      "price": {
+        "required": "Bạn chưa nhập Đơn giá",
+        "maxlength": "Đơn giá có độ dài tối đa 19 số"
+      },
+      "unitName": {
+        "maxlength": "Đơn vị tính có độ dài tối đa 300 ký tự",
+        "invalid": "Đơn vị tính là chữ cái, chữ số và các ký tự dấu cách _ - , và /"
+      },
+      "vat": {
+        "required": {
+          "select": "Bạn chưa chọn Thuế GTGT",
+          "input": "Yêu cầu nhập phần trăm tính thuế GTGT của hàng hóa"
+
+        },
+        "maxlength": "Thuế GTGT (%) có độ dài tối đa 2 ký tự",
+        "invalid": "Phần trăm tính thuế chỉ được nhập các giá trị 0; 5; 10; 15"
+      },
+      "discount": {
+        "required": "Bạn chưa nhập Chiết khấu",
+        "maxlength": "Chiết khấu có độ dài tối đa 24 số",
+        "invalid": "Chiết khấu không được lớn đơn giá của hàng hóa"
+      },
+      "import": {
+        "formatInvalid": "Biểu mẫu không đúng định dạng"
+      }
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới hàng hóa",
+        "update": "Cập nhật hàng hóa",
+        "detail": "Chi tiết hàng hóa",
+        "product": "hàng hóa"
+      },
+      "confirm": {
+        "confirm": "Xác nhận"
+      }
+    },
+    "messages": {
+      "exist": " đã tồn tại trên hệ thống, vui lòng nhập lại!",
+      "export": {
+        "excel": {
+          "error": "Không có dữ liệu xuất excel"
+        }
+      }
+    },
+    "tooltip": {
+      "vat.guide": "Nhập theo quy định của từng hàng hóa 0, 5, 10, 15…"
+    }
+  }
+}

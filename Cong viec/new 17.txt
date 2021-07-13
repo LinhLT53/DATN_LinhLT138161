@@ -1,0 +1,103 @@
+1:Nhân viên 
+- id 
+- tên nhân viên
+- mã số
+- CMT
+- mã số hợp đồng
+- mã số thuế
+- phone
+- email
+- passworld
+- ngày sinh
+- chức vụ
+- địa chỉ
+2:Phòng
+- id phòng
+- số người max
+- tầng
+- số phòng
+- trạng thái
+- giá phòng theo h( tính tu )
+- giá phòng theo đêm( từ 14h chiều tới 12h ngày hôm sau)
+- giá phòng theo ngày (ngày đặt tới ngày trả)
+- note
+- version( )// set tay cac trường trnjg thái
+3:Dịch vụ
+- id dịch vu
+- mã dịch vụ
+- tên dịch vụ
+- giá cả
+- đơn vị tính
+- note
+4:Quyền
+- id quyèn
+- mã quyền
+- loại quyền
+5:Khách
+- id 
+- cmt
+- tên 
+- sdt
+- email
+- địa chỉ
+- passworld
+6:Đăt phòng
+- id
+- id khách
+- id nhân viên
+- 
+7:Dịch vụ theo số đặt phòng
+- id đặt phòng
+- id dịch vụ
+- đơn giá
+- tên dịch vụ
+- số lượng
+
+8:User vs quyền 
+- id 
+- id user
+- id quyên
+
+9:Lịch sử
+10: Hóa đơn thanh toán
+
+
+11 Tài sản
+12 tài sản trong phòng
+13 img
+- id
+
+14 App_pram
+-id
+-mã code
+-mã loại
+-tên
+-giá phòng phát sinh ( them vào app)
+
+15 Công việc lịch trực
+- id 
+- id nhân viên
+- id công việc ( lây trong app_pram)
+- thời gian bắt đầu
+- thời gian kết thúc
+- số phòng dọn dẹp
+==> tất cả kế thừa =>{
+người tạo( lấy id nhân viên)
+người sửa( lấy id nhân viên)
+ngày tạo
+ngày sửa
+}
+Chức năng 
+1.4.1.	Chức năng Quản lý phòng: Show thông tin trạng thái phòng ra
+1.4.2.	Chức năng quản lý các dịch vụ : Sư dụng bảng 7 show ra các dịch vụ và số lượng dịch vụ sử dụng hiện tai
+1.4.3.	Chức năng Quản lý khách hàng : show thông tin bảng khách + lịch sử đặt phòng +hóa đơn khách đó(tổng)
+1.4.4.	Chức năng Đặt Phòng: lưu các thông tin vào bẳng đặt phòng
+1.4.5.	Chức năng Đổi Phòng:
+1.4.6.	Chức năng quản lý trả phòng : Truy xuất hết lịch sử dịch vụ sư dụng theo mã đặt+ tài sản hao hụt
+		phòng tạo 1 bẳng hóa đơn thanh toán theo mã đặt
+1.4.7.	Quản lý thông tin hủy đăng kí: Thay đổi trạng thái đặt phòng
+1.4.8.	Chức năng quản trị hệ thống: Sư dụng bảng phân quyền và chức năng cua nó
+1.4.9.	Chức năng quản lý hóa đơn thanh toán: showw thông tin bảng thanh toán
+1.4.10.	Chức năng thống kê: sử dụng dữ liệu dịch vụ số phòng , đặt phòng +lich sư show ra
+
+

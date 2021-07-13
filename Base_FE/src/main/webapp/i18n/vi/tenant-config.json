@@ -1,0 +1,17 @@
+{
+  "tenantConfig": {
+    "title": "Cấu hình doanh nghiệp",
+    "titleParent": "Quản lý thông tin doanh nghiệp",
+    "appParams": {
+      "title": "cấu hình chung"
+    },
+    "decimal": {
+      "title": "cấu hình dấu thập phân",
+      "note": "(Cấu hình số chữ số thập phân sau dấu \",\" mặc định làm tròn, tối thiểu là 0 , tối đa là 9)",
+      "validate": {
+        "maxLength": "không được nhập quá 1 kí tự",
+        "dupicate": "Dấu ngăn cách số thập phân và Dấu phân cách phần nghìn không được trùng nhau"
+      }
+    }
+  }
+}

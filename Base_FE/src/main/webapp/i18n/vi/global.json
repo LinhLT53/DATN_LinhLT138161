@@ -1,0 +1,323 @@
+{
+  "global": {
+    "title": "InvoiceWebapp",
+    "browsehappy": "Bạn đang sử dụng một trình duyệt <strong>quá cũ</strong>. Vui lòng <a href=\"http://browsehappy.com/?locale=en\">nâng cấp trình duyệt</a> của bạn để có trải nghiệm tốt nhất.",
+    "menu": {
+      "home": "Trang chủ",
+      "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+      "entities": {
+        "main": "Thực thể",
+        "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+      },
+      "account": {
+        "main": "Tài khoản",
+        "settings": "Cài đặt",
+        "password": "Mật khẩu",
+        "sessions": "Phiên đăng nhập",
+        "login": "Đăng nhập",
+        "logout": "Đăng xuất",
+        "register": "Đăng ký"
+      },
+      "admin": {
+        "main": "Quản trị",
+        "userManagement": "Quản lý tài khoản",
+        "tracker": "Theo dõi người dùng",
+        "metrics": "Số liệu",
+        "health": "Tình trạng",
+        "configuration": "Cấu hình",
+        "logs": "Ghi logs",
+        "audits": "Kiểm duyệt",
+        "apidocs": "API",
+        "database": "Cơ sở dữ liệu",
+        "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+      },
+      "language": "Ngôn ngữ"
+    },
+    "form": {
+      "username.label": "Tên tài khoản",
+      "username.placeholder": "Nhập tên tài khoản của bạn",
+      "currentpassword.label": "Mật khẩu",
+      "currentpassword.placeholder": "Nhập mật khẩu",
+      "newpassword.label": "Mật khẩu mới",
+      "newpassword.placeholder": "Nhập mật khẩu mới",
+      "confirmpassword.label": "Xác nhận mật khẩu mới",
+      "confirmpassword.placeholder": "Nhập lại mật khẩu mới",
+      "email.label": "Email",
+      "email.placeholder": "Nhập email của bạn"
+    },
+    "messages": {
+      "info": {
+        "authenticated": {
+          "prefix": "Nếu bạn muốn ",
+          "link": "đăng nhập",
+          "suffix": ", bạn có thể thử với tài khoản mặc định:<br/>- Quản trị viên (tài khoản=\"admin\" và mật khẩu=\"admin\") <br/>- Người dùng (tài khoản=\"user\" và mật khẩu=\"user\")."
+        },
+        "register": {
+          "noaccount": "Bạn chưa có tài khoản?",
+          "link": "Đăng ký tài khoản mới"
+        }
+      },
+      "error": {
+        "dontmatch": "Xác nhận mật khẩu không khớp!"
+      },
+      "validate": {
+        "newpassword": {
+          "required": "Bạn phải nhập mật khẩu.",
+          "minlength": "Mật khẩu phải có ít nhất 4 ký tự.",
+          "maxlength": "Mật khẩu không được vượt quá 50 ký tự.",
+          "strength": "Độ mạnh của mật khẩu:"
+        },
+        "confirmpassword": {
+          "required": "Bạn phải nhập lại mật khẩu để xác nhận.",
+          "minlength": "Mật khẩu phải có ít nhất 4 ký tự.",
+          "maxlength": "Mật khẩu không được vượt quá 50 ký tự."
+        },
+        "email": {
+          "required": "Bạn phải nhập email.",
+          "invalid": "Email bạn nhập không hợp lệ.",
+          "minlength": "Email phải có ít nhất 5 ký tự.",
+          "maxlength": "Email không được vượt quá 50 ký tự."
+        }
+      }
+    },
+    "field": {
+      "id": "ID"
+    },
+    "ribbon": {
+      "dev": "Phát triển"
+    },
+    "item-count": "Bản ghi {{first}} - {{second}} trong số {{total}}"
+  },
+  "entity": {
+    "action": {
+      "addblob": "Thêm nội dung",
+      "addimage": "Thêm ảnh",
+      "back": "Quay lại",
+      "cancel": "Hủy",
+      "delete": "Xóa",
+      "edit": "Sửa",
+      "open": "Mở",
+      "save": "Lưu",
+      "view": "Xem"
+    },
+    "detail": {
+      "field": "Trường",
+      "value": "Giá trị"
+    },
+    "delete": {
+      "title": "Xác nhận hành động xóa"
+    },
+    "validation": {
+      "required": "Trường này bắt buộc phải nhập.",
+      "required.select": "Trường này bắt buộc phải chọn.",
+      "minlength": "Trường này phải có ít nhất {{ min }} ký tự.",
+      "maxlength": "Trường này không được quá {{ max }} ký tự",
+      "min": "Trường này phải lớn hơn {{ min }}.",
+      "max": "Trường này phải nhỏ hơn {{ max }}.",
+      "minbytes": "Dung lượng trường này phải lớn hơn {{ min }} bytes.",
+      "maxbytes": "Dung lượng trường này phải nhỏ hơn {{ max }} bytes.",
+      "pattern": "Trường này phải theo định dạng {{ pattern }}.",
+      "number": "Trường này phải là một số.",
+      "datetimelocal": "Trường này phải là định dạng thời gian.",
+      "patternLogin": "Trường này chỉ có thể chứa chữ cái, chữ số và địa chỉ email."
+    }
+  },
+  "error": {
+    "internalServerError": "Lỗi máy chủ nội bộ",
+    "server.not.reachable": "Không tìm thấy máy chủ",
+    "url.not.found": "Không tìm thấy",
+    "NotNull": "Trường {{ fieldName }} không được để trống!",
+    "Size": "Trường {{ fieldName }} không nằm trong giới hạn tối thiểu/tối đa!",
+    "userexists": "Tên đăng nhập đã được sử dụng!",
+    "emailexists": "Email đã được sử dụng!",
+    "idexists": "Thêm mới {{ entityName }} không được trùng với định danh đã tồn tại",
+    "idnull": "Invalid ID"
+  },
+  "footer": "Đây là chân trang của bạn",
+  "common": {
+    "button": {
+      "search": "Tìm kiếm",
+      "link.normal": "Tìm kiếm cơ bản",
+      "link.advanced": "Tìm kiếm nâng cao",
+      "add": "Thêm mới",
+      "update": "Cập nhật",
+      "import": "Import excel",
+      "export": "Xuất excel",
+      "delete": "Xóa",
+      "close": "Đóng",
+      "previous": "Trước",
+      "next": "Sau",
+      "activated": "Kích hoạt",
+      "createKey": "Sinh cặp khoá",
+      "print": "In",
+      "confirm.save": "Ghi lại",
+      "confirm.update": "Cập nhật",
+      "confirm.cancel": "Hủy bỏ",
+      "confirm.import": "Import",
+      "confirm.allowed": "Đồng ý",
+      "confirm.ok": "Đồng ý",
+      "confirm.yes": "Có",
+      "confirm.no": "Không",
+      "confirm.loginRequest": "Đăng nhập",
+      "confirm.delete": "Xóa",
+      "confirm.deactivate": "Khóa",
+      "confirm.active": "Mở khóa",
+      "confirm.invoiceAdd": "Lập hóa đơn"
+    },
+    "card": {
+      "title.search": "Thông tin tìm kiếm",
+      "title.search.report": "Thông tin xuất báo cáo",
+      "title.data": "Danh sách chi tiết",
+      "title.invoice": "Danh sách hóa đơn đã phát hành",
+      "title.report": "Thông tin xuất báo cáo"
+    },
+    "tooltip": {
+      "home": "Trang chủ",
+      "toggle.columns": "Ẩn/hiện cột",
+      "toggle.showPassword": "Xem mật khẩu",
+      "toggle.hidePassword": "Ẩn mật khẩu",
+      "action.detail": "Xem chi tiết",
+      "action.update": "Cập nhật",
+      "action.delete": "Xóa",
+      "action.active": "Khóa",
+      "action.activated": "Kích hoạt",
+      "action.deactivate": "Mở khoá",
+      "action.sendEmail": "Gửi Email",
+      "action.decentralizationInvoice": "Phân quyền ký hiệu hóa đơn",
+      "action.auth.userGroup": "Phân quyền nhóm người dùng",
+      "action.add.user": "Thêm người dùng",
+      "action.addRole": "Bổ sung quyền",
+      "action.release": "Phát hành",
+      "action.undo": "Khôi phục",
+      "action.deleteFileImport": "Xóa file",
+      "action.clearNgSelect": "Xóa",
+      "action.approve": "Phê duyệt",
+      "action.reject": "Từ chối",
+      "action.showReason": "Xem lý do từ chối"
+    },
+    "checkbox": {
+      "continue.label": "Tiếp tục thêm mới"
+    },
+    "select": {
+      "option.default": "--Lựa chọn--",
+      "notFoundText": "Không tìm thấy dữ liệu",
+      "required": "Vui lòng nhập dữ liệu tìm kiếm",
+      "option.all": "--Tất cả--"
+    },
+    "table": {
+      "action": "Hành động",
+      "status": {
+        "active": "Hoạt động",
+        "deactivate": "Ngừng hoạt động",
+        "deleted": "Đã xóa",
+        "draft": "Dự thảo"
+      },
+      "pagination": "phần tử trong trang",
+      "pageSize.show": "Hiển thị",
+      "pageSize.rows": "bản ghi",
+      "noData": "Không có dữ liệu",
+      "noRecords": "Không tìm thấy bản ghi nào",
+      "totalItems": "Tổng số bản ghi:",
+      "orderNumber": "STT"
+    },
+    "title": {
+      "tenant": "Quản lý thông tin doanh nghiệp"
+    },
+    "modal": {
+      "confirm": {
+        "title": "Xác nhận",
+        "notification": "Thông báo",
+        "messages": {
+          "closeImport": "File chưa được import, bạn có muốn đóng không?",
+          "close": "Dữ liệu nhập chưa được lưu lại, bạn có muốn đóng không?",
+          "closeAddUser": "Bạn có chắc chắn muốn đóng không?",
+          "deleteUser": "Bạn có chắc chắn muốn xóa không?",
+          "update": "Bạn chắc chắn muốn cập nhật {{param}}?",
+          "active": "Bạn chắc chắn muốn mở khóa {{param}}?",
+          "deactivate": "Bạn chắc chắn muốn khóa {{param}}?",
+          "delete": "Bạn có chắc chắn xóa {{param}} không?",
+          "reset": "Bạn có chắc chắn muốn đổi {{param}} không?",
+          "createPassword": "Bạn có chắc chắn muốn tạo {{param}} không?",
+          "create": "Bạn có chắc chắn muốn thêm mới {{param}} không?",
+          "deleteMultiple": "Bạn có chắc chắn xóa ",
+          "activated": "Bạn có chắc chắn muốn kích hoạt {{param}} ?",
+          "undo": "Bạn có chắc chắn muốn khôi phục {{param}} không?",
+          "import": "Bạn có chắc chắn lập hóa đơn ngày {{param}} ?",
+          "loginRequest": "Bạn cần đăng nhập để thực hiện ký hóa đơn! Nếu chưa có tài khoản, vui lòng liên lạc với nhà cung cấp để được cấp",
+          "buyerNoTaxCode": "Bạn chắc chắn muốn lập hóa đơn cho người mua không có mã số thuế",
+          "approve": "Bạn có chắc chắn muốn phê duyệt {{param}} không?",
+          "acceptRisk": "Bạn có chắc chắn xác nhận bản ghi này không?",
+          "": "Bạn chắc chắn từ chối vấn đề rủi ro dự án không?",
+          "declineRisk": "Bạn chắc chắn từ chối vấn đề rủi ro dự án không?",
+          "receiveBooking": "Bạn có chắc chắn muốn nhận lịch đặt phòng vào hệ thống?",
+          "deleteBooking": "Bạn có chắc chắn muốn xóa lịch đặt phòng?"
+        }
+      }
+    },
+    "toastr": {
+      "title": {
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "info": "Thông báo",
+        "error": "Có lỗi xảy ra"
+      },
+      "messages": {
+        "success": {
+          "add": "Thêm mới {{ paramName }} thành công!",
+          "update": "Cập nhật {{ paramName }} thành công!",
+          "save": "Cập nhật {{ paramName }} thành công!",
+          "active": "Mở khóa {{ paramName }} thành công!",
+          "deactivate": "Khóa {{ paramName }} thành công!",
+          "delete": "Xóa {{ paramName }} thành công!",
+          "undo": "Khôi phục {{ paramName }} thành công!",
+          "activated": "Kích hoạt {{ paramName }} thành công!",
+          "send": "Gửi yêu cầu phê duyệt thành công!",
+          "addFile": "Thêm mới chứng thư số thành công!",
+          "updateFile": "Cập nhật chứng thư số thành công!",
+          "import": "Hệ thống import {{ paramName }} thành công!"
+        },
+        "info": {
+          "noDataToExport": "Không có dữ liệu xuất File"
+        },
+        "error": {
+          "active": "Hệ thống không thể mở khóa bản ghi",
+          "deactivate": "Hệ thống không thể khóa bản ghi",
+          "save": "Hệ thống không thể lưu bản ghi",
+          "update": "Hệ thống không thể cập nhật dữ liệu",
+          "delete": "Hệ thống không thể xóa bản ghi",
+          "load": "Hệ thống không thể tải dữ liệu",
+          "import": "Hệ thống không thể import dữ liệu",
+          "export": "Hệ thống không thể xuất dữ liệu",
+          "download": "Hệ thống không thể tải dữ liệu",
+          "undo": "Hệ thống không thể xóa bản ghi",
+          "activated": "Hệ thống không thể kích hoạt bản ghi",
+          "deleted": "Hệ thống không thể khôi phục bản ghi",
+          "send": "Hệ thống không thể gửi yêu cầu phê duyệt thông báo phát hành",
+          "notFoundTypeSign": "Hệ thống không lấy được thông tin của loại chữ ký",
+          "actionButton": "Hệ thống không không thể thực hiện chức năng này",
+          "gatewayTimeout": "Không thể kết nối đến máy chủ, vui lòng kiểm tra lại",
+          "createKey": "Hệ thống không thể sinh cặp khóa",
+          "release": "Hệ thống không thể phát hành hóa đơn",
+          "resetPassword": "Hệ thống không thể đặt lại mật khẩu, vui lòng thử lại sau!"
+        }
+      }
+    },
+    "notAllowed": "Bạn không được quyền chỉnh sửa!",
+    "import": {
+      "error": {
+        "exceedMaxSize": "File upload lớn hơn dung lượng cho phép (5MB)",
+        "formatIncorrect": "Hệ thống chỉ hỗ trợ upload các file có định dạng: {{ accept }}",
+        "fileNotChoose": "Bạn chưa chọn file upload!",
+        "default": "Hệ thống không thể import dữ liệu",
+        "exceedMaxSizeFile": "Dung lượng file vượt quá dung lượng tối đa",
+        "notChooseFile": "Bạn chưa chọn file import!"
+      },
+      "success": {
+        "upload": "Upload file thành công, xin mời thực hiện import",
+        "import": "Import thành công {{successRecord}}/{{totalRecord}} bản ghi, vui lòng tải file kết quả để xem chi tiết",
+        "importsuccess": "Import thành công, vui lòng tải file kết quả để xem chi tiết",
+        "resultImportFalse": "Import thành công 0/{{totalRecord}} bản ghi, dữ liệu trong bản ghi không hợp lệ"
+      }
+    }
+  }
+}

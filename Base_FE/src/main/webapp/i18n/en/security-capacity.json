@@ -1,0 +1,24 @@
+{
+  "securityCapacity": {
+    "titleTable": "Năng lực bảo mật ATTT",
+    "numericalOrder": "STT",
+    "action": "Hành động",
+    "timeOfEvaluation": "Thời điểm đánh giá",
+    "physical": "Vật lý",
+    "networkSecurity": "Mạng bảo mật",
+    "dataSecurity": "Bảo mật dữ liệu",
+    "specifiedProcess": "Quy trình qui định",
+    "ensureBusiness": "Quy trình về đảm bảo tính liên tục trong hoạt động kinh doanh",
+    "pointEvaluation": "Điểm đánh giá",
+    "note": "Ghi chú",
+    "timeOfEvaluationEmpty": "Trường Thời điểm đánh giá không thể không chọn",
+    "pointEvaluationEmpty": "Trường Điểm đánh giá không thể bỏ trống",
+    "timeOfEvaluationPointEvaluationEmpty": "Trương Thời điểm đánh giá và Điểm đánh giá không thể bỏ trống",
+    "cannotAddNewItem": "Không thể thêm bản ghi bởi vì bạn chưa tích lưu lại thông tin ở dòng bạn vừa sửa đổi",
+    "staffEvaluation": "Nhân sự tham gia đánh giá",
+    "sureDelete": "bản ghi",
+    "editError": "Không thể chỉnh sửa bản ghi khác khi bạn ghi lại dữ liệu ở bản ghi trước",
+    "undoError": "Không thể quay về giá trị ban đầu bởi vì bạn chưa lưu lại thông tin bản ghi trước",
+    "deleteError": "Không thể xóa khi bạn chưa xử lý bản ghi trước"
+  }
+}

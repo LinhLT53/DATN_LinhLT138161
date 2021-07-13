@@ -1,0 +1,53 @@
+{
+  "signature": {
+    "title.table": "Danh sách chứng thư số",
+    "titleParent": "Quản lý phát hành",
+    "branchName": "Chi nhánh/Doanh nghiệp",
+    "branchNameLabel": "Tên Chi nhánh/Doanh nghiệp ",
+    "branchParentName": "Tên đơn vị",
+    "signatureType": "Loại chứng thư số",
+    "taxCode": "Mã số thuế",
+    "startDate": "Ngày bắt đầu hiệu lực",
+    "endDate": "Ngày kết thúc hiệu lực",
+    "status": "Trạng thái",
+    "signatureConfirm": "chứng thư số",
+    "serial": "Serial",
+    "signatureFile": "Chứng thư số/ Tải lên từ file",
+    "signatureUSB": "Chứng thư số/ Tải lên từ USB token",
+    "nameCTS": "Tên chủ thể CTS",
+    "organNameCTS": "Tên tổ chức chứng thực CTS",
+    "uploadType": "Cách tải file",
+    "privateKey": "Khóa riêng",
+    "publicKey": "Khoá công khai",
+    "messages": {
+      "validate": {
+        "name": {
+          "required": "Bạn chưa chọn Chi nhánh/Doanh nghiệp.",
+          "maxlength": "Tên chi nhánh không được quá 200 ký tự."
+        },
+        "signatureType": {
+          "required": "Bạn chưa chọn Loại chứng thư số."
+        },
+        "file": {
+          "notFoundTaxCode": "Mã số thuế của chứng thư số không trùng khớp, vui lòng chọn lại!",
+          "fileDatDate": "Thời gian hiệu lực của chứng thư số không hợp lệ, vui lòng chọn lại!",
+          "existKey": "Chỉ được phép có 1 cặp khoá ở trạng thái Chờ cấp chứng thư số, bạn không thể thêm mới",
+          "existFile": "Bạn không thể tạo chứng thư số cho đơn vị {{ param }}",
+          "notDuplicateTaxCode": "Mã số thuế của chứng thư số không trùng khớp, vui lòng chọn lại!"
+        },
+        "signatureFile":{
+          "required": "Bạn chưa tải file chứng thư số."
+        }
+      },
+      "confirm": "Đơn vị đã tồn tại chứng thư số đang trong thời gian hiệu lực, nếu thêm mới chứng thư số, chứng thư số hiệu lực đã tồn tại sẽ ngừng hoạt động, bạn có muốn tiếp tục không?"
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới chứng thư số",
+        "update": "Cập nhật chứng thư số",
+        "detail": "Xem thông tin chứng thư số",
+        "activated": "Kích hoạt chứng thư số"
+      }
+    }
+  }
+}

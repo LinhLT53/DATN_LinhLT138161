@@ -1,0 +1,42 @@
+{
+  "hospitalBloodTransfusionReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo bệnh viện truyền máu huyết học",
+    "girdView": "Danh sách hoá đơn",
+    "tenantBranch": "Tên đơn vị",
+    "userName": "Tên người dùng",
+    "year": "Năm",
+    "fromDate": "Từ ngày lập",
+    "toDate": "Đến ngày lập",
+    "invoiceTemplateName": "Tên mẫu hoá đơn",
+    "serial": "Ký hiệu hoá đơn",
+    "enterprise": "Xí nghiệp",
+    "hospitalType": "Loại bệnh viện",
+    "issueDate": "Ngày tháng năm phát hành",
+    "invoiceNumber": "Số HĐ",
+    "totalMoney": "Tổng tiền",
+    "taxAmount": "Thuế suất",
+    "payments": "Hình thức thanh toán",
+    "buyerName": "Tên người mua",
+    "buyerTaxCode": "Mã số thuế người mua",
+    "buyerAddress": "Địa chỉ người mua",
+    "button": {
+      "showReport": "Xem báo cáo",
+      "exportExcel": "Xuất excel",
+      "exportPdf": "Xuất pdf"
+    },
+    "validate": {
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "fromDate": {
+        "required": "Bạn chưa nhập Từ ngày nhập",
+        "invalid": "Từ ngày lập phải nhỏ lơn hoặc bằng đến ngày lập!"
+      },
+      "toDate": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "invalidDate": "Khoảng cách từ ngày lập hóa đơn đến ngày lập hóa đơn không được quá 3 tháng!"
+    }
+  }
+}

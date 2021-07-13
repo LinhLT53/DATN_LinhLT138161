@@ -1,0 +1,80 @@
+{
+  "emailForm": {
+    "title": "Biểu mẫu email",
+    "invoiceSampleName": "Tên mẫu hóa đơn",
+    "mailTitle": "Tiêu đề email",
+    "emailSampleName": "Tên mẫu email",
+    "status": "Trạng thái",
+    "preview": "Xem trước nội dung",
+    "emailSampleList": "Danh sách mẫu email",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "email": "Email",
+    "emailTemplate": "Tên mẫu email",
+    "invoiceNameTemplate": "Tên mẫu hóa đơn",
+    "usage": "Sử dụng",
+    "chooseInvoiceNameTemplate": "Chọn tên mẫu hóa đơn",
+    "emailForm": "biểu mẫu email",
+    "delete": " biểu mẫu email không?",
+    "modal": {
+      "action.deactivate": "Bạn chắc chắn muốn khóa biểu mẫu email?",
+      "action.active": "Bạn chắc chắn muốn mở khóa biểu mẫu email?",
+      "action.delete": "Bạn có chắc chắn xóa biểu mẫu email?",
+      "emailContent": "Nội dung email",
+      "emailContentInvoice": "Nội dung email hóa đơn",
+      "emailContentReplace": "Nội dung email hóa đơn thay thế",
+      "emailContentConfig": "Nội dung email hóa đơn điều chỉnh",
+      "emailContentCancel": "Nội dung email hóa đơn hủy",
+      "fieldSample": "Các trường mẫu",
+      "sendMail": {
+        "title": "Gửi email",
+        "yes": "Gửi email",
+        "no": "Hủy bỏ"
+      },
+      "title": {
+        "add": "Thêm mới biểu mẫu email",
+        "update": "Cập nhật biểu mẫu email",
+        "detail": "Chi tiết biểu mẫu email"
+      }
+    },
+    "validate": {
+      "email": {
+        "required": "Bạn chưa nhập Email",
+        "invalid": "Bạn đang nhập sai định dạng Email"
+      },
+      "emailTemplate": {
+        "required": "Bạn chưa nhập Tên mẫu email",
+        "maxlength": "Tên mẫu email không được nhập quá 100 kí tự"
+      },
+      "emailTitle": {
+        "required": "Bạn chưa nhập Tiêu đề email",
+        "maxlength": "Tiêu đề email không được nhập quá 400 kí tự"
+      },
+      "usage": {
+        "required": "Bạn chưa chọn Sử dụng"
+      },
+      "status": {
+        "required": "Bạn chưa chọn Trạng thái"
+      },
+      "content": {
+        "required": "Bạn chưa nhập Nội dung email"
+      }
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "add": "Thêm mới biểu mẫu email thành công!",
+          "addNotConfig": "Thêm mới biểu mẫu email thành công, nội dung email được thiết lập mặc định, nếu bạn muốn thay đổi nội dung email, vui lòng thực hiện thao tác Cập nhật biểu mẫu email!",
+          "update": "Cập nhật biểu mẫu email thành công!",
+          "sendMail": "Hệ thống đã thực hiện gửi mail!",
+          "delete": "Xóa biểu mẫu email thành công!"
+        },
+        "error": {
+          "add": "Đã có lỗi xảy ra, hệ thống không thể lưu bản ghi!",
+          "sendMail": "Đã có lỗi xảy ra, không thể thực hiện gửi mail!",
+          "delete": "Đã có lỗi xảy ra, hệ thống không thể xóa biểu mẫu email!"
+        }
+      }
+    }
+  }
+}

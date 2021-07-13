@@ -1,0 +1,78 @@
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.upload-control {
+  display: block;
+}
+
+.upload-control .upload-input,
+.upload-control .upload-btn {
+  padding: 7px;
+  min-width: 74px;
+}
+
+.upload-control .upload-btn-cer {
+  padding: 7px;
+  min-width: 98px;
+}
+
+.upload-control .upload-btn-usb {
+  padding: 7px;
+  min-width: 143px;
+}
+
+.upload-control input[type='file'] {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.upload-control label {
+  cursor: default;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #cccccc;
+}
+
+.upload-control:hover .upload-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+}
+
+.upload-control .upload-input {
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 20px;
+  //height: calc(1.5em + 0.75rem + 0px);
+}
+
+.upload-input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25)
+}
+
+.upload-control {
+  .upload-btn,
+  .upload-btn-cer,
+  .upload-btn-cer,
+  .upload-btn-usb {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #f2f2f2;
+  }
+}
+

@@ -1,0 +1,36 @@
+{
+  "userGroup": {
+    "title": "Quản lý nhóm người dùng",
+    "titleParent": "Danh mục hệ thống",
+    "titleTable": "Kết quả tìm kiếm",
+    "orderNumber": "STT",
+    "userGroupCode": "Mã nhóm",
+    "userGroup": "Nhóm người dùng",
+    "userGroupName": "Nhóm",
+    "action": "Hành động",
+    "tableAddUser": {
+      "email": "Acc email",
+      "organization": "Đơn vị"
+    },
+    "card": {
+      "title": "Danh sách người dùng"
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới nhóm người dùng",
+        "update": "Cập nhật nhóm người dùng",
+        "detail": "Xem thông tin nhóm người dùng",
+        "auth": "Phân quyền nhóm người dùng"
+      },
+      "confirm": {
+        "title": "Nhóm người dùng"
+      }
+    },
+    "toastr": {
+      "messages": {
+        "add": "Thêm người dùng thành công!",
+        "permission": "Phân quyền nhóm người dùng thành công"
+      }
+    }
+  }
+}

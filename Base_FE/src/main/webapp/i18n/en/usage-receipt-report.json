@@ -1,0 +1,49 @@
+{
+  "usageReceiptReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo tình hình sử dụng biên lai",
+    "tenantBranch": "Tên đơn vị",
+    "typeDate": "Loại báo cáo",
+    "typeReport": "",
+    "month": "Tháng",
+    "quarter": "Quý",
+    "year": "Năm",
+    "fromDate": "Từ ngày lập",
+    "toDate": "Đến ngày lập",
+    "validate": {
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "year": {
+        "required": "Bạn chưa chọn Năm"
+      },
+      "typeDate": {
+        "required": "Bạn chưa chọn Loại báo cáo"
+      },
+      "fromDate": {
+        "required": "Bạn chưa nhập Từ ngày lập",
+        "invalidFromDate": "Từ ngày lập phải nhỏ hơn hoặc bằng Đến ngày lập!"
+      },
+      "toDate": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "value": {
+        "required": {
+          "moth": "Bạn chưa chọn Tháng",
+          "quarter": "Bạn chưa chọn Quý"
+        }
+      },
+      "isDate": "Ngày lập không được lớn hơn ngày hiện tại!",
+      "invalidQuarter": "Quý báo cáo không được lớn hơn quý hiện tại!",
+      "invalidMonth": "Tháng báo cáo phải nhỏ hơn hoặc bằng tháng hiện tại!",
+      "invalidDate": "Ngày lập phải nhỏ hơn hoặc bằng ngày hiện tại!"
+    },
+    "button": {
+      "download": {
+        "excel": "Xuất excel",
+        "pdf": "Xuất pdf",
+        "xml": "Xuất xml"
+      }
+    }
+  }
+}

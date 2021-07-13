@@ -1,0 +1,36 @@
+{
+  "invoiceUsageReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo tình hình sử dụng hóa đơn",
+    "tenantBranch": "Tên đơn vị",
+    "typeDate": "Loại báo cáo",
+    "typeReport": "",
+    "moth": "Tháng",
+    "quarter": "Quý",
+    "year": "Năm",
+    "validate": {
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "year": {
+        "required": "Bạn chưa chọn Năm"
+      },
+      "typeDate": {
+        "required": "Bạn chưa chọn Loại báo cáo"
+      },
+      "value": {
+        "required": {
+          "moth": "Bạn chưa chọn Tháng",
+          "quarter": "Bạn chưa chọn Quý"
+        }
+      }
+    },
+    "button": {
+      "download": {
+        "excel": "Xuất excel",
+        "pdf": "Xuất pdf",
+        "xml": "Xuất xml"
+      }
+    }
+  }
+}

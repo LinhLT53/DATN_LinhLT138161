@@ -1,0 +1,93 @@
+<!--<div class="cdk-overlay-container">-->
+<!--  <div class="cdk-global-overlay-wrapper" style="justify-content: flex-end; align-items: flex-start;">-->
+<!--    <div class="flex-column h-100 d-flex justify-content-end">-->
+<!--      <div class="custom-notification" *ngIf="data && data.length > 0 && show">-->
+<!--        <div class="list-noti">-->
+<!--          <div class="close-all text-center my-2" *ngIf="data.length > 1">-->
+<!--            <button type="button" class="btn btn-outline-secondary" (click)="closeAll()"> <span-->
+<!--              jhiTranslate="notification.hiddenAll"> Ẩn tất cả</span></button>-->
+<!--          </div>-->
+<!--          <div class="pr-0">-->
+<!--            <perfect-scrollbar class="ps" [style.max-height.vh]="44">-->
+<!--              <div class="one-noti" *ngFor="let item of data, index as i">-->
+<!--                <div class="title">-->
+<!--                  <div class="card mb-0 px-2">-->
+<!--                    <div class="card-header">-->
+<!--                      <span class="float-right cursor-pointer" (click)="closeOne(i)"><a><i-->
+<!--                        class="fa fa-times" aria-hidden="true"></i></a></span>-->
+<!--                      <span class="noti-title">{{item.title}}</span>-->
+<!--                    </div>-->
+<!--                    <div class="card-body pt-0 pb-1 pr-2 pl-2">-->
+<!--                      <div class="row pl-3">-->
+<!--                        <div class="noti-content">{{item.shortContent}}</div>-->
+<!--                      </div>-->
+<!--                      <div class="">-->
+<!--                        <div class="no-show float-left">-->
+<!--                          <div class="custom-control custom-checkbox">-->
+<!--                            <input class="custom-control-input" type="checkbox" value=""-->
+<!--                                   id="no-show-{{i}}" name="checkboxDefault">-->
+<!--                            <label class="custom-control-label" for="no-show-{{i}}"-->
+<!--                                   jhiTranslate="notification.notShowAgain">-->
+<!--                              Không hiển thị lại-->
+<!--                            </label>-->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="float-right">-->
+<!--                          <button type="button" class="btn btn-link pt-0 pr-0"-->
+<!--                                  (click)="openPopup(notificationDetail,item,i)"> <span-->
+<!--                            jhiTranslate="common.tooltip.action.detail"> Xem chi tiết</span></button>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </perfect-scrollbar>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<ng-template #notificationDetail let-modal>-->
+<!--  <div class="modal-header">-->
+<!--    <h5 class="modal-title mt-0"><span>{{selectedData.title}}</span></h5>-->
+<!--    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">-->
+<!--      <span aria-hidden="true">&times;</span>-->
+<!--    </button>-->
+<!--  </div>-->
+<!--  <div class="modal-body">-->
+<!--    <div class="row">-->
+<!--      <div class="col-md-6">-->
+<!--        <div class="form-group">-->
+<!--          <label class="form-control-label" jhiTranslate="notification.time">Thời gian</label>-->
+<!--          <div class="field-detail">-->
+<!--            <p>{{selectedData.createdDate | date:"dd/MM/yyyy  HH:mm:ss"}}</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="col-md-6">-->
+<!--        <div class="ml-3 mt-3" *ngIf="selectedData.attFileName">-->
+<!--          <div class="form-group mb-0">-->
+<!--            <label class="form-control-label" jhiTranslate="notification.attachFile">Tài liệu đính kèm</label>-->
+<!--          </div>-->
+<!--          <div class="row mb-2">-->
+<!--            <button type="button" class="btn btn-link pt-0"-->
+<!--                    (click)="downloadAttFile()">{{selectedData.attFileName}}</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <div class="col-12">-->
+<!--        <div class="form-group">-->
+<!--          <label class="form-control-label" jhiTranslate="notification.content">Nội dung</label>-->
+<!--          <div class="field-detail">-->
+<!--            <div [innerHTML]="selectedData.content | decodeHtml"></div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</ng-template>-->

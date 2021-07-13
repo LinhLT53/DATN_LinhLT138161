@@ -1,0 +1,21 @@
+{
+  "reportLiabilitiesPartner": {
+    "parentTitle": "Báo cáo",
+    "title": "Báo cáo tổng hợp công  nợ theo đối tác (MM)",
+    "partner": "Đối tác",
+    "startDate": "Thời gian bắt đầu",
+    "endDate": "Thời gian kết thúc",
+    "orderNumber": "STT",
+    "mmUser": "MM sử dụng",
+    "mmPay": "MM đã thanh toán",
+    "mmOwed": "MM còn nợ",
+    "note": "Ghi chú",
+    "total": "Tổng",
+    "viewReport": "Xem báo cáo",
+    "export": "Xuất excel",
+    "listReport": "Danh sách báo cáo",
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    }
+  }
+}

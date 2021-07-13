@@ -1,0 +1,45 @@
+{
+  "invoiceHotelReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo hóa đơn khách sạn",
+    "girdView": "Danh sách hoá đơn",
+    "tenantBranch": "Tên đơn vị",
+    "userName": "Tên người dùng",
+    "year": "Năm",
+    "fromDate": "Từ ngày lập",
+    "toDate": "Đến ngày lập",
+    "invoiceTemplateName": "Tên mẫu hoá đơn",
+    "serial": "Ký hiệu hoá đơn",
+    "taxCode": "Mã số thuế",
+    "formNo": "Mẫu số",
+    "symbol": "Ký hiệu",
+    "issueDate": "Ngày tháng năm phát hành",
+    "invoiceNumber": "Số hóa đơn",
+    "createDate": "Ngày lập",
+    "createBy": "Người lập",
+    "status": "Trạng thái",
+    "listInvoice": "Danh sách hóa đơn",
+    "button": {
+      "showReport": "Xem báo cáo",
+      "exportExcel": "Xuất excel",
+      "exportPdf": "Xuất pdf"
+    },
+    "validate": {
+      "reportType": {
+        "required": "Bạn chưa chọn Loại báo cáo"
+      },
+      "fromDate": {
+        "required": "Bạn chưa nhập Từ ngày lập"
+      },
+      "toDate": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "maxFromDate": {
+        "invalid": "Từ ngày lập phải nhỏ hơn hoặc bằng đến ngày lập!"
+      },
+      "maxToDate": {
+        "invalid": "Khoảng cách từ ngày lập hóa đơn đến ngày lập hóa đơn không được quá 3 tháng!"
+      }
+    }
+  }
+}

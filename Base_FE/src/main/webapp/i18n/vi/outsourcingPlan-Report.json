@@ -1,0 +1,37 @@
+{
+  "outsourcingPlanReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo Thống kê kế hoạch thuê ngoài",
+    "plan-status": "Trạng thái kế hoạch",
+    "project-code": "Mã dự án",
+    "start-time": "Thời gian bắt đầu OS dự kiến",
+    "end-time": "Thời gian kết thúc OS dự kiến",
+    "plan-code": "Mã kế hoạch",
+    "outsourcing-type": "Hình thức thuê ngoài",
+    "business-unit": "Đơn vị kinh doanh",
+    "production-unit": "Đơn vị sản xuất",
+    "outsourcedPlan": "Kế hoạch thuê ngoài",
+    "outsourcedType": "Hình thức thuê ngoài thuê ngoài",
+    "am": "AM",
+    "pm": "PM",
+    "no": "STT",
+    "action": "Hành động",
+    "project-name": "Tên dự án",
+    "mmos": "MM OS",
+    "sum": "Tổng",
+    "ba": "BA",
+    "dev": "Dev",
+    "test": "Test",
+    "description": "Mô tả sơ bộ về sản phẩm",
+    "human-number": "Số nhân sự OS/ tháng",
+    "human-required": "Yêu cầu đối với nhân sự OS",
+
+    "popup": {
+      "title-show-detail": "Xem chi tiết dự án"
+    },
+
+    "button": {
+      "createNewContract": "Tạo mới hợp đồng"
+    }
+  }
+}

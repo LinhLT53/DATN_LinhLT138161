@@ -1,0 +1,134 @@
+<nav class="page-sidebar" data-pages="sidebar">
+  <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
+  <div class="sidebar-overlay-slide from-top" id="appMenu">
+  </div>
+  <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
+  <!-- BEGIN SIDEBAR MENU HEADER-->
+  <div class="sidebar-header">
+<!--    <img src="../../../assets/img/logo_white.png" alt="logo" class="brand" data-src="assets/img/logo_white.png"-->
+<!--      data-src-retina="assets/img/logo_white_2x.png" width="78">-->
+    <div class="sidebar-header-controls">
+      <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20 hidden-md-down"
+        data-pages-toggle="#appMenu"><i class="fa fa-angle-down fs-16"></i>
+      </button>
+      <button type="button" class="btn btn-link hidden-md-down" data-toggle-pin="sidebar"><i class="fa fs-12"></i>
+      </button>
+    </div>
+  </div>
+  <!-- END SIDEBAR MENU HEADER-->
+  <!-- START SIDEBAR MENU -->
+  <div class="sidebar-menu">
+    <!-- BEGIN SIDEBAR MENU ITEMS-->
+    <ul class="menu-items">
+      <!--<li>
+        <a [routerLink]="bookRoom.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{bookRoom.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="bookRoom.class"></i>
+        </span>
+      </li>
+
+      <li>
+        <a [routerLink]="bookRoomFuture.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{bookRoomFuture.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="bookRoomFuture.class"></i>
+        </span>
+      </li>-->
+<!--      <li *jhiHasPermission="quyen.PHONGTRUOC">-->
+      <li>
+        <a [routerLink]="bookRoom.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{bookRoom.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="bookRoom.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.PHONGLE">-->
+      <li>
+        <a [routerLink]="bookRoomFuture.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{bookRoomFuture.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="bookRoomFuture.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.NHANSU">-->
+      <li>
+        <a [routerLink]="humanResources.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{humanResources.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="humanResources.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.KHACHHANG">-->
+      <li>
+        <a [routerLink]="customer.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{customer.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="roomType.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.TAISAN">-->
+      <li>
+        <a [routerLink]="asset.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{asset.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="customer.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.LOAIPHONG">-->
+      <li>
+        <a [routerLink]="roomType.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{roomType.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="promotion.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.PHONG">-->
+      <li>
+        <a [routerLink]="room.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{room.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="room.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.KHUYENMAI">-->
+      <li>
+        <a [routerLink]="promotion.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{promotion.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="asset.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.DICHVU">-->
+      <li>
+        <a [routerLink]="service.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{service.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="service.class"></i>
+        </span>
+      </li>
+<!--      <li *jhiHasPermission="quyen.BIEUDO">-->
+      <li>
+        <a [routerLink]="chart.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{chart.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="chart.class"></i>
+        </span>
+      </li>
+      <div class="clearfix"></div>
+    </ul>
+  </div>
+  <!--   END SIDEBAR MENU-->
+</nav>

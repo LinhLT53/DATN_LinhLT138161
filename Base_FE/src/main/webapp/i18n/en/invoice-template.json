@@ -1,0 +1,64 @@
+{
+  "invoiceTemplate": {
+    "title": "Quản lý mẫu hóa đơn",
+    "undo": "mẫu hoá đơn",
+    "invoiceName": "Tên mẫu hóa đơn",
+    "templateCode": "Mã mẫu hóa đơn",
+    "invoiceTypeName": "Loại hóa đơn",
+    "barcodeType": "Loại barcode",
+    "createdBy": "Người tạo",
+    "createdDate": "Ngày tạo",
+    "state": "Trạng thái",
+    "description": "Mô tả",
+    "select": "Chọn mẫu hóa đơn",
+    "list": "Danh sách",
+    "preview": "Xem trước",
+    "fileSuggest": "Logo và Warter mark: Loại file .png, dung lượng file tối đa: 5MB",
+    "modal": {
+      "title": "mẫu hóa đơn",
+      "add": "Thêm mới mẫu hóa đơn",
+      "update": "Cập nhật mẫu hóa đơn",
+      "detail": "Chi tiết mẫu hóa đơn",
+      "list.detail": "Danh sách mẫu hóa đơn"
+    },
+    "status": {
+      "active": "Hoạt động",
+      "deactivate": "Ngừng hoạt động",
+      "deleted": "Đã xóa",
+      "draft": "Dự thảo"
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "save": "Thêm mới mẫu hoá đơn thành công!",
+          "update": "Câp nhật mẫu hoá đơn thành công!",
+          "active": "Mở khóa mẫu hiệu hóa đơn thành công!",
+          "deactivate": "Khóa mẫu hiệu hóa đơn thành công!",
+          "undo": "Khôi phục mẫu hoá đơn thành công!"
+        },
+        "error": {
+          "save": "Thêm mới hoá đơn không thành công!",
+          "update": "Cập nhật mẫu hoá đơn không thành công!",
+          "undo": "Đã có lỗi xảy ra, hệ thống không thể xóa mẫu hoá đơn",
+          "deleted": "Đã có lỗi xảy ra, hệ thống không thể khôi phục mẫu hoá đơn"
+        },
+        "warning": {
+          "select": "Bạn chưa chọn mẫu hoá đơn"
+        }
+      }
+    },
+    "validate": {
+      "invoiceTypeId": {
+        "required": "Bạn chưa chọn Loại hóa đơn"
+      },
+      "invoiceName": {
+        "required": "Bạn chưa nhập Tên mẫu hóa đơn",
+        "maxlength": "Tên mẫu hóa đơn có độ dài tối đa 100 ký tự",
+        "not.found": "Không tìm thấy kết quả phù hợp!"
+      },
+      "description": {
+        "maxlength": "Mô tả có độ dài tối đa 200 ký tự"
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "invoiceDelete":{
+    "title":"Xoá bỏ hoá đơn",
+    "titleCustomer": "Thông tin khách hàng",
+    "titleGeneral": "Thông tin chung",
+    "buyerCode": "Mã khách hàng",
+    "buyerName": "Tên người mua",
+    "buyerTaxCode": "Mã số thuế",
+    "buyerPhoneNumber": "Số điện thoại",
+    "buyerUnitName": "Tên đơn vị",
+    "buyerEmailAddress": "Email",
+    "buyerIdType": "Loại giấy tờ",
+    "buyerIdNo": "Số giấy tờ",
+    "buyerAddress": "Địa chỉ",
+    "buyerBankName": "Tên ngân hàng",
+    "buyerBankNumber": "Tài khoản ngân hàng",
+    "invoiceSeri": "Mã KH",
+    "deliveryWarehouse": "Kho",
+    "issueDate": "Ngày lập hoá đơn gốc",
+    "invoiceNo": "Số hoá đơn gốc",
+    "paymentMethodName": "Hình thức thanh toán",
+    "additionalReferenceDesc" : "Văn bản thoả thuận",
+    "createTime": "Ngày lập",
+    "additionalReferenceDate": "Ngày thoả thuận",
+    "agreementFileName": "Biên bản thoả thuận",
+    "invoiceNote":"Ghi chú",
+    "invoiceForms": "Mẫu hoá đơn",
+    "originalInvoiceNumber": "Số hoá đơn gốc",
+    "originalInvoiceDate": "Ngày lập hoá đơn gốc",
+    "paymentMethod": "Hình thức thanh toán",
+    "totalMoney": "Tổng tiền",
+    "reasonDelete": "Lý do xoá bỏ",
+    "systemDelete": "Hệ thống sẽ tiến hành cập nhật xoá bỏ hoá đơn",
+    "validate": {
+      "additionalReferenceDesc": {
+        "maxlength":"Văn bản thoả thuận chỉ nhập tối đa 100 kí tự.",
+        "required": "Bạn chưa nhập Văn bản thoả thuận"
+      },
+      "reasonDelete": {
+        "maxlength":"Lý do xoá bỏ chỉ nhập tối đa 500 kí tự. ",
+        "required": "Bạn chưa nhập Lý do xoá bỏ"
+      },
+      "additionalReferenceDate.required": "Bạn chưa nhập Ngày thoả thuận",
+      "agreementFileName": {
+        "file": "(Loại file .doc, .docx, .pdf, .png, .jpg. Dung lượng tối đa 5Mb)"
+      }
+    },
+    "toastr": {
+      "messages": {
+        "success.save": "Xóa bỏ hóa đơn thành công!"
+      }
+    },
+    "messages": {
+      "confirm": "Bạn có chắc chắn muốn xoá bỏ hóa đơn?"
+    }
+  }
+}

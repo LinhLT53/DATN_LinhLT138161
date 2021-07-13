@@ -1,0 +1,13 @@
+{
+  "liabilitiesOrganizationPartner": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo Tổng hợp công nợ theo đơn vị - đối tác",
+    "outsourcing-unit": "Đơn vị thuê ngoài",
+    "partner": "Đối tác",
+    "man-months-use": "MM sử dụng",
+    "project-name": "Tên dự án",
+    "man-months-pay": "MM thanh toán",
+    "man-months-owe": "MM còn nợ",
+    "note": "Ghi chú"
+  }
+}

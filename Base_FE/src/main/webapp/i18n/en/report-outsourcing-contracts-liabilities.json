@@ -1,0 +1,37 @@
+{
+  "reportOutsourcingContract": {
+    "parentTitle": "Báo cáo",
+    "title": "Báo cáo hợp đồng thuê ngoài - công nợ",
+    "partnerCode": "Mã đối tác",
+    "projectName": "Tên dự án",
+    "projectCode": "Mã dự án",
+    "contractNumber": "Số hợp đồng thuê ngoài",
+    "outsourcingOrganization": "Đơn vị thuê ngoài",
+    "productOrganization": "Đơn vị sản xuất",
+    "businessOrganization": "Đơn vị kinh doanh",
+    "signedState": "Trạng thái ký",
+    "contractState": "Trạng thái hợp đồng",
+    "startDate": "Thời gian bắt đầu",
+    "endDate": "Thời gian kết thúc",
+    "orderNumber": "STT",
+    "ttrPakdNumber": "Số TTr PAKD",
+    "contactPoint": "Đầu mối liên hệ đề nghị hợp tác",
+    "pm": "Đầu mối kỹ thuật (PM)",
+    "am": "AM",
+    "mmTotal": "Tổng MM thuê ngoài",
+    "mmPay": "MM đã thanh toán",
+    "mmOwed": "MM còn nợ",
+    "price": "Đơn giá",
+    "contractValue": "Giá trị hợp đồng",
+    "amountOwed": "Số tiền còn nợ",
+    "contractInfo": "Thông tin chung hợp đồng",
+    "problem": "Vấn đề",
+    "total": "Tổng",
+    "viewReport": "Xem báo cáo",
+    "export": "Xuất excel",
+    "listReport": "Danh sách báo cáo",
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    }
+  }
+}

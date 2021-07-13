@@ -1,0 +1,10 @@
+export const INVOICE_TEMPLATE_STATUS = {
+  DEACTIVATE: 0,
+  ACTIVE: 1,
+  DRAFT: 2,
+  DELETED: 3
+};
+
+export const INVOICE_TEMPLATE = {
+  STATE_ADD_VALUE: 2
+};

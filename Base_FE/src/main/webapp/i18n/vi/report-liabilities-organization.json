@@ -1,0 +1,21 @@
+{
+  "reportLiabilitiesOrgan": {
+    "parentTitle": "Báo cáo",
+    "title": "Báo cáo tổng hợp công  nợ theo đơn vị (MM)",
+    "organization": "Đơn vị",
+    "partnerName": "Tên đối tác viết tắt",
+    "startDate": "Thời gian bắt đầu",
+    "endDate": "Thời gian kết thúc",
+    "orderNumber": "STT",
+    "partnerList": "Danh sách đối tác",
+    "signTotal": "Tổng đã ký",
+    "unSignTotal": "Tổng chưa ký",
+    "mmTotal": "Tổng MM",
+    "viewReport": "Xem báo cáo",
+    "export": "Xuất excel",
+    "listReport": "Danh sách báo cáo",
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    }
+  }
+}

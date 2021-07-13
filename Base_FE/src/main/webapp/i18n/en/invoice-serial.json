@@ -1,0 +1,56 @@
+{
+  "invoiceSerial": {
+    "title": "Quản lý ký hiệu hóa đơn",
+    "titleParent": "Quản lý phát hành",
+    "title.table": "Danh sách ký hiệu hóa đơn",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "invoiceTemplateId": "Mã mẫu hóa đơn",
+    "invoiceTemplateName": "Tên mẫu hóa đơn",
+    "serialNo": "Ký hiệu hóa đơn",
+    "description": "Ghi chú",
+    "createdDate": "Ngày tạo",
+    "status": "Trạng thái",
+    "invoiceSerial": "ký hiệu hóa đơn",
+    "modal": {
+      "action.deactivate": "Bạn chắc chắn muốn mở khóa ký hiệu hóa đơn?",
+      "action.active": "Bạn chắc chắn muốn khóa ký hiệu hóa đơn",
+      "title": {
+        "add": "Thêm mới ký hiệu hóa đơn",
+        "update": "Cập nhật ký hiệu hóa đơn"
+      }
+    },
+    "validate": {
+      "invoiceSerialName": {
+        "required": "Bạn chưa chọn Tên mẫu hóa đơn"
+      },
+      "serialNo": {
+        "required": "Bạn chưa nhập Ký hiệu hóa đơn",
+        "maxLength": "Ký hiệu không được nhập quá 7 ký tự",
+        "exist": "Ký hiệu hóa đơn [ {{ serialNo }} ] đã tồn tại trên mẫu hóa đơn [ {{invoiceTemplateName}} ], vui lòng nhập lại!",
+        "invalid": "Ký hiệu hóa đơn là ký tự chữ cái không dấu và số"
+      },
+      "status": {
+        "required": "Bạn chưa chọn Trạng thái"
+      },
+      "description": {
+        "maxlength": "Ghi chú không được nhập quá 200 ký tự"
+      }
+    },
+    "toastr": {
+      "title": {
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "error": "Có lỗi xảy ra"
+      },
+      "messages": {
+        "success": {
+          "add": "Thêm mới Ký hiệu hóa đơn thành công!",
+          "update": "Cập nhật Ký hiệu hóa đơn thành công!",
+          "active": "Mở khóa Ký hiệu hóa đơn thành công!",
+          "deactivate": "Khóa Ký hiệu hóa đơn thành công!"
+        }
+      }
+    }
+  }
+}

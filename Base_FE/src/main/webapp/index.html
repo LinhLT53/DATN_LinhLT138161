@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <base href="/"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Quản lý khách sạn</title>
+    <meta name="description" content="Description for InvoiceWebapp">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+<!--    <link rel="icon" type="image/x-icon" href="assets/img/logo_icon.png"/>-->
+    <link rel="manifest" href="manifest.webapp"/>
+    <link rel="stylesheet" href="content/css/loading.css">
+    <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="content/css/pages-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    var global = global || window;
+    var Buffer = Buffer || [];
+    var process = process || {
+      env: { DEBUG: undefined },
+      version: []
+    };
+  </script>
+</head>
+<body class="fixed-header dashboard menu-pin sidebar-visible">
+<!--[if lt IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<jhi-main>
+</jhi-main>
+<noscript>
+    <h1>You must enable javascript to view this page.</h1>
+</noscript>
+<script type="text/javascript" language="javascript">
+    // show an error message if the app loading takes more than 5 sec
+    window.onload = function() {
+        setTimeout(showError, 4000);
+    };
+
+    function showError() {
+        var errorElm = document.getElementById('jhipster-error');
+        if (errorElm && errorElm.style) {
+            errorElm.style.display = 'block';
+        }
+    }
+</script>
+<script src="https://cdn.ckeditor.com/4.10.1/full-all/ckeditor.js"></script>
+</body>
+</html>

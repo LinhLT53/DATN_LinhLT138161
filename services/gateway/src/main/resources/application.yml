@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: project-service
+          uri: lb://project-service
+          predicates:
+          - Path= /project-service/**
+server:
+  port: 8062
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8061/eureka
+    instance:
+      hostname: localhost

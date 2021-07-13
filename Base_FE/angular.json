@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "webapp": {
+      "root": "",
+      "sourceRoot": "src/main/webapp",
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true,
+          "style": "scss"
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        }
+      },
+      "prefix": "jhi",
+      "architect": {
+        "build": {
+          "styles": [
+            "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css"
+          ]
+        }
+      }
+    }
+  },
+  "defaultProject": "webapp",
+  "cli": {
+    "packageManager": "npm",
+    "analytics": "9277a2f4-b02a-4009-95c8-ff9b308d6fcc"
+  }
+}

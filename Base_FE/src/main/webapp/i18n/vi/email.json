@@ -1,0 +1,80 @@
+{
+  "email": {
+    "emailConfig": {
+      "email": "Email",
+      "configCommon": "cấu hình chung",
+      "title": "Cấu hình Email",
+      "titleLowercase": "cấu hình Email",
+      "sampleConfiguration": "Cấu hình mẫu",
+      "nameConfiguration": "Tên cấu hình",
+      "Cc": "Cc",
+      "serverAddress": "Địa chỉ server",
+      "password": "Mật khẩu",
+      "status": "Trạng thái",
+      "userName": "Tên đăng nhập",
+      "Bcc": "Bcc",
+      "port": "Cổng",
+      "confirmPassword": "Nhắc lại mật khẩu",
+      "securityType": "Loại bảo mật",
+      "configEmail": "Cấu hình email",
+      "configFieldExample": "Cấu hình các trường mẫu",
+      "exist": "Bạn có chắc chắn muốn cập nhật cấu hình chung?",
+      "sendEmailCreateInvoice": "Gửi Email khi lập hóa đơn",
+      "sendEmailCreateInvoiceReplace": "Gửi Email khi lập hóa đơn thay thế",
+      "sendEmailCreateInvoiceImpale": "Gửi Email khi lập hóa đơn điều chỉnh",
+      "sendEmailDeleteInvoice": "Gửi Email khi hủy hóa đơn (Xóa bỏ hóa đơn)",
+      "validate": {
+        "sampleConfiguration": {
+          "required": "Bạn chưa chọn Cấu hình mẫu"
+        },
+        "nameConfiguration": {
+          "required": "Bạn chưa nhập Tên cấu hình",
+          "maxLength": "Tên cấu hình không được nhập quá 200 kí tự"
+        },
+        "userName": {
+          "invalid": "Bạn đang nhập sai định dạng Email",
+          "maxLength": "Tên đăng nhập không được nhập quá 200 kí tự",
+          "required": "Bạn chưa nhập Tên đăng nhập"
+        },
+        "cc": {
+          "invalid": "Email có định dạng example@yyy.zzz hoặc example@yyy.zzz.ttt và cách nhau bởi dấu (;)",
+          "maxLength": "Cc không được nhập quá 500 kí tự",
+          "placeholder": "Các email cách nhau bởi dấu chấm phẩy (;)"
+        },
+        "bcc": {
+          "invalid": "Email có định dạng example@yyy.zzz hoặc example@yyy.zzz.ttt và cách nhau bởi dấu (;)",
+          "maxLength": "Bcc không được nhập quá 500 kí tự",
+          "placeholder": "Các Email cách nhau bởi dấu chấm phẩy (;)"
+        },
+        "serverAddress": {
+          "required": "Bạn chưa nhập Địa chỉ Server",
+          "invalid": "Bạn nhập sai định dạng Địa chỉ Server",
+          "maxLength": "Địa chỉ server không được nhập quá 50 kí tự"
+        },
+        "port": {
+          "required": "Bạn chưa nhập Cổng",
+          "maxLength": "Cổng không được nhập quá 10 kí tự"
+        },
+        "password": {
+          "required": "Bạn chưa nhập Password",
+          "maxLength": "Mật khẩu không được nhập quá 50 kí tự"
+        },
+        "confirmPassword": {
+          "required": "Bạn chưa nhập Mật khẩu",
+          "maxLength": "Mật khẩu không được nhập quá 50 kí tự",
+          "invalid": "Mật khẩu không đúng"
+        },
+        "securityType": {
+          "required": "Bạn chưa chọn Loại bảo mật"
+        }
+      }
+    },
+    "fieldSampleConfig": {
+      "title": "Cấu hình các trường mẫu",
+      "titleLowercase": "cấu hình các trường mẫu"
+    }
+  },
+  "decimal": {
+    "maxLength": "không được nhập quá 1 kí tự"
+  }
+}

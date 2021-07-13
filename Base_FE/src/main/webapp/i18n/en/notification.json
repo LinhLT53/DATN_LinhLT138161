@@ -1,0 +1,9 @@
+{
+  "notification": {
+    "hiddenAll": "Ẩn tất cả",
+    "notShowAgain": "Không hiển thị lại",
+    "attachFile": "Tài liệu đính kèm",
+    "time":"Thời gian",
+    "content":"Nội dung"
+  }
+}

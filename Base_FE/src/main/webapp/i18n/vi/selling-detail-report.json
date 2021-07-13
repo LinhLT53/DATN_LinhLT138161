@@ -1,0 +1,73 @@
+{
+  "sellingDetailReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo bán hàng chi tiết",
+    "girdView": "Danh sách hoá đơn",
+    "tenantBranch": "Tên đơn vị",
+    "userName": "Tên người dùng",
+    "year": "Năm",
+    "month": "Tháng",
+    "quarter": "Quý",
+    "fromDate": "Từ ngày lập",
+    "toDate": "Đến ngày lập",
+    "invoiceTemplateName": "Tên mẫu hoá đơn",
+    "originalBill": "Hóa đơn gốc",
+    "customerInformation": "Thông tin khách hàng",
+    "invoiceTemplateNo": "Mẫu số",
+    "serial": "Ký hiệu",
+    "invoiceNo": "Số HĐ",
+    "invoiceSerial": "Số hóa đơn",
+    "createdDateStr": "Ngày lập",
+    "total": "Tổng tiền",
+    "buyerName": "Tên khách hàng",
+    "itemName": "Tên hàng",
+    "buyerUnitName": "Tên đơn vị",
+    "buyerAddress": "Địa chỉ",
+    "buyerCode": "Mã khách hàng",
+    "buyerTaxCode": "MST người mua",
+    "taxCode": "MST đơn vị bán",
+    "formNo": "Mẫu số",
+    "symbol": "Ký hiệu",
+    "issueDate": "Ngày tháng năm phát hành",
+    "invoiceNumber": "Số HĐ",
+    "invoiceType": "Loại hóa đơn",
+    "reportType": "Loại báo cáo",
+    "createDate": "Ngày lập",
+    "createBy": "Người nhập",
+    "status": "Trạng thái",
+    "listInvoice": "Danh sách hóa đơn",
+    "amount": "Số lượng",
+    "price": "Đơn giá",
+    "revenue": "Doanh thu",
+    "button": {
+      "showReport": "Xem báo cáo",
+      "exportExcel": "Xuất excel",
+      "exportPdf": "Xuất Pdf"
+    },
+    "validate": {
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "fromDate": {
+        "required": "Bạn chưa nhập Từ ngày nhập",
+        "invalid": "Từ ngày lập phải nhỏ hơn hoặc bằng đến ngày lập!"
+      },
+      "toDate": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "year": {
+        "required": "Bạn chưa chọn năm"
+      },
+      "quarter": {
+        "required": "Bạn chưa chọn quý"
+      },
+      "month": {
+        "required": "Bạn chưa chọn tháng"
+      },
+      "reportType": {
+        "required": "Bạn chưa chọn loại báo cáo"
+      },
+      "invalidDate": "Khoảng cách xuất báo cáo theo ngày không được vượt quá 6 tháng!"
+    }
+  }
+}

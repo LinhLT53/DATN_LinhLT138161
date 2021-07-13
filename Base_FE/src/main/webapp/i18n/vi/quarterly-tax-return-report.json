@@ -1,0 +1,23 @@
+{
+  "quarterlyTaxReturnReport": {
+    "title": "Báo cáo hoá đơn hoàn thuế theo quý",
+    "titleParent": "Báo cáo",
+    "tenantBranch": "Tên đơn vị",
+    "year": "Năm",
+    "quarter": "Quý",
+    "invoiceType": "Loại hoá đơn",
+    "invoiceTemplateName": "Tên mẫu hoá đơn",
+    "serial": "Ký hiệu",
+    "validate": {
+      "year": {
+        "required": "Bạn chưa chọn Năm"
+      },
+      "quarter": {
+        "required": "Bạn chưa chọn Quý"
+      },
+      "invoiceType": {
+        "required": "Bạn chưa chọn Loại hoá đơn"
+      }
+    }
+  }
+}

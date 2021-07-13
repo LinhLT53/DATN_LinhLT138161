@@ -1,0 +1,33 @@
+{
+  "partnerResources": {
+    "titleTable": "Nguồn lực đối tác",
+    "numericalOrder": "STT",
+    "action": "Hành động",
+    "timeOfEvaluation": "Thời điểm đánh giá",
+    "generalPersonnel": "Tổng nhân sự",
+    "qualityPersonnel": "Chất lượng nhân sự",
+    "totalPersonnelDHCNTT": "Số lượng nhân sự có bằng DHCNTT",
+    "totalPersonnelCertificate": "Số lượng nhân sự có chứng chỉ lập trình (Microsoft, Oracle, IBM, Amazon,...)",
+    "totalPersonnelTester": "Số lượng nhân sự có chứng chỉ kiểm thử (ISTQB,...)",
+    "totalPersonnelQTDA": "Số lượng nhân sự có chứng chỉ QTDA (PMP, Scrum Master)",
+    "humanResourceTrainingProgram": "Chương trình đào tạo nhân sự",
+    "numberPersonnelTrained": "Số lượng nhân sự đã được đào tạo",
+    "personnelInvolvedEvaluation": "Nhân sự tham gia dánh giá",
+    "pointEvaluation": "Điểm đánh giá",
+    "note": "Ghi chú",
+
+    "errorTimeEvaluation": "Trường thời diểm đánh giá phải được chọn",
+    "errorTotalPersonnelEmpty": "Trường tổng nhân sự không thể bỏ trống",
+
+    "errorTotalPersonnelPositive": "Trường tổng nhân sự phải là số nguyên dương",
+
+    "errorNumberDHCNTTPersonnelPositive": "Trường số lượng nhân sự có bằng CNTT phải là số nguyên dương",
+
+    "errorNumberProgrammingCertifiedPersonnelPositive": "Trường số lượng nhân sự có chứng chỉ lập trình phải là số nguyên dương",
+
+    "errorNumberTestCertifiedPersonnel": "Trường số lượng nhân sự có chứng chỉ kiểm thử phải là số nguyên dương",
+    "errorNumberQTDACertifiedPersonnel": "Trương số lượng nhân sự có chứng chỉ QTDA phải là số nguyên dương",
+    "errorNumberTrainedPersonnel": "Trường số lượng nhân sự đã được đào tạo phải là số nguyên dương",
+    "errorScoreEvaluation": "Trường điểm đánh giá phải là số nguyên dương và nhỏ hơn 80 và phần thập phân tối đa là 2"
+  }
+}

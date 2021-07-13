@@ -1,0 +1,32 @@
+{
+  "totalPersonnelVts": {
+    "titleTable": "Tổng nhân sự sẵn sàng tham gia dự án VTS",
+    "titleTable1": "Tổng nhân sự sản xuất",
+    "numericalOrder": "STT",
+    "action": "Hành động",
+    "timeOfEvaluation": "Thời điểm đánh giá",
+    "purpose": "Mục đích",
+    "generalPersonnel": "Tổng nhân sự",
+    "ba": "BA",
+    "dev": "Dev",
+    "tester": "Tester",
+    "total": "Tổng",
+    "expert": "Chuyên gia",
+    "experience": "Kinh nghiệm",
+    "basic": "Cơ bản",
+
+    "errorTimeEvaluation": "Trường thời điểm đánh giá phải được chọn",
+    "errorTotalPersonnel": "Trường tổng nhân sự phải là số nguyên dương",
+    "errorBaExpert": "Trường BA có trình độ chuyên gia phải là số nguyên dương",
+    "errorBaExperient": "Trường BA có kinh nghiệm phải là số nguyên dương",
+    "errorBaBasic": "Trường BA có trình độ cơ bản phải là số nguyên dương",
+
+    "errorDevExpert": "Trường Dev có trình độ chuyên gia phải là số nguyên dương",
+    "errorDevExperience": "Trường Dev có kinh nghiệm phải là số nguyên dương",
+    "errorDevBasic": "Trường Dev có trình độ cơ bản phải là số nguyên dương",
+
+    "errorTesterExpert": "Trường Tester có trình độ chuyên gia phải là số nguyên dương",
+    "errorTesterExperience": "Trường Tester có kinh nghiệm phải là số nguyên dương",
+    "errorTesterBasic": "Trường Tester có trình độ cơ bản phải là số nguyên dương"
+  }
+}

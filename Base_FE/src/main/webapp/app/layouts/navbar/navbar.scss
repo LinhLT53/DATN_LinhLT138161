@@ -1,0 +1,203 @@
+@import '~bootstrap/scss/functions';
+@import '~bootswatch/dist/minty/variables';
+@import '~bootstrap/scss/variables';
+
+/* ==========================================================================
+Navbar
+========================================================================== */
+
+.navbar-version {
+  font-size: 0.65em;
+  color: $navbar-dark-color;
+}
+
+.font-text {
+  font-family: Open+Sans, SansSerif;
+  color: black;
+}
+
+.profile-image {
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.navbar {
+  padding: 0.2rem 1rem;
+
+  .dropdown-item.active,
+  .dropdown-item.active:focus,
+  .dropdown-item.active:hover {
+    background-color: $dark;
+  }
+
+  ul.navbar-nav {
+    .nav-item {
+      margin-left: 0.5em;
+    }
+  }
+
+  a.nav-link {
+    font-weight: 400;
+  }
+
+  .navbar-toggler {
+    &:hover {
+      color: $navbar-dark-hover-color;
+    }
+  }
+}
+.a-custom {
+  color: #007bff !important;
+  text-decoration: underline !important;
+}
+
+.header .notification-list {
+  border: none;
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.logo-img {
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
+  background-size: contain;
+}
+
+.fa.icon-logo {
+  font-size: x-large;
+}
+
+/*dangnp*/
+.notification {
+  background-color: #ffffff;
+  color: black;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  left: 90px;
+}
+
+.notification .badge {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size : 10px;
+}
+.fa-bell-o{
+  font-size : 25px;
+}
+.dropdown-menu{
+  width: 500px;
+  padding-left: 30px;
+}
+
+//test
+/* CSS used here will be applied after bootstrap.css */
+
+.dropdown {
+  display:inline-block;
+  margin-left:20px;
+  padding:10px;
+}
+
+
+.glyphicon-bell {
+
+  font-size:1.5rem;
+}
+
+.notifications {
+  min-width:420px;
+}
+
+.notifications-wrapper {
+  overflow:auto;
+  max-height: 600px;
+}
+
+.menu-title {
+  color: red;
+  font-size:17px;
+  display:inline-block;
+  color: #0273d4;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.glyphicon-circle-arrow-right {
+  margin-left:10px;
+}
+
+
+.notification-heading{
+  padding:2px 10px;
+  background-color: #0273d4;
+}
+
+.dropdown-menu-bar  {
+  font-family: Open+Sans, SansSerif !important;
+  font-size: 14px!important;
+  width: 325px !important;
+  padding-left: 0px !important;
+}
+
+.name-text{
+  display: block;
+  text-align: right;
+  color: black;
+}
+
+.content-text {
+  padding-left: 6px;
+  display: block;
+  text-align: left;
+  color: black;
+}
+
+
+.dropdown-menu.divider {
+  margin:5px 0;
+}
+
+.item-title {
+
+  font-size:1.3rem;
+  color:#000;
+  font-size: 16px;
+
+}
+
+.notifications a.content {
+  text-decoration:none;
+  background:#ccc;
+
+}
+
+.notification-item {
+  padding:10px;
+  margin:5px;
+  border-radius:4px;
+  border-top: #e5eaf2 solid 1px;
+}
+
+ul.dropdown-menu.notifications.show{
+  transform: translate3d(-349px, 65px, 0px) !important;
+  padding: 0;
+}
+
+
+
+
+
+
+

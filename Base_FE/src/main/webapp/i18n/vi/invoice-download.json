@@ -1,0 +1,33 @@
+{
+    "invoiceDownload": {
+        "modal": {
+            "title": "Tải nhiều hóa đơn",
+            "id": "Nhà cung cấp",
+            "templateId": "Mẫu hóa đơn",
+            "seri": "Ký hiệu hóa đơn",
+            "start": "Từ số",
+            "end": "Đến số",
+            "fileType": "Loại file",
+            "validate": {
+                "id": {
+                    "required": "Bạn chưa chọn Nhà cung cấp"
+                },
+                "templateId": {
+                    "required": "Bạn chưa chọn Mẫu hóa đơn"
+                },
+                "seri": {
+                    "required": "Bạn chưa chọn Ký hiệu hóa đơn"
+                },
+                "start": {
+                    "required": "Bạn chưa nhập Từ số"
+                },
+                "end": {
+                    "required": "Bạn chưa nhập Đến số"
+                },
+                "fileType": {
+                    "required": "Bạn chưa chọn Loại file"
+                }
+            }
+        }
+    }
+}

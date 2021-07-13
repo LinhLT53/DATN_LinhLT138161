@@ -1,0 +1,51 @@
+{
+  "userGroup": {
+    "title": "Quản lý nhóm người dùng",
+    "titleParent": "Danh mục hệ thống",
+    "titleTable": "Kết quả tìm kiếm",
+    "orderNumber": "STT",
+    "userGroupCode": "Mã nhóm",
+    "userGroup": "Nhóm người dùng",
+    "userGroupName": "Nhóm ",
+    "action": "Hành động",
+    "description": "Mô tả",
+    "note": "Ghi chú",
+    "tableAddUser": {
+      "email": "Acc email",
+      "organization": "Đơn vị"
+    },
+    "card": {
+      "title": "Danh sách người dùng"
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới nhóm người dùng",
+        "update": "Cập nhật nhóm người dùng",
+        "detail": "Xem thông tin nhóm người dùng",
+        "auth": "Phân quyền nhóm người dùng",
+        "deleteSucc": "nhóm người dùng"
+      },
+      "confirm": {
+        "title": "Nhóm người dùng"
+      },
+      "validate": {
+        "required": {
+          "code": "Mã nhóm bắt buộc nhập",
+          "name": "Tên nhóm bắt buộc nhập",
+          "existCode": "Mã nhóm người dùng [ {{groupUserCode}} ] đã tồn tại trên hệ thống, vui lòng nhập lại"
+        }
+      }
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "add": "Thêm người dùng thành công!",
+          "permission": "Phân quyền nhóm người dùng thành công!"
+        },
+        "error": {
+          "permission": "Có lỗi của hệ thống"
+        }
+      }
+    }
+  }
+}

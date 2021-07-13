@@ -1,0 +1,23 @@
+<div class="input-group mr-2" >
+  <input #input type="text" [ngClass]="ngControl?.valid ? 'ng-valid' : 'ng-invalid'" class="form-control"
+         [ngModel]="dateString" (change)="onInputChange($event)" [disabled]='disabled' jhiAutoFocusField
+         [autofocus]="isFocus"/>
+  <div class="input-group-append">
+    <button class="btn calendar" [ngbPopover]="calendarContent" [disabled]='disabled' type="button">
+      <i class="pg-calender"></i>
+    </button>
+  </div>
+</div>
+<ng-template #calendarContent>
+  <div>
+    <ngb-datepicker #dateTimepicker name="dateTimepicker" [ngModel]="datetime" (select)="onDateChange($event)"
+                    [minDate]="minDate" [maxDate]="maxDate">
+    </ngb-datepicker>
+    <div class="mt-auto">
+      <ngb-timepicker #timepicker name="timepicker" [ngModel]="datetime" (ngModelChange)="onTimeChange($event)"
+                      [disabled]="disabledTime"
+                      [hourStep]="hourStep" [minuteStep]="minuteStep" [secondStep]="secondStep" [seconds]="seconds">
+      </ngb-timepicker>
+    </div>
+  </div>
+</ng-template>

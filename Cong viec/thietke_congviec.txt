@@ -1,0 +1,46 @@
+Đặt phòng
+	đặt phòng	Thảo	Khang xây giao diện
+	đổi phòng	Thảo
+	thanh toán	Khang
+	chi tiết	Thảo
+	hủy			Thảo
+	Bảo dưỡng	Thảo
+	Gia hạn (chỉ mở trường ngày dự kiến đi)		Thảo
+	Tích thêm khách hàng khi chưa có trong db
+Quản lý nhân viên	Thảo
+	thêm
+	xóa
+	sửa
+Quản lý khách hàng	Thảo
+	thêm
+	sửa
+	xóa
+Quản lý loại phòng	Tân
+	thêm
+	sửa
+	xóa
+Quản lý dịch vụ		Tân
+	thêm
+	sửa
+	xóa
+Quản lý phòng		Tân
+	thêm
+	sửa
+	xóa
+Tài sản				Tân
+	thêm
+	sửa
+	xóa
+Phân quyền			Chốt lại
+	Hỏi Chính
+Login, đổi mk, quên mk		Khang
+	đã xong
+	Bổ sung giới hạn số lần đăng nhập
+	Nếu nhập sai quá 5 lần - khóa 10p	Khang
+Thống kê			Khang
+
+Job chạy ngầm		Khang
+	1 ngày 1 lần
+	chạy vào 0h
+Support-Hỗ trợ		Khang
+	

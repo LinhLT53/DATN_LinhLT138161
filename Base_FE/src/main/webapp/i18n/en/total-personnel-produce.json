@@ -1,0 +1,16 @@
+{
+  "totalPersonnelVts": {
+    "titleTable": "Tổng nhân sự sản xuất",
+    "numericalOrder": "STT",
+    "action": "Hành động",
+    "timeOfEvaluation": "Thời điểm đánh giá",
+    "generalPersonnel": "Tổng nhân sự",
+    "ba": "BA",
+    "dev": "Dev",
+    "tester": "Tester",
+    "total": "Tổng",
+    "expert": "Chuyên gia",
+    "experience": "Kinh nghiệm",
+    "basic": "Cơ bản"
+  }
+}

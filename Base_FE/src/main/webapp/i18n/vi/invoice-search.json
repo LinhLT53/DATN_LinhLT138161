@@ -1,0 +1,44 @@
+{
+  "invoiceSearch": {
+    "titleParent": "Tiện ích",
+    "title": "Tra cứu hóa đơn",
+    "supplierTaxCode": "MST bên bán",
+    "captcha": "Mã bảo mật",
+    "invoiceNo": "Số hóa đơn",
+    "reservationCode": "Mã số bí mật",
+    "notFoundInvoice": "Không tìm thấy hóa đơn",
+    "validate": {
+      "supplierTaxCode": {
+        "required": "Bạn chưa nhập MST bên bán",
+        "maxlength": "MST bên bán không được quá 20 ký tự"
+      },
+      "reservationCode": {
+        "required": "Bạn chưa nhập Mã số bí mật",
+        "maxlength": "Mã số bí mật không được quá 20 ký tự"
+      },
+      "recaptcha": {
+        "required": "Bạn chưa xác thực mã Captcha"
+      },
+      "invoiceNo": {
+        "maxlength": "Số hóa đơn không được quá 20 ký tự"
+      }
+    },
+    "button": {
+      "buyerSign": "Người mua ký",
+      "downloadPdf": "Tải về file PDF",
+      "downloadZip": "Tải về file Zip",
+      "print": "In",
+      "downloadDigitalCertificate": "Tải chứng thư số"
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "sign": "Ký hóa đơn thành công!"
+        },
+        "warning": {
+          "sign": "Không thể thực hiện ký hóa đơn, mã số thuế của đơn vị không trùng khớp với hóa đơn!"
+        }
+      }
+    }
+  }
+}

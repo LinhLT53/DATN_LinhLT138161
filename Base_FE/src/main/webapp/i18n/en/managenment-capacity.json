@@ -1,0 +1,16 @@
+{
+  "managementCapacity": {
+    "titleTable": "Năng lực quản lý chất lượng",
+    "numericalOrder": "STT",
+    "action": "Hành động",
+    "timeOfEvaluation": "Thời điểm đánh giá",
+    "levelDevelopmentProcessGrowth": "Mức độ tăng trưởng quy trình phát triền",
+    "projectManagementTool": "Công cụ quản lý dự án",
+    "measurementCriteria": "Các chỉ tiêu đo lường",
+    "reportingMechanism": "Cơ chế đánh giá",
+    "pointEvaluation": "Điểm đánh giá",
+    "note": "Ghi chú",
+    "staffEvaluation": "Nhân sự tham gia đánh giá",
+    "errorScoreEvaluation": "Trường điểm đánh giá chỉ cho phép nhập số nguyên dương, phần thập phân sau số thập phân 2 số và tối đa 400 điểm"
+  }
+}

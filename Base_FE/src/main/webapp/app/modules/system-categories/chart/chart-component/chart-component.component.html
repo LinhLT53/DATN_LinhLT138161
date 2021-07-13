@@ -1,0 +1,153 @@
+<jhi-spinner></jhi-spinner>
+
+
+
+<perfect-scrollbar class="ps" [style.max-height.px]="heighsize" (window:resize)="onResize()">
+
+  <div>
+    <div style="display: flex;background-color: #ffffff;padding-top: 1%;">
+      <div class="col-md-1"></div>
+      <div class="col-md-1">
+        <div style="padding-left: 15%;">
+          <div>
+            <span style="font-size: 2.4rem; color: #0893e1; margin-right: 10px;">
+              <i class="fa fa-angle-left" (click)="back()"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6"><p style="font-size: 20px;padding-top: 2%;font-family: Open+Sans; text-align: center">BIỂU
+        ĐỒ DOANH SỐ THEO -{{this.xetQuy()}}  Năm {{this.form.get("lstQuy").value[0]?this.form.get("lstQuy").value[0]:this.form.get("lstQuy").value}}</p></div>
+      <div class="col-md-1">
+        <span style="font-size: 2.4rem; color: #0893e1; margin-right: 10px;padding-left: 50%;">
+          <i class="fa fa-angle-right" (click)="next()"></i></span>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div>
+      <!-- <google-chart
+        [type]="type"
+        [data]="data"
+        [options]="options"
+        [height]="height*0.7"
+        [width]="width*0.85"
+        [columns]="columns123"
+        (select)="test($event)"
+        (click)="test1234($event)"
+        (mouseover)="test12($event)"
+        >
+        
+      </google-chart> -->
+      <!-- <google-chart
+      [type]="type"
+      [data]="data"
+      [options]="options"
+      [height]="height*0.7"
+      [width]="width*0.85"
+      [columns]="columns123"
+      >
+    </google-chart> -->
+    <div #chart class="col-md-9">
+        <google-chart
+       [type]="type"
+       [data]="data"
+       [options]="options"
+       [height]="height*0.7"
+       [width]="1000"
+       [columns]="columns123"
+       >
+     </google-chart>
+     </div>
+      <div #chart style="padding-top: 2%"></div>
+    </div>
+    <div>
+      <div>
+        <form [formGroup]="form" novalidate autocomplete="off">
+          <div class="col-md-12">
+            <div class="form-group row" style="display: flex;">
+              <div class="col-sm-1"></div>
+              <!-- <div class="col-sm-1" style="text-align: center;">
+                <span style="font-size: 1.6rem; color: #0893e1; margin-right: 10px;"><i class="fa fa-filter"
+                                                                                        (click)="handleClickNam()"></i></span>
+              </div> -->
+              <div class="col-sm-3" style="display: inherit;">
+                <div class="col-sm-1" style="display: flex;align-items: center;justify-content: flex-end;">Quý</div>
+                <ng-select class="cursor-text scroll-ng-select col-md-10" style=" padding-left: 2%;"
+                           bindLabel="name" formControlName="lstMajorId" bindValue="id"
+                           notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                           placeholder="{{ 'common.select.option.default' | translate }}"
+                           clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                           [items]="dataQuy"
+                           [multiple]="true"
+                           (change)="getDataChart()"
+                >
+                  <!--          (change)="handleClick($event)"-->
+                </ng-select>
+              </div>
+              <div class="col-md-4" style="display: inherit;">
+                <div class="col-md-2" style="display: flex;align-items: center;justify-content: flex-end;">Năm</div>
+                <!--                <div class="col-md-3" style=" padding-left: 2%;">-->
+                <!--                  <input type="number" min="2010" class="form-control" formControlName="nam" value="2020"-->
+                <!--                         jhiAutoFocusField placeholder="Nhập vào số năm kinh nghiệm">-->
+                <!--                </div>-->
+                <ng-select class="cursor-text scroll-ng-select col-md-4" style=" padding-left: 2%;"
+                           bindLabel="value" formControlName="lstQuy" bindValue="value"
+                           notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                           placeholder="{{ 'common.select.option.default' | translate }}"
+                           clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                           [items]="nam"
+                           [multiple]="false"
+                           (change)="getDataChart()"
+                >
+                </ng-select>
+              </div>
+              <div class="col-sm-2">
+                <!--      <input type="text" formControlName="dateGraduate" class="form-control"-->
+                <!--              (blur)="dateGraduate()" [minLength]=2010/>-->
+              </div>
+            </div>
+          </div>
+        </form>
+        <!--        <button (click)="button1()">123</button>-->
+      </div>
+    </div>
+  </div>
+  <!--  <div style="background-color: red">123</div>-->
+
+</perfect-scrollbar>
+<style>
+  .back:hover {
+    background-color: yellow;
+  }
+
+  .fa.fa-angle-left:hover {
+    /*color: #0f0f0f;*/
+    background-color: #80bdff;
+    cursor: pointer
+  }
+
+  .fa.fa-angle-right:hover {
+    /*color: #0f0f0f;*/
+    background-color: #80bdff;
+    cursor: pointer
+  }
+
+  .ps {
+    position: fixed;
+  }
+
+  .fa.fa-filter:hover {
+    /*color: #0f0f0f;*/
+    background-color: #80bdff;
+    cursor: pointer
+
+  }
+
+  .google-visualization-tooltip {
+    background-color: yellow !important;
+    border: 2px solid cyan !important;
+  }
+
+  .google-visualization-tooltip span {
+    color: magenta !important;
+  }
+</style>

@@ -1,0 +1,52 @@
+{
+  "organizationCategories": {
+    "organization": "Đơn vị",
+    "title": "Danh mục đơn vị",
+    "titleParent": "Danh mục hệ thống",
+    "titleTable": "Kết quả tìm kiếm",
+    "orderNumber": "STT",
+    "codeOrganization": "Mã đơn vị",
+    "nameOrganization": "Tên đơn vị",
+    "groupOrganization": "Nhóm đơn vị",
+    "parentOrganization": "Đơn vị cha",
+    "modal": {
+      "title": {
+        "add": "Thêm mới danh mục đơn vị",
+        "update": "Sửa danh mục đơn vị"
+      }
+    },
+    "validate": {
+      "code": {
+        "duplicate": "Mã đơn vị đã tồn tại trong hệ thống",
+        "codeRequire": "Mã đơn vị là bắt buộc",
+        "maxlength": "Mã đơn vị không được quá 255 ký tự",
+        "specialCharacters": "Mã đơn vị không chứa ký tự đặc biệt"
+      },
+      "name": {
+        "duplicate": "Tên đơn vị đã tồn tại trong hệ thống",
+        "nameRequire": "Tên đơn vị là bắt buộc",
+        "maxlength": "Tên đơn vị không được quá 255 ký tự",
+        "specialCharacters": "Tên đơn vị không chứa ký tự đặc biệt"
+      },
+      "description": {
+        "maxlength": "Mô tả đơn vị không được quá 255 ký tự"
+      },
+      "note": {
+        "maxlength": "Ghi chú đơn vị không được quá 255 ký tự"
+      },
+      "parent": {
+        "parentRequire": "Đơn vị cha là bắt buộc"
+      },
+      "group": {
+        "groupRequire": "Nhóm đơn vị là bắt buộc"
+      }
+    },
+    "action": {
+      "add": "Danh mục đơn vị ",
+      "update": "Danh mục đơn vị ",
+      "delete": "Danh mục đơn vị",
+      "import": " Danh mục đơn vị",
+      "fileExcel": "File Excel"
+    }
+  }
+}

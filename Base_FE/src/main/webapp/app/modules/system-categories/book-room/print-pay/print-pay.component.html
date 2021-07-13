@@ -1,0 +1,68 @@
+<div class="modal-import" jhiModalDrag [handle]="handle">
+    <div class="modal-header" #handle>
+      <h5 class="modal-title mt-0">{{title}}</h5>
+      <button #closeBtn type="button" class="close" aria-label="Close" (click)="onCancel()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div>
+    <div style="overflow-y: auto; height: 300px;overflow-x: hidden;" id="modal-body1">
+        <div class="row" style="padding: 10px 20px 0 20px;">
+         <div class="col-md-4">
+            <img src="../../../../../assets/img/bk-rgb.jpg" style="width: 40px;height: 80px;"/>
+        </div>
+        <div class="col-md-8">
+            <p>aaaaa</p>
+            <p>aaaaa</p>
+            <p>aaaaa</p>
+        </div>
+        </div>   
+        <div><p class="textcenter">Khach Sạn Abcd</p></div>      
+        <p class="textcenter">Phong So 358</p>
+        <div class="row" style="padding: 10px 20px 0 20px;">
+       
+            <table class="table table-bordered table-hover table-striped" id="tableCustoms">
+              <thead>
+              <tr class="text-center" jhiSort [(predicate)]="predicate" [(ascending)]="reverse">
+                <th scope="col" style="width: 10%" jhiTranslate="userGroup.orderNumber">STT</th>
+                <th class="large-width-table" style="width: 10%"><span>Tên</span>
+                </th>
+                <th class="large-width-table"style="width: 7%"><span>SL</span>
+                </th>
+                <th class="large-width-table"  style="width: 15%"><span>Đ.giá</span>
+                </th>
+               
+                <th class="large-width-table"  style="width:15%"><span>T.Tiền</span>
+                </th>
+                
+              </tr>
+              </thead>
+              <tbody *ngFor="let item of dataShowTable; index as i">
+              <tr>
+                <td>{{i+1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.sum}}</td>
+              </tr>
+              </tbody>
+            </table>
+         
+         
+        </div>
+        <div class="textrigtr"><p>Tổng : {{sumService}}</p></div>
+        <div class="textrigtr"><p>Thời gian : {{this.datepipe.transform(date,"yyyy-MM-dd hh:mm")}}</p></div>
+        <div class="textrigtr"><p>Tiền Phòng : {{this.sumBook}}</p></div>
+        <div class="textrigtr"><p>Giảm giá phòng: {{dataDiscount?dataDiscount.percentPromotion:0}}%</p></div>
+        <div class="textrigtr"><p>Tổng thanh toán : {{sumbill}}</p></div>
+        <div class="textrigtr"><p>Phụ thu : {{sumbill}}</p></div>
+        <div class="textrigtr"><p>Tiền ứng: {{sumbill}}</p></div>
+        <div class="textrigtr"><b>Phải Trả: {{sumbill}}</b></div>
+        <div>Ngày {{date.getUTCDay()}} Tháng {{date.getMonth()}} Năm {{date.getFullYear()}}</div>
+        
+    </div>
+    <button class="btn btn-primary" printTitle="MyTitle"  
+    printSectionId="modal-body1"  
+    ngxPrint>In Qr</button>
+</div>
+    

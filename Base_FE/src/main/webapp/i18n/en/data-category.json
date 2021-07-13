@@ -1,0 +1,85 @@
+{
+  "dataCategories": {
+    "webTitle": "Khởi tạo danh mục dữ liệu",
+    "serialNo": "Danh mục hệ thống",
+    "title": "Danh mục dữ liệu",
+    "importTitle": "Tên File",
+    "searchForm": {
+      "title": "Kết quả tìm kiếm",
+      "code": "Mã danh mục",
+      "name": "Tên danh mục",
+      "type": "Loại danh mục"
+    },
+    "listData": {
+      "code": "Mã danh mục dữ liệu",
+      "name": "Tên danh mục dữ liệu",
+      "type": "Loại danh mục dữ liệu"
+    },
+    "createData": {
+      "add": "Thêm danh mục dữ liệu",
+      "update": "Sửa danh mục dữ liệu",
+      "code": "Mã danh mục",
+      "name": "Tên danh mục",
+      "description": "Mô tả",
+      "note": "Ghi chú",
+      "type": "Loại danh mục"
+    },
+    "validation": {
+      "action": {
+        "delete": "Dữ liệu đã được sử dụng, không được phép xóa"
+      },
+      "code": {
+        "codeRequire": "Mã danh mục là bắt buộc",
+        "minLength": "Mã danh mục phải có từ 4 ký tự",
+        "whiteSpace": "Mã danh mục không tất là khoảng trắng",
+        "specialCharacters": "Mã danh mục không hợp lệ",
+        "duplicate": "Mã danh mục đã tồn tại trong hệ thống",
+        "maxlength": "Mã danh mục không quá 20 ký tự"
+      },
+      "name": {
+        "nameRequire": "Tên danh mục là bắt buộc",
+        "whiteSpace": "Tên danh mục không tất là khoảng trắng",
+        "specialCharacters": "Tên danh mục không chứa ký tự đặc biệt",
+        "maxlength": "Tên danh mục không quá 250 ký tự"
+      },
+      "description": {
+        "maxlength": "Mô tả không quá 255 ký tự"
+      },
+      "note": {
+        "maxlength": "Ghi chú không quá 255 ký tự"
+      },
+      "type": {
+        "required": "Loại danh mục là bắt buộc"
+      },
+      "import": "Loại File .xlsx,. xls dung lượng tối đa: 5MB"
+    },
+    "action": {
+      "title": "Hành Động",
+      "add": "Danh mục dữ liệu ",
+      "update": "Danh mục dữ liệu ",
+      "delete": "tài liệu",
+      "import": " danh mục dữ liệu",
+      "fileExcel": "File Excel"
+    },
+    "toastr": {
+      "title": {
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "info": "Thông báo",
+        "error": "Có lỗi xảy ra"
+      },
+      "messages": {
+        "success": {
+          "add": "Thêm mới người dùng thành công!",
+          "update": "Cập nhật người dùng thành công!",
+          "delete": "Xóa tài liệu thành công!"
+        },
+        "warning": "Warning",
+        "error": {
+          "add": "Đã có lỗi xảy ra, hệ thống không thể lưu bản ghi",
+          "delete": "Đã có lỗi xảy ra, hệ thống không thể xóa tài liệu"
+        }
+      }
+    }
+  }
+}

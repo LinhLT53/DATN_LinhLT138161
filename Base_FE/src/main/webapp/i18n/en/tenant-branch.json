@@ -1,0 +1,104 @@
+{
+  "tenantBranch": {
+    "title": "Quản lý chi nhánh",
+    "titleParent": "Danh mục",
+    "tenantBranch": "chi nhánh",
+    "title.table": "Danh sách chi nhánh",
+    "code": "Mã chi nhánh",
+    "name": "Tên chi nhánh",
+    "parentSupplierId": "Chi nhánh cha",
+    "taxCode": "Mã số thuế chi nhánh",
+    "address": "Địa chỉ",
+    "representative": "Người đại diện",
+    "representativeIdTypeName": "Loại giấy tờ",
+    "representativeIdNo": "Số giấy tờ",
+    "bankName": "Tên ngân hàng",
+    "bankAccount": "Số tài khoản",
+    "bankAccountOwner": "Chủ tài khoản",
+    "contactPersonName": "Người liên hệ",
+    "website": "Website",
+    "email": "Địa chỉ email",
+    "phoneNumber": "Số điện thoại",
+    "faxNumber": "Số Fax",
+    "description": "Mô tả",
+    "status": "Trạng thái",
+    "status.active": "Hoạt động",
+    "status.deactivate": "Ngừng hoạt động",
+    "validate": {
+      "code": {
+        "maxlength": "Mã chi nhánh chỉ nhập tối đa 100 ký tự.",
+        "exist": "Mã chi nhánh [ {{ codeError }} ] đã tồn tại!"
+      },
+      "name": {
+        "required": "Bạn chưa nhập Tên chi nhánh.",
+        "maxlength": "Tên chi nhánh không được quá 800 ký tự."
+      },
+      "parentSupplierId": {
+        "required": " Bạn chưa chọn Đơn vị cha."
+      },
+      "taxCode": {
+        "invalidFormat": "Mã số thuế không đúng định dạng, bạn vui lòng nhập lại!",
+        "maxlength": "Mã số thuế chỉ nhập tối đa 20 ký tự.",
+        "checkDuplicate": "Mã số thuế chi nhánh không trùng khớp với chi nhánh cha!",
+        "invalidToast": "Mã số thuế không đúng định dạng"
+      },
+      "address": {
+        "required": " Bạn chưa nhập Địa chỉ.",
+        "maxlength": "Địa chỉ chỉ nhập tối đa 800 ký tự."
+      },
+      "representative": {
+        "required": "Bạn chưa nhập Người đại diện.",
+        "maxlength": "Người đại diện chỉ nhập tối đa 400 ký tự.",
+        "invalid": "Người đại diện là chữ cái, chữ số và các ký tự dấu cách _ và -"
+      },
+      "representativeIdType": {
+        "required": "Bạn chưa chọn Loại giấy tờ."
+      },
+      "representativeIdNo": {
+        "required": "Bạn chưa nhập Số giấy tờ.",
+        "maxlength": "Số giấy tờ chỉ nhập tối đa 100 ký tự.",
+        "invalid": "Số giấy tờ là chữ cái không dấu, chữ số và các ký tự _ và -"
+      },
+      "bankName": {
+        "maxlength": "Tên ngân hàng chỉ nhập tối đa 400 ký tự.",
+        "invalid": "Tên ngân hàng là chữ cái, chữ số và các ký tự dấu cách _ và -"
+      },
+      "bankAccount": {
+        "maxlength": "Số tài khoản chỉ nhập tối đa 200 ký tự."
+      },
+      "bankAccountOwner": {
+        "maxlength": "Chủ tài khoản chỉ nhập tối đa 400 ký tự.",
+        "invalid": "Chủ tài khoản là chữ cái, chữ số và các ký tự dấu cách _ và -"
+      },
+      "contactPersonName": {
+        "maxlength": "Người liên hệ chỉ nhập tối đa 400 ký tự.",
+        "invalid": "Người liên hệ là chữ cái, chữ số và các ký tự dấu cách _ và -"
+      },
+      "website": {
+        "maxlength": "Website chỉ nhập tối đa 200 ký tự."
+      },
+      "email": {
+        "maxlength": "Email chỉ nhập tối đa 50 ký tự.",
+        "invalid": "Bạn đang nhập sai định dạng Email"
+      },
+      "phoneNumber": {
+        "required": "Bạn chưa nhập Số điện thoại.",
+        "maxlength": "Số điện thoại chỉ nhập tối đa 50 ký tự."
+      },
+      "faxNumber": {
+        "maxlength": "Số Fax chỉ nhập tối đa 50 ký tự."
+      },
+      "description": {
+        "maxlength": "Mô tả chỉ nhập tối đa 2000 ký tự."
+      },
+      "statusNotSelect": "Bạn chưa chọn trạng thái"
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới chi nhánh",
+        "update": "Cập nhật chi nhánh",
+        "detail": "Xem thông tin chi nhánh"
+      }
+    }
+  }
+}

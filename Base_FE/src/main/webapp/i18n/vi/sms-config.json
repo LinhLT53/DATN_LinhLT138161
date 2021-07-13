@@ -1,0 +1,29 @@
+{
+  "smsConfig": {
+    "title": "Cấu hình SMS",
+    "step1": {
+      "title": "Cấu hình SMS",
+      "titleLowercase": "cấu hình SMS",
+      "cpCode": "Mã CP",
+      "status": "Trạng thái",
+      "branchName": "Tên thương hiệu",
+      "smsInvoice": "Gửi SMS khi lập hóa đơn",
+      "smsReplace": "Gửi SMS khi lập hóa đơn thay thế",
+      "smsConfig": "Gửi SMS khi lập hóa đơn điều chỉnh",
+      "smsCancel": "Gửi SMS khi hủy hóa đơn (Xóa bỏ hóa đơn)",
+      "statusInvalid": "Bạn chưa chọn trạng thái"
+    },
+    "step2": {
+      "title": "Cấu hình SMS từng loại hóa đơn",
+      "titleLowercase": "cấu hình SMS từng loại hóa đơn",
+      "smsInvoice": "Cấu hình SMS hóa đơn",
+      "smsReplace": "Cấu hình SMS hóa đơn thay thế",
+      "smsConfig": "Cấu hình SMS hóa đơn điều chỉnh",
+      "smsCancel": "Cấu hình SMS hóa đơn hủy",
+      "header": "Header",
+      "smsContent": "Nội dung SMS",
+      "footer": "Footer",
+      "preview": "Xem trước nội dung"
+    }
+  }
+}

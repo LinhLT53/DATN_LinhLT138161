@@ -1,0 +1,63 @@
+<div class="login-wrapper bg-white">
+  <!--    <div class="bg-pic">-->
+  <!--      <img src="../../../assets/img/demo/bg-sinvoice.png" class="lazy">-->
+  <!--    </div>-->
+  <div class="row center-text">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 bg-white">
+      <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+        <div class="text-center">
+          <img src="https://cdn.printgo.vn/uploads/media/774255/thiet-ke-logo-khach-san-2_1586876001.jpg" alt="logo" width="280">
+        </div>
+        <h5 class="p-t-35 custom-login-label">Đăng nhập</h5>
+        <form class="form pt-3" role="form" (ngSubmit)="login()" [formGroup]="loginForm" novalidate autocomplete="off">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="isError">
+            {{errorMsg}}
+            <button type="button" class="close ml-0"  (click)="checkError()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="form-group">
+            <label for="username" required="true">Tên đăng nhập</label>
+            <div>
+              <input type="text" class="form-control" name="username" id="username"
+                     placeholder="Nhập vào địa chỉ email" formControlName="username"
+                     required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <div>
+              <input type="password" class="form-control" name="password" id="password"
+                     placeholder="Nhập mật khẩu đăng nhập" formControlName="password"
+                     required>
+            </div>
+          </div>
+          <ngx-recaptcha2 #captchaElem
+                [siteKey]="'6LdwZa0aAAAAAMOXVPT8RRaWQUjleVeioD33NPUv'"
+                (success)="getcapcha()"
+                [useGlobalDomain]="false"
+                formControlName="recaptcha">
+          </ngx-recaptcha2>
+          <div>
+            <input type="checkbox" name="remember" id="remember" style=""
+                   formControlName="remember">
+            <label for="remember">Lưu lại đăng nhập</label>
+          </div>
+          <button class="btn btn-primary btn-cons m-t-10 w-100 p-2" type="submit" [disabled]="this.distable">Đăng nhập
+          </button>
+          <div>
+            <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20">
+              <div class="col-sm-12 no-padding m-t-10">
+                <div class="alert alert-warning" style="color: blue">
+                  <a class="alert-link" (click)="openForgotPassword()">Quên mật khẩu?</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>

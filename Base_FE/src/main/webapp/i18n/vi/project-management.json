@@ -1,0 +1,58 @@
+{
+  "projectManagement": {
+    "projectManagement": "Quản lý dự án",
+    "start-date": "Ngày bắt đầu",
+    "end-date": "Ngày kết thúc",
+    "project-code": "Mã dự án",
+    "project-name": "Tên dự án",
+    "am": "AM",
+    "pm": "PM",
+    "customer": "Khách hàng",
+    "production-unit": "Đơn vị sản xuất",
+    "business-unit": "Đơn vị kinh doanh",
+    "expected-date": "Ngày dự kiến triển khai chính thức",
+    "yes/no-outcesource": "Có/Không thuê ngoài",
+    "programming-language": "Ngôn ngữ lập trình",
+    "frameworks": "Frameworks",
+    "database": "Database",
+    "versions": "Các phiên bản",
+    "note": "Ghi chú",
+    "result-search": "Kết quả tìm kiếm",
+    "orderNumber": "STT",
+    "action": "Hành Động",
+    "popup": {
+      "title-show-detail": "Xem chi tiết dự án",
+      "title-update": "Sửa thông tin dự án",
+      "title-add": "Thêm dự án",
+      "this-value": "bản ghi này"
+    },
+    "toast": {
+      "projectCode": {
+        "codeRequire": "Mã dự án là bắt buộc",
+        "exist": "Mã dự án đã tồn tại",
+        "invalid": "Mã dự án không hợp lệ"
+      },
+      "projectName": {
+        "codeRequire": "Tên dự án dự án là bắt buộc"
+      },
+      "pm": {
+        "codeRequire": "Pm là bắt buộc"
+      },
+      "productUnit": {
+        "codeRequire": "Đơn vị sản xuất là bắt buộc"
+      },
+      "startDate": {
+        "codeRequire": "Ngày bắt đầu là bắt buộc"
+      },
+      "isOutsource": {
+        "codeRequire": "Có/Không thuê ngoài là bắt buộc"
+      },
+      "success": {
+        "title": "Thành công",
+        "create": "Thêm mới thành công",
+        "update": "Sửa thành công",
+        "delete": "Xóa thành công"
+      }
+    }
+  }
+}

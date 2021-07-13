@@ -1,0 +1,55 @@
+<a href="javascript:;" class="upload-control v-from file-process" [ngClass]="{hasFile: file}" jhiAutoFocusField
+   [autofocus]="isFocus">
+  <ng-container *ngIf="(labelName !== '' || fileType !== null) && labelName !== 'none'">
+    <p class="file-name-label {{ required ==='yes' ? 'required': ''}}">{{ labelName}}</p>
+  </ng-container>
+  <ng-container *ngIf="fileType==='excel' && !title">
+    <p class="file-name-label">Tên file</p>
+  </ng-container>
+  <label for="{{strType}}"
+         [ngStyle]="{'display':typeScreen !== 'project' ? 'none' : '','box-shadow':typeScreen !== 'project' ? 'none' : '' ,'border': typeScreen === 'project'? 'none': ''}"
+  ><i
+    class="fa fa-paperclip fa-2x" aria-hidden="true"></i></label>
+  <input type="file"
+         [ngStyle]="{'display':typeScreen === 'project' ? 'none' : '' }"
+         class="form-control"
+         [accept]="accept"
+         [multiple]="multiple"
+         (change)="onChange($event)"
+         [disabled]="isDisable"
+         (blur)="onTouchChangeFile()"
+         #inputFile
+         id="{{strType}}">
+  <label for="{{strType}}" [ngClass]="isError ? 'border-red' : ''" >
+    <div class="upload-input" [ngClass]="isDisable ? 'disable' : ''">{{file && !multiple ? file.name : ''}}</div>
+    <ng-container
+      *ngIf="fileType==='pdf' || fileType==='excel' || fileType ==='png' || fileType ==='BBTT' || fileType ==='BK'">
+      <i *ngIf="showCheck" class="fa fa-check icon-color-blue" aria-hidden="true" ngbTooltip="{{msgTooltip}}"></i>
+      <span class="upload-btn">Chọn file</span>
+    </ng-container>
+    <ng-container *ngIf="fileType==='cer'">
+      <span class="upload-btn-cer">Tải lên từ file</span>
+    </ng-container>
+    <ng-container *ngIf="fileType==='usbToken'">
+      <span class="upload-btn-usb">Tải lên từ usb-token</span>
+    </ng-container>
+    <ng-container *ngIf="fileType==='fileOutsourcePlan'">
+      <span class="upload-btn">Chọn file</span>
+    </ng-container>
+  </label>
+  <ng-container *ngIf="suggest != ''">
+    <p class="my-1"><i>{{suggest}}</i></p>
+  </ng-container>
+  <ng-container *ngIf="fileType==='excel' && suggest === ''">
+    <p class="my-1"><i>(Loại file .xlsx, .xls, dung lượng tối đa: 5Mb)</i></p>
+  </ng-container>
+  <ng-container *ngIf="fileType==='cer'&& suggest === ''">
+    <p class="my-1"><i>(Loại file *.cer, *.cert, dung lượng tối đa: 5Mb)</i></p>
+  </ng-container>
+  <ng-container *ngIf="fileType==='pdf'&& suggest === ''">
+    <p class="my-1"><i>(Loại file .pdf, dung lượng tối đa: 5Mb)</i></p>
+  </ng-container>
+  <ng-container *ngIf="fileType==='fileOutsourcePlan' && suggest === ''">
+    <p class="my-1"><i>(Loại file: .pdf, .rar, .zip, .xlsx, tổng dung lượng tối đa: 150MB)</i></p>
+  </ng-container>
+</a>

@@ -1,0 +1,83 @@
+{
+  "adjustedCurrency": {
+    "parentTitle": "Quản lý hóa đơn đã phát hành",
+    "title": "Lập hóa đơn điều chỉnh tiền",
+    "change": "ĐIều chỉnh",
+    "invoiceInfo": "Thông tin hóa đơn",
+    "buyerName": "Tên người mua",
+    "address": "Địa chỉ",
+    "invoiceNo": "Mẫu số hóa đơn",
+    "invoiceParent": "Số hóa đơn gốc",
+    "invoiceParentCreated": "Ngày lập hóa đơn gốc",
+    "createdDate": "Ngày lập",
+    "typePay": "Hình thức thanh toán",
+    "typePayDetail": "Hình thức thanh toán chi tiết",
+    "addInfo": "Thông tin bổ sung",
+    "docAgree": "Văn bản thỏa thuận",
+    "dateAgree": "Ngày thỏa thuận",
+    "note": "Ghi chú",
+    "reportAgree": "Biên bản thỏa thuận",
+    "list": "Bảng kê",
+    "adjusted": "Điều chỉnh",
+    "productCode": "Mã hàng hóa",
+    "productName": "Tên hàng hóa",
+    "unitName": "Đơn vị tính",
+    "lotNo": "Số lô",
+    "exp": "Hạn dùng",
+    "quantum": "Số lượng",
+    "price": "Đơn giá",
+    "money": "Thành tiền",
+    "perDiscount": "% Chiết khấu",
+    "perDiscountSecond": "% Chiết khẩu lần 2",
+    "discount": "Chiết khấu",
+    "vat": "Thuế GTGT(%)",
+    "taxAmount": "Tiền thuế",
+    "totalTax": "Tổng tiền thuế",
+    "total": "Tổng tiền hàng",
+    "totalText": "Tổng tiền bằng chữ",
+    "totalByWord": "Số tiền bằng chữ:",
+    "noteDefault": "Hóa đơn điều chỉnh tăng/giảm cho hóa đơn điện tử mẫu [{{invoiceTemplate}}] ký hiệu [{{invoiceSeri}}] số [{{invoiceNo}}] lập ngày [{{issueDate}}]",
+    "inputAllFieldProduct": "Vui lòng điền đủ các trường cần thiết, các trường số phải lớn hơn 0",
+    "validate": {
+      "paymentMethod": {
+        "required": "Bạn chưa chọn Hình thức thanh toán"
+      },
+      "additionalReferenceDesc": {
+        "required": "Bạn chưa nhập Văn bản thỏa thuận",
+        "maxlength": "Văn bản thỏa thuận có độ dài tối đa 400 ký tự"
+      },
+      "invoiceNote": {
+        "required": "Bạn chưa nhập Văn bản Ghi chú"
+      },
+      "issueDate": {
+        "rangeDate": "Ngày phát hành hóa đơn không hợp lệ.",
+        "required": "Bạn chưa nhập/chọn Ngày lập"
+      },
+      "paymentMethodName": {
+        "maxlength": "Hình thức thanh toán chi tiết có độ dài tối đa 50 ký tự"
+      }
+    },
+    "err": {
+      "fullRegis": "Phát hành hóa đơn thất bại! Đơn vị đã dùng hết số hóa đơn đăng ký",
+      "fullInvoice": "Phát hành hóa đơn thất bại! Đơn vị đã dùng hết số hóa đơn đã phát hành",
+      "errDigit": "Bạn không thể lập hóa đơn! Đơn vị chưa kích hoạt chứng thư số",
+      "notSign": "Hóa đơn không được kí số",
+      "overReleased": "Đơn vị dùng hết số hóa đơn phát hành",
+      "notFound": "Không tìm thấy hóa đơn bị điều chỉnh",
+      "digitalCertificate": "Đơn vị chưa kích hoạt chứng thư số",
+      "originalBill": "Hóa đơn không phải hóa đơn gốc"
+    },
+    "messages": {
+      "success": {
+        "add": "Lập hóa đơn điều chỉnh thành công!, Mã số thuế bên bán : [{{tenantTaxCode}}], Số hóa đơn [{{invoiceNo}}], Mã số bí mật [{{reservationCode}}]",
+        "warning": "Số hóa đơn : [{{invoiceNo}}] đang được xử lý. Vui lòng đợi trong ít phút."
+      },
+      "confirm": {
+        "confirmAdjustedCurrency": "Bạn có chắc chắn lập hóa đơn ngày "
+      },
+      "warning": {
+        "creating": "Mã số thuế bên bán : [{{tenantTaxCode}}], Số hóa đơn [{{invoiceNo}}], Mã số bí mật [{{reservationCode}}] đang được xử lý. Vui lòng đợi trong ít phút."
+      }
+    }
+  }
+}

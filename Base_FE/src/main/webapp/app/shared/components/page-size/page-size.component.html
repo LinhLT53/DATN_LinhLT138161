@@ -1,0 +1,10 @@
+<div class="page-size ml-2">
+  <select class="custom-select" style="width: auto" name="pageSize" [(ngModel)]="itemsPerPage" (change)="loadPage()">
+    <option [ngValue]="5">5</option>
+    <option [ngValue]="10">10</option>
+    <option [ngValue]="15">15</option>
+    <option [ngValue]="20">20</option>
+    <option [ngValue]="25">25</option>
+    <option [ngValue]="30">30</option>
+  </select>
+</div>

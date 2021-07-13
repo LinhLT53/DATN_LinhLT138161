@@ -1,0 +1,111 @@
+{
+  "user": {
+    "title": "Danh mục người dùng",
+    "user": "người dùng",
+    "titleAuth": "Phân quyền ký hiệu hóa đơn",
+    "titleParent": "Danh mục hệ thống",
+    "title.table": "Danh sách người dùng",
+    "position": "Chức danh",
+    "organization": "Đơn vị",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "userName": "Tên nhân viên",
+    "note": "Ghi chú",
+    "description": "Mô tả",
+    "emailAddress": "Địa chỉ email",
+    "cmt": "Căn cước công dân",
+    "address": "Địa chỉ",
+    "contractCode": "Mã số hợp đồng",
+    "taxCode": "Mã số thuế",
+    "status": "Trạng thái",
+    "userGroup": "Nhóm người dùng",
+    "invalidDelete": "Người dùng đã được sử dụng, không được phép xóa",
+    "modal": {
+      "action.deactivate": "Bạn chắc chắn muốn mở khóa người dùng?",
+      "action.active": "Bạn chắc chắn muốn khóa người dùng?",
+      "title": {
+        "add": "Thêm mới nhân sự",
+        "update": "Cập nhật thông tin nhân sự",
+        "detail": "Xem thông tin nhân sự"
+      }
+    },
+    "toastr": {
+      "title": {
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "info": "Thông báo",
+        "error": "Có lỗi xảy ra"
+      },
+      "messages": {
+        "success": {
+          "add": "Thêm mới người dùng thành công!",
+          "update": "Cập nhật người dùng thành công!",
+          "delete": "Xóa biểu người dùng thành công!"
+        },
+        "warning": "Warning",
+        "error": {
+          "add": "Đã có lỗi xảy ra, hệ thống không thể lưu bản ghi",
+          "sendMail": "Đã có lỗi xảy ra, không thể thực hiện gửi mail",
+          "delete": "Đã có lỗi xảy ra, hệ thống không thể xóa biểu mẫu email"
+        }
+      }
+    },
+    "validate": {
+      "note": {
+        "maxlength": "Ghi chú không được quá 500 ký tự"
+      },
+      "description": {
+        "maxlength": "Mô tả không được quá 500 ký tự"
+      },
+      "date": {
+        "error": "Ngày được chọn phải nhỏ hơn hoặc bằng ngày hiện tại"
+      },
+      "year": {
+        "error": "Năm nhập vào phải nhỏ hơn hoặc bằng ngày hiện tại"
+      },
+      "userName": {
+        "required": "Bạn chưa nhập Tên nhân viên",
+        "maxlength": "Tên nhân viên không được quá 255 ký tự",
+        "invalid": "Tên nhân viên là chữ cái không dấu, chữ số và các ký tự - _ và ."
+      },
+      "fullName": {
+        "required": "Trường bắt buộc, không được để trống",
+        "maxlength": "Tên nhân sự không được quá 255 ký tự",
+        "invalid": "Tên nhân viên là chữ cái không dấu, chữ số và các ký tự - _ và ."
+      },
+      "code": {
+        "required": "Trường bắt buộc, không được để trống",
+        "maxlength": "Mã nhân sự không được quá 255 ký tự",
+        "invalid": "Mã số nhân sự là chữ cái không dấu, chữ số và các ký tự - _ và .",
+        "duplicate": "Mã số nhân sự đã tồn tại."
+      },
+      "deparment": {
+        "required": "Trường bắt buộc, không được để trống"
+      },
+      "part": {
+        "required": "Trường bắt buộc, không được để trống"
+      },
+      "dateRecruitment": {
+        "required": "Trường bắt buộc, không được để trống"
+      },
+      "major": {
+        "required": "Trường bắt buộc, không được để trống"
+      },
+      "emailAddress": {
+        "required": "Trường bắt buộc, không được để trống",
+        "maxlength": "Acc email không được quá 255 ký tự",
+        "invalid": "Bạn đang nhập sai định dạng  email",
+        "duplicate": "Email đã tồn tại."
+      },
+      "userGroup": {
+        "required": "Bạn chưa chọn Nhóm người dùng"
+      },
+      "organizationId": {
+        "required": "Bạn chưa chọn Đơn vị"
+      },
+      "positionName": {
+        "required": "Trường bắt buộc, không được để trống"
+      }
+    }
+  }
+}

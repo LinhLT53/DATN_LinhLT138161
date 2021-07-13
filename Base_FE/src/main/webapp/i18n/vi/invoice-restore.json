@@ -1,0 +1,40 @@
+{
+  "invoiceRestore": {
+    "title": "Khôi phục hóa đơn xóa bỏ",
+    "buyerCode": "Mã khách hàng",
+    "buyerName": "Tên người mua",
+    "buyerTaxCode": "Mã số thuế",
+    "buyerPhoneNumber": "Số điện thoại",
+    "buyerUnitName": "Tên đơn vị",
+    "buyerEmailAddress": "Email",
+    "buyerIdType": "Loại giấy tờ",
+    "buyerIdNo": "Số giấy tờ",
+    "buyerAddress": "Địa chỉ",
+    "bankName": "Tên ngân hàng",
+    "bankAccount": "Tài khoản ngân hàng",
+    "deliveryWarehouse": "Kho",
+
+    "template": "Mẫu hoá đơn",
+    "invoiceNo": "Số hoá đơn gốc",
+    "issueDate": "Ngày lập hoá đơn gốc",
+    "paymentMethodName": "Hình thức thanh toán",
+    "totalTaxAmount": "Tổng tiền",
+
+    "reason": "Lý do khôi phục",
+
+    "restore": "Khôi phục",
+
+    "information": "Thông tin khách hàng",
+    "generalInformation": "Thông tin chung",
+    "systemRestore": "Hệ thống sẽ tiến hành khôi phục hóa đơn",
+    "validate" : {
+      "reason" : {
+        "required": "Bạn chưa nhập lý do khôi phục"
+      }
+    },
+    "messages": {
+      "confirm": "Bạn có chắc chắn muốn khôi phục hóa đơn?",
+      "success": "Khôi phục hóa đơn thành công!"
+    }
+  }
+}

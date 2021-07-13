@@ -1,0 +1,83 @@
+{
+  "taxPreparationUpdate": {
+    "title": "Cập nhật kê khai thuế",
+    "enterprise": "Doanh nghiệp",
+    "year": "Năm",
+    "tenantBranch": "Chi nhánh/ Doanh nghiệp",
+    "typeReport": "Loại cập nhật",
+    "month": "Tháng",
+    "quater": "Quý",
+    "update": "Cập nhật",
+    "cancelUpdate": "Hủy cập nhật",
+    "cancel": "Hủy",
+    "validate": {
+      "year": {
+        "required": "Bạn chưa chọn năm"
+      },
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Chi nhánh/ Doanh nghiệp"
+      },
+      "typeReport": {
+        "required": "Bạn chưa chọn Loại cập nhật"
+      },
+      "month": {
+        "required": "Bạn chưa chọn Tháng",
+        "invalid": "Tháng phải nhỏ hơn hoặc bằng tháng hiện tại!"
+      },
+      "quater": {
+        "required": "Bạn chưa chọn Quý",
+        "invalid": "Quý phải nhỏ hơn hoặc bằng quý hiện tại!"
+      },
+      "idTenantBranch": {
+        "required": "Bạn chưa chọn Chi nhánh/Doanh nghiệp"
+      }
+    },
+    "modal": {
+      "confirm": {
+        "messages": {
+          "update": "Bạn có chắc chắc muốn cập nhật trạng thái kê khai thuế cho các hóa đơn không",
+          "cancel": "Bạn có chắc chắc muốn hủy cập nhật trạng thái kê khai thuế cho các hóa đơn không"
+        }
+      },
+      "title": {
+        "typeDate": {
+          "month": "Tháng",
+          "quater": "Quý"
+        },
+        "month": {
+          "jan": "Tháng 1",
+          "feb": "Tháng 2",
+          "mar": "Tháng 3",
+          "apr": "Tháng 4",
+          "may": "Tháng 5",
+          "june": "Tháng 6",
+          "july": "Tháng 7",
+          "aug": "Tháng 8",
+          "sept": "Tháng 9",
+          "oct": "Tháng 10",
+          "nov": "Tháng 11",
+          "dec": "Tháng 12"
+        },
+        "quater": {
+          "one": "Quý 1",
+          "two": "Quý 2",
+          "three": "Quý 3",
+          "four": "Quý 4"
+        }
+      }
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "update": "Cập nhật kê khai thuế cho hóa đơn thành công!",
+          "cancel": "Hủy cập nhật kê khai thuế cho hóa đơn thành công!"
+        },
+        "error": {
+          "update": "Hóa đơn đã được kê khai thuế trước đây",
+          "cancel": "Hóa đơn đã được hủy kê khai thuế trước đây",
+          "invalid": "Không có hóa đơn theo năm tìm kiếm"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+
+<div class="modal-import" jhiModalDrag [handle]="handle" >
+  <div class="modal-header" #handle>
+    <h5 class="modal-title mt-0">Import nhân sự</h5>
+    <button #closeBtn type="button" class="close" aria-label="Close" (click)="onCloseAddModal()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ng-container>
+      <a #deleteFileElem (click)="deleteFileImport()" [hidden]="!file">
+        <span class="icon-delete-file import" aria-hidden="true"
+              ngbTooltip="{{ 'common.tooltip.action.deleteFileImport' | translate }}">x</span>
+      </a>
+    </ng-container>
+    <jhi-upload-file [fileType]="'excel'" #fileImport [accept]="'.xls,.xlsx'" (onFileChange)="onChangeFile($event)"
+                     (onError)="onError($event)" [isError]="errImport" (focusout)="onFocusOut()">
+    </jhi-upload-file>
+    <div class="mt-2">
+      <button #downloadTemplateBtn type="button" class="btn btn-link pl-0" (click)="downloadFileTemplate('xlsx')">
+        <i class="fa fa-download mr-2" aria-hidden="true"></i><span>Tải file mẫu</span>
+      </button>
+      <!--      <button #downloadTemplateBtn type="button" class="btn btn-link pl-0" (click)="downloadFileTemplate('xlsx')">-->
+      <!--        <i class="fa fa-download mr-2" aria-hidden="true"></i><span>Tải file mẫu (.xlsx)</span>-->
+      <!--      </button>-->
+      <!--      <button #downloadTemplateBtn type="button" class="btn btn-link pl-0" (click)="downloadFileTemplate('xls')">-->
+      <!--        <i class="fa fa-download mr-2" aria-hidden="true"></i><span>Tải file mẫu (.xls)</span>-->
+      <!--      </button>-->
+      <button #downloadResultBtn [hidden]="!importResult" type="button" class="btn btn-link ml-2" style="float: right"
+              (click)="downloadFileImport()">
+        <i class="fa fa-download mr-2" aria-hidden="true"></i><span>Tải file kết quả</span>
+      </button>
+    </div>
+    <div class="text-danger" *ngIf="errImport">{{errMessage}}</div>
+    <div class="text-success" *ngIf="successImport">{{successMessage}}</div>
+  </div>
+  <div class="modal-footer">
+    <button #cancelBtn type="button" class="btn btn-light alight" (click)="onCloseAddModal()">
+      <i class="fa fa-times mr-2" aria-hidden="true"></i>{{'common.button.confirm.cancel'| translate}}
+    </button>
+    <button type="submit" class="btn btn-primary" (click)="onSubmitImport()">
+      <i class="fa fa-upload mr-2" aria-hidden="true"></i><span>{{'common.button.confirm.import'| translate}}</span>
+    </button>
+  </div>
+</div>

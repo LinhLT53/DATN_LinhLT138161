@@ -1,0 +1,35 @@
+{
+  "invoiceCancelListReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo hủy dải hóa đơn",
+    "listReport": "Danh sách hóa đơn",
+    "tenantBranchName": "Tên đơn vị",
+    "year": "Năm",
+    "destroyTime": "Ngày hủy",
+    "orderNumber": "STT",
+    "invoiceTemplateTypeName": "Tên loại hóa đơn",
+    "invoiceTemplateId": "Ký hiệu mẫu hóa đơn",
+    "serialNo": "Ký hiệu hóa đơn",
+    "fromNumber": "Từ số",
+    "toNumber" : "Đến số",
+    "amount": "Số lượng",
+    "viewReport": "Xem báo cáo",
+    "exportExcel": "Xuất excel",
+    "exportPdf": "Xuất pdf",
+    "default": "--Lựa chọn--",
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    },
+    "validate": {
+      "tenantBranchName": {
+        "required" : "Bạn chưa chọn tên đơn vị"
+      },
+      "year": {
+        "required" : "Bạn chưa chọn năm"
+      },
+      "destroyTime":{
+        "required": "Bạn chưa chọn ngày hủy"
+      }
+    }
+  }
+}

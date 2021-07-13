@@ -1,0 +1,52 @@
+{
+  "financialCapacity": {
+    "titleTable": "Năng lực tài chính",
+    "numericalOrder": "STT",
+    "action": "Hành động",
+    "year": "Năm",
+    "totalAsset": "Tổng tài sản",
+    "totalLiability": "Tổng nợ phải trả",
+    "shortTermAsset": "Tài sản ngắn hạn",
+    "totalCurrentLiabilities": "Tổng nợ ngắn hạn",
+    "revenue": "Doanh thu",
+    "profitBeforeTax": "Lợi nhuận trước thuế",
+    "profitAfterTax": "Lợi nhuận sau thuế",
+    "otherContain": "Các nội dung khác (nếu có yêu cầu)",
+    "staffParticipatedEvaluation": "Nhân sự tham gia đánh giá",
+    "pointEvaluation": "Điểm đánh giá",
+    "note": "Ghi chú",
+
+    "errorYear": "Trường năm chưa được chọn",
+    "errorTotalAssetEmpty": "Trường tổng tài sản không thể bỏ trống",
+    "errorTotalAssetCannotWord": "Trường tổng tài sản phải là số",
+    "errorTotalAssetPositive": "Trường tổng tài sản phải là số nguyên dương",
+
+    "errorTotalLiabilityEmpty": "Trường tổng nợ phải trả không thể bỏ trống",
+    "errorTotalLiabilityCannotWord": "Trường tổng nợ phải trả phải là số",
+    "errorTotalLiabilityPositive": "Trường tổng tài sản phải là số nguyên dương",
+
+    "errorShortTermAssetEmpty": "Trường tài sản ngắn hạn không thể bỏ trống",
+    "errorShortTermAssetCannotWord": "Trường tài sản ngắn hạn phải là số",
+    "errorShortTermAssetPositive": "Trường tài sản ngắn hạn phải là số nguyên dương",
+
+    "errorTotalCurrentLiabilitiesEmpty": "Trường tổng nợ ngắn hạn không thể bỏ trống",
+    "errorTotalCurrentLiabilitiesCannotWord": "Trường tổng nợ ngắn hạn phải là số",
+    "errorTotalCurrentLiabilitiesPositive": "Trường tổng nợ ngắn hạn phải là số nguyên dương",
+
+    "errorRevenueEmpty": "Trường doanh thu không thể bỏ trống",
+    "errorRevenueCannotWord": "Trường doanh thu phải là số",
+    "errorRevenuePositive": "Trường doanh thu phải là số nguyên dương",
+
+    "errorProfitBeforeTaxEmpty": "Trường lợi nhuận trước thuế không thể bỏ trống",
+    "errorProfitBeforeTaxCannotWord": "Trường lợi nhuận trước thuế phải là số",
+    "errorProfitBeforeTaxPositive": "Trường lợi nhuận trước thuế phải là số nguyên dương",
+
+    "errorProfitAfterTaxEmpty": "Trường lợi nhuận trước thuế không thể bỏ trống",
+    "errorProfitAfterTaxCannotWord": "Trường lợi nhuận trước thuế phải là số",
+    "errorProfitAfterTaxPositive": "Trường lợi nhuận trước thuế phải là số nguyên dương",
+
+    "errorScoreEmpty": "Trường điểm đánh giá không thể bỏ trống",
+    "errorScoreCannotWord": "Trường điểm đánh giá phải là số",
+    "errorScore40": "Trường điểm đánh giá phải là số nguyên dương và nhỏ hơn 40 điểm và phần thập phân chỉ tối đa 2"
+  }
+}

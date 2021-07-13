@@ -1,0 +1,324 @@
+<div class="modal-import" jhiModalDrag [handle]="handle">
+  <div class="modal-header" #handle>
+    <h5 *ngIf="type === 'add'" class="modal-title mt-0">Đặt phòng</h5>
+    <h5 *ngIf="type === 'update'" class="modal-title mt-0">Sửa đặt phòng</h5>
+    <h5 *ngIf="type === 'detail'" class="modal-title mt-0">Xem chi tiết đặt phòng</h5>
+    <h5 *ngIf="type === 'foward'" class="modal-title mt-0">Chuyển phòng</h5>
+    <h5 *ngIf="type === 'pay'" class="modal-title mt-0">Thanh toán</h5>
+    <button #closeBtn type="button" class="close" aria-label="Close" (click)="onCancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <perfect-scrollbar class="ps" [style.max-height.px]="height" (window:resize)="onResize()">
+      <div id="organizationCategories" class="page-content">
+        <div class=" main-content">
+          <div class="page-content">
+            <form [formGroup]="form" *ngIf="form" novalidate autocomplete="off">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('roomId')">
+                    <label class="form-control-label required">Mã phòng</label>
+                    <ng-select class="cursor-text scroll-ng-select" #ngSelectID
+                               bindLabel="roomName" formControlName="roomId" bindValue="roomId"
+                               notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                               placeholder="{{ 'common.select.option.default' | translate }}"
+                               clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                               [items]="listRoom"
+                               (change)="getDataOnSelectRoom($event)"
+                               [multiple]="false"
+                               [readonly]="checkActiveMaPhong()" required>
+                      <ng-template ng-option-tmp let-item="item">
+                        {{item.roomCode}} - {{item.roomName}} <br/>
+                      </ng-template>
+                    </ng-select>
+                    <jhi-error-messages *ngIf="formControl['roomId'].hasError('required')"
+                                        [displayError]="isFieldValid('roomId')"
+                                        errorMsg="Mã phòng là bắt buộc">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-control-label required"
+                    >Giá phòng</label>
+                    <input type="text" formControlName="price" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readonly]="true"
+                           maxlength="50"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('customerId')">
+                    <label class="form-control-label required">Khách hàng</label>
+                    <ng-select class="cursor-text scroll-ng-select" #ngSelectID
+                               bindLabel="fullname" formControlName="customerId" bindValue="customerId"
+                               notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                               placeholder="{{ 'common.select.option.default' | translate }}"
+                               clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                               [items]="listCustomer"
+                               [multiple]="false"
+                               [readonly]="type !== 'add' && type !== 'update'" required>
+                      <ng-template ng-option-tmp let-item="item">
+                        {{item.fullname}} - {{item.email}} <br/>
+                      </ng-template>
+                    </ng-select>
+                    <jhi-error-messages *ngIf="formControl['customerId'].hasError('required')"
+                                        [displayError]="isFieldValid('customerId')"
+                                        errorMsg="Khách hàng là bắt buộc">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('bookingType')">
+                    <label class="form-control-label">Loại đặt phòng</label>
+                    <ng-select class="cursor-text scroll-ng-select"
+                               bindLabel="name" formControlName="bookingType" bindValue="id"
+                               notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                               placeholder="{{ 'common.select.option.default' | translate }}"
+                               clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                               [items]="listBookingType"
+                               (change)="getDataOnSelectBookType()"
+                               [multiple]="false"
+                               [readonly]="type !== 'add' && type !== 'update'">
+                    </ng-select>
+                    <jhi-error-messages *ngIf="formControl['bookingType'].hasError('required')"
+                                        [displayError]="isFieldValid('bookingType')"
+                                        errorMsg="Loại đặt phòng là bắt buộc">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" *ngIf="bookType === 'future'" [ngClass]="displayFieldHasError('bookingDate')">
+                    <label class="form-control-label"
+                    >Ngày đặt phòng</label>
+                    <jhi-date-time-picker formControlName="bookingDate" [disabled]="type === 'detail'"
+                                          (ngModelChange)="validateNgayDat()"></jhi-date-time-picker>
+                    <jhi-error-messages *ngIf="requireNgayDat" [displayError]="requireNgayDat"
+                                        errorMsg="Ngày đặt là bắt buộc">
+                    </jhi-error-messages>
+                    <jhi-error-messages *ngIf="cpNgayDatNgayHt" [displayError]="cpNgayDatNgayHt"
+                                        errorMsg="Ngày đặt không được nhỏ hơn ngày hiện tại">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group" *ngIf="bookType === 'future'" [ngClass]="displayFieldHasError('bookingDateOut')">
+                    <label class="form-control-label"
+                    >Ngày dự kiến đi</label>
+                    <jhi-date-time-picker formControlName="bookingDateOut" [disabled]="type === 'detail'"
+                                          (ngModelChange)="validateNgayDuKienDi()"></jhi-date-time-picker>
+                    <jhi-error-messages *ngIf="requireNgayDKDi" [displayError]="requireNgayDKDi"
+                                        errorMsg="Ngày dự kiến đi là bắt buộc">
+                    </jhi-error-messages>
+                    <jhi-error-messages *ngIf="cpNgayDKDiNgayHt" [displayError]="cpNgayDKDiNgayHt"
+                                        errorMsg="Ngày dự kiến đi không được nhỏ hơn ngày hiện tại">
+                    </jhi-error-messages>
+                    <jhi-error-messages *ngIf="cpNgayDKDiNgayDat" [displayError]="cpNgayDKDiNgayDat"
+                                        errorMsg="Ngày dự kiến đi không được nhỏ hơn ngày đặt">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" *ngIf="bookType === 'current' || (bookType === 'future' && type === 'detail')">
+                    <label class="form-control-label" [ngClass]="type === 'detail' ? '' : ''"
+                    >Ngày đến</label>
+                    <jhi-date-time-picker formControlName="bookingCheckin" [disabled]="true"
+                                          (ngModelChange)="validateNgayDen()"></jhi-date-time-picker>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group" *ngIf="bookType === 'current' || (bookType === 'future' && type === 'detail')" [ngClass]="displayFieldHasError('bookingCheckout')">
+                    <label class="form-control-label"
+                    >Ngày trả</label>
+                    <jhi-date-time-picker formControlName="bookingCheckout" [disabled]="type !== 'add' && type !== 'update'"
+                                          (ngModelChange)="validateNgayTra()"></jhi-date-time-picker>
+                    <jhi-error-messages *ngIf="requireNgayTra" [displayError]="requireNgayTra"
+                                        errorMsg="Ngày trả là bắt buộc">
+                    </jhi-error-messages>
+                    <jhi-error-messages *ngIf="cpNgayTraNgayHt" [displayError]="cpNgayTraNgayHt"
+                                        errorMsg="Ngày trả đi không được nhỏ hơn ngày hiện tại">
+                    </jhi-error-messages>
+                    <jhi-error-messages *ngIf="cpNgayTraNgayDen" [displayError]="cpNgayTraNgayDen"
+                                        errorMsg="Ngày trả không được nhỏ hơn ngày đến">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('totalDate')">
+                    <label class="form-control-label"
+                    >Thời gian thuê phòng</label>
+                    <input type="text" formControlName="totalDate" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readOnly]="true" maxlength="50"/>
+                  </div>
+                </div>
+                <!--<div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('promotionCode')">
+                    <label class="form-control-label"
+                    >Mã khuyến mãi</label>
+                    <input type="text" formControlName="promotionCode" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readOnly]="false" maxlength="255" (blur)="getPromotion()"/>
+                  </div>
+                </div>-->
+                <!--<div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('promotionCode')">
+                    <label class="form-control-label">Mã khuyến mãi</label>
+                    <ng-select class="cursor-text scroll-ng-select"
+                               bindLabel="promotionName" formControlName="promotionCode" bindValue="promotionCode"
+                               notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                               placeholder="{{ 'common.select.option.default' | translate }}"
+                               clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                               [items]="listPromotion"
+                               (change)="getPromotion()"
+                               [multiple]="false"
+                               [readonly]="type !== 'add' && type !== 'update'">
+                    </ng-select>
+                  </div>
+                </div>-->
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('priceBooking')">
+                    <label class="form-control-label"
+                    >Tiền thuê phòng</label>
+                    <input type="text" formControlName="priceBooking" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readOnly]="true" maxlength="255" (blur)="trimSpace('priceBooking')"/>
+                  </div>
+                </div>
+                <div class="col-md-6"> 
+                  <div class="form-group" [ngClass]="displayFieldHasError('priceService')">
+                    <label class="form-control-label"
+                    >Tiền dịch vụ</label>
+                    <input type="text" formControlName="priceService" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readOnly]="true" maxlength="255" (blur)="trimSpace('priceService')"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('advanceAmount')">
+                    <label class="form-control-label"
+                    >Đã thanh toán</label>
+                    <input type="text" formControlName="advanceAmount" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readOnly]="type !== 'add'" maxlength="255" (blur)="tinhTongTien()"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('priceTotal')">
+                    <label class="form-control-label"
+                    >Tổng tiền</label>
+                    <input type="text" formControlName="priceTotal" class="form-control"
+                           [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                           [readOnly]="true" maxlength="255" (blur)="trimSpace('priceTotal')"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group" [ngClass]="displayFieldHasError('status')">
+                    <label class="form-control-label">Trạng thái</label>
+                    <ng-select class="cursor-text scroll-ng-select"
+                               bindLabel="status" formControlName="status" bindValue="id"
+                               notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                               clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                               [items]="statusList"
+                               [clearable]="false"
+                               [multiple]="false"
+                               [readonly]="true">
+                    </ng-select>
+                    <jhi-error-messages *ngIf="formControl['status'].hasError('required')"
+                                        [displayError]="isFieldValid('status')"
+                                        errorMsg="{{ 'user.validate.userName.required' | translate }}">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" [ngClass]="displayFieldHasError('note')">
+                    <label class="form-control-label" jhiTranslate="user.note">ghi chú</label>
+                    <textarea rows="4" cols="400" formControlName="note" class="form-control"
+                              type="text" [readonly]="type !== 'add' && type !== 'update'" (blur)="trimSpace('note')"
+                              style="overflow: scroll"></textarea>
+                    <jhi-error-messages *ngIf="formControl['note'].hasError('maxlength')"
+                                        [displayError]="isFieldValid('note')"
+                                        errorMsg="{{ 'user.validate.note.maxlength' | translate }}">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group" [ngClass]="displayFieldHasError('noteAddition')">
+                    <label class="form-control-label">ghi chú thêm</label>
+                    <textarea rows="4" cols="400" formControlName="noteAddition" class="form-control"
+                              type="text" [readonly]="true" (blur)="trimSpace('noteAddition')"
+                              style="overflow: scroll"></textarea>
+                    <jhi-error-messages *ngIf="formControl['noteAddition'].hasError('maxlength')"
+                                        [displayError]="isFieldValid('note')"
+                                        errorMsg="{{ 'user.validate.note.maxlength' | translate }}">
+                    </jhi-error-messages>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </perfect-scrollbar>
+  </div>
+  <div class="action-btn">
+    <button #cancelBtn type="button" class="btn btn-light alight" (click)="onCancel()">
+      <i class="fa fa-times mr-2" aria-hidden="true"></i><span
+      jhiTranslate="{{(type !== 'detail'? 'common.button.confirm.cancel' : 'common.button.close')}}">Hủy bỏ</span>
+    </button>
+
+    <button *ngIf="type === 'add' || type === 'update' || type === 'foward'" type="submit" class="btn btn-primary" (click)="tinhTongTien()">
+      <i class="fa fa-location-arrow" aria-hidden="true"></i><span
+    >  Tính tổng tiền</span>
+    </button>
+
+    <button *ngIf="type === 'add' || type === 'update' || type === 'foward'" type="submit" class="btn btn-primary" (click)="onSubmitData()">
+      <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span
+      jhiTranslate="common.button.confirm.save">Ghi lại</span>
+    </button>
+
+    <button *ngIf="type === 'pay'" type="submit" class="btn btn-primary" (click)="onPay()">
+      <i class="fa fa-credit-card-alt" aria-hidden="true"></i><span
+    >  Thanh toán</span>
+    </button>
+
+    <button *ngIf="(type === 'detail' || type === 'pay')" type="submit" class="btn btn-primary" (click)="onInvoicePrint()">
+      <i class="fa fa-print" aria-hidden="true"></i><span
+    >  In hóa đơn</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,342 @@
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+  color: inherit;
+}
+
+.has-error .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control-label.required:after,
+.col-form-label.required:after,
+.file-name-label.required:after {
+  color: #dc3545;
+  content: '*';
+  position: absolute;
+  margin-left: 2px;
+}
+
+.form-group label:not(.error),
+.form-control-label.import {
+  //font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Open+Sans', sans-serif;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: inherit;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+.form-control {
+  // border: 1px solid #ced4da;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+
+  &:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+.form-group.dropdown {
+  position: relative;
+
+  .form-control {
+    cursor: pointer;
+  }
+
+  .fa {
+    position: absolute;
+    right: 12px;
+    font-size: initial;
+    top: 60%;
+    color: #21252980;
+  }
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  pointer-events: none;
+}
+
+.input-border-bottom {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.input-border-bottom:read-only {
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1.45px dotted #9e9e9e;
+  color: #616161;
+  pointer-events: none;
+  cursor: not-allowed;
+  -webkit-appearance: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.input-border-bottom:focus {
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem transparent;
+  border-color: #11a6a14d;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  background-color: $color-primary;
+}
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: unset;
+}
+
+textarea {
+  /* ThucDV modify start 26/05/2020 */
+
+  /*
+  resize: none;
+  */
+  /* ThucDV modify end 26/05/2020 */
+}
+
+.form-control-lg {
+  height: calc(1.5em + 1rem + 2px);
+  min-height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+}
+
+.form-control-sm {
+  height: calc(1.5em + 0.5rem + 2px);
+  min-height: calc(1.5em + 0.5rem + 2px);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem;
+}
+
+.custom-label-right {
+  text-align: right;
+}
+
+.input-group {
+  // width: 350px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-custom-select {
+  .custom-select-arrow {
+    font-family: $base-font-family;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, $color-primary 50%),
+      linear-gradient(135deg, $color-primary 50%, transparent 50%), linear-gradient(to right, $color-primary, $color-primary);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+    background-size: 0px 0px, 0px 2px, 28px 2.5rem;
+    background-repeat: no-repeat;
+    padding-right: 2rem;
+  }
+
+  &.dropdown .fa {
+    position: absolute;
+    right: 7.5px;
+    font-size: initial;
+    top: 53%;
+    color: #fff;
+    pointer-events: none;
+    font-size: 1.4rem;
+    z-index: 1000;
+
+    &.padding-right {
+      right: 14px;
+    }
+  }
+
+  &.has-error .fa {
+    top: 41%;
+  }
+
+  &.input-group.dropdown .fa {
+    top: 7px;
+  }
+
+  // .ng-select .ng-arrow-wrapper {
+  //   height: 100%;
+  //   width: 28px;
+  //   background-color: $color-primary;
+
+  //   .ng-arrow {
+  //     border: none;
+  //   }
+  // }
+  .ng-select .ng-option-label {
+    white-space: pre-line;
+  }
+
+  .custom-select-arrow.input-border-bottom {
+    background: none;
+  }
+}
+
+.card-body {
+  .form-custom-select.dropdown .fa {
+    // top: 36.5px;
+  }
+}
+
+.form-group [class*='col-'] > span .fa {
+  top: 7.5px;
+}
+
+@media (max-width: 768px) {
+  .form-group [class*='col-'] > span .fa {
+    right: 21.5px;
+  }
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  white-space: nowrap;
+  background: #5bc0de;
+  color: black;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-disabled {
+  color: #555;
+}
+
+.input-border-bottom.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  color: #333;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked:hover {
+  background-color: #ebf5ff;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  color: #555;
+  font-weight: 400;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.cursor-text {
+  .ng-input input {
+    cursor: text !important;
+  }
+}
+
+.custom-label-right {
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .custom-label-right {
+    text-align: left;
+  }
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  font-family: 'Open+Sans', sans-serif;
+  color: #555;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.input-group > .form-control:not(:first-child),
+.input-group > .custom-select:not(:first-child) {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.ng-value-container {
+  color: $color-master-dark;
+}
+
+.scroll-ng-select {
+  .ng-select-container.ng-has-value {
+    overflow: auto;
+  }
+
+  &.input-border-bottom:read-only {
+    pointer-events: unset;
+  }
+}
+
+#email {
+  @media only screen and (min-width: 768px) {
+    form .row [class*='col-']:not(:first-child),
+    form .row [class*='col-']:not(:last-child) {
+      padding-left: 15px;
+    }
+  }
+}
+
+.sms-config-invoice {
+  margin-left: -4rem;
+}
+
+@media only screen and (max-width: 576px) {
+  .sms-config-invoice {
+    margin-left: unset;
+  }
+}
+
+.sms-config {
+  margin-left: -0.5rem;
+}
+
+input[type='text'] {
+  cursor: text !important;
+}
+
+.error-msg,
+.error-msg-import label {
+  font-family: 'Open+Sans', sans-serif;
+  font-size: 13px;
+  color: #dc3545;
+}
+
+.upload-input.disable {
+  background-color: #e3e3e6;
+}
+
+#addInvoice,
+#adjustedCurrency,
+#invoiceSubstitutionAdd {
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

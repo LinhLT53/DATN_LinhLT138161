@@ -1,0 +1,167 @@
+{
+  "invoiceAnnouncement": {
+    "title": "Lập thông báo phát hành",
+    "girdView": "Danh sách lập thông báo phát hành",
+    "titleCategories": "Quản lý phát hành",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "tenantBranch": "Chi nhánh",
+    "tenantName": "Tên đơn vị khởi tạo hoá đơn điện tử",
+    "address": "Địa chỉ",
+    "startEndDate": "Từ ngày-Đến ngày",
+    "name": "Tên đơn vị",
+    "templateCode": "Mẫu hoá đơn",
+    "supplierTaxCode": "Mã số thuế",
+    "taxOfficeId": "Cơ quan thế",
+    "taxReceiveName": "Tên cơ quan thuế",
+    "phoneNumber": "Số điện thoại",
+    "description": "Dấu phân cách sử dụng",
+    "invoiceForm": "Các loại hoá đơn phát hành",
+    "addInvoiceForm": "Chọn loại hoá đơn phát hành",
+    "createdDate": "Ngày lập",
+    "usedTotalReg": "Số lượng đã lập/tổng",
+    "status": "Trạng thái",
+    "status.waitingApproval": "Chờ phê duyệt",
+    "status.approved": "Đã phê duyệt",
+    "status.disApproval": "Từ chối phê duyệt",
+    "status.draft": "Dự thảo",
+    "status.activate": "Hoạt động",
+    "status.canApprove": "Huỷ phê duyệt",
+    "status.cancel": "Huỷ",
+    "nameInvocieTemp": "Tên mẫu hoá đơn",
+    "serial": "Ký hiệu",
+    "amount": "Số lượng",
+    "fromNumber": "Từ số",
+    "toNumber": "Đến số",
+    "numberNow": "Số hiện tại",
+    "startDate": "Ngày bắt đầu sử dụng",
+    "dowloadTempWhite": "Tải hoá đơn trắng",
+    "delete": "Xoá",
+    "approveDate": "Ngày huỷ",
+    "announcer": "Tên người huỷ",
+    "destroyerEmail": "Email người hủy",
+    "destroyerPhone": "Số điện thoại người hủy",
+    "destroyDate": "Thời gian hủy",
+    "destroyReason": "Lý do hủy",
+    "disapproverEmail": "Email người từ chối phê duyệt",
+    "disapproverPhone": "Số điện thoại người từ chối phê duyệt",
+    "disapproveDate": "Thời gian từ chối phê duyệt",
+    "disapproveReason": "Lý do từ chối phê duyệt",
+    "customer": "khách hàng",
+    "noData": "Không có dữ liệu",
+    "validate": {
+      "nameInvocieTemp": {
+        "required": "Bạn chưa chọn Tên mẫu hoá đơn."
+      },
+      "serial": {
+        "required": "Bạn chưa chọn Ký hiệu."
+      },
+      "amount": {
+        "required": "Bạn chưa nhập Số lượng.",
+        "maxlength": "Số lượng không được quá 8 ký tự."
+      },
+      "startDate": {
+        "required": "Bạn chưa chọn ngày bắt đầu sử dụng.",
+        "nowDate": "Ngày bắt đầu sử dụng không được nhỏ hơn ngày hiện tại."
+      },
+      "tenantName": {
+        "required": " Bạn chưa chọn Tên đơn vị khởi tạo hoá đơn điện tử."
+      },
+      "destroyReason": {
+        "required": "Bạn chưa nhập Lí do hủy",
+        "maxlength": "Lí do hủy dải không được nhập quá 1000 kí tự"
+      },
+      "fromNumber": {
+        "maxlength": "Trường Từ số có định dạng không đúng"
+      },
+      "toNumber": {
+        "maxlength": "Trường Đến số có định dạng không đúng"
+      },
+      "description": {
+        "required": "Bạn chưa nhập Dấu phân cách sử dụng.",
+        "appParams": "Đăng ký sử dụng dấu phân cách là dấu ({{separationPoint}}) sau chữ số hàng nghìn, triệu, tỷ, nghìn tỷ, triệu tỷ và sử dụng dấu ({{decimalPoint}}) sau chữ số hàng đơn vị để ghi chữ số sau chữ số hàng đơn vị."
+      },
+      "taxReceiveName": {
+        "required": "Bạn chưa chọn Tên cơ quan thuế."
+      }
+    },
+    "modal": {
+      "title": {
+        "add": "Thêm mới thông báo phát hành",
+        "update": "Cập nhật thông báo phát hành",
+        "detail": "Chi tiết thông báo phát hành",
+        "sendRequest": "Gửi yêu cầu phê duyệt thông báo phát hành",
+        "cancelListNumber": "Huỷ dải số",
+        "cancel": "Xem lý do hủy thông báo phát hành",
+        "disApprove": "Xem lí do không phê duyệt",
+        "destroy": "Hủy thông báo phát hành",
+        "filePDF": "File PDF",
+        "filePDFExchange": "File PDF chuyển đổi",
+        "announcementDetail": "Chi tiết thông báo phát hành",
+        "showDetail": "Xem thông báo phát hành bản docx",
+        "documentFile": "Chi tiết File bằng chứng"
+      }
+    },
+    "sendingRequest": {
+      "title": "Gửi yêu cầu phê duyệt thông báo phát hành",
+      "file": "File bằng chứng",
+      "startDate": "Ngày bắt đầu sử dụng",
+      "validate": {
+        "file": {
+          "required": "Bạn chưa chọn File bằng chứng",
+          "exitCTS": "Thời gian hiệu lực của chứng thư số không hợp lệ, vui lòng chọn lại!",
+          "msgError": "File bằng chứng phải có định dạng pdf dung lượng tối đa 5Mb"
+        }
+      },
+      "button": {
+        "sending": "Gửi yêu cầu"
+      }
+    },
+    "cancelListNumber": {
+      "button": {
+        "submit": "Huỷ dải"
+      },
+      "destroyReason": {
+        "label": "Lý do huỷ dải",
+        "maxlength": "Lý do huỷ chỉ nhập tối đa 1000 ký tự.",
+        "required": "Bạn chưa nhập Lý do huỷ dải"
+      },
+      "toastr": {
+        "messages.success": "Hủy dải: {{ param }} thành công!",
+        "messages.error": "Đã có lỗi xảy ra, hệ thống không thể hủy dải"
+      },
+      "validate.date": "Bạn chưa nhâp Ngày huỷ",
+      "confirmCancel": "Bạn đang hủy dải đã được lập hóa đơn, bạn có muốn tiếp tục không?"
+    },
+    "button": {
+      "decision": "Tải về quyết định",
+      "file32": "Tải về mẫu 32",
+      "form01": "Tải Biểu mẫu 01 Nghị định 119",
+      "viewDocx": "Xem bản docx",
+      "destroy": "Hủy thông báo"
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "destroy": "Hủy thông báo phát hành thành công!",
+          "add": "Thêm mới thông báo phát hành thành công!",
+          "update": "Cập nhật thông báo phát hành thành công",
+          "delete": "Xóa tên mẫu hóa đơn có mẫu hóa đơn {{ templateCode }} và serial {{ serialNo }} thành công",
+          "deleted": "Xóa hóa đơn thành công!"
+        },
+        "error": {
+          "exitsTemp": "Hoá đơn đã tồn tại",
+          "girdViewErr": "Danh sách tên mẫu hóa đơn đang chưa được chọn"
+        }
+      }
+    },
+    "tooltip": {
+      "action.submitRequest": "Gửi yêu cầu phê duyệt",
+      "action.cancel": "Huỷ thông báo",
+      "action.viewCancel": "Xem lý do huỷ bỏ",
+      "action.file": "Mở file bằng chứng",
+      "action.stripCancel": "Huỷ dải",
+      "action.notApproved": "Xem lý do không phê duyệt"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<jhi-page-ribbon></jhi-page-ribbon>
+<jhi-sidebar></jhi-sidebar>
+<div class="page-container">
+  <jhi-navbar></jhi-navbar>
+  <div class="page-content-wrapper">
+    <!-- START PAGE CONTENT -->
+    <div class="content sm-gutter">
+      <!-- START CONTAINER FLUID -->
+      <div class="container-fluid pl-0 pr-0">
+        <router-outlet></router-outlet>
+<!--         <jhi-customer-list></jhi-customer-list>-->
+      </div>
+    </div>
+  </div>
+  <router-outlet name="popup"></router-outlet>
+  <!--    <jhi-footer></jhi-footer>-->
+</div>

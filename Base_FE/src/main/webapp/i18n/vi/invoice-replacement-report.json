@@ -1,0 +1,67 @@
+{
+  "invoiceReplaceReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo bảng kê hóa đơn thay thế",
+    "year": "Năm",
+    "invoiceType": "Loại báo cáo",
+    "createdDateFrom": "Từ ngày lập",
+    "createdDateTo": "Đến ngày lập",
+    "general": "Tổng hợp theo",
+    "userName": "Tên người dùng",
+    "viewReport": "Xem báo cáo",
+    "invoiceNo": "Số HĐ",
+    "taxCustomer": "MST người mua",
+    "notTax": "Doanh số bán chưa thuế",
+    "taxName": "Thuế suất",
+    "vatOut": "Thuế GTGT đầu ra",
+    "total": "Tổng cộng",
+    "createBy": "Người lập",
+    "listReport": "Danh sách hóa đơn",
+    "STT": "STT",
+    "tenantTaxCode": "Mã số thuế",
+    "originalBill": "Hóa đơn gốc",
+    "invoiceTemplateName": "Mẫu số",
+    "invoiceSeri": "Ký hiệu",
+    "invoiceNoOriginalBill": "Số hóa đơn",
+    "createdDateStr": "Ngày lập",
+    "totalOriginalBill": "Số tiền",
+    "invoiceInstead": "Hóa đơn thay thế",
+    "replacementInvoiceTemplateName": "Mẫu số",
+    "replacementInvoiceSeri": "Ký hiệu",
+    "replacementInvoiceNo": "Số hóa đơn",
+    "replacementCreatedDateStr": "Ngày lập",
+    "replacementTotal": "Số tiền",
+    "customerInformation": "Thông tin khách hàng",
+    "buyerName": "Tên người mua",
+    "buyerUnitName": "Tên đơn vị",
+    "buyerAddress": "Địa chỉ",
+    "buyerCode": "Mã khách hàng",
+    "buyerTaxCode": "Mã số thuế",
+    "button": {
+      "exportPdf": "Xuất Pdf"
+    },
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    },
+    "validate": {
+      "reportType": {
+        "required": "Bạn chưa chọn Loại báo cáo"
+      },
+      "fromDate": {
+        "required": "Bạn chưa nhập Từ ngày lập"
+      },
+      "toDate": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "unitName": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "maxFromDate": {
+        "invalid": "Từ ngày lập phải nhỏ hơn hoặc bằng đến ngày lập!"
+      },
+      "maxToDate": {
+        "invalid": "Khoảng cách từ ngày lập hóa đơn đến ngày lập hóa đơn không được quá 3 tháng!"
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "invoiceReleaseList": {
+    "title": "Phát hành nhiều hóa đơn",
+    "titleParent": "Quản lý hóa đơn",
+    "infoSearch": "Thông tin tìm kiếm",
+    "idNo": "STT",
+    "createdDate": "Ngày tạo",
+    "invoiceNo": "Mẫu hóa đơn",
+    "invoiceType": "Loại hóa đơn",
+    "invoiceNoName": "Tên mẫu hóa đơn",
+    "invoiceSeri": "Ký hiệu hóa đơn",
+    "fromDate": "Từ ngày tạo",
+    "toDate": "Đến ngày tạo",
+    "supplier": "Nhà cung cấp",
+    "fileName": "Tên file Import",
+    "buyerCode": "Mã người mua",
+    "buyerName": "Tên người mua",
+    "buyerUnitName": "Tên đơn vị",
+    "buyerTaxCode": "Mã số thuế người mua",
+    "createdBy": "Người tạo",
+    "createDate": "Ngày tạo",
+    "totalBeforeTax": "Tổng trước thuế",
+    "taxAmount": "Tiền thuế",
+    "taxCode": "Mã số thuế",
+    "discount": "Tiền chiết khấu",
+    "total": "Tổng tiền",
+    "currency": "Loại tiền",
+    "issueDate": "Ngày phát hành",
+    "release": {
+      "title": "Phát hành hóa đơn",
+      "dateRelease": "Ngày phát hành",
+      "confirm": "Bạn có chắc chắn phát hành hóa đơn ngày"
+    },
+    "button": {
+      "add": "Phát hành",
+      "previousPage": "Quay về màn hình quản lý hóa đơn chưa phát hành"
+    },
+    "modal": {
+      "confirm": {
+        "messages": {
+          "release": "Bạn có chắc phát hành [",
+          "date": "hóa đơn ngày "
+        }
+      }
+    },
+    "confirm": "Chỉ được phép phát hành tối đa {{ param }} hóa đơn trên 1 lần thực hiện phát hành!",
+    "toastr": {
+      "title": {
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "info": "Thông báo",
+        "error": "Có lỗi xảy ra"
+      },
+      "messages": {
+        "success": {
+          "release": "Hệ thống đang xử lý phát hành hóa đơn. Chi tiết kết quả hệ thống sẽ hiển thị tại phần thông báo."
+        },
+        "warning": {
+        },
+        "error": {
+          "import.outRegisterInvoice": "Phát hành hóa đơn thất bại! Đơn vị đã dùng hết số hóa đơn đăng ký",
+          "import.outReleaseInvoice": "Phát hành hóa đơn thất bại! Đơn vị đã dùng hết số hóa đơn đã phát hành",
+          "import.notActiveInvoice": "Bạn không thể lập hóa đơn! Đơn vị chưa kích hoạt chứng thư số",
+          "release.timeRelease": "Ngày phát hành hóa đơn không hợp lệ!",
+          "listEmpty": "Phát hành hóa đơn thất bại! Dải số hóa đơn chỉ còn {{ N }} số."
+        }
+      }
+    },
+    "validate": {
+      "supplier": {
+        "required": "Bạn chưa chọn Nhà cung cấp"
+      },
+      "invoiceType": {
+        "required": "Bạn chưa chọn Loại hóa đơn"
+      },
+      "invoiceTemplateName": {
+        "required": "Bạn chưa chọn Mẫu hóa đơn"
+      },
+      "serial": {
+        "required": "Bạn chưa chọn Ký hiệu hóa đơn"
+      },
+      "fromDate": {
+        "required": "Bạn chưa chọn Từ ngày tạo"
+      },
+      "toDate": {
+        "required": "Bạn chưa chọn Đến ngày tạo",
+        "biger": "Đến ngày tạo không được nhỏ hơn Từ ngày tạo"
+      },
+      "issueDate": {
+        "required": "Bạn chưa chọn/nhập Ngày phát hành"
+      }
+    }
+  }
+}

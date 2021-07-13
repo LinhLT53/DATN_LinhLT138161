@@ -1,0 +1,157 @@
+<div class="modal-import" jhiModalDrag [handle]="handle">
+  <div class="modal-header" #handle>
+    <h5 class="modal-title mt-0">{{title}}</h5>
+    <button #closeBtn type="button" class="close" aria-label="Close" (click)="onCancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <perfect-scrollbar class="ps" [style.max-height.px]="height" (window:resize)="onResize()">
+
+    <div class="modal-body">
+      <form [formGroup]="form" *ngIf="form" novalidate autocomplete="off">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" >
+              <label class="form-control-label " style="font-size: 18px;">Nhân viên xử lý : </label>
+              <label class="form-control-label " style="font-size: 18px;">{{this.dataShow?.nameEmployee?this.dataShow.nameEmployee:""}}</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="form-control-label " style="font-size: 18px;">Người đặt : </label>
+              <label class="form-control-label " style="font-size: 18px;">{{this.dataShow?.customName}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" >
+              <label class="form-control-label " style="font-size: 18px;">Tên phòng : </label>
+              <label class="form-control-label " style="font-size: 18px;">{{this.dataRoom.roomName}}</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" >
+              <label class="form-control-label " style="font-size: 18px;">Loại phòng : </label>
+              <label class="form-control-label " style="font-size: 18px;">{{this.dataRoom.roomTypeName}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group" >
+              <label class="form-control-label " style="font-size: 18px;">Thời gian nhận phòng : </label>
+              <label class="form-control-label " style="font-size: 18px;">{{this.datepipe.transform(this.dataShow?.bookingCheckin,"yyyy-MM-dd hh:mm")}}</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" >
+              <label class="form-control-label " style="font-size: 18px;">Thời gian trả phòng(dự kiến) : </label>
+              <label class="form-control-label " style="font-size: 18px;">{{this.datepipe.transform(this.dataShow?.bookingCheckout,"yyyy-MM-dd hh:mm")}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="row" formArrayName="listService">
+          <p class="sizeFont">Thêm dịch vụ đặt phòng</p>
+          <perfect-scrollbar id="scrollbarTable" class="ps">
+            <table class="table table-bordered table-hover table-striped" id="tableCustoms">
+              <thead>
+                <th class="large-width-table" style="width: 100px"><span>Hành động</span>
+                </th>
+                <th class="large-width-table" style="width: 150px"><span>Tên dịch vụ</span>
+                </th>
+                <th class="large-width-table" style="width: 80px"><span>Đơn giá</span>
+                </th>
+                <th class="large-width-table" style="width: 80px"><span>Số lượng</span>
+                </th>
+                <th class="large-width-table" style="width: 140px"><span>Thành tiền</span>
+                </th>
+              </thead>
+              <tbody *ngFor="let person of listServiceR; let i = index;" [formGroupName]="i">
+                <tr>
+                  <td class="text-center four-icon medium-width-table">
+                    <div class="group-action">
+                      <button class="btn btn-light" placement="top" ngbTooltip="Lưu" (click)="saveDevice(i)">
+                        <i class="fa fa-floppy-o icon-color-blue" aria-hidden="true"></i>
+                      </button>
+                      <button class="btn btn-light" placement="top"
+                        ngbTooltip="{{'common.tooltip.action.delete' | translate}}" (click)="deleteDevice(i)">
+                        <i class="fa fa-trash icon-color-red" aria-hidden="true"></i></button>
+                      <button class="btn btn-light" placement="top"
+                        ngbTooltip="{{'common.tooltip.action.delete' | translate}}" (click)="addDevice(i)">
+                        <i class="fa fa-plus icon-color-blue" aria-hidden="true"></i></button>
+                    </div>
+                  </td>
+                  <td>
+                    <ng-select class="cursor-text scroll-ng-select" bindLabel="servicename" formControlName="serviceId"
+                      bindValue="serviceId" notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                      clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}" placeholder="--Tất cả--"
+                      (change)="getPrice($event,i)" [items]="listServiceShow" [multiple]="false"
+                      [disabled]="true"
+                      [readonly]="type === 'detail'||checkNul[i]||type === 'browser'">
+                    </ng-select>
+                  </td>
+                  <td>
+                    <input class="form-control" placeholder="Service {{ i + 1 }}"
+                      [attr.disabled]="(checkNul[i] ? true : null)||(type==='browser' ? true:null)" type="number"
+                      formControlName="price" [readonly]="true">
+                  </td>
+                  <td>
+                    <input class="form-control" placeholder="Service {{ i + 1 }}"
+                      [attr.disabled]="(checkNul[i] ? true : null)||(type==='browser' ? true:null)" type="number"
+                      formControlName="quantity" (change)="xetGia($event,i)">
+                  </td>
+                  <td>
+                    <input class="form-control" placeholder="Service {{ i + 1 }}"
+                      [attr.disabled]="(checkNul[i] ? true : null)||(type==='browser' ? true:null)" type="number"
+                      formControlName="total"  [readonly]="true">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-primary" (click)="addService(false)">Thêm</button>
+          </perfect-scrollbar>
+        </div>
+        <div class="row" *ngIf="status===3">
+          <div class="form-group">
+            <label class="form-control-label">Lý do</label>
+            <textarea rows="2" cols="200" formControlName="reason" class="form-control" type="text" [readonly]="true"
+              (blur)="trimSpace('note')" style="overflow: scroll"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group" [ngClass]="displayFieldHasError('note')">
+            <label class="form-control-label" jhiTranslate="user.note">ghi chú</label>
+            <textarea rows="4" cols="400" formControlName="note" class="form-control" type="text"
+              [readonly]="type === 'detail'" (blur)="trimSpace('note')" placeholder="Ghi chú"
+              style="overflow: scroll"></textarea>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </perfect-scrollbar>
+
+  <div class="action-btn">
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">
+      <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>Duyệt</span>
+    </button>
+    <button type="submit" class="btn btn-danger" (click)="onCancel()">
+      <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>Hủy</span>
+    </button>
+  </div>
+</div>
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is example from ItSolutionStuff.com
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>

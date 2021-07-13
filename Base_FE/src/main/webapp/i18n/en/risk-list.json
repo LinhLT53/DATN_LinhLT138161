@@ -1,0 +1,45 @@
+{
+  "risk-list": {
+    "validate": {
+      "projectId": {
+        "required": "Mã dự án bắt buộc chọn!"
+      },
+      "fixedBy": {
+        "required": "Người khắc phục bắt buộc chọn!"
+      },
+      "severity": {
+        "required": "Mức độ nghiêm trọng bắt buộc chọn!"
+      },
+      "riskType": {
+        "required": "Phân loại vấn đề bắt buộc chọn!"
+      },
+      "fixedStatus": {
+        "required": "Trạng thái khắc phục bắt buộc chọn!"
+      },
+      "riskContent": {
+        "required": "Rủi ro/Vấn đề bắt buộc nhập!",
+        "maxlength": "Rủi ro/vấn đề chỉ được nhập tối đa 500 ký tự!"
+      },
+      "riskExplain": {
+        "required": "Giải trình rủi ro/Vấn đề bắt buộc nhập!",
+        "maxlength": "Giải trình rủi ro/Vấn đề chỉ được nhập tối đa 500 ký tự"
+      },
+      "riskDate": {
+        "required": "Thời gian phát hiện rủi ro phải bé thua hoặc bằng ngày hiện tại"
+      },
+      "deadline": {
+        "required": "Thời hạn xử lý phải lớn hơn hoặc bằng ngày hiện tại",
+        "invalid": "Thời hạn xử lý phải hớn hơn hoặc bằng thời gian phát hiện rủi ro"
+      },
+      "noteAction": {
+        "required": "Hành động khắc phục chỉ được nhập tối đa 500 ký tự"
+      },
+      "lessonLearn": {
+        "required": "Lesson learn/Bài học kinh nghiệm chỉ được nhập tối đa 500 ký tự"
+      },
+      "note": {
+        "required": "Ghi chú chỉ được nhập tối đa 500 ký tự"
+      }
+    }
+  }
+}

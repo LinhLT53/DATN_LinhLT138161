@@ -1,0 +1,129 @@
+.btn {
+  font-family: $base-font-family;
+}
+
+.btn.disabled, .btn[disabled] {
+  pointer-events: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary.btn-custom-positive {
+  color: #0273d4;
+  background-color: #fff;
+  border-color: #0273d4;
+
+  &:hover, &:focus, &:active {
+    color: #358fdd !important;
+    background-color: #e2e6ea33 !important;
+    border-color: #358fdd !important;
+    box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.5) !important;
+  }
+}
+
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+  color: inherit;
+  background-color: #dae0e5;
+  border-color: #d3d9df;
+}
+
+.btn-light:hover {
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+.btn-light.focus,
+.btn-light:focus {
+  box-shadow: 0 0 0 0.2rem #e2e6ea;
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+  color: inherit;
+  background-color: inherit;
+  border-color: #f8f9fa;
+}
+
+.btn-link {
+  font-size: 13px;
+  color: #007bff;
+  text-decoration: underline;
+
+  &:hover, &:focus {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+
+  &.btn-custom-bg {
+    padding: 0 8px;
+
+    &:hover, &:focus {
+      box-shadow: 0 0 0 0.2rem #0099ff99;
+      background-color: #0099ff99;
+      webkit-transition: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+.btn-light {
+  color: #000000;
+  font-size: 14px;
+}
+
+.btn-view-column {
+  padding: 5px 8px;
+
+  .icon-view-column {
+    font-size: large;
+    //display: inline-block;
+    //width: 25px;
+    //height: 25px;
+    //background: url(../../assets/img/columns.png) no-repeat;
+    //background-size: 100%;
+  }
+}
+
+.btn.calendar {
+  padding: 5px 12px;
+  border: 1px solid #ced4da;
+
+  &:hover,
+  &:active {
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+  }
+
+  &:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+}
+
+.btn.btn-light {
+  .fa.fa-times-circle {
+    color: #dc3545;
+    font-size: 1.1rem;
+    vertical-align: middle;
+  }
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+  border-color: #989898 !important;
+  background-color: #fff;
+}

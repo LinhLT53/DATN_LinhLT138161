@@ -1,0 +1,16 @@
+<form class="input-group mr-2" autocomplete="off">
+  <div class="form-group w-100 mb-0">
+    <div class="input-group">
+      <input class="form-control" placeholder="dd/MM/yyyy" [minDate]="minDate" (blur)="onChangeBlur()"
+             [ngClass]="isError ? 'border-red' : ''"
+             name="dp" [(ngModel)]="date" ngbDatepicker #d="ngbDatepicker" type="text" #input
+             (change)="onInputChange($event)" (dateSelect)="onDateChange($event)" [placement]="placement" [disabled]="isDisabled">
+      <div class="input-group-append">
+        <button class="btn calendar" (click)="d.toggle()" type="button" [ngClass]="isError ? 'border-red' : ''">
+          <i class="pg-calender"></i>
+        </button>
+      </div>
+    </div>
+    <div class="text-danger" *ngIf="isError">{{msgError}}</div>
+  </div>
+</form>

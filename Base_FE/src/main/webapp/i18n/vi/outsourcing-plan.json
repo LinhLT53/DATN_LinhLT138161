@@ -1,0 +1,83 @@
+{
+  "outsourcingPlan": {
+    "title": "Kế hoạch thuê ngoài phát triển phần mềm",
+    "plan-status": "Trạng thái kế hoạch",
+    "project-code": "Mã dự án",
+    "start-time": "Thời gian bắt đầu OS dự kiến",
+    "end-time": "Thời gian kết thúc OS dự kiến",
+    "plan-code": "Mã kế hoạch",
+    "outsourcing-type": "Hình thức thuê ngoài",
+    "business-unit": "Đơn vị kinh doanh",
+    "production-unit": "Đơn vị sản xuất",
+    "am": "AM",
+    "pm": "PM",
+    "no": "STT",
+    "action": "Hành động",
+    "project-name": "Tên dự án",
+    "mmos": "MMOS",
+    "sum": "Tổng",
+    "ba": "BA",
+    "dev": "Dev",
+    "test": "Test",
+    "description": "Mô tả sơ bộ về sản phẩm",
+    "human-number": "Số nhân sự OS/ tháng",
+    "human-required": "Yêu cầu đối với nhân sự OS",
+    "plan": "kế hoạch",
+    "baNumber": "Số lượng BA",
+    "devNumber": "Số lượng Dev",
+    "testNumber": "Số lượng Test",
+    "baRequired": "Yêu cầu BA",
+    "devRequired": "Yêu cầu Dev",
+    "testRequired": "Yêu cầu Test",
+    "create": "Tạo kế hoạch thuê ngoài phát triển PM",
+    "status": "Trạng thái",
+    "update": "Cập nhật",
+
+    "popup": {
+      "title-show-detail": "Xem chi tiết dự án",
+      "isExist": "Mã kế hoạch {{ planCodeCodeOld }} đã tồn tại. Mã kế hoạch của bạn là: {{ planCodeNew }}",
+      "reasonReject": "Lý do từ chối"
+    },
+    "required": {
+      "idProject": "Mã dự án là bắt buộc",
+      "idBusinessUnit": "Đơn vị kinh doanh là bắt buộc",
+      "idProductionUnit": "Đơn vị sản xuất là bắt buộc",
+      "formOfOutSourcing": "Hình thức thuê ngoài là bắt buộc",
+      "startTime": "Ngày bắt đầu là bắt buộc",
+      "invalid": {
+        "start": "Thời gian bắt đầu phải nhỏ nhơn thời gian kết thúc"
+      },
+      "reasonReject": "Lý do từ chối là bắt buộc"
+    },
+
+    "button": {
+      "createNewContract": "Tạo mới hợp đồng",
+      "linkTo": "Màn hình Kế hoạch thuê ngoài",
+      "reject": "Từ chối"
+    },
+    "function": {
+      "add": {
+        "generalInfo": "1. Thông tin chung",
+        "title": "Thêm mới",
+        "codePlanning": "Mã kế hoạch",
+        "codeProject": "Mã dự án",
+        "nameProject": "Tên dự án",
+        "pm": "PM",
+        "am": "AM",
+        "productionUnit": "Đơn vị sản xuất",
+        "businessUnit": "Đơn vị kinh doanh",
+        "startTimeOSExpected": "Thời gian bắt đầu OS dự kiến",
+        "endTimeOSExpected": "Thời gian kết thúc OS dự kiến",
+        "mmos": "MM OS",
+        "formOfOutSourcing": "Hình thức thuê ngoài",
+        "descriptionProduct": "Mô tả sơ bộ về sản phẩm",
+        "file": "File sở cứ kế hoạch",
+        "amountEmpOS": "2. Số nhân sự OS/ tháng",
+        "ba": "BA",
+        "dev": "Dev",
+        "test": "Test",
+        "requestEmpOs": "3. Yêu cầu đối với nhân sự OS"
+      }
+    }
+  }
+}

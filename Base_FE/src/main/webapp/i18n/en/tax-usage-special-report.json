@@ -1,0 +1,65 @@
+{
+  "taxUsageSpecialReport": {
+    "titleParent": "Báo cáo",
+    "title": "Tờ khai thuế tiêu thụ đặc biệt",
+    "girdView": "Danh sách hoá đơn",
+    "tenantBranch": "Tên đơn vị",
+    "userName": "Tên người dùng",
+    "year": "Năm",
+    "month": "Tháng",
+    "dateTime": "Ngày",
+    "timeUpdate": "Bổ sung lần thứ",
+    "declarationType": "Loại tờ khai",
+    "reportType": "Loại báo cáo",
+    "timeUpdate ": "Bổ sung lần thứ",
+    "fromDate": "Từ ngày lập",
+    "toDate": "Đến ngày lập",
+    "invoiceTemplateName": "Tên mẫu hoá đơn",
+    "serial": "Ký hiệu hoá đơn",
+    "taxCode": "Mã số thuế",
+    "formNo": "Mẫu số",
+    "symbol": "Ký hiệu",
+    "issueDate": "Ngày tháng năm phát hành",
+    "invoiceNumber": "Số hóa đơn",
+    "createDate": "Ngày lập",
+    "createBy": "Người nhập",
+    "status": "Trạng thái",
+    "listInvoice": "Danh sách hóa đơn",
+    "button": {
+      "showReport": "Xem báo cáo",
+      "exportExcel": "Xuất excel",
+      "exportPdf": "Xuất pdf"
+    },
+    "validate": {
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "year": {
+        "required": "Bạn chưa chọn năm"
+      },
+      "month": {
+        "required": "Bạn chưa chọn tháng"
+      },
+      "dateTime": {
+        "required": "Bạn chưa chọn ngày"
+      },
+      "reportType": {
+        "required": "Bạn chưa chọn loại báo cáo"
+      },
+      "declarationType": {
+        "required": "Bạn chưa chọn loại tờ khai"
+      },
+      "timeUpdate": {
+        "required": "Bạn chưa chọn lần bổ sung"
+      },
+      "invalidDate": "Ngày lập không được lớn hơn ngày hiện tại!",
+      "invalidMonth": "Tháng báo cáo phải nhỏ hơn hoặc bằng tháng hiện tại!"
+    },
+    "selector": {
+      "firstTime": "Lần đầu",
+      "timeUpdate": "Bổ sung",
+      "1st": "Lần 1",
+      "2nd": "Lần 2"
+    }
+  }
+}

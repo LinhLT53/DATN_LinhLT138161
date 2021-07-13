@@ -1,0 +1,31 @@
+{
+  "profileManagement": {
+    "idPartner": "Mã đối tác",
+    "titleParent": "Danh mục hệ thống",
+    "title": "Quản lý hồ sơ năng lực đối tác",
+    "partnerName": "Tên đối tác",
+    "partnerShortName": "Tên đối tác viết tắt",
+    "foundedYear": "Năm thành lập",
+    "groupPartner": "Nhóm đối tác",
+    "action": "Hành động",
+    "partnerCategory": "Loại đối tác",
+    "registeredBusinessLines": "Ngành nghề kinh doanh",
+    "headQuarter": "Trụ sở làm việc",
+    "city": "Thành phố",
+    "nameCluesContact": "Tên đầu mối liên hệ",
+    "pointOfContact": "Đầu mối liên hệ",
+    "currentProductionPersonnel": "Nhân sự sản xuất hiện tại",
+    "position": "Chức vụ",
+    "phoneNumber": "Số điện thoại",
+    "email": "Email",
+    "total": "Tổng",
+    "ba": "Ba",
+    "dev": "Dev",
+    "tester": "Tester",
+    "note": "Ghi chú",
+    "searchResult": "Kết quả tìm kiếm",
+    "orderNumber": "STT",
+    "partnerProfile": "hồ sơ đối tác",
+    "existsData": "Hồ sơ năng lực đối tác đã được sử dụng dữ liệu, không được phép xóa"
+  }
+}

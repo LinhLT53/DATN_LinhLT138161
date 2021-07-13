@@ -1,0 +1,33 @@
+<div class="modal-action" jhiModalDrag [handle]="handle">
+    <div class="modal-header" #handle>
+      <h5 *ngIf="type === 'delete'" class="modal-title mt-0" style="text-align: center;"><span>Xem ảnh</span>
+      </h5>
+    <button type="button" class="close" aria-label="Close" (click)="onSubmitClose(false)">
+        <span *ngIf="type === 'update'" aria-hidden="true">&times;</span>
+        <span *ngIf="type !== 'update'" aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body" style="text-align: center;">
+        <img [src]="imgData" style="height: 200px;width: 300px;">
+    </div>
+    <div class="modal-footer">
+      <!-- <button type="button" class="btn btn-light" (click)="onSubmitClose(false)"
+              *ngIf="type !== 'delete' && type!== 'confirmWithMsg'" jhiAutoFocusField>
+        <i class="fa fa-times mr-2" aria-hidden="true"></i>{{'common.button.confirm.cancel' | translate}}
+      </button> -->
+      <button type="button" class="btn btn-light" (click)="onSubmitClose(false)" *ngIf="type === 'delete'"
+              jhiAutoFocusField>
+        <i class="fa fa-times mr-2" aria-hidden="true"></i>Đóng
+      </button>
+      <!-- <button type="button" class="btn btn-light" (click)="onSubmitClose(false)" *ngIf="type === 'confirmWithMsg'"
+              jhiAutoFocusField>
+        <i class="fa fa-times mr-2" aria-hidden="true"></i>{{'common.button.close' | translate}}
+      </button> -->
+      <button style="background-color: darkkhaki;" *ngIf="(status==='update'||status==='add')&&role"
+      class="btn btn-light" placement="top"
+      (click)="onSubmitClose(true)" jhiAutoFocusField>
+      <i class="fa fa-trash icon-color-red" aria-hidden="true"></i>Xóa Ảnh</button>
+     
+    </div>
+  </div>
+  

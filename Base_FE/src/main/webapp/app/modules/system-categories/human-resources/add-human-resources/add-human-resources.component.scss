@@ -1,0 +1,36 @@
+.form-control-label.required:after{
+  color: #dc3545;
+  content: '(*)';
+  position: absolute;
+  margin-left: 2px;
+}
+.history{
+  .history_title{
+    background-color: #0273d4;
+    padding-left: 10px;
+    h3{
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+  }
+  .history_content{
+    max-height: 500px;
+    overflow: scroll;
+    padding-left: 30px;
+    p{
+      font-size: 16px;
+    }
+  }
+}
+.action-btn{
+  text-align: center;
+}
+perfect-scrollbar {
+
+   height: auto !important;
+
+}
+.main-content{
+  background-color: #ffffff;
+}

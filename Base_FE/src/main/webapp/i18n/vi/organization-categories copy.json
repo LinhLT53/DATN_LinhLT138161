@@ -1,0 +1,20 @@
+{
+  "organizationCategories": {
+    "organization": "Đơn vị",
+    "title": "Danh mục đơn vị",
+    "titleParent": "Danh mục hệ thống",
+    "titleTable": "Quản lý danh mục đơn vị",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "codeOrganization": "Mã đơn vị",
+    "nameOrganization": "Tên đơn vị",
+    "groupOrganization": "Nhóm đơn vị",
+    "parentOrganization": "Đơn vị cha",
+    "modal":  {
+      "title": {
+        "add": "Thêm mới danh mục đơn vị",
+        "update": "Sửa danh mục đơn vị"
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+server:
+  port: 8063
+  servlet:
+    context-path: /project-service
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8061/eureka
+
+spring:
+  application:
+    name: project-service
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+  datasource.url: jdbc:mysql://127.0.0.1:3306/qlks?useUnicode=yes&characterEncoding=UTF-8
+  datasource.username: root
+  datasource.password: 123456
+  datasource.driver-class-name: com.mysql.cj.jdbc.Driver
+
+  #  datasource.url: jdbc:mysql://remotemysql.com:3306/m4DRi9HeNN?useUnicode=yes&characterEncoding=UTF-8
+  #  datasource.username: m4DRi9HeNN
+  #  datasource.password: ajyZL4ndAv
+  #      h2.console.enabled: true
+  datasource:
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 600000
+      maxLifetime: 1800000
+      maximumPoolSize: 6
+  servlet:
+    multipart:
+      max-file-size: 150MB
+      max-request-size: 150MB
+  # config mail
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: buithekhang2406@gmail.com
+    password: Khang240697
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+        transport:
+          protocol: smtp
+        debug: true
+  #url email-template
+  freemarker:
+    template-loader-path: classpath:/templates/email-template
+
+# url Redmine
+
+
+valueDB: 2
+#Lich dong bo
+autoSynchronized: 0 30 6,12,0 * * *
+#Lich send mail
+#autoSendMail:  0 0 8 * * *
+autoSendMail:  0 0 13 * * *
+#Schedule auto save notification rest deadline
+autoNotification: 0 30 8 * * *
+
+
+urlForgotPassword: http://localhost:8080/qlts/#/forgot-password/
+#urlForgotPassword: http://192.168.100.122:8069/qlda-phase2/forgot-password/
+
+#host cross
+#hostCross: http://192.168.1.194:8080
+#host tomcat
+#hostCross: http://localhost:8080
+
+hostCross: http://localhost:9003
+
+#folder-upload
+#folderUpload: /home/iist/services/qlda-service-phase2/fileUpload/
+folderUpload: D:/fileUpload/
+
+pathLocal: C:/Users/KhangBui/Pictures/project/
+
+google:
+  recaptcha:
+    site:
+      key: 6LdwZa0aAAAAAMOXVPT8RRaWQUjleVeioD33NPUv
+    secret:
+      key: 6LdwZa0aAAAAAKA6QQ0Zb3wsiKiylIa50zsbHo5r
+    verify:
+      url: https://www.google.com/recaptcha/api/siteverify
+
+test: 1231313

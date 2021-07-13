@@ -1,0 +1,97 @@
+{
+  "tenantInformation": {
+    "title": "Khởi tạo thông tin doanh nghiệp",
+    "id": "id",
+    "tenantInformation": "thông tin doanh nghiệp",
+    "state": "state",
+    "name": "Tên đơn vị",
+    "code": "Mã chi nhánh",
+    "taxCode": "Mã số thuế",
+    "businessLicenseNo": "Giấy phép kinh doanh",
+    "representative": "Người đại diện",
+    "representativeIdType": "Loại giấy tờ của người đại diện",
+    "representativeIdNo": "Số giấy tờ của người đại diện",
+    "contactPersonName": "Người liên hệ",
+    "address": "Địa chỉ",
+    "phoneNumber": "Số điện thoại hiển thị trên hóa đơn",
+    "faxNumber": "Số fax",
+    "email": "Email hiển thị trên hóa đơn",
+    "website": "Website",
+    "bankName": "Tên ngân hàng",
+    "bankAccount": "Số tài khoản",
+    "bankAccountOwner": "Chủ tài khoản",
+    "contactPhoneNumber": "Số điện thoại liên hệ",
+    "contactEmail": "Email liên hệ",
+    "adminUser": "admin",
+    "lookBill": "Tra cứu hóa đơn",
+    "validate": {
+      "name": {
+        "required": "Bạn chưa nhập Tên đơn vị",
+        "maxLength": "Tên đơn vị không được nhập quá 800 kí tự"
+      },
+      "taxCode": {
+        "invalidToast": "Mã số thuế không đúng định dạng"
+      },
+      "address": {
+        "required": "Bạn chưa nhập Địa chỉ",
+        "maxLength": "Địa chỉ không được nhập quá 800 kí tự"
+      },
+      "phoneNumber": {
+        "maxLength": "Số điện thoại hiển thị trên hóa đơn không được nhập quá 50 kí tự"
+      },
+      "code": {
+        "maxLength": "Mã chi nhánh không được nhập quá 200 kí tự"
+      },
+      "email": {
+        "maxLength": "Email hiển thị trên hóa đơn không được nhập quá 50 kí tự"
+      },
+      "contactPersonName": {
+        "maxLength": "Người liên hệ không được nhập quá 400 kí tự",
+        "invalid": "Người liên hệ là chữ số, chữ, ký tự dấu cách, _ và –"
+      },
+      "businessLicenseNo": {
+        "maxLength": "Giấy phép kinh doanh không được nhập quá 20 kí tự"
+      },
+      "representativeIdType": {
+        "maxLength": "Loại giấy tờ của người đại diện không được nhập quá 100 kí tự",
+        "required": "Bạn chưa chọn Loại giấy tờ của người đại diện",
+        "invalid": "Loại giấy tờ của người đại diện là chữ số, chữ, ký tự _ và –"
+      },
+      "representative": {
+        "maxLength": "Người đại diện không được nhập quá 400 kí tự",
+        "invalid": "Người đại diện là chữ số, chữ, ký tự dấu cách, _ và –"
+      },
+      "contactPhoneNumber": {
+        "maxLength": "Số điện thoại liên hệ không được nhập quá 200 kí tự"
+      },
+      "contactEmail": {
+        "maxLength": "Số điện thoại liên hệ không được nhập quá 50 kí tự"
+      },
+      "bankAccount": {
+        "maxLength": "Số tài khoản không được nhập quá 200 kí tự"
+      },
+      "representativeIdNo": {
+        "maxLength": "Số giấy tờ của người đại diện không được nhập quá 100 kí tự",
+        "required": "Bạn chưa nhập Số giấy tờ của người đại diện",
+        "invalid": "Số giấy tờ của người đại diện là chữ số, chữ, ký tự _ và "
+      },
+      "bankName": {
+        "maxLength": "Tên ngân hàng không được nhập quá 400 kí tự",
+        "invalid": "Tên ngân hàng là chữ số, chữ, ký tự dấu cách, _ và –"
+      },
+      "bankAccountOwner": {
+        "maxLength": "Chủ tài khoản không được nhập quá 400 kí tự",
+        "invalid": "Chủ tài khoản là chữ số, chữ, ký tự dấu cách, _ và –"
+      },
+      "website": {
+        "maxLength": "Website không được nhập quá 200 kí tự"
+      },
+      "update": {
+        "message": "Sửa thông tin doanh nghiệp/chi nhánh có thể làm thông tin có trên mẫu hóa đơn khác với thông tin mẫu hóa đơn đã đăng ký với cơ quan thuế. Để sử dụng tiếp các hóa đơn còn lại, doanh nghiệp cần thực hiện theo mục IV công văn 2010/TCT-TVQT của Tổng cục thuế. Doanh nghiệp có chắc chắn thực hiện?"
+      },
+      "faxNumber": {
+        "maxLength": "Số Fax không được nhập quá 50 kí tự"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "invoiceCreatedReport": {
+    "titleParent": "Báo cáo",
+    "title": "Báo cáo tạo lập và phát hành hóa đơn",
+    "tenantBranch": "Tên đơn vị",
+    "username": "Tên người dùng",
+    "templateCode": "Mẫu số",
+    "templateName": "Tên mẫu hóa đơn",
+    "invoiceSeri": "Ký hiệu",
+    "invoiceNo": "Số hóa đơn",
+    "createdDateFrom": "Từ ngày lập",
+    "createdDateTo": "Đến ngày lập",
+    "createdDate": "Ngày lập",
+    "createdUser": "Người lập",
+    "paymentStatus": "Trạng thái thanh toán",
+    "invoiceStatus": "Trạng thái hóa đơn",
+    "taxCode": "Mã số thuế",
+    "listReport": "Danh sách hóa đơn",
+    "paymentStatus.paid": "Đã thanh toán",
+    "paymentStatus.unpaid": "Chưa thanh toán",
+    "invoiceStatus.invoiceDraft": "Hóa đơn nháp",
+    "invoiceStatus.invoiceAnnouncement": "Hóa đơn phát hành",
+    "invoiceStatus.invoiceCancel": "Hóa đơn hủy",
+    "typeDate": "Loại báo cáo",
+    "typeReport": "",
+    "moth": "Tháng",
+    "quarter": "Quý",
+    "year": "Năm",
+    "card": {
+      "title": "Thông tin xuất báo cáo"
+    },
+    "viewReport": "Xem báo cáo",
+    "validate": {
+      "tenantBranch": {
+        "required": "Bạn chưa chọn Tên đơn vị"
+      },
+      "year": {
+        "required": "Bạn chưa chọn Năm"
+      },
+      "firstPeriod": {
+        "required": "Bạn chưa nhập Từ ngày lập"
+      },
+      "lastPeriod": {
+        "required": "Bạn chưa nhập Đến ngày lập"
+      },
+      "maxFromDate": {
+        "invalid": "Từ ngày lập phải nhỏ hơn hoặc bằng đến ngày lập!"
+      },
+      "maxToDate": {
+        "invalid": "Khoảng cách xuất báo cáo theo ngày không được vượt quá 3 tháng!"
+      }
+    },
+    "button": {
+      "showReport": "Xem báo cáo",
+      "exportExcel": "Xuất excel",
+      "exportPdf": "Xuất pdf"
+    }
+  }
+}

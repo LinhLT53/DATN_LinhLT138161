@@ -1,0 +1,27 @@
+.style-chart {
+  //height: 1000px;
+  background-color: #ffffff;
+  font-family: Open + Sans, sans-serif;
+}
+#legend_div {
+  text-align: center;
+  width: 320px;
+}
+
+.legend-marker {
+  display: inline-block;
+  padding: 16px 4px 8px 4px;
+}
+
+.legend-marker-color {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+}
+
+rect g text {
+  font-family: Open + Sans !important;
+}
+.page-container {
+  background-color: #ffffff !important;
+}

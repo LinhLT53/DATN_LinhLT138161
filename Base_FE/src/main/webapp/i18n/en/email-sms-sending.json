@@ -1,0 +1,32 @@
+{
+  "emailSmsSending": {
+    "titleEmail": "Gửi Email",
+    "titleSms": "Gửi SMS",
+    "buyerName": "Tên khách hàng",
+    "buyerEmailAddress": "Địa chỉ Email",
+    "buyerPhoneNumber": "Số điện thoại",
+    "send": "Gửi email",
+    "cancel": "Hủy bỏ",
+    "validate": {
+      "buyerEmailAddress": {
+        "required": "Bạn chưa nhập Email",
+        "maxLength": "Email không được nhập quá 255 kí tự",
+        "invalid": "Bạn đang nhập sai định dạng email"
+      },
+      "buyerPhoneNumber": {
+        "required": "Bạn chưa nhập Số điện thoại"
+      }
+    },
+    "toastr": {
+      "messages": {
+        "success": {
+          "sendingMail": "Hệ thống đã thực hiện xử lý gửi mail!"
+        },
+        "error": {
+          "sendingMail": "Đã có lỗi xảy ra, hệ thống không thể gửi email!",
+          "send": "Đã có lỗi xảy ra, không thể thực hiện gửi mail!"
+        }
+      }
+    }
+  }
+}

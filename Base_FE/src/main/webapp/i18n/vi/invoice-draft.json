@@ -1,0 +1,295 @@
+{
+  "invoiceDraft": {
+    "title": "Quản lý hóa đơn chưa phát hành",
+    "title.table": "Danh sách hóa đơn chưa phát hành",
+    "addTitle": "Lập hóa đơn nháp",
+    "updateTitle": "Cập nhật hóa đơn nháp",
+    "releaseTitle": "Phát hành hóa đơn",
+    "titleParent": "Quản lý hóa đơn",
+    "titleLowercase": "hóa đơn chưa phát hành",
+    "orderNumber": "STT",
+    "action": "Hành động",
+    "createdDate": "Ngày tạo",
+    "invoiceNo": "Mẫu hóa đơn",
+    "invoiceNoName": "Tên mẫu hóa đơn",
+    "invoiceSeri": "Ký hiệu hóa đơn",
+    "fromDate": "Từ ngày",
+    "toDate": "Đến ngày",
+    "buyerName": "Tên người mua",
+    "customerName": "Tên khách hàng",
+    "buyerUnitName": "Tên đơn vị",
+    "taxCode": "Mã số thuế",
+    "totalBeforeTax": "Tổng trước thuế",
+    "taxAmount": "Tiền thuế",
+    "total": "Tổng tiền",
+    "currency": "Loại tiền",
+    "status": "Trạng thái",
+    "buyerCode": "Mã người mua",
+    "buyerTaxCode": "Mã số thuế người mua",
+    "buyerEmailAddress": "Email",
+    "buyerAddress": "Địa chỉ",
+    "buyerPhoneNumber": "Số điện thoại",
+    "createdBy": "Người tạo",
+    "supplier": "Nhà cung cấp",
+    "buyerIdNo": "Số giấy tờ",
+    "buyerIdType": "Loại giấy tờ",
+    "notRelease": "Chưa phát hành",
+    "customerCode": "Mã khách hàng",
+    "bankName": "Tên ngân hàng",
+    "bankAccount": "Tải khoản ngân hàng",
+    "contractNo": "Hợp đồng số",
+    "list": "Bảng kê",
+    "createTime": "Ngày lập",
+    "deliveryOrder": "Lệnh điều động nội bộ",
+    "deliveryWarehouse": "Địa chỉ kho xuất hàng",
+    "deliveryVehicle": "Phương tiện vận chuyển",
+    "deliveryCarrier": "Tên người vận chuyển",
+    "paymentMethod": "Hình thức thanh toán",
+    "paymentType": "Hình thức thanh toán chi tiết",
+    "exchange": "Tỷ giá",
+    "csBo": "Bộ CS",
+    "previousIndex": "Chỉ số cũ",
+    "currentIndex": "Chỉ số mới",
+    "multiNo": "HS nhân",
+    "waterElectNo": "Số điện năng/ Số nước TT",
+    "warehouse": "Kho",
+    "itemCode": "Mã hàng hóa",
+    "itemName": "Tên hàng hóa",
+    "unitName": "Đơn vị tính",
+    "unitPrice": "Đơn giá",
+    "itemTotalAmountWithoutVat": "Tổng tiền hàng trước thuế",
+    "batchNo": "Số lô",
+    "expDate": "Hạn dùng",
+    "vatPercentage": "Thuế GTGT (%)",
+    "vatAmount": "Tổng thuế",
+    "property": "Tính chất",
+    "totalAmount": "Thành tiền",
+    "percentDiscount": "% Chiết khấu",
+    "percentDiscount2": "% Chiết khấu lần 2",
+    "discount": "Chiết khấu",
+    "note": "Ghi chú",
+    "quantity": "Số lượng",
+    "totalAmountBeforeTax": "Tổng tiền hàng trước thuế",
+    "taxAmountTotal": "Tổng tiền thuế",
+    "totalProduct": "Tổng tiền hàng",
+    "inputAllField": "Vui lòng điền đủ các trường cần thiết",
+    "notFoundData": "Không tìm thấy dữ liệu",
+    "delete": " hóa đơn chưa phát hành không?",
+    "import": {
+      "title": "Lập hóa đơn chưa phát hành theo file",
+      "titleTable": "Lịch sử import dữ liệu",
+      "fileImport": "File Import",
+      "downloadFileTemplate": "Tải file mẫu",
+      "fileImportName": "Tên file",
+      "createdDate": "Ngày upload",
+      "status": "Trạng thái",
+      "status.waiting": "Đang xử lý",
+      "status.success": "Đã xử lý",
+      "status.fail": "Xử lý thất bại",
+      "status.templateErr": "File không đúng biểu mẫu",
+      "downloadFileResult": "Tải file kết quả"
+    },
+    "release": {
+      "title": "Phát hành hóa đơn",
+      "dateRelease": "Ngày phát hành",
+      "confirm": "Bạn có chắc chắn phát hành hóa đơn ngày"
+    },
+    "preview": {
+      "title": "Lập hóa đơn nháp",
+      "download": "Tải bản thể hiện"
+    },
+    "button": {
+      "add": "Lập hóa đơn",
+      "import": "Import hóa đơn",
+      "title": "hóa đơn",
+      "preview": "Xem trước",
+      "previousPage": "Quay về màn hình quản lý hóa đơn chưa phát hành",
+      "released": "Phát hành nhiều hóa đơn"
+    },
+    "card": {
+      "title.customerInfo": "Thông tin khách hàng",
+      "title.additional": "Thông tin bổ sung",
+      "checkbox.noInvoice": "Người mua không lấy hóa đơn",
+      "title.invoiceInfo": "Thông tin hóa đơn",
+      "title.transactionInformation": "Thông tin giao dịch",
+      "title.waterElectInfo": "Thông tin điện nước",
+      "title.invoiceDetail": "Chi tiết hóa đơn"
+    },
+    "modal": {
+      "action.deactivate": "Bạn chắc chắn muốn mở khóa người dùng?",
+      "action.active": "Bạn chắc chắn muốn khóa người dùng?",
+      "title": {
+        "add": "Thêm mới người dùng",
+        "update": "Cập nhật người dùng",
+        "detail": "Xem thông tin người dùng"
+      },
+      "messages": {
+        "noTaxCode": "Bạn chắc chắn muốn lập hóa đơn cho người mua không có mã số thuế ?",
+        "invoice": {
+          "null": "Hóa đơn null!",
+          "accessDenined": "Không có quyền thao tác với ký hiệu hóa đơn này!",
+          "actionInvalid": "Không có quyền thao tác này trên hóa đơn!",
+          "issueDateInvalid": "Ngày lập hóa đơn không hợp lệ!",
+          "packageEmpty": "{{paramName}} thất bại! Đơn vị đã dùng hết số hóa đơn đăng ký",
+          "signatureInvalid": "Bạn không thể lập hóa đơn! Đơn vị chưa kích hoạt chứng thư số",
+          "listEmpty": "{{paramName}} thất bại! Đơn vị đã dùng hết số hóa đơn đã phát hành"
+        },
+        "release": {
+          "packageEmpty": "Phát hành hoá đơn thất bại! Đơn vị đã dùng hết số hóa đơn đăng ký",
+          "signatureInvalid": "Bạn không thể phát hành hóa đơn! Đơn vị chưa kích hoạt chứng thư số"
+        }
+      }
+    },
+    "tooltip": {
+      "addCustomer": "Thêm khách hàng"
+    },
+    "toastr": {
+      "title": {
+        "success": "Thành công",
+        "warning": "Cảnh báo",
+        "info": "Thông báo",
+        "error": "Có lỗi xảy ra"
+      },
+      "messages": {
+        "success": {
+          "add": "Thêm mới người dùng thành công!",
+          "addInvoice": "Lập hóa đơn nháp thành công!",
+          "update": "Cập nhật người dùng thành công!",
+          "updateAuth": "Cập nhật phân quyền ký hiệu hóa đơn thành công!",
+          "sendMail": "Hệ thống đã thực hiện gửi mail!",
+          "delete": "Xóa biểu mẫu email thành công!",
+          "active": "Mở khóa người dùng thành công!",
+          "deactivate": "Khóa người dùng thành công!",
+          "release": "Mã số thuế bên bán : {{tenantTaxCode}}, Số hóa đơn {{invoiceNo}}, Mã số bí mật {{reservationCode}} đang được xử lý. Vui lòng đợi trong ít phút",
+          "import": "File import đang được xử lý, Chi tiết kết quả hệ thống sẽ trả lại sau",
+          "releasePreview": "Phát hành hóa đơn thành công"
+        },
+        "error": {
+          "add": "Đã có lỗi xảy ra, hệ thống không thể lưu bản ghi",
+          "sendMail": "Đã có lỗi xảy ra, không thể thực hiện gửi mail",
+          "delete": "Đã có lỗi xảy ra, hệ thống không thể xóa biểu mẫu email",
+          "active": "Đã có lỗi xảy ra, không thể thực hiện mở khóa người dùng",
+          "deactivate": "Đã có lỗi xảy ra, không thể thực hiện khóa người dùng",
+          "import.outRegisterInvoice": "{{param}} thất bại! Đơn vị đã dùng hết số hóa đơn đăng ký",
+          "import.outReleaseInvoice": "{{param}} thất bại! Đơn vị đã dùng hết số hóa đơn đã phát hành",
+          "import.notActiveInvoice": "Bạn không thể lập hóa đơn! Đơn vị chưa kích hoạt chứng thư số",
+          "release.timeRelease": "Ngày phát hành hóa đơn không hợp lệ!",
+          "taxSpread": "Tiền thuế vượt quá khoảng chênh lệch cho phép!",
+          "itemName": "Tên hàng hóa vượt quá số ký tự cho phép",
+          "itemCode": "Mã hàng hóa vượt quá số ký tự cho phép",
+          "invoice": {
+            "null": "Hóa đơn null!",
+            "accessDenined": "Không có quyền thao tác với ký hiệu hóa đơn này!",
+            "actionInvalid": "Không có quyền thao tác này trên hóa đơn!",
+            "issueDateInvalid": "Ngày lập hóa đơn không hợp lệ!",
+            "packageEmpty": "Lập hóa đơn thất bại! Đơn vị đã dùng hết số hóa đơn đăng ký",
+            "signatureInvalid": "Bạn không thể lập hóa đơn! Đơn vị chưa kích hoạt chứng thư số",
+            "listEmpty": "Lập hóa đơn thất bại! Đơn vị đã dùng hết số hóa đơn đã phát hành",
+            "taxSpread": "Tiền thuế vượt quá khoảng chênh lệch cho phép!",
+            "itemName": "Tên hàng hóa vượt quá số ký tự cho phép",
+            "itemCode": "Mã hàng hóa vượt quá số ký tự cho phép"
+          }
+        }
+      }
+    },
+    "validate": {
+      "releaseDate": {
+        "invalid": "Ngày phát hành hóa đơn không hợp lệ"
+      },
+      "additional": {
+        "required": "Bạn chưa nhập {{param}}"
+      },
+      "buyerName": {
+        "required": "Bạn chưa nhập Tên người mua",
+        "maxlength": "Tên người mua không được quá 510 ký tự"
+      },
+      "buyerTaxCode": {
+        "required": "Bạn chưa nhập Mã số thuế",
+        "maxlength": "Mã số thuế không được quá 20 ký tự",
+        "invalid": "Mã số thuế không đúng định dạng, bạn vui lòng nhập lại!"
+      },
+      "buyerAddress": {
+        "required": "Bạn chưa nhập Địa chỉ",
+        "maxlength": "Địa chỉ không được quá 510 ký tự"
+      },
+      "buyerUnitName": {
+        "required": "Bạn chưa nhập Tên đơn vị",
+        "maxlength": "Tên đơn vị không được quá 400 ký tự"
+      },
+      "invoiceNo": {
+        "required": "Bạn chưa chọn Mẫu hóa đơn"
+      },
+      "invoiceNoName": {
+        "required": "Bạn chưa chọn Tên mẫu hóa đơn"
+      },
+      "invoiceSeri": {
+        "required": "Bạn chưa chọn Ký hiệu hóa đơn"
+      },
+      "paymentMethod": {
+        "required": "Bạn chưa chọn Hình thức thanh toán"
+      },
+      "currency": {
+        "required": "Bạn chưa chọn Loại tiền"
+      },
+      "buyer": {
+        "required": "Bạn chưa chọn Người mua hàng"
+      },
+      "status": {
+        "required": "Bạn chưa chọn Trạng thái"
+      },
+      "description": {
+        "required": "Bạn chưa nhập Mô tả",
+        "maxlength": "Mô tả không được quá 200 ký tự"
+      },
+      "paymentType": {
+        "maxlength": "Hình thức thanh toán chi tiết không được quá 50 ký tự"
+      },
+      "deliveryOrder": {
+        "required": "Bạn chưa nhập Lệnh điều động nội bộ",
+        "maxlength": "Lệnh điều động nội bộ không được quá 200 ký tự"
+      },
+      "deliveryWarehouse": {
+        "required": "Bạn chưa nhập Địa chỉ kho xuất hàng",
+        "maxlength": "Địa chỉ kho xuất hàng không được quá 200 ký tự"
+      },
+      "warehouse": {
+        "maxlength": "Kho không được quá 200 ký tự"
+      },
+      "deliveryCarrier": {
+        "required": "Bạn chưa nhập Tên người vận chuyển",
+        "maxlength": "Tên người vận chuyển không được quá 200 ký tự"
+      },
+      "deliveryVehicle": {
+        "required": "Bạn chưa nhập Phương tiện vận chuyển",
+        "maxlength": "Phương tiện vận chuyển không được quá 200 ký tự"
+      },
+      "contractNo": {
+        "required": "Bạn chưa nhập Hợp đồng số",
+        "maxlength": "Hợp đồng số không được quá 50 ký tự"
+      },
+      "bankAccount": {
+        "maxlength": "Tài khoản ngân hàng không được quá 510 ký tự"
+      },
+      "bankName": {
+        "maxlength": "Tên ngân hàng không được quá 510 ký tự"
+      },
+      "buyerIdNo": {
+        "maxlength": "Số giấy tờ không được quá 50 ký tự"
+      },
+      "buyerPhoneNumber": {
+        "maxlength": "Số điện thoại không được quá 50 ký tự"
+      },
+      "email": {
+        "maxlength": "Email không được quá 500 ký tự",
+        "invalid": "Bạn đang nhập sai định dạng Email"
+      },
+      "buyerCode": {
+        "maxlength": "Mã khách hàng không được quá 100 ký tự"
+      },
+      "vatPercentage": {
+        "required": "Bạn chưa chọn thuế GTGT(%)"
+      },
+      "invalidDate": "Từ ngày không được phép lớn hơn Đến ngày"
+    }
+  }
+}
