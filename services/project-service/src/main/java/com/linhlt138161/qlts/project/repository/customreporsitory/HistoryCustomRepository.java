@@ -1,4 +1,4 @@
-package com.thao.qlts.project.repository.customreporsitory;
+package com.linhlt138161.qlts.project.repository.customreporsitory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

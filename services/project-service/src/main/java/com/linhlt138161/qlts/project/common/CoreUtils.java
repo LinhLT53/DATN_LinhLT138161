@@ -1,4 +1,4 @@
-package com.thao.qlts.project.common;
+package com.linhlt138161.qlts.project.common;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

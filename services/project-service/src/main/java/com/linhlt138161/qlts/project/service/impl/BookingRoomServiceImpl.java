@@ -1,14 +1,14 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.dto.BookingRoomDTO;
-import com.thao.qlts.project.dto.BookingRoomServiceDTO;
-import com.thao.qlts.project.dto.DataPage;
-import com.thao.qlts.project.entity.*;
-import com.thao.qlts.project.repository.customreporsitory.BookingRoomCustomRepository;
-import com.thao.qlts.project.repository.jparepository.*;
-import com.thao.qlts.project.service.BookingRoomService;
-import com.thao.qlts.project.service.mapper.BookingRoomMapper;
-import com.thao.qlts.project.service.mapper.BookingRoomServiceMapper;
+import com.linhlt138161.qlts.project.dto.BookingRoomDTO;
+import com.linhlt138161.qlts.project.dto.BookingRoomServiceDTO;
+import com.linhlt138161.qlts.project.dto.DataPage;
+import com.linhlt138161.qlts.project.entity.*;
+import com.linhlt138161.qlts.project.repository.customreporsitory.BookingRoomCustomRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.*;
+import com.linhlt138161.qlts.project.service.BookingRoomService;
+import com.linhlt138161.qlts.project.service.mapper.BookingRoomMapper;
+import com.linhlt138161.qlts.project.service.mapper.BookingRoomServiceMapper;
 import common.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

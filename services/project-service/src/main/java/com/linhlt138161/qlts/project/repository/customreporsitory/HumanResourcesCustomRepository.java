@@ -1,8 +1,8 @@
-package com.thao.qlts.project.repository.customreporsitory;
+package com.linhlt138161.qlts.project.repository.customreporsitory;
 
-import com.thao.qlts.project.dto.DTOSearch;
-import com.thao.qlts.project.dto.HumanResourcesDTO;
-import com.thao.qlts.project.dto.HumanResourcesShowDTO;
+import com.linhlt138161.qlts.project.dto.DTOSearch;
+import com.linhlt138161.qlts.project.dto.HumanResourcesDTO;
+import com.linhlt138161.qlts.project.dto.HumanResourcesShowDTO;
 import common.AppParams;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;

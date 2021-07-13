@@ -1,8 +1,8 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.entity.LoginEntity;
-import com.thao.qlts.project.repository.jparepository.LoginRepository;
-import com.thao.qlts.project.service.LoginService;
+import com.linhlt138161.qlts.project.entity.LoginEntity;
+import com.linhlt138161.qlts.project.repository.jparepository.LoginRepository;
+import com.linhlt138161.qlts.project.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

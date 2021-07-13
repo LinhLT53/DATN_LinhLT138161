@@ -61,7 +61,7 @@ public class Constants {
 
     public static final String SERVER_ERROR = "Đã có lỗi xáy ra từ hệ thống";
 
-    /* ThaoLC */
+    /* linhlt138161LC */
     public static final String TIME_BOOKING_FAIL = "Vượt quá thời gian đặt phòng, đặt phòng họp thất bại";
     public static final String TIME_BOOKING_SHORT_FIFTEEN_MITUES = "Mỗi phòng họp cần đặt cách nhau 15 phút, đặt phòng họp thất bại";
     public static final String TOTIME_THAN_FROMTIME = "Thời gian họp Đến giờ phải lớn hơn Từ giờ";

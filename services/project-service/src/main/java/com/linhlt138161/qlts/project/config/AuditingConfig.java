@@ -1,6 +1,6 @@
-package com.thao.qlts.project.config;
+package com.linhlt138161.qlts.project.config;
 
-import com.thao.qlts.project.repository.jparepository.HumanResourcesRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.HumanResourcesRepository;
 import exception.CustomExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

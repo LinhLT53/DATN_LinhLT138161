@@ -1,7 +1,7 @@
-package com.thao.qlts.project.config;
+package com.linhlt138161.qlts.project.config;
 
-import com.thao.qlts.project.filter.CROSFilter;
-import com.thao.qlts.project.filter.JWTAuthorizaionFilter;
+import com.linhlt138161.qlts.project.filter.CROSFilter;
+import com.linhlt138161.qlts.project.filter.JWTAuthorizaionFilter;
 import exception.JwtAuthenticationEntryPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.thao.qlts.project.service;
+package com.linhlt138161.qlts.project.service;
 
 public interface DiscountPromotionService {
 }

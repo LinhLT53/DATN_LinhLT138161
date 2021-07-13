@@ -1,4 +1,4 @@
-package com.thao.qlts.project.entity;
+package com.linhlt138161.qlts.project.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -26,8 +26,14 @@ public class AssetEntity extends Auditable<String> {
     @Column(name = "note")
     private String note;
 
+    @Column(name = "image")
+    private String image;
+
     @Column(name = "amount")
     private Integer amount;
+
+    @Column(name = "room_id")
+    private Integer room_id;
 
     @Column(name = "status")
     private Integer status;

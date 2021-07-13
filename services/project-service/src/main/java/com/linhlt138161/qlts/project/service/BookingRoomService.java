@@ -1,10 +1,10 @@
-package com.thao.qlts.project.service;
+package com.linhlt138161.qlts.project.service;
 
-import com.thao.qlts.project.dto.BookingRoomDTO;
-import com.thao.qlts.project.dto.BookingRoomServiceDTO;
-import com.thao.qlts.project.dto.DataPage;
-import com.thao.qlts.project.entity.BookingRoomEntity;
-import com.thao.qlts.project.entity.BookingRoomServiceEntity;
+import com.linhlt138161.qlts.project.dto.BookingRoomDTO;
+import com.linhlt138161.qlts.project.dto.BookingRoomServiceDTO;
+import com.linhlt138161.qlts.project.dto.DataPage;
+import com.linhlt138161.qlts.project.entity.BookingRoomEntity;
+import com.linhlt138161.qlts.project.entity.BookingRoomServiceEntity;
 import common.ResultResp;
 
 import java.util.List;

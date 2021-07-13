@@ -1,6 +1,6 @@
-package com.thao.qlts.project.service;
+package com.linhlt138161.qlts.project.service;
 
-import com.thao.qlts.project.entity.LoginEntity;
+import com.linhlt138161.qlts.project.entity.LoginEntity;
 
 public interface  LoginService {
     LoginEntity getUser(String email);

@@ -1,7 +1,7 @@
-package com.thao.qlts.project.service;
+package com.linhlt138161.qlts.project.service;
 
-import com.thao.qlts.project.dto.*;
-import com.thao.qlts.project.entity.HumanResourcesEntity;
+import com.linhlt138161.qlts.project.dto.*;
+import com.linhlt138161.qlts.project.entity.HumanResourcesEntity;
 import common.ResultResp;
 import org.springframework.web.multipart.MultipartFile;
 

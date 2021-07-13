@@ -1,7 +1,7 @@
-package com.thao.qlts.project.repository.jparepository;
+package com.linhlt138161.qlts.project.repository.jparepository;
 
-import com.thao.qlts.project.entity.AppParamEntity;
-import com.thao.qlts.project.entity.RoomEntity;
+import com.linhlt138161.qlts.project.entity.AppParamEntity;
+import com.linhlt138161.qlts.project.entity.RoomEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

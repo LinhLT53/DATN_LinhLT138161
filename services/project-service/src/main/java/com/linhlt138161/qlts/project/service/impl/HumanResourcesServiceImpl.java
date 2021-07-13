@@ -1,12 +1,12 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.dto.*;
-import com.thao.qlts.project.entity.HumanResourcesEntity;
-import com.thao.qlts.project.repository.customreporsitory.HumanResourcesCustomRepository;
-import com.thao.qlts.project.repository.jparepository.HumanResourcesRepository;
-import com.thao.qlts.project.repository.jparepository.PositionRepository;
-import com.thao.qlts.project.service.HumanResourcesService;
-import com.thao.qlts.project.service.mapper.HumanResourcesMapper;
+import com.linhlt138161.qlts.project.dto.*;
+import com.linhlt138161.qlts.project.entity.HumanResourcesEntity;
+import com.linhlt138161.qlts.project.repository.customreporsitory.HumanResourcesCustomRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.HumanResourcesRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.PositionRepository;
+import com.linhlt138161.qlts.project.service.HumanResourcesService;
+import com.linhlt138161.qlts.project.service.mapper.HumanResourcesMapper;
 import common.*;
 import exception.CustomExceptionHandler;
 import org.apache.commons.collections.CollectionUtils;

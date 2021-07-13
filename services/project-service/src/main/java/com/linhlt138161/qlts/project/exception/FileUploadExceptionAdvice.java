@@ -1,4 +1,4 @@
-package com.thao.qlts.project.exception;
+package com.linhlt138161.qlts.project.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.multipart.MaxUploadSizeExceededException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.thao.qlts.project.message.ResponseMessage;
+import com.linhlt138161.qlts.project.message.ResponseMessage;
 
 
 @ControllerAdvice

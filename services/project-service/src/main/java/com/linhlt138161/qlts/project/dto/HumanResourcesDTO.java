@@ -1,4 +1,4 @@
-package com.thao.qlts.project.dto;
+package com.linhlt138161.qlts.project.dto;
 
 import com.google.gson.Gson;
 import lombok.AllArgsConstructor;

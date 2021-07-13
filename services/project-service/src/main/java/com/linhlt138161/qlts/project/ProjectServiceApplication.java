@@ -1,4 +1,4 @@
-package com.thao.qlts.project;
+package com.linhlt138161.qlts.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

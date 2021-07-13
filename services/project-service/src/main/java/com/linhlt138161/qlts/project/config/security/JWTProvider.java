@@ -1,6 +1,6 @@
-package com.thao.qlts.project.config.security;
+package com.linhlt138161.qlts.project.config.security;
 
-import com.thao.qlts.project.entity.HumanResourcesEntity;
+import com.linhlt138161.qlts.project.entity.HumanResourcesEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

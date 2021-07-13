@@ -1,7 +1,7 @@
-package com.thao.qlts.project.repository.customreporsitory;
+package com.linhlt138161.qlts.project.repository.customreporsitory;
 
-import com.thao.qlts.project.dto.BookingRoomDTO;
-import com.thao.qlts.project.dto.RoomDTO;
+import com.linhlt138161.qlts.project.dto.BookingRoomDTO;
+import com.linhlt138161.qlts.project.dto.RoomDTO;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

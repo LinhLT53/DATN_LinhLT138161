@@ -1,8 +1,8 @@
-package com.thao.qlts.project.controller;
+package com.linhlt138161.qlts.project.controller;
 
-import com.thao.qlts.project.dto. ServiceDTO;
-import com.thao.qlts.project.entity.RoomTypeEntity;
-import com.thao.qlts.project.service.ServiceService;
+import com.linhlt138161.qlts.project.dto. ServiceDTO;
+import com.linhlt138161.qlts.project.entity.RoomTypeEntity;
+import com.linhlt138161.qlts.project.service.ServiceService;
 import common.ErrorCode;
 import common.ResultResp;
 import exception.CustomExceptionHandler;

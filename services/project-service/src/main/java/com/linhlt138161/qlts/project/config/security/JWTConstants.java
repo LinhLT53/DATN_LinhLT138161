@@ -1,4 +1,4 @@
-package com.thao.qlts.project.config.security;
+package com.linhlt138161.qlts.project.config.security;
 
 public class JWTConstants {
     public static final String SECRET = "IIST";

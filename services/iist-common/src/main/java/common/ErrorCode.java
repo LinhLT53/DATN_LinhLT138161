@@ -86,7 +86,7 @@ public class ErrorCode {
     public static final ObjectError GROUPPERMISSION_EXIST = new ObjectError("EGP012", Constants.PERMISSION_LIST_EXIST);
     public static final ObjectError GROUP_PERMISSION_INACTIVE = new ObjectError("EGP011", Constants.GROUP_PERMISSION_INACTIVE);
     /*
-     *@author ThaoLC - IIST
+     *@author linhlt138161LC - IIST
      *created on 7/30/2020
      */
     public static final ObjectError RESET_PASSWORD_OK = new ObjectError("BK0046",Constants.RESET_PASSWORD_OK);

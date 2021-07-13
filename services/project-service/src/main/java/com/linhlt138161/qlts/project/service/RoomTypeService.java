@@ -1,7 +1,7 @@
-package com.thao.qlts.project.service;
+package com.linhlt138161.qlts.project.service;
 
-import com.thao.qlts.project.dto.DataPage;
-import com.thao.qlts.project.dto.RoomTypeDTO;
+import com.linhlt138161.qlts.project.dto.DataPage;
+import com.linhlt138161.qlts.project.dto.RoomTypeDTO;
 
 import java.util.List;
 

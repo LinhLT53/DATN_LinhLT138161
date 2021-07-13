@@ -1,4 +1,4 @@
-package com.thao.qlts.project.config.async;
+package com.linhlt138161.qlts.project.config.async;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.thao.qlts.project.entity;
+package com.linhlt138161.qlts.project.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

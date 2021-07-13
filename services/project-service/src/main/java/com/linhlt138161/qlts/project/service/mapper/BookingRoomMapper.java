@@ -1,7 +1,7 @@
-package com.thao.qlts.project.service.mapper;
+package com.linhlt138161.qlts.project.service.mapper;
 
-import com.thao.qlts.project.dto.BookingRoomDTO;
-import com.thao.qlts.project.entity.BookingRoomEntity;
+import com.linhlt138161.qlts.project.dto.BookingRoomDTO;
+import com.linhlt138161.qlts.project.entity.BookingRoomEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

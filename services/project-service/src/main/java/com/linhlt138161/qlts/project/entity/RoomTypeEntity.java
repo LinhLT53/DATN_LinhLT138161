@@ -1,4 +1,4 @@
-package com.thao.qlts.project.entity;
+package com.linhlt138161.qlts.project.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,4 +37,7 @@ public class RoomTypeEntity extends Auditable<String> {
 
     @Column(name = "note")
     private String note;
+
+    @Column(name = "image")
+    private String image;
 }

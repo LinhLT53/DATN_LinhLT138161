@@ -1,4 +1,4 @@
-package com.thao.qlts.project.entity;
+package com.linhlt138161.qlts.project.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +17,7 @@ public class RoomEntity extends Auditable<String> {
     @Column(name = "room_id")
     private Long roomId;
 
-    @Column(name = "max_number")
+        @Column(name = "max_number")
     private Integer maxNumber;
 
     @Column(name = "floor_number")
@@ -29,8 +29,14 @@ public class RoomEntity extends Auditable<String> {
     @Column(name = "room_name")
     private String roomName;
 
+    @Column(name = "image_avatar")
+    private String image_avatar;
+
     @Column(name = "status")
     private Integer status;
+
+    @Column(name = "price")
+    private Integer price;
 
     @Column(name = "room_type")
     private Integer roomType;

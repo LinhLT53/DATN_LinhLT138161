@@ -1,6 +1,6 @@
-package com.thao.qlts.project.repository.jparepository;
+package com.linhlt138161.qlts.project.repository.jparepository;
 
-import com.thao.qlts.project.entity.GroupPermissionUserEntity;
+import com.linhlt138161.qlts.project.entity.GroupPermissionUserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

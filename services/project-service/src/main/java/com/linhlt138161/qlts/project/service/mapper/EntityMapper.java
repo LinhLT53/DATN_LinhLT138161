@@ -1,4 +1,4 @@
-package com.thao.qlts.project.service.mapper;
+package com.linhlt138161.qlts.project.service.mapper;
 
 import java.util.List;
 

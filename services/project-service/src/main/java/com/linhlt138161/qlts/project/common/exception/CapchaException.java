@@ -1,4 +1,4 @@
-package com.thao.qlts.project.common.exception;
+package com.linhlt138161.qlts.project.common.exception;
 
 public class CapchaException extends Exception{
     public CapchaException(String errorMessage) {

@@ -1,7 +1,7 @@
-package com.thao.qlts.project.controller;
+package com.linhlt138161.qlts.project.controller;
 
-import com.thao.qlts.project.dto.promotionDTO;
-import com.thao.qlts.project.service.PromotionService;
+import com.linhlt138161.qlts.project.dto.promotionDTO;
+import com.linhlt138161.qlts.project.service.PromotionService;
 import common.DateUtils;
 import common.ErrorCode;
 import common.ResultResp;

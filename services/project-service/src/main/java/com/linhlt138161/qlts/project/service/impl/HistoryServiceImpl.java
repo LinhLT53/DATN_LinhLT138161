@@ -1,6 +1,6 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.service.HistoryService;
+import com.linhlt138161.qlts.project.service.HistoryService;
 import org.springframework.stereotype.Service;
 
 @Service(value = "historyService")

@@ -1,4 +1,4 @@
-package com.thao.qlts.project.common.annotation;
+package com.linhlt138161.qlts.project.common.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

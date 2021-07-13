@@ -1,6 +1,6 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.dto.respone.RecaptchaResponse;
+import com.linhlt138161.qlts.project.dto.respone.RecaptchaResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpMethod;

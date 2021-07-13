@@ -1,7 +1,7 @@
-package com.thao.qlts.project.service.mapper;
+package com.linhlt138161.qlts.project.service.mapper;
 
-import com.thao.qlts.project.dto.ServiceDTO;
-import com.thao.qlts.project.entity.ServiceEntity;
+import com.linhlt138161.qlts.project.dto.ServiceDTO;
+import com.linhlt138161.qlts.project.entity.ServiceEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")

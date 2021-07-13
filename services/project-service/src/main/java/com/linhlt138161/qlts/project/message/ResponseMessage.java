@@ -1,4 +1,4 @@
-package com.thao.qlts.project.message;
+package com.linhlt138161.qlts.project.message;
 
 public class ResponseMessage {
 	private String message;

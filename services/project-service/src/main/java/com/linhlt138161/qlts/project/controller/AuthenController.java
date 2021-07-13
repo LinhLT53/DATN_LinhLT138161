@@ -1,13 +1,13 @@
-package com.thao.qlts.project.controller;
+package com.linhlt138161.qlts.project.controller;
 
-import com.thao.qlts.project.common.exception.CapchaException;
-import com.thao.qlts.project.config.security.JWTProvider;
-import com.thao.qlts.project.dto.HumanResourcesDTO;
-import com.thao.qlts.project.dto.UserLoginDTO;
-import com.thao.qlts.project.entity.HumanResourcesEntity;
-import com.thao.qlts.project.repository.jparepository.HumanResourcesRepository;
-import com.thao.qlts.project.service.AuthenService;
-import com.thao.qlts.project.service.HumanResourcesService;
+import com.linhlt138161.qlts.project.common.exception.CapchaException;
+import com.linhlt138161.qlts.project.config.security.JWTProvider;
+import com.linhlt138161.qlts.project.dto.HumanResourcesDTO;
+import com.linhlt138161.qlts.project.dto.UserLoginDTO;
+import com.linhlt138161.qlts.project.entity.HumanResourcesEntity;
+import com.linhlt138161.qlts.project.repository.jparepository.HumanResourcesRepository;
+import com.linhlt138161.qlts.project.service.AuthenService;
+import com.linhlt138161.qlts.project.service.HumanResourcesService;
 import common.ErrorCode;
 import common.ResultResp;
 import exception.CustomExceptionHandler;

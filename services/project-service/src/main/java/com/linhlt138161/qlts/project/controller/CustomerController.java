@@ -1,7 +1,7 @@
-package com.thao.qlts.project.controller;
+package com.linhlt138161.qlts.project.controller;
 
-import com.thao.qlts.project.dto.CustomerDTO;
-import com.thao.qlts.project.service.CustomerService;
+import com.linhlt138161.qlts.project.dto.CustomerDTO;
+import com.linhlt138161.qlts.project.service.CustomerService;
 import common.ErrorCode;
 import common.ResultResp;
 import exception.CustomExceptionHandler;

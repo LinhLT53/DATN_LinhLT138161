@@ -1,6 +1,6 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.service.GroupPermissionPermissionService;
+import com.linhlt138161.qlts.project.service.GroupPermissionPermissionService;
 import org.springframework.stereotype.Service;
 
 @Service(value = "groupPermissionPermissionService")

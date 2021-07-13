@@ -1,15 +1,15 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
 
-import com.thao.qlts.project.dto.DataPage;
-import com.thao.qlts.project.dto.promotionDTO;
-import com.thao.qlts.project.entity.promotionEntity;
-import com.thao.qlts.project.entity.promotionRoomTypeEntity;
-import com.thao.qlts.project.repository.customreporsitory.promotionCustomRepository;
-import com.thao.qlts.project.repository.jparepository.PromotionRepository;
-import com.thao.qlts.project.repository.jparepository.promotionRoomTypeRepository;
-import com.thao.qlts.project.service.PromotionService;
-//import com.thao.qlts.project.service.mapper.PromotionMapper;
+import com.linhlt138161.qlts.project.dto.DataPage;
+import com.linhlt138161.qlts.project.dto.promotionDTO;
+import com.linhlt138161.qlts.project.entity.promotionEntity;
+import com.linhlt138161.qlts.project.entity.promotionRoomTypeEntity;
+import com.linhlt138161.qlts.project.repository.customreporsitory.promotionCustomRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.PromotionRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.promotionRoomTypeRepository;
+import com.linhlt138161.qlts.project.service.PromotionService;
+//import com.linhlt138161.qlts.project.service.mapper.PromotionMapper;
 import common.CommonUtils;
 import common.ErrorCode;
 import exception.CustomExceptionHandler;

@@ -1,13 +1,13 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.dto.BookingRoomServiceDTO;
-import com.thao.qlts.project.dto.ChartDto;
-import com.thao.qlts.project.dto.PayDto;
-import com.thao.qlts.project.dto.TimeBookDTO;
-import com.thao.qlts.project.entity.*;
-import com.thao.qlts.project.repository.jparepository.*;
-import com.thao.qlts.project.service.BookingRoomService;
-import com.thao.qlts.project.service.PayService;
+import com.linhlt138161.qlts.project.dto.BookingRoomServiceDTO;
+import com.linhlt138161.qlts.project.dto.ChartDto;
+import com.linhlt138161.qlts.project.dto.PayDto;
+import com.linhlt138161.qlts.project.dto.TimeBookDTO;
+import com.linhlt138161.qlts.project.entity.*;
+import com.linhlt138161.qlts.project.repository.jparepository.*;
+import com.linhlt138161.qlts.project.service.BookingRoomService;
+import com.linhlt138161.qlts.project.service.PayService;
 import common.Enums;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

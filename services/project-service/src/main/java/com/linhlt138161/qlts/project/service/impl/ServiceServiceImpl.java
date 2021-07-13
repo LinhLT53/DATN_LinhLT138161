@@ -1,12 +1,12 @@
-package com.thao.qlts.project.service.impl;
+package com.linhlt138161.qlts.project.service.impl;
 
-import com.thao.qlts.project.dto.DataPage;
-import com.thao.qlts.project.dto.ServiceDTO;
-import com.thao.qlts.project.entity.ServiceEntity;
-import com.thao.qlts.project.repository.customreporsitory.ServiceCustomRepository;
-import com.thao.qlts.project.repository.jparepository.ServiceRepository;
-import com.thao.qlts.project.service.ServiceService;
-import com.thao.qlts.project.service.mapper.ServiceMapper;
+import com.linhlt138161.qlts.project.dto.DataPage;
+import com.linhlt138161.qlts.project.dto.ServiceDTO;
+import com.linhlt138161.qlts.project.entity.ServiceEntity;
+import com.linhlt138161.qlts.project.repository.customreporsitory.ServiceCustomRepository;
+import com.linhlt138161.qlts.project.repository.jparepository.ServiceRepository;
+import com.linhlt138161.qlts.project.service.ServiceService;
+import com.linhlt138161.qlts.project.service.mapper.ServiceMapper;
 import common.ErrorCode;
 import exception.CustomExceptionHandler;
 import org.springframework.beans.factory.annotation.Autowired;

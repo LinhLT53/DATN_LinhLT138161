@@ -1,12 +1,12 @@
-package com.thao.qlts.project.controller;
+package com.linhlt138161.qlts.project.controller;
 
-import com.thao.qlts.project.common.CoreUtils;
-import com.thao.qlts.project.config.security.JWTProvider;
-import com.thao.qlts.project.dto.DTOSearch;
-import com.thao.qlts.project.dto.HumanResourcesDTO;
-import com.thao.qlts.project.dto.HumanResourcesShowDTO;
-import com.thao.qlts.project.service.AuthenService;
-import com.thao.qlts.project.service.HumanResourcesService;
+import com.linhlt138161.qlts.project.common.CoreUtils;
+import com.linhlt138161.qlts.project.config.security.JWTProvider;
+import com.linhlt138161.qlts.project.dto.DTOSearch;
+import com.linhlt138161.qlts.project.dto.HumanResourcesDTO;
+import com.linhlt138161.qlts.project.dto.HumanResourcesShowDTO;
+import com.linhlt138161.qlts.project.service.AuthenService;
+import com.linhlt138161.qlts.project.service.HumanResourcesService;
 import common.CommonUtils;
 import common.ErrorCode;
 import common.ObjectError;
