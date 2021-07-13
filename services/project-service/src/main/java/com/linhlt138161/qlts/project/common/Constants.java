@@ -7,7 +7,7 @@ public class Constants {
 
     public static class EXECEL_STYLE {
         public static final String String = "String";
-        public static final String Date = "Date";
+        public static final String Date = "Dat    e";
         public static final String Number = "Number";
         public static final String NumberAsString = "NumberAsString";
     }

@@ -49,7 +49,7 @@ export class Authen {
   }
 
   private navigeteRole4() {
-    console.log(authen.positionId);
+    // console.log(authen.positionId);
 
     if (authen.positionId === AUTHEN.BUONGPHONG) {
       this.router.navigate(['/system-categories/service-resources']);

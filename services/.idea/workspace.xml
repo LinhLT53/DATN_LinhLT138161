@@ -2,242 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecc64281-3338-45fd-aa59-ba66717e9abc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/history/history-resources-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/history/history-resources.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/account/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/account/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/account/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/account/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/models/asset-model/asset-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/models/asset-model/asset-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/models/room-type-model/room-type-model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/models/room-type-model/room-type-model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/services/booking-room-api/booking-room-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/services/booking-room-api/booking-room-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/services/room-api/room-api-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/core/services/room-api/room-api-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/layouts/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/layouts/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/layouts/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/layouts/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/layouts/sidebar/sidebar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/layouts/sidebar/sidebar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/add-asset/add-asset.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/add-asset/add-asset.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/add-asset/add-asset.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/add-asset/add-asset.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/asset-resuorce.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/asset-resuorce.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/asset-resuorce.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/asset-resuorce/asset-resuorce.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-booking/add-booking.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-booking/add-booking.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-booking/add-booking.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-booking/add-booking.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-service/add-service.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-service/add-service.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-service/add-service.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/add-service/add-service.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/book-room.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/book-room.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/book-room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/book-room.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/book-room.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/book-room/book-room.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/chart/chart-resources.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/chart/chart-resources.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/customer/customer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/customer/customer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/customer/customer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/promotion/promotion.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/promotion/promotion.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/promotion/promotion.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/promotion/promotion.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room-type/add-room-type/add-room-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room-type/add-room-type/add-room-type.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room-type/room-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room-type/room-type.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room-type/room-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room-type/room-type.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room/room.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room/room.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room/room.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/room/room.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/service/service.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/service/service.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/service/service.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/service/service.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/system-categories-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/system-categories-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/system-categories.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/modules/system-categories/system-categories.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/shared/constants/sidebar-menu.constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/shared/constants/sidebar-menu.constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/shared/directives/has-permission.directive.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/shared/directives/has-permission.directive.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/ProjectServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/CoreUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/ExcelDataUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/ExcelStyleUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/FileUploadUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/StatusCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/annotation/Export.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/annotation/Import.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/annotation/LogAnnotation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/annotation/SheetExportSerializable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/annotation/SheetImportSerializable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/constant/TextStyleExcel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/exception/CapchaException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/common/exception/LoginTimeException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/AuditingConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/ConfigSchedule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/JpaAuditingConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/SpringFoxConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/WebSecuriyConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/WebSocketConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/async/AsyncConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/email/MailConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/security/JWTConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/config/security/JWTProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/AssetControler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/AuthenController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/BookingRoomController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/CustomerController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/HumanResourcesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/ServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/promotionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/roomController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/controller/roomTypeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/AppParamDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/AssetDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/AssetRoomDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/AuditingDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/BookingRoomDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/BookingRoomServiceDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/CustomerDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/DTOSearch.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/DataPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/DiscountPromotionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/EmployeeDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/GroupPermissionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/GroupPermissionPermissionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/GroupPermissionUserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/GroupUserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/HistoryDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/HumanResourcesDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/HumanResourcesShowDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/ICusTomDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/IPositionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/ImageDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/PayDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/PermissionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/PermissionGroupUserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/RoomDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/RoomServiceDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/RoomTypeDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/ServiceDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/TimeBookDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/UserLoginDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/WorkScheduleDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/promotionDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/promotionRoomTypeDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/dto/respone/RecaptchaResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/AppParamEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/AssetEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/AssetRoomEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/Auditable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/BookingRoomEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/BookingRoomServiceEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/CustomerEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/DiscountPromotionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/GroupPermissionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/GroupPermissionPermissionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/GroupPermissionUserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/GroupUserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/HistoryEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/HumanResourcesEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/ImageEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/LoginEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/PayEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/PermissionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/PermissionGroupUserEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/PositionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/RoomEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/RoomServiceEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/RoomTypeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/ServiceEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/WorkScheduleEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/promotionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/entity/promotionRoomTypeEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/exception/FileUploadExceptionAdvice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/filter/CROSFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/filter/JWTAuthorizaionFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/message/ResponseMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/AssetCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/BookingRoomCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/CustomerRepositoryy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/HistoryCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/HumanResourcesCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/RoomCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/RoomTypeCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/ServiceCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/customreporsitory/promotionCustomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/AppParamRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/AssetRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/AssetRoomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/BookingRoomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/BookingRoomServiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/CustomerRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/DiscountPromotionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/GroupPermissionPermissionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/GroupPermissionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/GroupPermissionUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/GroupUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/HistoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/HumanResourcesRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/ImageRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/LoginRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/PayRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/PermissionGroupUserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/PermissionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/PositionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/PromotionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/RoomRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/RoomServiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/RoomTypeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/ServiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/WorkScheduleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/repository/jparepository/promotionRoomTypeRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/AppParamService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/AssetRoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/AssetService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/AuthenService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/BookingRoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/DiscountPromotionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/EmployeeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/GroupPermissionPermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/GroupPermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/GroupPermissionUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/GroupUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/HistoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/HumanResourcesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/ImageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/LoginService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/PayService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/PermissionGroupUserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/PermissionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/PromotionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/RoomService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/RoomServiceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/RoomTypeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/ServiceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/WorkScheduleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/AppParamServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/AssetRoomServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/AssetServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/AuthenServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/BookingRoomServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/CaptchaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/CustomerServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/DiscountPromotionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/EmployeeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/GroupPermissionPermissionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/GroupPermissionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/GroupPermissionUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/GroupUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/HistoryServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/HumanResourcesServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/ImageServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/LoginServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/PayServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/PermissionGroupUserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/PermissionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/PromotionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/RoomServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/RoomServiceServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/RoomTypeServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/ServiceServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/impl/WorkScheduleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/BookingRoomMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/BookingRoomServiceMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/CustomerMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/EntityMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/HumanResourcesMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/PromotionMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/RoomMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/RoomTypeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/thao/qlts/project/service/mapper/ServiceMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/shared/util/authen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Base_FE/src/main/webapp/app/shared/util/authen.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,6 +104,8 @@
       <workItem from="1625973580924" duration="1739000" />
       <workItem from="1626068743444" duration="667000" />
       <workItem from="1626156159158" duration="1476000" />
+      <workItem from="1626174364038" duration="617000" />
+      <workItem from="1626175154860" duration="1803000" />
     </task>
     <servers />
   </component>
@@ -361,64 +129,65 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="129" y="54" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1625931288965" />
-    <state x="2017" y="169" key="FileChooserDialogImpl" timestamp="1626156253310">
-      <screen x="1366" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2017" y="169" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626156253310" />
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1625973595625" />
-    <state width="1323" height="524" key="GridCell.Tab.0.bottom" timestamp="1626167364821">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1626175167753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364821" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626175167753" />
+    <state x="2017" y="169" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626156253310" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1625973595625" />
+    <state width="1323" height="524" key="GridCell.Tab.0.bottom" timestamp="1626178218222">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="524" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218222" />
     <state width="1877" height="524" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182866" />
     <state width="1323" height="341" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
-    <state width="1323" height="524" key="GridCell.Tab.0.center" timestamp="1626167364820">
+    <state width="1323" height="524" key="GridCell.Tab.0.center" timestamp="1626178218222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364820" />
+    <state width="1323" height="524" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218222" />
     <state width="1877" height="524" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182865" />
     <state width="1323" height="341" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
-    <state width="1323" height="524" key="GridCell.Tab.0.left" timestamp="1626167364820">
+    <state width="1323" height="524" key="GridCell.Tab.0.left" timestamp="1626178218222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364820" />
+    <state width="1323" height="524" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218222" />
     <state width="1877" height="524" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182864" />
     <state width="1323" height="341" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
-    <state width="1323" height="524" key="GridCell.Tab.0.right" timestamp="1626167364821">
+    <state width="1323" height="524" key="GridCell.Tab.0.right" timestamp="1626178218222">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364821" />
+    <state width="1323" height="524" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218222" />
     <state width="1877" height="524" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182866" />
     <state width="1323" height="341" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
-    <state width="1323" height="524" key="GridCell.Tab.1.bottom" timestamp="1626167364821">
+    <state width="1323" height="524" key="GridCell.Tab.1.bottom" timestamp="1626178218223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364821" />
+    <state width="1323" height="524" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218223" />
     <state width="1877" height="524" key="GridCell.Tab.1.bottom/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182867" />
     <state width="1323" height="341" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622090154157" />
-    <state width="1323" height="524" key="GridCell.Tab.1.center" timestamp="1626167364821">
+    <state width="1323" height="524" key="GridCell.Tab.1.center" timestamp="1626178218223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364821" />
+    <state width="1323" height="524" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218223" />
     <state width="1877" height="524" key="GridCell.Tab.1.center/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182867" />
     <state width="1323" height="341" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
-    <state width="1323" height="524" key="GridCell.Tab.1.left" timestamp="1626167364821">
+    <state width="1323" height="524" key="GridCell.Tab.1.left" timestamp="1626178218223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364821" />
+    <state width="1323" height="524" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218223" />
     <state width="1877" height="524" key="GridCell.Tab.1.left/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182867" />
     <state width="1323" height="341" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
-    <state width="1323" height="524" key="GridCell.Tab.1.right" timestamp="1626167364821">
+    <state width="1323" height="524" key="GridCell.Tab.1.right" timestamp="1626178218223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="524" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626167364821" />
+    <state width="1323" height="524" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626178218223" />
     <state width="1877" height="524" key="GridCell.Tab.1.right/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626091182867" />
     <state width="1323" height="341" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1625985544090" />
     <state width="1309" height="313" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1622090154156" />
