@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/discovery/discovery.iml" filepath="$PROJECT_DIR$/discovery/discovery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iist-common/iist-common.iml" filepath="$PROJECT_DIR$/iist-common/iist-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-service/project-service.iml" filepath="$PROJECT_DIR$/project-service/project-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/services.iml" filepath="$PROJECT_DIR$/services.iml" />
+    </modules>
+  </component>
+</project>
