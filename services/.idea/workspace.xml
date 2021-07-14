@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecc64281-3338-45fd-aa59-ba66717e9abc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/project-service/src/main/java/com/linhlt138161/qlts/project/entity/ServiceDutyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project-service/src/main/java/com/linhlt138161/qlts/project/entity/TourEntity.java" afterDir="false" />
+    <list default="true" id="ecc64281-3338-45fd-aa59-ba66717e9abc" name="Default Changelist" comment="linh tinh fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/linhlt138161/qlts/project/entity/ServiceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-service/src/main/java/com/linhlt138161/qlts/project/entity/ServiceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/java/com/linhlt138161/qlts/project/entity/StaffEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/project-service/src/main/java/com/linhlt138161/qlts/project/entity/StaffEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/project-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,7 @@
       <workItem from="1626194008178" duration="409000" />
       <workItem from="1626194505217" duration="486000" />
       <workItem from="1626195006759" duration="85000" />
-      <workItem from="1626240998720" duration="1309000" />
+      <workItem from="1626240998720" duration="2357000" />
     </task>
     <task id="LOCAL-00001" summary="linh tinh fix">
       <created>1626188781293</created>
@@ -178,9 +173,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="412" y="153" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1626194421226" />
-    <state x="308" y="0" key="CommitChangelistDialog2" timestamp="1626194756273">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1799" y="0" width="1294" height="864" key="CommitChangelistDialog2" timestamp="1626242662523">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state x="1799" y="0" width="1294" height="864" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626242662523" />
     <state x="308" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1626194756273" />
     <state x="129" y="54" key="DiffContextDialog" timestamp="1626194634045">
       <screen x="0" y="0" width="1366" height="728" />
@@ -192,9 +188,10 @@
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1626175167753" />
     <state x="2017" y="169" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626156253310" />
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1625973595625" />
-    <state width="296" height="438" key="Git.Branch.Popup" timestamp="1626195908151">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="423" height="632" key="Git.Branch.Popup" timestamp="1626242644439">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state width="423" height="632" key="Git.Branch.Popup/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626242644439" />
     <state width="296" height="438" key="Git.Branch.Popup/0.0.1366.728@0.0.1366.728" timestamp="1626195908151" />
     <state width="1323" height="207" key="GridCell.Tab.0.bottom" timestamp="1626195885429">
       <screen x="0" y="0" width="1366" height="728" />
@@ -272,9 +269,10 @@
     </state>
     <state width="1323" height="335" key="GridCell.Tab.2.right/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1620645004820" />
     <state width="1323" height="293" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1625931725903" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1626194828161">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1753" y="137" key="Vcs.Push.Dialog.v2" timestamp="1626242630121">
+      <screen x="1366" y="0" width="1920" height="1040" />
     </state>
+    <state x="1753" y="137" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@1366.0.1920.1040" timestamp="1626242630121" />
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1626194828161" />
     <state x="389" y="0" width="684" height="728" key="find.popup" timestamp="1626194398344">
       <screen x="0" y="0" width="1366" height="728" />
