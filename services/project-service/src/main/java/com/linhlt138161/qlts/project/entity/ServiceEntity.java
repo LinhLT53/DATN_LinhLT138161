@@ -3,8 +3,10 @@ package com.linhlt138161.qlts.project.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.joda.time.DateTime;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -22,6 +24,16 @@ public class ServiceEntity extends Auditable<String> {
 
     @Column(name = "service_name")
     private String servicename;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "start_date")
+    private Date startdate;
+
+    @Column(name = "end_date")
+    private Date enddate;
+
 
     @Column(name = "price")
     private Double price;
