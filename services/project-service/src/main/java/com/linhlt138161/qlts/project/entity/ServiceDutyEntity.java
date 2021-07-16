@@ -11,7 +11,7 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name ="Service_duty")
+@Table(name ="service_duty")
 @AllArgsConstructor
 @NoArgsConstructor
 public class ServiceDutyEntity {
@@ -33,10 +33,10 @@ public class ServiceDutyEntity {
     @Column(name = "end_time")
     private Date endtime;
 
-    @Column(name = "actual start_time")
+    @Column(name = "actual_start_time")
     private Date actualstarttime;
 
-    @Column(name = "actual end_time")
+    @Column(name = "actual_end_time")
     private Date actualendttime;
 
     @Column(name = "id_staff")
