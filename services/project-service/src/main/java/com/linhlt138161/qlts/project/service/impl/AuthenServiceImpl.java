@@ -69,16 +69,16 @@ public class AuthenServiceImpl implements AuthenService {
 
     @Override
     public String login(UserLoginDTO userLoginDTO) throws CapchaException, LoginException {
-        boolean captchaVerified = captchaService.verify(userLoginDTO.getRecaptchare());
-        if (!captchaVerified) {
-            throw new CapchaException("exx");
-        }
+//        boolean captchaVerified = captchaService.verify(userLoginDTO.getRecaptchare());
+//        if (!captchaVerified) {
+//            throw new CapchaException("exx");
+//        }
         LoginEntity entity = loginService.getUser(userLoginDTO.getEmail());
-        if (entity != null) {
-            if (entity.getRequetFail() == 3 & (entity.getTime() + 600000 > new Date().getTime())) {
-                throw new LoginException("exx");
-            }
-        }
+//        if (entity != null) {
+//            if (entity.getRequetFail() == 3 & (entity.getTime() + 600000 > new Date().getTime())) {
+//                throw new LoginException("exx");
+//            }
+//        }
 
         try {
             UsernamePasswordAuthenticationToken upToken = new UsernamePasswordAuthenticationToken(userLoginDTO.getEmail(), userLoginDTO.getPassword());

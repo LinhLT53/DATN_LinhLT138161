@@ -154,29 +154,27 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     class: 'fa-tachometer',
     resourceCode: 'menu.hddt_qlht_chdn'
   };
-  requestform = {
-    name: MENU_TITLE.REQUEST_FORM.NAME,
-    url: '/system-categories/request-form',
-    class: 'fa-tachometer',
-    resourceCode: 'menu.hddt_qlht_chdn'
-  };
   listDevice = {
     name: MENU_TITLE.LIST_DEVICE.NAME,
     url: '/system-categories/list-device',
     class: 'fa-tachometer',
     resourceCode: 'menu.hddt_qlht_chdn'
   };
-
   bookRoom = {
     name: MENU_TITLE.BOOK_ROOM.NAME,
     url: '/system-categories/book-room',
     class: 'fa-tachometer',
     resourceCode: 'menu.hddt_qlht_chdn'
   };
-
   bookRoomFuture = {
     name: MENU_TITLE.BOOK_ROOM_FUTURE.NAME,
     url: '/system-categories/book-room-future',
+    class: 'fa-tachometer',
+    resourceCode: 'menu.hddt_qlht_chdn'
+  };
+  tour = {
+    name: MENU_TITLE.TOUR.NAME,
+    url: '/system-categories/tour-resources',
     class: 'fa-tachometer',
     resourceCode: 'menu.hddt_qlht_chdn'
   };

@@ -1,0 +1,118 @@
+<!--</div>-->
+<div [handle]="handle" class="modal-import" jhiModalDrag>
+  <div #handle class="modal-header">
+    <h5 class="modal-title mt-0">{{title}}</h5>
+    <button #closeBtn (click)="onCancel()" aria-label="Close" class="close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" autocomplete="off" novalidate>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label required">Mã tour</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
+                   [readOnly]="type === 'detail'||type==='update'"
+                   class="form-control"
+                   formControlName="code"
+                   maxlength="255" type="text"
+            />
+            <jhi-error-messages *ngIf="formControl['code'].hasError('required')"
+                                [displayError]="isFieldValid('code')"
+                                errorMsg="Vui long nhập mã tour">
+            </jhi-error-messages>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label required">Tên tour</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="name"
+                   maxlength="255" type="text"/>
+            <jhi-error-messages *ngIf="formControl['name'].hasError('required')"
+                                [displayError]="isFieldValid('name')"
+                                errorMsg="Vui lòng nhập tên tour">
+            </jhi-error-messages>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Điểm diễn ra </label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="venue"
+                   type="text"/>
+          </div>
+          <jhi-error-messages *ngIf="formControl['venue'].hasError('venue')"
+                              [displayError]="isFieldValid('venue')"
+                              errorMsg="Vui long nhập mã tour">
+          </jhi-error-messages>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Phương tiện</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="vehicle"
+                   type="text"/>
+          </div>
+          <jhi-error-messages *ngIf="formControl['venue'].hasError('venue')"
+                              [displayError]="isFieldValid('venue')"
+                              errorMsg="Vui long nhập mã tour">
+          </jhi-error-messages>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Giá </label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="price"
+                   type="number"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="form-control-label ">Dịch vụ</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="service"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label class="form-control-label ">Điêu khoản dịch vụ</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="note"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="action-btn">
+    <button #cancelBtn (click)="onCancel()" class="btn btn-light alight" type="button">
+      <i aria-hidden="true" class="fa fa-times mr-2"></i><span
+      jhiTranslate="{{(type !== 'detail'? 'common.button.confirm.cancel' : 'common.button.close')}}">Hủy bỏ</span>
+    </button>
+    <button (click)="onSubmitData()" *ngIf="type !== 'detail'" class="btn btn-primary" type="submit">
+      <i aria-hidden="true" class="fa fa-floppy-o mr-2"></i><span
+      jhiTranslate="common.button.confirm.save">Ghi lại</span>
+    </button>
+  </div>
+
+
+</div>
+

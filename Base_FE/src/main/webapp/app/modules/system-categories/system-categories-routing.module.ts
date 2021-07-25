@@ -11,6 +11,7 @@ import { CustomerComponent } from 'app/modules/system-categories/customer/custom
 import { PromotionComponent } from 'app/modules/system-categories/promotion/promotion.component';
 import { AddBookingFutureComponent } from 'app/modules/system-categories/add-booking-future/add-booking-future.component';
 import { ChartComponentComponent } from './chart/chart-component/chart-component.component';
+import { TourComponent } from 'app/modules/system-categories/tour/tour.component';
 // import { ChartComponent } from 'app/modules/system-categories/chart/chart.component';
 
 const routes: Routes = [
@@ -36,6 +37,18 @@ const routes: Routes = [
     data: {
       pageTitle: 'organizationCategories.title',
       url: 'system-categories/human-resources'
+    }
+  },
+  {
+    path: 'tour-resources',
+    component: TourComponent,
+    canActivate: [],
+    resolve: {
+      pagingParams: JhiResolvePagingParams
+    },
+    data: {
+      pageTitle: 'organizationCategories.title',
+      url: '/system-categories/tour-resources'
     }
   },
   {

@@ -51,8 +51,7 @@ export class LoginComponent implements AfterViewInit, OnInit {
       this.loginForm = this.fb.group({
         username: [user.username],
         password: [user.password],
-        remember: [user.remember],
-        recaptcha: ''
+        remember: [user.remember]
       });
     }
   }
@@ -67,16 +66,6 @@ export class LoginComponent implements AfterViewInit, OnInit {
     setTimeout(() => this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#username'), 'focus', []), 0);
   }
 
-  getcapcha() {
-    const response = this.captchaElem.getResponse();
-    if (response.length === 0) {
-      console.warn(response);
-      return;
-    } else {
-      this.distable = false;
-    }
-    // this.loginForm.set
-  }
   checkError() {
     this.isError = false;
   }
@@ -95,15 +84,10 @@ export class LoginComponent implements AfterViewInit, OnInit {
       this.errorMsg = this.translateService.instant('login.messages.error.inputAllField');
       return;
     }
-    const response = this.captchaElem.getResponse();
-    if (response.length === 0) {
-      console.warn(response);
-      return;
-    }
+
     const data = {
       email: this.loginForm.get('username').value,
-      password: this.loginForm.get('password').value,
-      recaptchare: response
+      password: this.loginForm.get('password').value
     };
     this.loginService.login(data).subscribe(
       res => {
@@ -134,7 +118,6 @@ export class LoginComponent implements AfterViewInit, OnInit {
         }
         this.isError = true;
         this.distable = true;
-        this.captchaElem.resetCaptcha();
       }
     );
   }
