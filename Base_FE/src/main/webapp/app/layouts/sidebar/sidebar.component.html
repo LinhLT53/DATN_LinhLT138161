@@ -20,24 +20,6 @@
   <div class="sidebar-menu">
     <!-- BEGIN SIDEBAR MENU ITEMS-->
     <ul class="menu-items">
-      <!--<li>
-        <a [routerLink]="bookRoom.url" routerLinkActive="active-link, text-white">
-          <span class="title">{{bookRoom.name}}</span>
-        </a>
-        <span class="icon-thumbnail">
-          <i class="fa" [ngClass]="bookRoom.class"></i>
-        </span>
-      </li>
-
-      <li>
-        <a [routerLink]="bookRoomFuture.url" routerLinkActive="active-link, text-white">
-          <span class="title">{{bookRoomFuture.name}}</span>
-        </a>
-        <span class="icon-thumbnail">
-          <i class="fa" [ngClass]="bookRoomFuture.class"></i>
-        </span>
-      </li>-->
-<!--      <li *jhiHasPermission="quyen.PHONGTRUOC">-->
       <li>
         <a [routerLink]="bookRoom.url" routerLinkActive="active-link, text-white">
           <span class="title">{{bookRoom.name}}</span>
@@ -125,6 +107,14 @@
         </a>
         <span class="icon-thumbnail">
           <i class="fa" [ngClass]="chart.class"></i>
+        </span>
+      </li>
+      <li>
+        <a [routerLink]="tour.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{tour.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="tour.class"></i>
         </span>
       </li>
       <div class="clearfix"></div>

@@ -27,8 +27,10 @@ import { PromotionResourcesModule } from 'app/modules/system-categories/promotio
 import { AddBookingFutureComponent } from './add-booking-future/add-booking-future.component';
 import { AddCustomerComponent } from './customer/add-customer/add-customer.component';
 import { CustomerResourcesModule } from 'app/modules/system-categories/customer/customer-resources.module';
-// import { ChartComponent } from './chart/chart.component';
 import { ChartResourcesModule } from 'app/modules/system-categories/chart/chart-resources.module';
+import { TourComponent } from './tour/tour.component';
+import { AddtourComponent } from './tour/addtour/addtour.component';
+import { tourResourcesModule } from 'app/modules/system-categories/tour/tour-resources.module';
 @NgModule({
   declarations: [
     ImportExcelHumanResourceComponent,
@@ -48,10 +50,8 @@ import { ChartResourcesModule } from 'app/modules/system-categories/chart/chart-
 
     AddBookingFutureComponent,
     PromotionComponent,
-    AddCustomerComponent
-
-    // ChartComponent
-    // CustomerComponent,
+    AddCustomerComponent,
+    TourComponent
   ],
   imports: [
     CommonModule,
@@ -68,7 +68,8 @@ import { ChartResourcesModule } from 'app/modules/system-categories/chart/chart-
     BookRoomModule,
     PromotionResourcesModule,
     CustomerResourcesModule,
-    ChartResourcesModule
+    ChartResourcesModule,
+    tourResourcesModule
   ],
   entryComponents: [ImportExcelHumanResourceComponent],
   exports: [],

@@ -68,5 +68,8 @@ export const MENU_TITLE = {
   },
   BOOK_ROOM_FUTURE: {
     NAME: 'Đặt phòng trước'
+  },
+  TOUR: {
+    NAME: 'Tour'
   }
 };

@@ -15,9 +15,8 @@ export class LoginService {
   login(credentials) {
     const data = {
       email: credentials.email,
-      password: credentials.password,
+      password: credentials.password
       //rememberMe: credentials.rememberMe
-      recaptchare: credentials.recaptchare
     };
     //  return this.http.post(SERVER_API_URL + 'auth/login', data, {});
     return this.http.post(this.baseUri + '/authen/login', data, {});

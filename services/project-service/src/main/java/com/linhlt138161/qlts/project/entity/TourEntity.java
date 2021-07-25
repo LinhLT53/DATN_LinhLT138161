@@ -23,6 +23,9 @@ public class TourEntity {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "code")
+    private String code;
+
     @Column(name = "vehicle")
     private String vehicle;
 
@@ -50,4 +53,12 @@ public class TourEntity {
 
     @Column(name = "image")
     private String image;
+
+    @Column (name = "note")
+    private String note;
+
+    @Column(name = "venue")
+     private  String venue;
+
+
 }

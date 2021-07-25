@@ -1,0 +1,116 @@
+Index: project-service/src/main/java/com/linhlt138161/qlts/project/entity/ServiceDutyEntity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.linhlt138161.qlts.project.entity;\r\nimport lombok.AllArgsConstructor;\r\nimport lombok.AllArgsConstructor;\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;\r\nimport org.apache.xmlbeans.GDate;\r\nimport org.joda.time.DateTime;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.Date;\r\n\r\n@Data\r\n@Entity\r\n@Table(name =\"Service_duty\")\r\n@AllArgsConstructor\r\n@NoArgsConstructor\r\npublic class ServiceDutyEntity {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    @Column(name = \"id\")\r\n    private Long id;\r\n\r\n    @Column(name = \"service_code\")\r\n    private String servicecode;\r\n\r\n    @Column(name = \"date\")\r\n    private Date date;\r\n\r\n    @Column(name = \"start_time\")\r\n    private Date ttarttime;\r\n\r\n    @Column(name = \"end_time\")\r\n    private Date endtime;\r\n\r\n    @Column(name = \"actual start_time\")\r\n    private Date actualstarttime;\r\n\r\n    @Column(name = \"actual end_time\")\r\n    private Date actualendttime;\r\n\r\n    @Column(name = \"id_staff\")\r\n    private Long idstaff;\r\n\r\n    @Column(name = \"id_room\")\r\n    private Long idroom;\r\n\r\n    @Column(name = \"status\")\r\n    private Integer Status;\r\n\r\n    @Column(name = \"note\")\r\n    private String note;\r\n\r\n}\r\n
+===================================================================
+--- project-service/src/main/java/com/linhlt138161/qlts/project/entity/ServiceDutyEntity.java	(revision 38b764b9199fd2c74b428a63f330b05f15b6148f)
++++ project-service/src/main/java/com/linhlt138161/qlts/project/entity/ServiceDutyEntity.java	(date 1626453902560)
+@@ -1,54 +1,54 @@
+-package com.linhlt138161.qlts.project.entity;
+-import lombok.AllArgsConstructor;
+-import lombok.AllArgsConstructor;
+-import lombok.Data;
+-import lombok.NoArgsConstructor;
+-import org.apache.xmlbeans.GDate;
+-import org.joda.time.DateTime;
+-
+-import javax.persistence.*;
+-import java.util.Date;
+-
+-@Data
+-@Entity
+-@Table(name ="Service_duty")
+-@AllArgsConstructor
+-@NoArgsConstructor
+-public class ServiceDutyEntity {
+-
+-    @Id
+-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+-    @Column(name = "id")
+-    private Long id;
+-
+-    @Column(name = "service_code")
+-    private String servicecode;
+-
+-    @Column(name = "date")
+-    private Date date;
+-
+-    @Column(name = "start_time")
+-    private Date ttarttime;
+-
+-    @Column(name = "end_time")
+-    private Date endtime;
+-
+-    @Column(name = "actual start_time")
+-    private Date actualstarttime;
+-
+-    @Column(name = "actual end_time")
+-    private Date actualendttime;
+-
+-    @Column(name = "id_staff")
+-    private Long idstaff;
+-
+-    @Column(name = "id_room")
+-    private Long idroom;
+-
+-    @Column(name = "status")
+-    private Integer Status;
+-
+-    @Column(name = "note")
+-    private String note;
+-
+-}
++//package com.linhlt138161.qlts.project.entity;
++//import lombok.AllArgsConstructor;
++//import lombok.AllArgsConstructor;
++//import lombok.Data;
++//import lombok.NoArgsConstructor;
++//import org.apache.xmlbeans.GDate;
++//import org.joda.time.DateTime;
++//
++//import javax.persistence.*;
++//import java.util.Date;
++//
++//@Data
++//@Entity
++//@Table(name ="Service_duty")
++//@AllArgsConstructor
++//@NoArgsConstructor
++//public class ServiceDutyEntity {
++//
++//    @Id
++//    @GeneratedValue(strategy = GenerationType.IDENTITY)
++//    @Column(name = "id")
++//    private Long id;
++//
++//    @Column(name = "service_code")
++//    private String servicecode;
++//
++//    @Column(name = "date")
++//    private Date date;
++//
++//    @Column(name = "start_time")
++//    private Date ttarttime;
++//
++//    @Column(name = "end_time")
++//    private Date endtime;
++//
++//    @Column(name = "actual start_time")
++//    private Date actualstarttime;
++//
++//    @Column(name = "actual end_time")
++//    private Date actualendttime;
++//
++//    @Column(name = "id_staff")
++//    private Long idstaff;
++//
++//    @Column(name = "id_room")
++//    private Long idroom;
++//
++//    @Column(name = "status")
++//    private Integer Status;
++//
++//    @Column(name = "note")
++//    private String note;
++//
++//}
