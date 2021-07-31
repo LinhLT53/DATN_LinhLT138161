@@ -68,7 +68,7 @@
 
           <div class="row d-flex justify-content-end pr-1">
             <button (click)="openModalAddUser('add',null)"
-                    *jhiHasPermission="quyen.THEMSUAKHUYENMAI" class="btn btn-primary"
+                    class="btn btn-primary"
                     type="button">
               <i aria-hidden="true" class="fa fa-plus mr-2">
               </i><span jhiTranslate="common.button.add">Thêmm mới</span>
@@ -137,14 +137,12 @@
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
-                       *jhiHasPermission="quyen.THEMSUAKHUYENMAI"
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
                         ngbTooltip="Sửa tài sản"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
                       <button
-                       *jhiHasPermission="quyen.THEMSUAKHUYENMAI"
                         (click)="deleteAsset(item)" class="btn btn-light"
                         ngbTooltip="{{'common.tooltip.action.delete' | translate}}"
                         placement="top">

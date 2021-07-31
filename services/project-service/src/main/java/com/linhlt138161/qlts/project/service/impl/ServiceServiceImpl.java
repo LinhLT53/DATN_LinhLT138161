@@ -94,13 +94,13 @@ public class ServiceServiceImpl implements ServiceService {
 
     @Override
     public ServiceDTO delete(Long id) {
-        ServiceDTO dto =  convertEntitytoDTO(serviceRepository.findById(id).get());
+        ServiceEntity entity = serviceRepository.findById(id).get();
+        ServiceDTO dto =  convertEntitytoDTO(entity);
         if (null == dto) {
             throw new CustomExceptionHandler(ErrorCode.CREATED_HR_FALSE.getCode(), HttpStatus.BAD_REQUEST);
         }else{
-            ServiceEntity entity = new ServiceEntity();
             entity.setServiceId(Long.valueOf(dto.getServiceId()));
-            entity.setStatus(0);
+            entity.setStatus(-1);
             serviceRepository.save(entity);
             return dto;
         }

@@ -5,7 +5,7 @@
       <i aria-hidden="true" class="fa fa-home icon-breadcrumb"></i>
     </button>
   </li>
-  <li class="breadcrumb-item active">Quản lý phòng</li>
+  <li class="breadcrumb-item active">Quản lý dịch vụ</li>
 </ol>
 <perfect-scrollbar (window:resize)="onResize()" [style.max-height.px]="height" class="ps">
   <div class="page-content" id="organizationCategories">
@@ -62,7 +62,7 @@
 
           <div class="row d-flex justify-content-end pr-1">
             <button (click)="openModalAddUser('add',null)"
-                    *jhiHasPermission="quyen.THEMSUADICHVU" class="btn btn-primary"
+                     class="btn btn-primary"
                     type="button">
               <i aria-hidden="true" class="fa fa-plus mr-2">
               </i><span jhiTranslate="common.button.add">Thêmm mới</span>
@@ -105,7 +105,7 @@
                   </th>
                   <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 150px"><span>Giá</span>
                   </th>
-                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 150px"><span>Unit</span>
+                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 150px"><span>Trạng thái</span>
                   </th>
                   <th *ngIf="this.columns[4]?.isShow" class="large-width-table"><span>ghi chú</span>
                   </th>
@@ -122,14 +122,12 @@
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
-                      *jhiHasPermission="quyen.THEMSUADICHVU"
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
                         ngbTooltip="Sửa tài sản"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
                       <button
-                      *jhiHasPermission="quyen.THEMSUADICHVU"
                         (click)="deleteAsset(item)" class="btn btn-light"
                         ngbTooltip="{{'common.tooltip.action.delete' | translate}}"
                         placement="top">
@@ -141,7 +139,11 @@
                   <td *ngIf="this.columns[0]?.isShow">{{item.servicecode}}</td>
                   <td *ngIf="this.columns[1]?.isShow">{{item.servicename}}</td>
                   <td *ngIf="this.columns[2]?.isShow" class="text-center">{{item.price}}</td>
-                  <td *ngIf="this.columns[3]?.isShow" class="text-center">{{item.unit}}</td>
+                  <td *ngIf="this.columns[3]?.isShow" class="text-center">
+                    <p *ngIf="item.status == 1"> Hoạt động</p>
+                    <p *ngIf="item.status == 0"> Không hoạt động</p>
+
+                  </td>
                   <td *ngIf="this.columns[4]?.isShow" style="text-align: left">{{item.note}}</td>
                 </tr>
                 </tbody>
