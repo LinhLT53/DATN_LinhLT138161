@@ -80,6 +80,11 @@ export class AddServiceComponent implements OnInit {
       }
     }
     this.spinner.show();
+    if (this.form.value.status == true) {
+      this.form.value.status = 1;
+    } else {
+      this.form.value.status = 0;
+    }
     this.serviceService.save(this.form.value).subscribe(
       res => {
         if (this.type === 'add') {
@@ -109,19 +114,7 @@ export class AddServiceComponent implements OnInit {
     }
   }
 
-  onBlurUserCode() {
-    // if (this.type === 'add'&& this.userDetail.code !== this.form.value.code) {
-    // if (this.type === 'add') {
-    //
-    //   this.humanResourceService.checkUserCode(this.form.value.code).subscribe(res => {
-    //
-    //     this.isDuplicateUserCode = false;
-    //
-    //   }, err => {
-    //     this.isDuplicateUserCode = true;
-    //   });
-    // }
-  }
+  onBlurUserCode() {}
 
   displayFieldHasError(field: string) {
     return {
@@ -147,56 +140,6 @@ export class AddServiceComponent implements OnInit {
 
   onCancel() {
     this.activeModal.dismiss();
-
-    // if (this.type === 'update') {
-    //   if (
-    //     this.form.value.humanResourceId === this.userDetail.humanResourceId &&
-    //     this.form.value.code === this.userDetail.code &&
-    //     this.form.value.email === this.userDetail.email &&
-    //     this.form.value.fullName === this.userDetail.fullName &&
-    //     this.form.value.partId === this.userDetail.partId &&
-    //     this.form.value.status === this.userDetail.status &&
-    //     this.form.value.majorId === this.userDetail.majorId &&
-    //     this.form.value.dateMajor === this.userDetail.dateMajor &&
-    //     this.form.value.note === this.userDetail.note
-    //   ) {
-    //     this.activeModal.dismiss();
-    //   } else {
-    //     const modalRef = this.modalService.open(ConfirmModalComponent, {centered: true, backdrop: 'static'});
-    //     modalRef.componentInstance.type = 'confirm';
-    //     modalRef.componentInstance.onCloseModal.subscribe(value => {
-    //       if (value === true) {
-    //         this.activeModal.dismiss();
-    //       }
-    //     });
-    //   }
-    // }
-    // if (this.type === 'add') {
-    //   if (
-    //     this.form.value.humanResourceId === null &&
-    //     this.form.value.code === '' &&
-    //     this.form.value.email === '' &&
-    //     this.form.value.fullName === '' &&
-    //     this.form.value.positionId === null &&
-    //     this.checkNull() &&
-    //     this.form.value.status === this.statusList[0].id &&
-    //     this.form.value.note === ''
-    //
-    //   ) {
-    //     this.activeModal.dismiss();
-    //   } else {
-    //     const modalRef = this.modalService.open(ConfirmModalComponent, {centered: true, backdrop: 'static'});
-    //     modalRef.componentInstance.type = 'confirm';
-    //     modalRef.componentInstance.onCloseModal.subscribe(value => {
-    //       if (value === true) {
-    //         this.activeModal.dismiss();
-    //       }
-    //     });
-    //   }
-    // }
-    // if (this.type === 'detail') {
-    //   this.activeModal.dismiss();
-    // }
   }
 
   getUserDetail(id) {
@@ -255,8 +198,7 @@ export class AddServiceComponent implements OnInit {
       hourPrice: null,
       servicecode: ['', Validators.compose([Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-zA-Z0-9]+$/)])],
       servicename: ['', Validators.compose([Validators.required, Validators.maxLength(255)])],
-      status: 1,
-      unit: null,
+      status: [''],
       price: null,
       note: ['', Validators.maxLength(1000)]
     });

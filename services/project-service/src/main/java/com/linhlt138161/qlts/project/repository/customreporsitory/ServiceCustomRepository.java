@@ -2,6 +2,7 @@ package com.linhlt138161.qlts.project.repository.customreporsitory;
 
 import com.linhlt138161.qlts.project.dto.ServiceDTO;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,26 +34,26 @@ public class ServiceCustomRepository {
                 "s.note,        " +
                 "s.status        " +
                 "FROM service s        " +
-                " where 1 = 1 and s.status = 1  "
+                " where 1 = 1 and s.status != -1   "
         );
 
-//        if (StringUtils.isNotBlank(dto.getCode())){
-//            sql.append("  and (( lower(r.room_code) LIKE :roomCode ) or ( lower(r.room_name) LIKE :roomCode ))");
-//        }
-//        if (dto.getRoomType() != null){
-//            sql.append(" and r.room_type = :roomType ");
-//        }
+        if (StringUtils.isNotBlank(dto.getServicecode())){
+            sql.append("  and (( lower(s.service_code) LIKE :code ) or ( lower(s.service_name) LIKE :code ))");
+        }
+        if (dto.getPrice() != null){
+            sql.append(" and s.price = :price ");
+        }
 
         Query query = em.createNativeQuery(sql.toString());
         Query queryCount = em.createNativeQuery(sql.toString());
-//        if (StringUtils.isNotBlank(dto.getRoomCode())){
-//            query.setParameter("roomCode", "%" + dto.getRoomCode() + "%");
-//            queryCount.setParameter("roomCode", "%" + dto.getRoomCode() + "%");
-//        }
-//        if (dto.getRoomType() != null){
-//            query.setParameter("roomType", dto.getRoomType());
-//            queryCount.setParameter("roomType", dto.getRoomType());
-//        }
+        if (StringUtils.isNotBlank(dto.getServicecode())){
+            query.setParameter("code", "%" + dto.getServicecode() + "%");
+            queryCount.setParameter("code", "%" + dto.getServicecode() + "%");
+        }
+        if (dto.getPrice() != null){
+            query.setParameter("price", dto.getPrice());
+            queryCount.setParameter("price", dto.getPrice());
+        }
 
         if (dto.getPage() != null && dto.getPageSize() != null) {
             query.setFirstResult((dto.getPage().intValue() - 1) * dto.getPageSize().intValue());
@@ -71,11 +72,12 @@ public class ServiceCustomRepository {
             for (Object[] obj : objects) {
                 ServiceDTO dto = new ServiceDTO();
                 dto.setServiceId(((BigInteger) obj[0]).longValue());
-                dto.setServicecode(obj[1].toString());
-                dto.setServicename(obj[2].toString());
-                dto.setUnit(obj[3].toString());
+                dto.setServicecode((String) obj[1]);
+                dto.setServicename((String) obj[2]);
+                dto.setUnit((String) obj[3]);
                 dto.setPrice((Double) obj[4]);
-                dto.setNote(obj[5].toString());
+                dto.setNote((String) obj[5]);
+                dto.setStatus((Integer) obj[6]);
                 list.add(dto);
             }
         }
