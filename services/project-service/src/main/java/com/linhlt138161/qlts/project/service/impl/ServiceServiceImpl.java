@@ -63,8 +63,8 @@ public class ServiceServiceImpl implements ServiceService {
             throw new CustomExceptionHandler(ErrorCode.CREATED_HR_FALSE.getCode(), HttpStatus.BAD_REQUEST);
         }
         else if (null != entity) {
-            //TODO: Update  phong
-            entity.setServiceId(Long.valueOf(dto.getDepartmentId()));
+            //TODO: Update  dich vu
+            entity.setServiceId(Long.valueOf(dto.getServiceId()));
             entity.setServicecode(dto.getServicecode());
             entity.setServicename(dto.getServicename());
             entity.setPrice(dto.getPrice());
@@ -73,7 +73,7 @@ public class ServiceServiceImpl implements ServiceService {
             entity.setStatus(1);
         }
         else if (dto.getServiceId() == null) {
-            //TODO: create phong
+            //TODO: create dich vu
             entity = new ServiceEntity();
             entity.setServicecode(dto.getServicecode());
             entity.setServicename(dto.getServicename());

@@ -13,6 +13,8 @@ import { FormStoringService } from 'app/shared/services/form-storing.service';
 import { Router } from '@angular/router';
 import { STORAGE_KEYS } from 'app/shared/constants/storage-keys.constants';
 import { ServiceService } from 'app/core/services/service/service.service';
+import { ConfimModalImgComponent } from 'app/shared/components/confim-modal-img/confim-modal-img.component';
+import { ImageApiService } from 'app/core/services/image-api/image-api.service';
 
 @Component({
   selector: 'jhi-add-service',
@@ -36,6 +38,12 @@ export class AddServiceComponent implements OnInit {
   years: number[] = [];
   userDetail: any;
   post: Date;
+  listurl = [];
+  dataStringPath: any;
+  listDataImg = [];
+  dataIm: any = [];
+  msg = '';
+  url;
 
   ////////////////////////
   constructor(
@@ -50,6 +58,7 @@ export class AddServiceComponent implements OnInit {
     private sysUserService: SysUserService,
     private translateService: TranslateService,
     private datepipe: DatePipe,
+    private imageApiService: ImageApiService,
     private formStoringService: FormStoringService,
     private serviceService: ServiceService,
     protected router: Router
@@ -63,19 +72,74 @@ export class AddServiceComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+    this.getFileImg();
+  }
+  getFileImg() {
+    console.warn(this.dataStringPath);
+    if (this.dataStringPath === undefined || this.dataStringPath === []) {
+      return;
+    }
+    for (const p of this.dataStringPath) {
+      this.imageApiService.getFile(p).subscribe(value => {
+        const data = value;
+        this.getFile(data, true);
+      });
+    }
+  }
+  deleteImgCustom(i) {
+    const modalRef = this.modalService.open(ConfimModalImgComponent, { centered: true, backdrop: 'static' });
+    modalRef.componentInstance.type = 'delete';
+    modalRef.componentInstance.param = 'ảnh đính kèm';
+    modalRef.componentInstance.status = this.type;
+    modalRef.componentInstance.role = true;
+    modalRef.componentInstance.imgData = this.listurl[i].data;
+    modalRef.componentInstance.onCloseModal.subscribe(value => {
+      if (value === true) {
+        this.cleanAnh(i);
+      }
+    });
   }
 
-  /////////////////////////////////////////////////
+  cleanAnh(i) {
+    this.listDataImg.splice(i, 1);
+    this.listurl.splice(i, 1);
+  }
+  selectFile(event) {
+    for (const p of event.target.files) {
+      this.getFile(p, true);
+    }
+  }
+
+  getFile(file, check) {
+    if (!file || file.length === 0) {
+      this.msg = 'You must select an image';
+      return;
+    }
+
+    const mimeType = file.type;
+    this.listDataImg.push(file);
+    if (mimeType.match(/image\/*/) == null) {
+      this.msg = 'Only images are supported';
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = _event => {
+      this.msg = '';
+      this.url = reader.result;
+      this.listurl.push({ chech: check, data: reader.result, url: null });
+    };
+  }
   onSubmitData() {
     if (this.form.invalid) {
       this.commonService.validateAllFormFields(this.form);
-      console.warn('aaaaaaa');
       return;
     }
 
     if (this.type === 'add') {
       if (this.isDuplicateUserCode) {
-        console.warn('duplicate');
         return;
       }
     }
@@ -88,12 +152,36 @@ export class AddServiceComponent implements OnInit {
     this.serviceService.save(this.form.value).subscribe(
       res => {
         if (this.type === 'add') {
+          const tyle = 2;
+          const formData = new FormData();
+          for (const c of this.listDataImg) {
+            formData.append('file', c);
+          }
+
+          this.imageApiService.save(res.data.serviceId, tyle, formData).subscribe(
+            res1 => {
+              this.toastService.openSuccessToast('Thêm mới anh thành công !');
+            },
+            error => {}
+          );
           this.toastService.openSuccessToast('Thêm mới thành công !');
         }
         if (this.type === 'update') {
+          const tyle = 2;
+          const formData = new FormData();
+          for (const c of this.listDataImg) {
+            formData.append('file', c);
+          }
+          formData.append('data', this.dataIm);
+          this.imageApiService.update(this.id, tyle, formData).subscribe(
+            value => {
+              this.toastService.openSuccessToast('Sửa ảnh thành công !');
+            },
+            error => {}
+          );
+
           this.toastService.openSuccessToast('Sửa thành công !');
         }
-
         this.router.navigate(['system-categories/service-resources']);
         this.activeModal.dismiss();
       },
@@ -155,6 +243,19 @@ export class AddServiceComponent implements OnInit {
         this.userDetail = null;
       }
     );
+    // this.imageApiService.getListDevice(this.id,this.data.idEquipmentGroup).subscribe(
+
+    this.imageApiService.getListDevice(id, id).subscribe(value => {
+      this.dataStringPath = value;
+      if (this.dataStringPath !== []) {
+        for (const p of this.dataStringPath) {
+          this.imageApiService.getFile(p.url).subscribe(value1 => {
+            const data = value1;
+            this.getFile(data, p.group);
+          });
+        }
+      }
+    });
   }
 
   setDataDefault() {

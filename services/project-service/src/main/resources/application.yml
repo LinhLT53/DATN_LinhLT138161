@@ -85,8 +85,7 @@ hostCross: http://localhost:9003
 #folderUpload: /home/iist/services/qlda-service-phase2/fileUpload/
 folderUpload: D:/fileUpload/
 
-pathLocal: C:/Users/KhangBui/Pictures/project/
-
+pathLocal: C:/Users/nvtan/Desktop/datnLinh/DATN_LinhLT138161/image/
 google:
   recaptcha:
     site:

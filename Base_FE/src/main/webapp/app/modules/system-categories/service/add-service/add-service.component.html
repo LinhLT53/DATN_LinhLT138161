@@ -57,15 +57,60 @@
             </label>
 
             <!--            <label class="form-control-label ">Trạng thái</label>-->
-<!--            <input class="form-check-input" type="checkbox"  formControlName="status">-->
+            <!--            <input class="form-check-input" type="checkbox"  formControlName="status">-->
 
-<!--              <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"-->
-<!--                   class="form-control"-->
-<!--                   formControlName="status"-->
-<!--                   type="text"/>-->
+            <!--              <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"-->
+            <!--                   class="form-control"-->
+            <!--                   formControlName="status"-->
+            <!--                   type="text"/>-->
           </div>
         </div>
       </div>
+
+
+
+
+
+<!--      <div>-->
+<!--        <div style="text-align:center">-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-4"></div>-->
+<!--            <div class="col-md-3">-->
+<!--              <ngb-carousel *ngIf="listurl">-->
+<!--                <div *ngFor="let user of listurl; index as i; first as isFirst">-->
+<!--                  <ng-template  ngbSlide>-->
+<!--                    <div class="picsum-img-wrapper">-->
+<!--                      <img [src]="user.data" style="height: 200px;width: 200px;" (click)="deleteImgCustom(i)">-->
+<!--                    </div>-->
+<!--                  </ng-template>-->
+
+<!--                  &lt;!&ndash; <button *ngIf="type==='update'||type==='add'" (click)="cleanAnh(i)">Xóa ảnh</button> &ndash;&gt;-->
+<!--                </div>-->
+<!--              </ngb-carousel>-->
+<!--            </div>-->
+<!--            <div class="col-md-"></div>-->
+<!--          </div>-->
+<!--          <div *ngIf="type==='update'||type==='add'">-->
+<!--            <input type="file" multiple (change)="selectFile($event)">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+
+
+      <div class="row">
+        <div *ngFor="let user of listurl; index as i; first as isFirst">
+          <div class="col-md-6">
+            <div class="picsum-img-wrapper">
+              <img [src]="user.data" style="height: 150px;width: 150px;" (click)="deleteImgCustom(i)">
+            </div>
+          </div>
+        </div>
+        <div *ngIf="type==='update'||type==='add'" style="height: 150px;width: 150px;">
+          <input style="padding-top: 60px;" type="file"  (change)="selectFile($event)">
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
