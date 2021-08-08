@@ -130,6 +130,11 @@ public class RoomServiceImpl implements RoomService {
             roomEntity.setRoomType(dto.getRoomType());
             roomEntity.setNote(dto.getNote());
             roomEntity.setStatus(1);
+            roomEntity.setPrice(dto.getPrice());
+            roomEntity.setElevator(dto.getElevator());
+            roomEntity.setTivi(dto.getTivi());
+            roomEntity.setPet(dto.getPet());
+            roomEntity.setHumanRecourcesId(dto.getHumanResourcesId());
         } else if (dto.getRoomId() == null) {
             //TODO: create phong
             roomEntity = new RoomEntity();
@@ -140,6 +145,11 @@ public class RoomServiceImpl implements RoomService {
             roomEntity.setRoomType(dto.getRoomType());
             roomEntity.setNote(dto.getNote());
             roomEntity.setStatus(1);
+            roomEntity.setPrice(dto.getPrice());
+            roomEntity.setElevator(dto.getElevator());
+            roomEntity.setTivi(dto.getTivi());
+            roomEntity.setPet(dto.getPet());
+            roomEntity.setHumanRecourcesId(dto.getHumanResourcesId());
         }
         roomRepository.save(roomEntity);
         for (Long i : assetRoomRepository.deleteroomID(roomEntity.getRoomId())) {
@@ -165,15 +175,15 @@ public class RoomServiceImpl implements RoomService {
 
     @Override
     public RoomDTO delete(Long id) {
-        RoomDTO dto = convertEntitytoDTO(roomRepository.findById(id).get());
-        if (null == dto) {
+        RoomEntity roomEntity = roomRepository.findById(id).get();
+        if (null == roomEntity) {
             throw new CustomExceptionHandler(ErrorCode.CREATED_HR_FALSE.getCode(), HttpStatus.BAD_REQUEST);
         } else {
-            RoomEntity roomEntity = new RoomEntity();
-            roomEntity.setRoomId(Long.valueOf(dto.getRoomId()));
+            roomEntity.setRoomId(Long.valueOf(roomEntity.getRoomId()));
             roomEntity.setStatus(0);
             roomRepository.save(roomEntity);
-            return dto;
+
+            return roomMapper.toDto(roomEntity);
         }
     }
 
@@ -199,6 +209,10 @@ public class RoomServiceImpl implements RoomService {
         dto.setStatus(roomEntity.getStatus());
         dto.setNote(roomEntity.getNote());
         dto.setFloorNumber(roomEntity.getFloorNumber());
+        dto.setHumanResourcesId(roomEntity.getHumanRecourcesId());
+        dto.setTivi(roomEntity.getTivi());
+        dto.setElevator(roomEntity.getElevator());
+        dto.setPet(roomEntity.getPet());
         return dto;
     }
 }

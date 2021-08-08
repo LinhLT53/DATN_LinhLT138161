@@ -61,4 +61,6 @@ public interface HumanResourcesService {
 
     List<IPositionDTO> position();
 
+    List<HumanResourcesDTO> getAll();
+
 }

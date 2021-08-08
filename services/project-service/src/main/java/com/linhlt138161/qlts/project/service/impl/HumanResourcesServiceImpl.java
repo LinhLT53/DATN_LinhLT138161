@@ -70,6 +70,13 @@ public class HumanResourcesServiceImpl implements HumanResourcesService, UserDet
     public List<IPositionDTO> position() {
         return positionRepository.getPosition();
     }
+
+    @Override
+    public List<HumanResourcesDTO> getAll() {
+        List<HumanResourcesDTO> listAll = humanResourcesMapper.toDto(repository.findByAll());
+        return listAll;
+    }
+
     @Override
     public ResultResp create(String username, HumanResourcesDTO humanResourcesDTO) {
         if (CommonUtils.isEqualsNullOrEmpty(humanResourcesDTO.getHumanResourceId())){
@@ -333,4 +340,6 @@ public class HumanResourcesServiceImpl implements HumanResourcesService, UserDet
         humanResourcesEntity.setAuthorities(roleList);
         return new org.springframework.security.core.userdetails.User(humanResourcesEntity.getEmail(), humanResourcesEntity.getPassword(), humanResourcesEntity.getAuthorities());
     }
+
+
 }

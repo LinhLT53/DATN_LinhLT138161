@@ -22,17 +22,6 @@
                                 [displayError]="isFieldValid('roomCode')"
                                 errorMsg="{{ 'user.validate.code.required' | translate }}">
             </jhi-error-messages>
-            <!--            <jhi-error-messages *ngIf="formControl['code'].hasError('maxlength')"-->
-            <!--                                [displayError]="isFieldValid('code')"-->
-            <!--                                errorMsg="{{ 'user.validate.code.maxlength' | translate }}">-->
-            <!--            </jhi-error-messages>-->
-            <!--            <jhi-error-messages *ngIf="isDuplicateUserCode" [displayError]="isDuplicateUserCode"-->
-            <!--                                errorMsg="{{ 'user.validate.code.duplicate' | translate }}">-->
-            <!--            </jhi-error-messages>-->
-            <!--            <jhi-error-messages *ngIf="formControl['code'].hasError('pattern')"-->
-            <!--                                [displayError]="isFieldValid('code')"-->
-            <!--                                errorMsg="{{ 'user.validate.code.invalid' | translate }}">-->
-            <!--            </jhi-error-messages>-->
           </div>
         </div>
         <div class="col-md-6">
@@ -46,39 +35,31 @@
                                 [displayError]="isFieldValid('roomName')"
                                 errorMsg="{{ 'user.validate.fullName.required' | translate }}">
             </jhi-error-messages>
-            <!--            <jhi-error-messages *ngIf="formControl['fullName'].hasError('maxlength')"-->
-            <!--                                [displayError]="isFieldValid('fullName')"-->
-            <!--                                errorMsg="{{ 'user.validate.fullName.maxlength' | translate }}">-->
-            <!--            </jhi-error-messages>-->
           </div>
         </div>
       </div>
       <div class="row">
+
+
         <div class="col-md-6">
           <div class="form-group">
-            <label class="form-control-label ">Số người tối đa</label>
-            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
-                   class="form-control"
-                   formControlName="maxNumber"
-                   type="number"/>
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('required')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.required' | translate }}">-->
-            <!--              </jhi-error-messages>-->
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('maxlength')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.maxlength' | translate }}">-->
-            <!--              </jhi-error-messages>-->
+            <label class="form-control-label ">Nhân viên phụ trách </label>
+            <ng-select class="cursor-text scroll-ng-select"
+                       bindLabel="fullName" formControlName="humanResourcesId" bindValue="humanResourceId"
+                       notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                       placeholder="{{ 'common.select.option.default' | translate }}"
+                       clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                       [items]="humanresourecsList"
+                       [multiple]="false"
+                       [readonly]="type === 'detail'||checkBoll">
+            </ng-select>
           </div>
         </div>
+
+
         <div class="col-md-6">
           <div class="form-group">
-            <label class="form-control-label ">Tầng số</label>
-<!--            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"-->
-<!--                   class="form-control"-->
-<!--                   formControlName="floorNumber"-->
-<!--                   type="text"/>-->
-
+            <label class="form-control-label ">Vị trí</label>
             <ng-select class="cursor-text scroll-ng-select"
                        bindLabel="name" formControlName="floorNumber" bindValue="id"
                        notFoundText="{{ 'common.select.notFoundText' | translate }}"
@@ -88,30 +69,10 @@
                        [multiple]="false"
                        [readonly]="type === 'detail'||checkBoll">
             </ng-select>
-
-
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('required')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.required' | translate }}">-->
-            <!--              </jhi-error-messages>-->
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('maxlength')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.maxlength' | translate }}">-->
-            <!--              </jhi-error-messages>-->
           </div>
         </div>
       </div>
       <div class="row">
-<!--        <div class="col-md-6">-->
-<!--          <div class="form-group">-->
-<!--            <label class="form-control-label ">Loại phòng</label>-->
-<!--            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"-->
-<!--                   class="form-control"-->
-<!--                   formControlName="roomType"-->
-<!--          </div>-->
-<!--        </div>-->
-
-
         <div class="col-md-6">
           <div class="form-group">
             <label class="form-control-label ">Loại phòng</label>
@@ -124,50 +85,112 @@
                        [multiple]="false"
                        [readonly]="type === 'detail'||checkBoll">
             </ng-select>
-            <!--            <jhi-error-messages *ngIf="formControl['partId'].hasError('assetId')"-->
-            <!--                                [displayError]="isFieldValid('assetId')"-->
-            <!--                                errorMsg="{{ 'user.validate.part.required' | translate }}">-->
-            <!--            </jhi-error-messages>-->
           </div>
         </div>
-
-
         <div class="col-md-6">
           <div class="form-group">
-            <label class="form-control-label required">Tài sản</label>
-            <ng-select class="cursor-text scroll-ng-select"
-                       bindLabel="assetname" formControlName="assetId" bindValue="assetId"
-                       notFoundText="{{ 'common.select.notFoundText' | translate }}"
-                       placeholder="{{ 'common.select.option.default' | translate }}"
-                       clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
-                       [items]="assetList"
-                       [multiple]="true"
-                       [readonly]="type === 'detail'||checkBoll">
-            </ng-select>
-<!--            <jhi-error-messages *ngIf="formControl['partId'].hasError('assetId')"-->
-<!--                                [displayError]="isFieldValid('assetId')"-->
-<!--                                errorMsg="{{ 'user.validate.part.required' | translate }}">-->
-<!--            </jhi-error-messages>-->
+            <label class="form-control-label ">Giá phòng</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="price"
+                   type="number"/>
           </div>
         </div>
+
 
       </div>
       <div class="row">
-        <div class="col-md-6">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="form-control-label ">Sức chưa</label>
+                    <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                           class="form-control"
+                           formControlName="maxNumber"
+                           type="number"/>
+                  </div>
+                </div>
+      </div>
+
+      <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="form-control-label required">Tài sản trong phòng</label>
+                    <ng-select class="cursor-text scroll-ng-select"
+                               bindLabel="assetname" formControlName="assetId" bindValue="assetId"
+                               notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                               placeholder="{{ 'common.select.option.default' | translate }}"
+                               clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                               [items]="assetList"
+                               [multiple]="true"
+                               [readonly]="type === 'detail'||checkBoll">
+                    </ng-select>
+                  </div>
+                </div>
+
+      </div>
+
+
+
+      <div class="row">
+        <div *ngFor="let user of listurl; index as i; first as isFirst">
+          <div class="col-md-6">
+            <div class="picsum-img-wrapper">
+              <img [src]="user.data" style="height: 150px;width: 150px;" (click)="deleteImgCustom(i)">
+            </div>
+          </div>
+        </div>
+        <div *ngIf="type==='update'||type==='add'" style="height: 150px;width: 150px;">
+          <input style="padding-top: 60px;" type="file"  (change)="selectFile($event)">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label>
+
+          <input #saveUserNameCheckBox
+                 id="tivi"
+                 type="checkbox"
+                 [checked]="tivi"
+                 (change)="ontivi(saveUserNameCheckBox.checked)" />
+            Tivi
+          </label>
+        </div>
+        <div class="col-md-3">
+          <label>
+
+            <input
+                   id="elevator"
+                   type="checkbox"
+                   [checked]="elevator"
+                   (change)="onelevator(saveUserNameCheckBox.checked)" />
+            Thang máy
+          </label>
+        </div>
+        <div class="col-md-3">
+          <label>
+
+            <input
+                   id="pet"
+                   type="checkbox"
+                   [checked]="pet"
+                   (change)="onpet(saveUserNameCheckBox.checked)" />
+            Được nuôi thú cưng
+          </label>
+        </div>
+      </div>
+
+
+
+
+      <div class="row">
+        <div class="col-md-12">
           <div class="form-group">
-            <label class="form-control-label ">nghi chú</label>
+            <label class="form-control-label ">Nghi chú</label>
             <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
                    formControlName="note"
                    type="text"/>
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('required')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.required' | translate }}">-->
-            <!--              </jhi-error-messages>-->
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('maxlength')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.maxlength' | translate }}">-->
-            <!--              </jhi-error-messages>-->
           </div>
         </div>
       </div>

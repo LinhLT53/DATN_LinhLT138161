@@ -57,11 +57,13 @@
 
       <div class="collapse show" id="dataTable">
         <div class="card-body pt-2 pb-0 px-2">
+          <!--                    *jhiHasPermission="quyen.THEMSUAKHACHHANG" class="btn btn-primary"-->
 
           <div class="row d-flex justify-content-end pr-1">
             <button (click)="openModalAddUser('add',null)"
-                    *jhiHasPermission="quyen.THEMSUAKHACHHANG" class="btn btn-primary"
-                    type="button">
+                    class="btn btn-primary"
+
+            type="button">
               <i aria-hidden="true" class="fa fa-plus mr-2">
               </i><span jhiTranslate="common.button.add">Thêmm mới</span>
             </button>
@@ -123,14 +125,12 @@
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
-                      *jhiHasPermission="quyen.THEMSUAKHACHHANG"
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
                         ngbTooltip="Sửa tài sản"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
                       <button
-                      *jhiHasPermission="quyen.THEMSUAKHACHHANG"
                         (click)="deleteAsset(item)" class="btn btn-light"
                         ngbTooltip="{{'common.tooltip.action.delete' | translate}}"
                         placement="top">

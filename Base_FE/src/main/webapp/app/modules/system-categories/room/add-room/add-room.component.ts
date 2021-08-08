@@ -13,6 +13,9 @@ import { FormStoringService } from 'app/shared/services/form-storing.service';
 import { Router } from '@angular/router';
 import { RoomApiServiceService } from 'app/core/services/room-api/room-api-service.service';
 import { STORAGE_KEYS } from 'app/shared/constants/storage-keys.constants';
+import { ConfimModalImgComponent } from 'app/shared/components/confim-modal-img/confim-modal-img.component';
+import { ImageApiService } from 'app/core/services/image-api/image-api.service';
+import { HumanResourcesApiService } from 'app/core/services/Human-resources-api/human-resources-api.service';
 
 @Component({
   selector: 'jhi-add-room',
@@ -39,7 +42,14 @@ export class AddRoomComponent implements OnInit {
   assetList: any[] = [];
   roomTypeList: any[] = [];
   roomFloorList: any[] = [];
-  ////////////////////////
+  humanresourecsList: any[] = [];
+
+  listurl = [];
+  dataStringPath: any;
+  listDataImg = [];
+  dataIm: any = [];
+  msg = '';
+  url;
   constructor(
     public activeModal: NgbActiveModal,
     private heightService: HeightService,
@@ -54,7 +64,9 @@ export class AddRoomComponent implements OnInit {
     private translateService: TranslateService,
     private datepipe: DatePipe,
     private formStoringService: FormStoringService,
-    protected router: Router
+    protected router: Router,
+    private imageApiService: ImageApiService,
+    private humanResourcesApiService: HumanResourcesApiService
   ) {
     this.height = this.heightService.onResize();
   }
@@ -68,8 +80,66 @@ export class AddRoomComponent implements OnInit {
     this.getAssetList();
     this.getRoomTypeList();
     this.getRoomFloorList();
+    this.getlistHumanResources();
+  }
+  getFileImg() {
+    console.warn(this.dataStringPath);
+    if (this.dataStringPath === undefined || this.dataStringPath === []) {
+      return;
+    }
+    for (const p of this.dataStringPath) {
+      this.imageApiService.getFile(p).subscribe(value => {
+        const data = value;
+        this.getFile(data, true);
+      });
+    }
+  }
+  deleteImgCustom(i) {
+    const modalRef = this.modalService.open(ConfimModalImgComponent, { centered: true, backdrop: 'static' });
+    modalRef.componentInstance.type = 'delete';
+    modalRef.componentInstance.param = 'ảnh đính kèm';
+    modalRef.componentInstance.status = this.type;
+    modalRef.componentInstance.role = true;
+    modalRef.componentInstance.imgData = this.listurl[i].data;
+    modalRef.componentInstance.onCloseModal.subscribe(value => {
+      if (value === true) {
+        this.cleanAnh(i);
+      }
+    });
   }
 
+  cleanAnh(i) {
+    this.listDataImg.splice(i, 1);
+    this.listurl.splice(i, 1);
+  }
+  selectFile(event) {
+    for (const p of event.target.files) {
+      this.getFile(p, true);
+    }
+  }
+
+  getFile(file, check) {
+    if (!file || file.length === 0) {
+      this.msg = 'You must select an image';
+      return;
+    }
+
+    const mimeType = file.type;
+    this.listDataImg.push(file);
+    if (mimeType.match(/image\/*/) == null) {
+      this.msg = 'Only images are supported';
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = _event => {
+      this.msg = '';
+      this.url = reader.result;
+      this.listurl.push({ chech: check, data: reader.result, url: null });
+    };
+  }
   getRoomFloorList() {
     this.roomApiServiceService.getRoomFloorList().subscribe(
       res => {
@@ -81,6 +151,21 @@ export class AddRoomComponent implements OnInit {
       },
       err => {
         this.roomFloorList = [];
+      }
+    );
+  }
+
+  getlistHumanResources() {
+    this.humanResourcesApiService.getAllHumanResources().subscribe(
+      res => {
+        if (res) {
+          this.humanresourecsList = res.data;
+        } else {
+          this.humanresourecsList = [];
+        }
+      },
+      error => {
+        this.humanresourecsList = [];
       }
     );
   }
@@ -131,9 +216,32 @@ export class AddRoomComponent implements OnInit {
     this.roomApiServiceService.save(this.form.value).subscribe(
       res => {
         if (this.type === 'add') {
+          const tyle = 2;
+          const formData = new FormData();
+          for (const c of this.listDataImg) {
+            formData.append('file', c);
+          }
           this.toastService.openSuccessToast('Thêm mới thành công !');
+          this.imageApiService.save(res.data.roomId, tyle, formData).subscribe(
+            res1 => {
+              this.toastService.openSuccessToast('Thêm mới anh thành công !');
+            },
+            error => {}
+          );
         }
         if (this.type === 'update') {
+          const tyle = 2;
+          const formData = new FormData();
+          for (const c of this.listDataImg) {
+            formData.append('file', c);
+          }
+          formData.append('data', this.dataIm);
+          this.imageApiService.update(this.id, tyle, formData).subscribe(
+            value => {
+              this.toastService.openSuccessToast('Sửa ảnh thành công !');
+            },
+            error => {}
+          );
           this.toastService.openSuccessToast('Sửa thành công !');
         }
 
@@ -157,19 +265,7 @@ export class AddRoomComponent implements OnInit {
     }
   }
 
-  onBlurUserCode() {
-    // if (this.type === 'add'&& this.userDetail.code !== this.form.value.code) {
-    // if (this.type === 'add') {
-    //
-    //   this.humanResourceService.checkUserCode(this.form.value.code).subscribe(res => {
-    //
-    //     this.isDuplicateUserCode = false;
-    //
-    //   }, err => {
-    //     this.isDuplicateUserCode = true;
-    //   });
-    // }
-  }
+  onBlurUserCode() {}
 
   displayFieldHasError(field: string) {
     return {
@@ -195,56 +291,6 @@ export class AddRoomComponent implements OnInit {
 
   onCancel() {
     this.activeModal.dismiss();
-
-    // if (this.type === 'update') {
-    //   if (
-    //     this.form.value.humanResourceId === this.userDetail.humanResourceId &&
-    //     this.form.value.code === this.userDetail.code &&
-    //     this.form.value.email === this.userDetail.email &&
-    //     this.form.value.fullName === this.userDetail.fullName &&
-    //     this.form.value.partId === this.userDetail.partId &&
-    //     this.form.value.status === this.userDetail.status &&
-    //     this.form.value.majorId === this.userDetail.majorId &&
-    //     this.form.value.dateMajor === this.userDetail.dateMajor &&
-    //     this.form.value.note === this.userDetail.note
-    //   ) {
-    //     this.activeModal.dismiss();
-    //   } else {
-    //     const modalRef = this.modalService.open(ConfirmModalComponent, {centered: true, backdrop: 'static'});
-    //     modalRef.componentInstance.type = 'confirm';
-    //     modalRef.componentInstance.onCloseModal.subscribe(value => {
-    //       if (value === true) {
-    //         this.activeModal.dismiss();
-    //       }
-    //     });
-    //   }
-    // }
-    // if (this.type === 'add') {
-    //   if (
-    //     this.form.value.humanResourceId === null &&
-    //     this.form.value.code === '' &&
-    //     this.form.value.email === '' &&
-    //     this.form.value.fullName === '' &&
-    //     this.form.value.positionId === null &&
-    //     this.checkNull() &&
-    //     this.form.value.status === this.statusList[0].id &&
-    //     this.form.value.note === ''
-    //
-    //   ) {
-    //     this.activeModal.dismiss();
-    //   } else {
-    //     const modalRef = this.modalService.open(ConfirmModalComponent, {centered: true, backdrop: 'static'});
-    //     modalRef.componentInstance.type = 'confirm';
-    //     modalRef.componentInstance.onCloseModal.subscribe(value => {
-    //       if (value === true) {
-    //         this.activeModal.dismiss();
-    //       }
-    //     });
-    //   }
-    // }
-    // if (this.type === 'detail') {
-    //   this.activeModal.dismiss();
-    // }
   }
 
   getUserDetail(id) {
@@ -253,6 +299,9 @@ export class AddRoomComponent implements OnInit {
         this.userDetail = res.data;
 
         this.oldEmail = this.userDetail.email ? this.userDetail.email : '';
+        this.tivi = this.userDetail.tivi;
+        this.pet = this.userDetail.pet;
+        this.elevator = this.userDetail.elevator;
 
         this.setDataDefault();
       },
@@ -260,6 +309,18 @@ export class AddRoomComponent implements OnInit {
         this.userDetail = null;
       }
     );
+
+    this.imageApiService.getListDevice(id, id).subscribe(value => {
+      this.dataStringPath = value;
+      if (this.dataStringPath !== []) {
+        for (const p of this.dataStringPath) {
+          this.imageApiService.getFile(p.url).subscribe(value1 => {
+            const data = value1;
+            this.getFile(data, p.group);
+          });
+        }
+      }
+    });
   }
 
   setDataDefault() {
@@ -287,6 +348,7 @@ export class AddRoomComponent implements OnInit {
       this.form.get('partId').setValue(userToken.assetId);
       this.form.get('roomTypeId').setValue(userToken.roomType);
       this.form.get('id').setValue(userToken.roomType);
+      this.form.get('humanResourcesId').setValue(userToken.roomType);
 
       this.checkBoll = true;
     } else {
@@ -310,7 +372,12 @@ export class AddRoomComponent implements OnInit {
       floorNumber: null,
       roomType: null,
       note: ['', Validators.maxLength(1000)],
-      assetId: [null, Validators.compose([Validators.required])]
+      assetId: [null, Validators.compose([Validators.required])],
+      humanResourcesId: [],
+      tivi: [],
+      elevator: [],
+      pet: [],
+      price: []
     });
     if (this.id) {
       this.getUserDetail(this.id);
@@ -319,5 +386,21 @@ export class AddRoomComponent implements OnInit {
       this.xetDataUer();
     }
     this.getYear();
+  }
+  public tivi: boolean;
+  public elevator: boolean;
+  public pet: boolean;
+
+  public ontivi(value: boolean) {
+    this.tivi = value;
+    this.form.get('tivi').setValue(this.tivi);
+  }
+  public onelevator(value: boolean) {
+    this.elevator = value;
+    this.form.get('elevator').setValue(this.elevator);
+  }
+  public onpet(value: boolean) {
+    this.pet = value;
+    this.form.get('pet').setValue(this.pet);
   }
 }

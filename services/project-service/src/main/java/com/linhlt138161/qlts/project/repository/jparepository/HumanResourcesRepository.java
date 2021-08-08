@@ -16,6 +16,10 @@ public interface HumanResourcesRepository extends JpaRepository<HumanResourcesEn
     @Query(value = "select * from HUMAN_RESOURCES where CODE=?1 and STATUS=1", nativeQuery = true)
     HumanResourcesEntity findByCode(String code);
 
+    @Query(value = "select * from HUMAN_RESOURCES where  STATUS=1", nativeQuery = true)
+
+    List<HumanResourcesEntity> findByAll();
+
     @Query(value = "select h from HumanResourcesEntity h where h.humanResourceId = ?1 and h.status = 1")
     List<HumanResourcesEntity> getListHumanResources(Long projectID);
 

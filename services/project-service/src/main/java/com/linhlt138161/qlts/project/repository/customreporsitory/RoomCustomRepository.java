@@ -36,9 +36,9 @@ public class RoomCustomRepository {
                 "        rt.name , p.par_name     " +
                 " from room r left join app_params p on r.floor_number = p.par_code " +
                 " left join room_type rt on r.room_type = rt.room_type_id "+
-                " where 1 = 1 and r.status != 2 "
+                " where 1 = 1 and r.status != 0 "
         );
-
+//        where 1 = 1 and r.status != 0
         if (StringUtils.isNotBlank(dto.getRoomCode())){
             sql.append("  and (( lower(r.room_code) LIKE :roomCode ) or ( lower(r.room_name) LIKE :roomCode ))");
         }
@@ -75,9 +75,10 @@ public class RoomCustomRepository {
                 "p.par_name, r.max_number, r.note, r.room_type, t.name, r.status " +
                 "from room r inner join app_params p on r.floor_number = p.par_code " +
                 " inner join room_type t on r.room_type = t.room_type_id " +
-                " where 1 = 1 and r.status != 2 " +
+                " where 1 = 1 and r.status != 0 " +
                 " and p.par_type = 'floor'"
         );
+//        where 1 = 1 and r.status != 0
         if (null != dto.getRoomType()){
             sql.append(" and t.room_type_id = :roomType ");
         }

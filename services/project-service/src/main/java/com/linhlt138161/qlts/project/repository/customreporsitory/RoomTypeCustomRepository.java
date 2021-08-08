@@ -73,12 +73,12 @@ public class RoomTypeCustomRepository {
             for (Object[] obj : objects) {
                 RoomTypeDTO roomTypeDTO = new RoomTypeDTO();
                 roomTypeDTO.setRoomTypeId(((BigInteger) obj[0]).longValue());
-                roomTypeDTO.setCode(obj[1].toString());
-                roomTypeDTO.setName(obj[2].toString());
-                roomTypeDTO.setHourPrice(((BigInteger)obj[3]).longValue());
-                roomTypeDTO.setDayPrice(((BigInteger)obj[4]).longValue());
-                roomTypeDTO.setNightPrice(((BigInteger)obj[5]).longValue());
-                roomTypeDTO.setNote(obj[6].toString());
+                roomTypeDTO.setCode((String) obj[1]);
+                roomTypeDTO.setName((String) obj[2]);
+//                roomTypeDTO.setHourPrice((Long) obj[3]);
+//                roomTypeDTO.setDayPrice((Long) obj[4]);
+//                roomTypeDTO.setNightPrice((Long) obj[5]);
+                roomTypeDTO.setNote((String) obj[6]);
                 list.add(roomTypeDTO);
             }
         }

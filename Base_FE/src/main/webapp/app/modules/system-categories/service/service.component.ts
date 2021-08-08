@@ -177,8 +177,6 @@ export class ServiceComponent implements OnInit {
     });
     modalRef.componentInstance.type = type;
     modalRef.componentInstance.id = selectedData ? selectedData.serviceId : null;
-    console.warn('tesst' + modalRef.componentInstance.id);
-
     modalRef.result
       .then(result => {
         if (result) {

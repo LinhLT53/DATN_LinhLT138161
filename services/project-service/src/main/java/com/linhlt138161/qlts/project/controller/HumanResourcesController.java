@@ -129,6 +129,12 @@ public class HumanResourcesController {
         }
     }
 
+    @GetMapping("/getAll")
+    public ResultResp getAll(){
+        return  ResultResp.success(resourcesService.getAll());
+    }
+
+
     @GetMapping("/getPosition")
     public ResultResp getHumanPosition() {
         return ResultResp.success(resourcesService.position());

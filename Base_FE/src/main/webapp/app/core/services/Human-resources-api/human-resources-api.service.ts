@@ -1,9 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Observable} from "rxjs";
-import {HttpClient, HttpHeaders, HttpResponse} from "@angular/common/http";
-import {SERVER_API} from "app/shared/constants/api-resource.constants";
-import {KeySearch} from "app/core/models/system-categories/keysearch.model";
-
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { SERVER_API } from 'app/shared/constants/api-resource.constants';
+import { KeySearch } from 'app/core/models/system-categories/keysearch.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,12 +11,15 @@ export class HumanResourcesApiService {
   private baseUri = SERVER_API;
   private token = localStorage.getItem('token');
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   // TanNV
   searchHumanResources(searchForm?: any): Observable<any> {
     return this.http.post(this.baseUri + '/humanResources/searchHumanResources', searchForm);
+  }
+
+  getAllHumanResources(): Observable<any> {
+    return this.http.get(this.baseUri + '/humanResources/getAll');
   }
 
   // searchNode(searchForm?: any): Observable<any> {
@@ -87,14 +89,13 @@ export class HumanResourcesApiService {
     });
   }
 
-//   downloadFileImport(id: number): Observable<any> {
-//     return this.http.get(this.resourceUrl + '/partnerCapacityProfile/download-file-result?taskId=' + id, {
-//       responseType: 'blob',
-//       observe: 'response'
-//     });
-//   }
-// }
-
+  //   downloadFileImport(id: number): Observable<any> {
+  //     return this.http.get(this.resourceUrl + '/partnerCapacityProfile/download-file-result?taskId=' + id, {
+  //       responseType: 'blob',
+  //       observe: 'response'
+  //     });
+  //   }
+  // }
 
   lockHumanResources(id?: any): Observable<any> {
     return this.http.delete<any>(SERVER_API + '/humanResources/lockHumanResources/' + id);
@@ -111,9 +112,9 @@ export class HumanResourcesApiService {
   resetpassword(id) {
     const option = {
       headers: new HttpHeaders({
-        'Authorization': 'Bearer ' + this.token
+        Authorization: 'Bearer ' + this.token
       })
-    }
+    };
     return this.http.put<any>(SERVER_API + '/humanResources/reset-password/' + id, id, option);
   }
 
@@ -122,7 +123,7 @@ export class HumanResourcesApiService {
   }
 
   forgotPassword(email1?: string): Observable<HttpResponse<any>> {
-    return this.http.post<HttpResponse<any>>(SERVER_API + '/authen/forgot-password', {email: email1});
+    return this.http.post<HttpResponse<any>>(SERVER_API + '/authen/forgot-password', { email: email1 });
   }
 
   getlistHumanResourcesDepatment(name: any): Observable<any> {
@@ -153,7 +154,6 @@ export class HumanResourcesApiService {
     return this.http.get(SERVER_API + '/humanResources/human-history');
   }
 
-
   getPartList(): Observable<any> {
     return this.http.get(SERVER_API + '/humanResources/getPart');
   }
@@ -167,8 +167,7 @@ export class HumanResourcesApiService {
   }
 
   update(data): Observable<HttpResponse<any>> {
-    return this.http.post<any>(SERVER_API + '/humanResources/update', data, {observe: 'response'});
-
+    return this.http.post<any>(SERVER_API + '/humanResources/update', data, { observe: 'response' });
   }
 
   getInfo(Id): Observable<any> {
