@@ -139,14 +139,12 @@
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
-                        *jhiHasPermission="quyen.THEMSUALOAIPHONG"
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
                         ngbTooltip="Sửa tài sản"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
                       <button
-                        *jhiHasPermission="quyen.THEMSUALOAIPHONG"
                         (click)="deleteAsset(item)" class="btn btn-light"
                         ngbTooltip="{{'common.tooltip.action.delete' | translate}}"
                         placement="top">

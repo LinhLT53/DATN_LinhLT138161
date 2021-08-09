@@ -97,7 +97,6 @@
           </div>
         </div>
 
-
       </div>
       <div class="row">
                 <div class="col-md-6">
@@ -126,11 +125,7 @@
                     </ng-select>
                   </div>
                 </div>
-
       </div>
-
-
-
       <div class="row">
         <div *ngFor="let user of listurl; index as i; first as isFirst">
           <div class="col-md-6">
@@ -140,7 +135,7 @@
           </div>
         </div>
         <div *ngIf="type==='update'||type==='add'" style="height: 150px;width: 150px;">
-          <input style="padding-top: 60px;" type="file"  (change)="selectFile($event)">
+          <input style="padding-top: 60px;" type="file"  multiple (change)="selectFile($event)">
         </div>
       </div>
 
@@ -179,10 +174,6 @@
           </label>
         </div>
       </div>
-
-
-
-
       <div class="row">
         <div class="col-md-12">
           <div class="form-group">
@@ -206,7 +197,5 @@
       jhiTranslate="common.button.confirm.save">Ghi lại</span>
     </button>
   </div>
-
-
 </div>
 
