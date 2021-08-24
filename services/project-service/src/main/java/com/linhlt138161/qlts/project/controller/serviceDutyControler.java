@@ -1,7 +1,8 @@
 package com.linhlt138161.qlts.project.controller;
 
-import com.linhlt138161.qlts.project.dto.promotionDTO;
+import com.linhlt138161.qlts.project.dto.ServiceDutyDTO;
 import com.linhlt138161.qlts.project.service.PromotionService;
+import com.linhlt138161.qlts.project.service.serviceDutyService;
 import common.DateUtils;
 import common.ErrorCode;
 import common.ResultResp;
@@ -18,20 +19,21 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("/promotion")
+@RequestMapping("/serviceDuty")
 @CrossOrigin("*")
-public class promotionController {
-    private final Logger log = LogManager.getLogger(promotionController.class);
-    @Autowired
-    PromotionService service;
+public class serviceDutyControler {
+    private final Logger log = LogManager.getLogger(serviceDutyControler.class);
 
-    @PostMapping("/searchPromotion")
-    public ResponseEntity<List<promotionDTO>> searchPromotion(@RequestBody promotionDTO promotionDTO){
+    @Autowired
+    serviceDutyService service;
+
+    @PostMapping("/search")
+    public ResponseEntity<List<ServiceDutyDTO>> searchPromotion(@RequestBody ServiceDutyDTO ServiceDutyDTO){
         log.info("----------------api searchPromotion-----------------");
         try {
             log.info("----------------api searchRoom Ok-----------------");
 
-            return new ResponseEntity(service.searchPromotion(promotionDTO), HttpStatus.OK);
+            return new ResponseEntity(service.searchPromotion(ServiceDutyDTO), HttpStatus.OK);
 
         }catch (Exception e){
             log.info("----------------api searchRoom thất bại-----------------");
@@ -40,7 +42,7 @@ public class promotionController {
         }
     }
     @PostMapping("/add")
-    public ResultResp createHR(@RequestBody promotionDTO partnerDTO, HttpServletRequest request) {
+    public ResultResp createHR(@RequestBody ServiceDutyDTO partnerDTO, HttpServletRequest request) {
         log.info("----------------api addPromotion-----------------");
         try {
             return ResultResp.success(ErrorCode.CREATED_HR_OK, service.create(partnerDTO));
@@ -52,7 +54,7 @@ public class promotionController {
         return ResultResp.badRequest(ErrorCode.CREATED_HR_FALSE);
     }
 
-    @GetMapping("/get-promotion-by-id/{id}")
+    @GetMapping("/get-serviceDuty-by-id/{id}")
     public ResultResp getOneById(@PathVariable("id") Long id) {
         log.info("<-- api updatePromotion: start, ", id);
         try {
@@ -65,7 +67,7 @@ public class promotionController {
             return ResultResp.badRequest(ErrorCode.SERVER_ERROR);
         }
     }
-    @GetMapping("/deletePromotion/{id}")
+    @GetMapping("/delete/{id}")
     public ResultResp deleteProject(@PathVariable("id") Long id,HttpServletRequest request) {
         log.info("----------------api delete phong -----------------");
         try {
@@ -98,3 +100,4 @@ public class promotionController {
     }
 
 }
+

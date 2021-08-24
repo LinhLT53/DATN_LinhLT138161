@@ -31,6 +31,9 @@ import { ChartResourcesModule } from 'app/modules/system-categories/chart/chart-
 import { TourComponent } from './tour/tour.component';
 import { AddtourComponent } from './tour/addtour/addtour.component';
 import { tourResourcesModule } from 'app/modules/system-categories/tour/tour-resources.module';
+import { ServiceDutyComponent } from './service-duty/service-duty.component';
+import { AdddutyComponent } from './service-duty/addduty/addduty.component';
+import { dutyResourcesModule } from 'app/modules/system-categories/service-duty/duty-resources.module';
 @NgModule({
   declarations: [
     ImportExcelHumanResourceComponent,
@@ -51,7 +54,8 @@ import { tourResourcesModule } from 'app/modules/system-categories/tour/tour-res
     AddBookingFutureComponent,
     PromotionComponent,
     AddCustomerComponent,
-    TourComponent
+    TourComponent,
+    ServiceDutyComponent
   ],
   imports: [
     CommonModule,
@@ -69,7 +73,8 @@ import { tourResourcesModule } from 'app/modules/system-categories/tour/tour-res
     PromotionResourcesModule,
     CustomerResourcesModule,
     ChartResourcesModule,
-    tourResourcesModule
+    tourResourcesModule,
+    dutyResourcesModule
   ],
   entryComponents: [ImportExcelHumanResourceComponent],
   exports: [],

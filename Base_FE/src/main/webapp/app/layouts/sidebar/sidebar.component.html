@@ -117,6 +117,14 @@
           <i class="fa" [ngClass]="tour.class"></i>
         </span>
       </li>
+      <li>
+        <a [routerLink]="duty.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{duty.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="tour.class"></i>
+        </span>
+      </li>
       <div class="clearfix"></div>
     </ul>
   </div>

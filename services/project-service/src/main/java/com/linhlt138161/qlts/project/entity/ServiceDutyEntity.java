@@ -28,22 +28,22 @@ public class ServiceDutyEntity {
     private Date date;
 
     @Column(name = "start_time")
-    private Date ttarttime;
+    private Date startDateTime;
 
     @Column(name = "end_time")
-    private Date endtime;
+    private Date endDateTime;
 
     @Column(name = "actual_start_time")
-    private Date actualstarttime;
+    private Date acTualStartDateTime;
 
     @Column(name = "actual_end_time")
-    private Date actualendttime;
+    private Date acTualEndDateTime;
 
     @Column(name = "id_staff")
-    private Long idstaff;
+    private Long staffID;
 
     @Column(name = "id_room")
-    private Long idroom;
+    private Long roomID;
 
     @Column(name = "status")
     private Integer Status;

@@ -178,6 +178,12 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     class: 'fa-tachometer',
     resourceCode: 'menu.hddt_qlht_chdn'
   };
+  duty = {
+    name: MENU_TITLE.DUTY.NAME,
+    url: '/system-categories/duty-resources',
+    class: 'fa-tachometer',
+    resourceCode: 'menu.hddt_qlht_chdn'
+  };
   user: any;
   constructor(
     private languageService: JhiLanguageService,

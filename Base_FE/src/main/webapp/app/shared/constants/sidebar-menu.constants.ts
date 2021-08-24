@@ -71,5 +71,8 @@ export const MENU_TITLE = {
   },
   TOUR: {
     NAME: 'Tour'
+  },
+  DUTY: {
+    NAME: 'Chực nhật'
   }
 };
