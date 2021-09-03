@@ -340,6 +340,4 @@ public class HumanResourcesServiceImpl implements HumanResourcesService, UserDet
         humanResourcesEntity.setAuthorities(roleList);
         return new org.springframework.security.core.userdetails.User(humanResourcesEntity.getEmail(), humanResourcesEntity.getPassword(), humanResourcesEntity.getAuthorities());
     }
-
-
 }
