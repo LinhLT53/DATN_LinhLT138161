@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="discovery" />
         <module name="gateway" />
-        <module name="project-service" />
         <module name="iist-common" />
+        <module name="project-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
