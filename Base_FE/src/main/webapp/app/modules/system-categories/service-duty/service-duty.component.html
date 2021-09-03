@@ -1,0 +1,189 @@
+<jhi-spinner></jhi-spinner>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <button class="btn btn-link btn-custom-bg" ngbTooltip="Quản lý tour" routerLink="">
+      <i aria-hidden="true" class="fa fa-home icon-breadcrumb"></i>
+    </button>
+  </li>
+  <li class="breadcrumb-item active">Quản lý chực nhật</li>
+</ol>
+<perfect-scrollbar (window:resize)="onResize()" [style.max-height.px]="height" class="ps">
+  <div class="page-content" id="organizationCategories">
+    <div class="card mb-1">
+      <div class="card-header">
+        <a aria-expanded="true" data-toggle="collapse" href="#search"><span
+          jhiTranslate="common.card.title.search"></span></a>
+      </div>
+      <div class="collapse show" id="search">
+        <div class="card-body">
+          <form [formGroup]="form" autocomplete="off" novalidate>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label custom-label-right">Mã </label>
+                  <div class="col-sm-9">
+                    <input class="form-control" formControlName="code" type="text"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label custom-label-right"> Tên tour</label>
+                  <div class="col-sm-9">
+                    <input class="form-control" formControlName="name" type="text"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+
+              <button (click)="onSearchData()" class="btn btn-primary" type="button">
+                <i aria-hidden="true" class="fa fa-search mr-2"></i><span
+                jhiTranslate="common.button.search">Tìm kiếm</span>
+              </button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a aria-expanded="true" data-toggle="collapse" href="#dataTable"><span
+          jhiTranslate="userGroup.titleTable"></span></a>
+      </div>
+
+      <div class="collapse show" id="dataTable">
+        <div class="card-body pt-2 pb-0 px-2">
+
+          <div class="row d-flex justify-content-end pr-1">
+            <button (click)="openModalAddUser('add',null)"
+                    class="btn btn-primary"
+                    type="button">
+              <i aria-hidden="true" class="fa fa-plus mr-2">
+              </i><span jhiTranslate="common.button.add">Thêmm mới</span>
+            </button>
+            <div class="d-inline-block choose-column" ngbDropdown ngbTooltip="Ẩn/hiện cột">
+              <button class="btn btn-primary btn-view-column ml-2" id="dropdownBasic1" ngbDropdownToggle placement="top"
+                      type="button">
+                <i aria-hidden="true" class="fa fa-list"></i>
+              </button>
+              <div aria-labelledby="dropdownBasic1" ngbDropdownMenu>
+                <perfect-scrollbar [style.max-height.vh]="SHOW_HIDE_COL_HEIGHT" class="ps">
+                  <ng-container *ngFor="let col of columns; let i = index">
+                    <div class="custom-control custom-checkbox ">
+                      <input (click)="toggleColumns(col)" [checked]="col.isShow" class="custom-control-input"
+                             id="check{{ i }}"
+                             type="checkbox"/>
+                      <label class="custom-control-label cursor-pointer" for="check{{ i }}">
+                        {{ col.value }}
+                      </label>
+                    </div>
+                  </ng-container>
+                </perfect-scrollbar>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <perfect-scrollbar class="ps" id="scrollbarTable">
+              <table class="table table-bordered table-hover table-striped" id="tableCustoms">
+                <thead>
+                <tr [(ascending)]="reverse" [(predicate)]="predicate" class="text-center" jhiSort>
+                  <th class="small-width-table" jhiTranslate="userGroup.orderNumber" scope="col">STT</th>
+                  <th class="medium-width-table action-width-four-icon custom-width" scope="col">Hành động</th>
+                  <th *ngIf="this.columns[0]?.isShow" class="large-width-table" style="width: 90px">
+                    <span>Mã chực nhật</span>
+                  </th>
+
+                  <th *ngIf="this.columns[1]?.isShow" class="large-width-table" style="width: 90px">
+                    <span>Tên người chực</span>
+                  </th>
+                  <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 90px">
+                    <span>Tên phòng</span>
+                  </th>
+                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 140px">
+                    <span>Ngày chực</span>
+                  </th>
+                  <th *ngIf="this.columns[4]?.isShow" class="large-width-table" style="width: 140px">
+                    <span>Thời gian bắt đầu</span>
+                  </th>
+                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table"style="width: 140px" >
+                    <span>Thời gian kết thúc</span>
+                  </th>
+                  <th *ngIf="this.columns[6]?.isShow" class="large-width-table" style="width: 140px">
+                    <span>Thời gian bắt đầu thực tế</span>
+                  <th *ngIf="this.columns[7]?.isShow" class="large-width-table" style="width: 140px" >
+                    <span>Thời gian kết thực thực tế</span>
+                  </th>
+                  <th *ngIf="this.columns[8]?.isShow" class="large-width-table">
+                    <span>Ghi chú</span>
+                  </th>
+                </tr>
+                </thead>
+                <tbody *ngFor="let item of listRoomResourcse; index as i">
+                <tr>
+                  <td class="text-center">{{itemsPerPage * (page - 1) + i + 1}}</td>
+                  <td class="text-center four-icon medium-width-table">
+                    <div class="group-action">
+                      <button (click)="openModalAddUser('detail',item)" class="btn btn-light"
+                              ngbTooltip="Xem thông tin tài sản"
+                              placement="top">
+                        <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
+                      </button>
+                      <button
+                        (click)="openModalAddUser('update',item)" class="btn btn-light"
+                        ngbTooltip="Sửa tài sản"
+                        placement="top">
+                        <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
+
+                      <button
+                        (click)="deleteAsset(item)" class="btn btn-light"
+                        ngbTooltip="{{'common.tooltip.action.delete' | translate}}"
+                        placement="top">
+                        <i aria-hidden="true" class="fa fa-trash icon-color-red"></i></button>
+
+
+                    </div>
+                  </td>
+                  <td *ngIf="this.columns[0]?.isShow">
+                    <p>{{item.servicecode}} </p></td>
+                  <td *ngIf="this.columns[1]?.isShow"><p>{{item.fullName}}</p></td>
+                  <td *ngIf="this.columns[2]?.isShow" class="text-center"><p>{{item.roomName}}</p></td>
+                  <td *ngIf="this.columns[3]?.isShow" style="text-align: left"><p>{{item.date}}</p></td>
+                  <td *ngIf="this.columns[4]?.isShow" style="text-align: left"><p>{{item.startDateTime}}</p></td>
+                  <td *ngIf="this.columns[5]?.isShow"style="text-align: left"><p>{{ item.endDateTime}}</p>
+                  </td>
+                  <td *ngIf="this.columns[6]?.isShow" style="text-align: left"><p>{{item.acTualStartDateTime}}</p></td>
+                  <td *ngIf="this.columns[7]?.isShow" style="text-align: left"><p>{{item.acTualEndDateTime}}</p></td>
+                  <td *ngIf="this.columns[8]?.isShow" style="text-align: left"><p>{{item.note}}</p></td>
+
+                </tr>
+                </tbody>
+              </table>
+            </perfect-scrollbar>
+          </div>
+
+          <div *ngIf="!totalItems || totalItems === 0"
+               class="row justify-content-start py-2 pl-1  table-footer no-data">
+            <p class="item-count" jhiTranslate="common.table.noData"></p>
+          </div>
+          <div [hidden]="totalItems === 0" class="d-flex justify-content-end table-footer">
+            <div class="row justify-content-center">
+              <p class="item-count">{{'common.table.totalItems'| translate}} {{totalItems}}</p>
+              <ngb-pagination (pageChange)="loadPage(page)" *ngIf="totalItems" [(page)]="page"
+                              [boundaryLinks]="true"
+                              [collectionSize]="totalItems" [maxSize]="maxSizePage" [pageSize]="itemsPerPage"
+                              [rotate]="true">
+              </ngb-pagination>
+              <jhi-page-size (onChangePageSize)="changePageSize($event)"></jhi-page-size>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</perfect-scrollbar>

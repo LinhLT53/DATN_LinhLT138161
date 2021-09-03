@@ -1,0 +1,126 @@
+<!--</div>-->
+<div [handle]="handle" class="modal-import" jhiModalDrag>
+  <div #handle class="modal-header">
+    <h5 class="modal-title mt-0">{{title}}</h5>
+    <button #closeBtn (click)="onCancel()" aria-label="Close" class="close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="form" autocomplete="off" novalidate>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Mã chực nhật</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail' || type == 'update'"
+                   class="form-control"
+                   formControlName="servicecode"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Nhân viên phụ trách </label>
+            <ng-select class="cursor-text scroll-ng-select"
+                       bindLabel="fullName" formControlName="staffID" bindValue="humanResourceId"
+                       notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                       placeholder="{{ 'common.select.option.default' | translate }}"
+                       clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                       [items]="humanresourecsList"
+                       [multiple]="false"
+                       [readonly]="type === 'detail'||checkBoll">
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Tên  phòng</label>
+            <ng-select class="cursor-text scroll-ng-select"
+                       bindLabel="name" formControlName="roomID" bindValue="roomTypeId"
+                       notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                       placeholder="{{ 'common.select.option.default' | translate }}"
+                       clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                       [items]="roomTypeList"
+                       [multiple]="false"
+                       [readonly]="type === 'detail'||checkBoll">
+            </ng-select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="form-group" [ngClass]="displayFieldHasError('startDateTime')">
+              <label class="form-control-label ">Thời bắt đầu</label>
+              <jhi-date-time-picker formControlName="startDateTime" [disabled]="type === 'detail'"></jhi-date-time-picker>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="form-group" [ngClass]="displayFieldHasError('endDateTime')">
+              <label class="form-control-label ">Thời kết thúc</label>
+              <jhi-date-time-picker formControlName="endDateTime" [disabled]="type === 'detail'"></jhi-date-time-picker>
+            </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="form-group" [ngClass]="displayFieldHasError('acTualStartDateTime')">
+              <label class="form-control-label ">Thời gian bắt đầu thực tế</label>
+              <jhi-date-time-picker formControlName="acTualStartDateTime" [disabled]="type === 'detail'"></jhi-date-time-picker>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="form-group" [ngClass]="displayFieldHasError('acTualEndDateTime')">
+              <label class="form-control-label ">Thời gian kết thúc thực tế</label>
+              <jhi-date-time-picker formControlName="acTualEndDateTime" [disabled]="type === 'detail'"></jhi-date-time-picker>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <div class="form-group" [ngClass]="displayFieldHasError('acTualStartDateTime')">
+              <label class="form-control-label ">Thời gian bắt đầu thực tế</label>
+              <jhi-date-time-picker formControlName="date" [disabled]="type === 'detail'"></jhi-date-time-picker>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Nghi chú</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="note"
+                   type="text"/>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+  <div class="action-btn">
+    <button #cancelBtn (click)="onCancel()" class="btn btn-light alight" type="button">
+      <i aria-hidden="true" class="fa fa-times mr-2"></i><span
+      jhiTranslate="{{(type !== 'detail'? 'common.button.confirm.cancel' : 'common.button.close')}}">Hủy bỏ</span>
+    </button>
+    <button (click)="onSubmitData()" *ngIf="type !== 'detail'" class="btn btn-primary" type="submit">
+      <i aria-hidden="true" class="fa fa-floppy-o mr-2"></i><span
+      jhiTranslate="common.button.confirm.save">Ghi lại</span>
+    </button>
+  </div>
+
+
+</div>
+

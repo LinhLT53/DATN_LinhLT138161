@@ -1,5 +1,6 @@
 package com.linhlt138161.qlts.project.repository.customreporsitory;
 
+import com.linhlt138161.qlts.project.ProjectServiceApplication;
 import com.linhlt138161.qlts.project.dto.ServiceDutyDTO;
 import com.linhlt138161.qlts.project.dto.promotionDTO;
 import com.linhlt138161.qlts.project.entity.ServiceDutyEntity;
@@ -9,6 +10,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -99,5 +101,38 @@ public class DutyCustomerReponsitory {
         }
         return list;
     }
+
+     static  int a = 0;
+
+    int data = 10;
+    DutyCustomerReponsitory(){
+        System.out.println("constructor mac dinh");
+    };
+
+    DutyCustomerReponsitory (int a){
+        B b = new B(this);
+
+    };
+    void display() {
+        System.out.println(a );
+    }
+    public static void main(String[] args) {
+        DutyCustomerReponsitory d = new DutyCustomerReponsitory(1);
+
+        d.display();
+//      for (int i = 0; i < 10000; i++){
+//          a++;
+//          System.out.println( a + " I LOVE YOU <3");
+//      }
+    }
 }
 
+class B {
+    DutyCustomerReponsitory obj;
+    B(DutyCustomerReponsitory obj) {
+        this.obj=obj;
+    }
+    void display() {
+        System.out.println(obj.data);// sử dụng biến thành viên cửa lớp A4
+    }
+}
