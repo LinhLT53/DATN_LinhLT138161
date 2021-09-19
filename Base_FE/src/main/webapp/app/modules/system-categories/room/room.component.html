@@ -110,13 +110,19 @@
                   <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 150px">
                     <span>loại phòng</span>
                   </th>
-                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 150px">
-                    <span>Tầng số</span>
+                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 100px">
+                    <span>Giá</span>
                   </th>
                   <th *ngIf="this.columns[4]?.isShow" class="large-width-table" style="width: 150px">
                     <span>số người max</span>
                   </th>
-                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table"><span>ghi chú</span>
+                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table" style="width: 150px">
+                    <span>Vị trí </span>
+                  </th>
+                  <th *ngIf="this.columns[6]?.isShow" class="large-width-table" style="width: 150px">
+                    <span>Nhân viên phụ trách </span>
+                  </th>
+                  <th *ngIf="this.columns[6]?.isShow" class="large-width-table"><span>ghi chú</span>
                   </th>
                 </tr>
                 </thead>
@@ -126,19 +132,19 @@
                   <td class="text-center four-icon medium-width-table">
                     <div class="group-action">
                       <button (click)="openModalAddUser('detail',item)" class="btn btn-light"
-                              ngbTooltip="Xem thông tin tài sản"
+                              ngbTooltip="Xem thông tin phòng"
                               placement="top">
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
-                        ngbTooltip="Sửa tài sản"
+                        ngbTooltip="Sửa phòng"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
                       <button
                         (click)="deleteAsset(item)" class="btn btn-light"
-                        ngbTooltip="{{'common.tooltip.action.delete' | translate}}"
+                        ngbTooltip="xóa phòng"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-trash icon-color-red"></i></button>
 
@@ -148,9 +154,11 @@
                   <td *ngIf="this.columns[0]?.isShow">{{item.roomCode}}</td>
                   <td *ngIf="this.columns[1]?.isShow">{{item.roomName}}</td>
                   <td *ngIf="this.columns[2]?.isShow" class="text-center">{{item.roomTypeName}}</td>
-                  <td *ngIf="this.columns[3]?.isShow" class="text-center">{{item.floorName}}</td>
+                  <td *ngIf="this.columns[3]?.isShow" class="text-center">{{item.price}}</td>
                   <td *ngIf="this.columns[4]?.isShow" class="text-center">{{item.maxNumber}}</td>
-                  <td *ngIf="this.columns[5]?.isShow" style="text-align: left">{{item.note}}</td>
+                  <td *ngIf="this.columns[5]?.isShow" class="text-center">{{item.floorName}}</td>
+                  <td *ngIf="this.columns[6]?.isShow" class="text-center">{{item.fullName}}</td>
+                  <td *ngIf="this.columns[7]?.isShow" style="text-align: left">{{item.note}}</td>
                 </tr>
                 </tbody>
               </table>

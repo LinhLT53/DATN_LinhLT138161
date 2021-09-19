@@ -31,6 +31,7 @@ public class RoomDTO extends AuditingDTO<String>{
     private Long bookingRoomId;
 
     private Long humanResourcesId;
+    private String fullName;
     private String tivi;
     private String elevator;
     private String pet;

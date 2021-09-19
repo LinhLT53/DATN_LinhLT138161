@@ -134,6 +134,7 @@ public class RoomServiceImpl implements RoomService {
             roomEntity.setElevator(dto.getElevator());
             roomEntity.setTivi(dto.getTivi());
             roomEntity.setPet(dto.getPet());
+            roomEntity.setPrice(dto.getPrice());
             roomEntity.setHumanRecourcesId(dto.getHumanResourcesId());
         } else if (dto.getRoomId() == null) {
             //TODO: create phong
@@ -149,6 +150,7 @@ public class RoomServiceImpl implements RoomService {
             roomEntity.setElevator(dto.getElevator());
             roomEntity.setTivi(dto.getTivi());
             roomEntity.setPet(dto.getPet());
+            roomEntity.setPrice(dto.getPrice());
             roomEntity.setHumanRecourcesId(dto.getHumanResourcesId());
         }
         roomRepository.save(roomEntity);
@@ -212,6 +214,7 @@ public class RoomServiceImpl implements RoomService {
         dto.setHumanResourcesId(roomEntity.getHumanRecourcesId());
         dto.setTivi(roomEntity.getTivi());
         dto.setElevator(roomEntity.getElevator());
+        dto.setPrice(roomEntity.getPrice());
         dto.setPet(roomEntity.getPet());
         return dto;
     }

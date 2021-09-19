@@ -27,16 +27,19 @@ public class RoomCustomRepository {
     public List<RoomDTO> searchRoom(RoomDTO dto){
         log.info("search Room");
         StringBuilder sql = new StringBuilder();
-        sql.append("select r.room_id,      " +
-                " r.room_code,     " +
-                "        r.room_name,     " +
-                "        r.floor_number,     " +
-                "        r.max_number,     " +
-                "        r.note,     " +
-                "        rt.name , p.par_name     " +
-                " from room r left join app_params p on r.floor_number = p.par_code " +
-                " left join room_type rt on r.room_type = rt.room_type_id "+
-                " where 1 = 1 and r.status != 0 "
+        sql.append("select r.room_id,          " +
+                "                r.room_code,         " +
+                "                       r.room_name,         " +
+                "                       r.floor_number,         " +
+                "                       r.max_number,         " +
+                "                       r.note,         " +
+                "                       rt.name , p.par_name,    " +
+                "                       hr.full_name,    " +
+                "                       r.price    " +
+                "                from room r left join app_params p on r.floor_number = p.par_code     " +
+                "                left join room_type rt on r.room_type = rt.room_type_id    " +
+                "                left join human_resources hr on hr.human_resource_id = r.humanRecourcesId    " +
+                "                where 1 = 1 and r.status != 0     "
         );
 //        where 1 = 1 and r.status != 0
         if (StringUtils.isNotBlank(dto.getRoomCode())){
@@ -161,6 +164,8 @@ public class RoomCustomRepository {
                 roomDTO.setNote((String) obj[5]);
                 roomDTO.setRoomTypeName((String) obj[6]);
                 roomDTO.setFloorName((String)obj[7]);
+                roomDTO.setFullName((String)obj[8]);
+                roomDTO.setPrice((Integer) obj[9]);
                 list.add(roomDTO);
             }
         }

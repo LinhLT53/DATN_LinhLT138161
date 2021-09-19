@@ -23,10 +23,11 @@ export class RoomComponent implements OnInit {
   columns = [
     { key: 0, value: 'Mã phòng', isShow: true },
     { key: 1, value: 'Tên tên phòng', isShow: true },
-    { key: 2, value: 'Giá', isShow: true },
+    { key: 2, value: 'Loại phòng', isShow: true },
+    { key: 3, value: 'Giá', isShow: true },
     { key: 4, value: 'Số người', isShow: true },
-    { key: 5, value: 'Số phòng', isShow: true },
-    { key: 6, value: 'Loại phòng', isShow: true },
+    { key: 5, value: 'Vị trí', isShow: false },
+    { key: 6, value: 'Nhân viên phụ trách', isShow: true },
     { key: 7, value: 'Ghi chú', isShow: true }
   ];
   quyen = QUYEN;

@@ -18,4 +18,5 @@ export class RoomModel {
   note?: any;
   roomTypeName: any;
   floorName: any;
+  fullName: any;
 }
