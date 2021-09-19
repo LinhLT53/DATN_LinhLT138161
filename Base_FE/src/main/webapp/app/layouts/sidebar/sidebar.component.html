@@ -28,8 +28,7 @@
           <i class="fa" [ngClass]="bookRoom.class"></i>
         </span>
       </li>
-<!--      <li *jhiHasPermission="quyen.PHONGLE">-->
-      <li>
+      <li *jhiHasPermission="quyen.PHONGLE">
         <a [routerLink]="bookRoomFuture.url" routerLinkActive="active-link, text-white">
           <span class="title">{{bookRoomFuture.name}}</span>
         </a>

@@ -73,7 +73,6 @@ export class AddBookingComponent implements OnInit {
 
   tongTien;
   debouncer: Subject<string> = new Subject<string>();
-  //relase
   listRoom = [];
   listCustomer = [];
   listPromotion = [];
@@ -221,10 +220,6 @@ export class AddBookingComponent implements OnInit {
         this.form.controls['bookingDateOut'].setErrors({ invalid: true });
       } else {
         this.requireNgayDKDi = false;
-        /*if (this.compareTwoTime(ngayDKDi, new Date()) <= 0) {
-          this.cpNgayDKDiNgayHt = true;
-          this.form.controls['bookingDateOut'].setErrors({ invalid: true });
-        } else {*/
         this.cpNgayDKDiNgayHt = false;
         const ngayDat = this.getValueOfField('bookingDate');
         if (this.compareTwoTime(ngayDKDi, ngayDat) <= 0) {
@@ -261,36 +256,6 @@ export class AddBookingComponent implements OnInit {
       return this.type !== 'add' && this.type !== 'update';
     }
   }
-
-  /*getPromotion() {
-    this.maKM = this.getValueOfField('promotionCode');
-    if (this.checkNullOrEmpty(this.maKM) && this.checkNullOrEmpty(this.idLoaiPhong)) {
-      this.promotionService.getByCodeAndRoomType(this.maKM, this.idLoaiPhong).subscribe(
-        res => {
-          if (res) {
-            if (this.checkNullOrEmpty(res.data)) {
-              if (this.checkNullOrEmpty(this.giaPhong)) {
-                const phanTramKm = res.data.percentPromotion;
-                if (phanTramKm > 0) {
-                  this.setValueToField('priceBooking', (this.giaPhong * (100 - phanTramKm)) / 100);
-                  this.tienThuePhong = (this.giaPhong * (100 - phanTramKm)) / 100;
-                }
-              }
-            } else {
-              this.setValueToField('priceBooking', this.giaPhong);
-            }
-          }
-        },
-        err => {
-          this.toastService.openErrorToast('Error from server');
-        }
-      );
-    } else {
-      this.setValueToField('priceBooking', this.giaPhong);
-    }
-    this.tinhTongTien();
-  }*/
-
   getListCustomer() {
     this.customerApiService.getAllCustomer().subscribe(
       res => {
@@ -305,23 +270,6 @@ export class AddBookingComponent implements OnInit {
       }
     );
   }
-
-  /*getPromotionList(roomType) {
-    this.promotionService.getByRoomType(roomType).subscribe(
-      res => {
-        if (res) {
-          this.listPromotion = res.data;
-        } else {
-          this.listPromotion = [];
-        }
-      },
-      err => {
-        this.listPromotion = [];
-        this.toastService.openErrorToast('Server Error');
-      }
-    );
-  }*/
-
   getRoomList() {
     this.roomApiService.getAll().subscribe(
       res => {
@@ -504,7 +452,6 @@ export class AddBookingComponent implements OnInit {
           this.idLoaiPhong = d.data.roomType;
           this.setValueToField('roomId', res.data.roomId);
           this.setGiaPhong(this.idLoaiPhong, this.loaiDatPhong);
-          // this.getPromotionList(this.idLoaiPhong);
         }
       },
       err => {
