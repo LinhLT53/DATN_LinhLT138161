@@ -37,6 +37,14 @@
           <i class="fa" [ngClass]="bookRoomFuture.class"></i>
         </span>
       </li>
+      <li>
+        <a [routerLink]="chart.url" routerLinkActive="active-link, text-white">
+          <span class="title">{{chart.name}}</span>
+        </a>
+        <span class="icon-thumbnail">
+          <i class="fa" [ngClass]="chart.class"></i>
+        </span>
+      </li>
 <!--      <li *jhiHasPermission="quyen.NHANSU">-->
       <li>
         <a [routerLink]="humanResources.url" routerLinkActive="active-link, text-white">
@@ -101,14 +109,7 @@
         </span>
       </li>
 <!--      <li *jhiHasPermission="quyen.BIEUDO">-->
-      <li>
-        <a [routerLink]="chart.url" routerLinkActive="active-link, text-white">
-          <span class="title">{{chart.name}}</span>
-        </a>
-        <span class="icon-thumbnail">
-          <i class="fa" [ngClass]="chart.class"></i>
-        </span>
-      </li>
+
       <li>
         <a [routerLink]="tour.url" routerLinkActive="active-link, text-white">
           <span class="title">{{tour.name}}</span>

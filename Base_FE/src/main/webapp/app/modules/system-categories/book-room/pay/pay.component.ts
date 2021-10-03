@@ -169,11 +169,11 @@ export class PayComponent implements OnInit {
     if (e) {
       this.dataDiscount = e;
       this.idDiscount = e.promotionId;
-      this.sumbookRoom = (this.sumBoooking * e.percentPromotion) / 100 + this.sumService;
+      this.sumbookRoom = this.sumBoooking - e.percentPromotion + this.sumService - this.bookRoomShow.advanceAmount;
     } else {
       this.dataDiscount = null;
       this.idDiscount = '';
-      this.sumbookRoom = this.sumBoooking + this.sumService;
+      this.sumbookRoom = this.sumBoooking + this.sumService - this.bookRoomShow.advanceAmount;
     }
   }
   convent(data) {

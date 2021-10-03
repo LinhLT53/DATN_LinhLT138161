@@ -92,10 +92,10 @@
         <div class="col-md-12">
           <div class="form-group">
             <label class="form-control-label ">Dịch vụ</label>
-            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+            <textarea [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
                    formControlName="service"
-                   type="text"/>
+                      type="text"></textarea>
           </div>
         </div>
       </div>
@@ -103,10 +103,10 @@
         <div class="col-md-12">
           <div class="form-group">
             <label class="form-control-label ">Điêu khoản dịch vụ</label>
-            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+            <textarea [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
                    formControlName="note"
-                   type="text"/>
+                      type="text"></textarea>
           </div>
         </div>
       </div>

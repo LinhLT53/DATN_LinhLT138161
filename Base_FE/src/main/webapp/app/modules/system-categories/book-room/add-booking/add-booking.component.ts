@@ -102,20 +102,20 @@ export class AddBookingComponent implements OnInit {
   yy: number;
   years: number[] = [];
   checkBoll = false;
-  // statusList = [
-  //   { id: 1, status: 'Đã đặt' },
-  //   { id: 2, status: 'Đang đặt' },
-  //   { id: 3, status: 'Đã thanh toán' },
-  //   { id: 4, status: 'Đã hủy' },
-  //   { id: 5, status: 'Đã chuyển phòng' }
-  // ];
   statusList = [
-    { id: 1, status: 'Còn trống' },
-    { id: 2, status: 'Không hoạt động' },
-    { id: 3, status: 'Đã đặt' },
-    { id: 4, status: 'Chờ dọn phòng' },
+    { id: 1, status: 'Đã đặt' },
+    { id: 2, status: 'Đang đặt' },
+    { id: 3, status: 'Đã thanh toán' },
+    { id: 4, status: 'Đã hủy' },
     { id: 5, status: 'Đã chuyển phòng' }
   ];
+  // statusList = [
+  //   { id: 1, status: 'Còn trống' },
+  //   { id: 2, status: 'Không hoạt động' },
+  //   { id: 3, status: 'Đã đặt' },
+  //   { id: 4, status: 'Chờ dọn phòng' },
+  //   { id: 5, status: 'Đã chuyển phòng' }
+  // ];
   title = '';
   constructor(
     public activeModal: NgbActiveModal,
