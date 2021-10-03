@@ -28,18 +28,25 @@ public class AssetCustomRepository  {
         log.info("---------------------sql get kho nhan su------------------");
 
         StringBuilder sql = new StringBuilder();
-        sql.append("SELECT a.asset_id ," +
-                " a.asset_code ," +
-                "        a.asset_name ," +
-                "        a.status ," +
-                "        a.amount,  "+
-                "        a.note "+
-                "FROM asset a " +
-                " where 1 = 1 and a.status = 1 "
+        sql.append("SELECT a.asset_id ,\n" +
+                "                 a.asset_code ,\n" +
+                "                       a.asset_name ,\n" +
+                "                       a.status ,\n" +
+                "                        a.amount,  \n" +
+                "                        a.note, \n" +
+                "                       a.price,\n" +
+                "                       a.Room_id,\n" +
+                "                       r.room_name\n" +
+                "                FROM asset a \n" +
+                "                left join room r on a.Room_id = r.room_id\n" +
+                "                where 1 = 1 and a.status = 1"
         );
 
         if (StringUtils.isNotBlank(dto.getAssetCode())){
-            sql.append("  and (( lower(a.asset_code) LIKE :assetCode ) or ( lower(a.asset_name) LIKE :assetCode ))");
+            sql.append("  and (( lower(a.asset_code) LIKE :assetCode ) )");
+        }
+        if (StringUtils.isNotBlank(dto.getAssetname())){
+            sql.append(" and ( lower(a.asset_name) LIKE :assetName ) ");
         }
         if (dto.getAmount() != null){
             sql.append(" and a.amount = :amount ");
@@ -53,6 +60,10 @@ public class AssetCustomRepository  {
             query.setParameter("assetCode", "%" + dto.getAssetCode() + "%");
             queryCount.setParameter("assetCode", "%" + dto.getAssetCode() + "%");
 
+        }
+        if (StringUtils.isNotBlank(dto.getAssetname())){
+            query.setParameter("assetName", "%" +dto.getAssetname()+ "%");
+            queryCount.setParameter("assetName", "%" +dto.getAssetname()+ "%");
         }
         if (dto.getAmount() != null){
             query.setParameter("amount", dto.getAmount());
@@ -80,6 +91,8 @@ public class AssetCustomRepository  {
                 assetDTO.setStatus((Integer) obj[3]);
                 assetDTO.setAmount((Integer) obj[4]);
                 assetDTO.setNote((String) obj[5]);
+                assetDTO.setPrice((Integer) obj[6]);
+                assetDTO.setRoomName((String) obj[8]);
 
                 list.add(assetDTO);
             }

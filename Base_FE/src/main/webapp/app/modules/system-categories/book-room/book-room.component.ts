@@ -62,10 +62,10 @@ export class BookRoomComponent implements OnInit {
   listRoom: Room[] = [];
   columns = [
     { key: 0, value: 'Mã phòng', isShow: true },
-    { key: 1, value: 'Số phòng', isShow: true },
-    { key: 2, value: 'Tên phòng', isShow: true },
-    { key: 3, value: 'Loại phòng', isShow: true },
-    { key: 4, value: 'Vị trí', isShow: true },
+    { key: 1, value: 'Tên phòng', isShow: true },
+    { key: 2, value: 'Loại phòng', isShow: true },
+    { key: 3, value: 'Vị trí', isShow: true },
+    { key: 4, value: 'Giá', isShow: true },
     { key: 5, value: 'Trạng thái', isShow: true }
   ];
   centerList: any[] = [];

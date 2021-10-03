@@ -3,6 +3,7 @@ package com.linhlt138161.qlts.project.service;
 import com.linhlt138161.qlts.project.dto.AppParamDTO;
 import com.linhlt138161.qlts.project.dto.DataPage;
 import com.linhlt138161.qlts.project.dto.RoomDTO;
+import com.linhlt138161.qlts.project.dto.RoomTypeDTO;
 
 import java.util.List;
 
@@ -17,5 +18,6 @@ public interface RoomService {
     DataPage<RoomDTO> onSearch(RoomDTO dto);
     List<RoomDTO> getAll();
     List<AppParamDTO> getAllFloor();
+    List<RoomDTO> getRomlist();
 
 }

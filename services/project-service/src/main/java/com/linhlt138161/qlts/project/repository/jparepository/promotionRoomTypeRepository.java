@@ -14,5 +14,6 @@ public interface promotionRoomTypeRepository extends JpaRepository<promotionRoom
     @Query(value = "select promotion_roomType_id from promotion_roomType where roomType_id=?1 and is_active= 1 ", nativeQuery = true)
     List<Long> deleteroomID(Long id);
 
-
+    @Query(value = "select promotion_roomType_id from promotion_roomType where promotion_id=?1 and is_active= 1 ", nativeQuery = true)
+    List<Long> findBypromotionRoomTypeID(Long id);
 }

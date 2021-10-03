@@ -28,7 +28,7 @@
               </div>
               <div class="col-md-6">
                 <div class="form-group row">
-                  <label class="col-sm-3 col-form-label custom-label-right"> Tên tour</label>
+                  <label class="col-sm-3 col-form-label custom-label-right">Tên nhân viên</label>
                   <div class="col-sm-9">
                     <input class="form-control" formControlName="name" type="text"/>
                   </div>
@@ -103,21 +103,21 @@
                   <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 90px">
                     <span>Tên phòng</span>
                   </th>
+<!--                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 140px">-->
+<!--                    <span>Ngày chực</span>-->
+<!--                  </th>-->
                   <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 140px">
-                    <span>Ngày chực</span>
-                  </th>
-                  <th *ngIf="this.columns[4]?.isShow" class="large-width-table" style="width: 140px">
                     <span>Thời gian bắt đầu</span>
                   </th>
-                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table"style="width: 140px" >
+                  <th *ngIf="this.columns[4]?.isShow" class="large-width-table"style="width: 140px" >
                     <span>Thời gian kết thúc</span>
                   </th>
-                  <th *ngIf="this.columns[6]?.isShow" class="large-width-table" style="width: 140px">
+                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table" style="width: 140px">
                     <span>Thời gian bắt đầu thực tế</span>
-                  <th *ngIf="this.columns[7]?.isShow" class="large-width-table" style="width: 140px" >
+                  <th *ngIf="this.columns[6]?.isShow" class="large-width-table" style="width: 140px" >
                     <span>Thời gian kết thực thực tế</span>
                   </th>
-                  <th *ngIf="this.columns[8]?.isShow" class="large-width-table">
+                  <th *ngIf="this.columns[7]?.isShow" class="large-width-table">
                     <span>Ghi chú</span>
                   </th>
                 </tr>
@@ -128,13 +128,13 @@
                   <td class="text-center four-icon medium-width-table">
                     <div class="group-action">
                       <button (click)="openModalAddUser('detail',item)" class="btn btn-light"
-                              ngbTooltip="Xem thông tin tài sản"
+                              ngbTooltip="Xem thông tin trực nhật"
                               placement="top">
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
-                        ngbTooltip="Sửa tài sản"
+                        ngbTooltip="Sửa lịch trực nhật"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
@@ -151,13 +151,13 @@
                     <p>{{item.servicecode}} </p></td>
                   <td *ngIf="this.columns[1]?.isShow"><p>{{item.fullName}}</p></td>
                   <td *ngIf="this.columns[2]?.isShow" class="text-center"><p>{{item.roomName}}</p></td>
-                  <td *ngIf="this.columns[3]?.isShow" style="text-align: left"><p>{{item.date}}</p></td>
-                  <td *ngIf="this.columns[4]?.isShow" style="text-align: left"><p>{{item.startDateTime}}</p></td>
-                  <td *ngIf="this.columns[5]?.isShow"style="text-align: left"><p>{{ item.endDateTime}}</p>
+<!--                  <td *ngIf="this.columns[3]?.isShow" style="text-align: left"><p>{{item.date}}</p></td>-->
+                  <td *ngIf="this.columns[3]?.isShow" style="text-align: left"><p>{{item.startDateTime}}</p></td>
+                  <td *ngIf="this.columns[4]?.isShow"style="text-align: left"><p>{{ item.endDateTime}}</p>
                   </td>
-                  <td *ngIf="this.columns[6]?.isShow" style="text-align: left"><p>{{item.acTualStartDateTime}}</p></td>
-                  <td *ngIf="this.columns[7]?.isShow" style="text-align: left"><p>{{item.acTualEndDateTime}}</p></td>
-                  <td *ngIf="this.columns[8]?.isShow" style="text-align: left"><p>{{item.note}}</p></td>
+                  <td *ngIf="this.columns[5]?.isShow" style="text-align: left"><p>{{item.acTualStartDateTime}}</p></td>
+                  <td *ngIf="this.columns[6]?.isShow" style="text-align: left"><p>{{item.acTualEndDateTime}}</p></td>
+                  <td *ngIf="this.columns[7]?.isShow" style="text-align: left"><p>{{item.note}}</p></td>
 
                 </tr>
                 </tbody>

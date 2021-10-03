@@ -48,10 +48,10 @@
                    formControlName="venue"
                    type="text"/>
           </div>
-          <jhi-error-messages *ngIf="formControl['venue'].hasError('venue')"
-                              [displayError]="isFieldValid('venue')"
-                              errorMsg="Vui long nhập mã tour">
-          </jhi-error-messages>
+<!--          <jhi-error-messages *ngIf="formControl['venue'].hasError('venue')"-->
+<!--                              [displayError]="isFieldValid('venue')"-->
+<!--                              errorMsg="Vui long nhập mã tour">-->
+<!--          </jhi-error-messages>-->
         </div>
         <div class="col-md-6">
           <div class="form-group">
@@ -61,10 +61,10 @@
                    formControlName="vehicle"
                    type="text"/>
           </div>
-          <jhi-error-messages *ngIf="formControl['venue'].hasError('venue')"
-                              [displayError]="isFieldValid('venue')"
-                              errorMsg="Vui long nhập mã tour">
-          </jhi-error-messages>
+<!--          <jhi-error-messages *ngIf="formControl['venue'].hasError('venue')"-->
+<!--                              [displayError]="isFieldValid('venue')"-->
+<!--                              errorMsg="Vui long nhập mã tour">-->
+<!--          </jhi-error-messages>-->
         </div>
       </div>
       <div class="row">
@@ -77,6 +77,16 @@
                    type="number"/>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="form-control-label ">Loại hình</label>
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
+                   class="form-control"
+                   formControlName="tourtype"
+                   type="text"/>
+          </div>
+        </div>
+
       </div>
       <div class="row">
         <div class="col-md-12">

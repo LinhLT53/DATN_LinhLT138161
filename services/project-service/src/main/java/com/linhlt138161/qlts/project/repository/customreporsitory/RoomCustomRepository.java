@@ -48,7 +48,7 @@ public class RoomCustomRepository {
         if (dto.getRoomType() != null){
             sql.append(" and r.room_type = :roomType ");
         }
-
+        sql.append(" order by r.room_id desc ");
 
         Query query = em.createNativeQuery(sql.toString());
         Query queryCount = em.createNativeQuery(sql.toString());
@@ -75,7 +75,7 @@ public class RoomCustomRepository {
     public List<RoomDTO> onSearch(RoomDTO dto){
         StringBuilder sql = new StringBuilder();
         sql.append("select r.room_id, r.room_code, r.room_name," +
-                "p.par_name, r.max_number, r.note, r.room_type, t.name, r.status " +
+                "p.par_name, r.max_number, r.note, r.room_type, t.name, r.status, r.price  " +
                 "from room r inner join app_params p on r.floor_number = p.par_code " +
                 " inner join room_type t on r.room_type = t.room_type_id " +
                 " where 1 = 1 and r.status != 0 " +
@@ -94,6 +94,8 @@ public class RoomCustomRepository {
         if (dto.getRoomCode() != null && dto.getRoomCode() != ""){
             sql.append("  and (( lower(r.room_code) LIKE :roomCode ) or ( lower(r.room_name) LIKE :roomCode )) ");
         }
+        sql.append(" order by r.room_id desc ");
+
         Query query = em.createNativeQuery(sql.toString());
         Query queryCount = em.createNativeQuery(sql.toString());
         if (null != dto.getRoomType()){
@@ -145,6 +147,9 @@ public class RoomCustomRepository {
                 }else if (status == 4){
                     roomDTO.setStatusName("Chờ dọn phòng");
                 }
+                if (obj[9] != null){
+                    roomDTO.setPrice(((BigInteger) obj[9]).longValue());
+                }
                 list.add(roomDTO);
             }
         }
@@ -165,7 +170,9 @@ public class RoomCustomRepository {
                 roomDTO.setRoomTypeName((String) obj[6]);
                 roomDTO.setFloorName((String)obj[7]);
                 roomDTO.setFullName((String)obj[8]);
-                roomDTO.setPrice((Integer) obj[9]);
+                if (obj[9] != null){
+                    roomDTO.setPrice(((BigInteger) obj[9]).longValue());
+                }
                 list.add(roomDTO);
             }
         }

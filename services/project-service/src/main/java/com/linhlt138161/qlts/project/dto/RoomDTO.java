@@ -35,7 +35,7 @@ public class RoomDTO extends AuditingDTO<String>{
     private String tivi;
     private String elevator;
     private String pet;
-    private Integer price;
+    private Long price;
 
 
     public String getRoomName() {
@@ -140,5 +140,13 @@ public class RoomDTO extends AuditingDTO<String>{
 
     public void setTyleDto(String tyleDto) {
         this.tyleDto = tyleDto;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
     }
 }

@@ -50,6 +50,10 @@ export class AddRoomComponent implements OnInit {
   dataIm: any = [];
   msg = '';
   url;
+  status: any;
+  public tivi: boolean;
+  public elevator: boolean;
+  public pet: boolean;
   constructor(
     public activeModal: NgbActiveModal,
     private heightService: HeightService,
@@ -198,7 +202,6 @@ export class AddRoomComponent implements OnInit {
       }
     );
   }
-  /////////////////////////////////////////////////
   onSubmitData() {
     if (this.form.invalid) {
       this.commonService.validateAllFormFields(this.form);
@@ -211,8 +214,13 @@ export class AddRoomComponent implements OnInit {
         console.warn('duplicate');
         return;
       }
+    } else {
+      if (this.status === 3) {
+        this.toastService.openErrorToast('Phòng đã được đặt chưa được sửa');
+        return;
+      }
     }
-    this.spinner.show();
+
     this.roomApiServiceService.save(this.form.value).subscribe(
       res => {
         if (this.type === 'add') {
@@ -297,7 +305,7 @@ export class AddRoomComponent implements OnInit {
     this.roomApiServiceService.getInfo(id).subscribe(
       res => {
         this.userDetail = res.data;
-
+        this.status = this.userDetail.status;
         this.oldEmail = this.userDetail.email ? this.userDetail.email : '';
         this.tivi = this.userDetail.tivi;
         this.pet = this.userDetail.pet;
@@ -326,12 +334,6 @@ export class AddRoomComponent implements OnInit {
   setDataDefault() {
     this.form.patchValue(this.userDetail);
     this.post = new Date(this.userDetail);
-    // if (this.userDetail.dateGraduate) {
-    //   this.form.get('experience').setValue(new Date().getFullYear() - toNumber(this.userDetail.dateGraduate));
-    // }
-    // if (this.userDetail.dateMajor) {
-    //   this.form.get('majorExperience').setValue(new Date().getFullYear() - toNumber(this.userDetail.dateMajor));
-    // }
   }
 
   getYear() {
@@ -387,9 +389,6 @@ export class AddRoomComponent implements OnInit {
     }
     this.getYear();
   }
-  public tivi: boolean;
-  public elevator: boolean;
-  public pet: boolean;
 
   public ontivi(value: boolean) {
     this.tivi = value;

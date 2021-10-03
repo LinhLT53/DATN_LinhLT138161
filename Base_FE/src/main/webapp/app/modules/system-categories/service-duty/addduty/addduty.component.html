@@ -38,7 +38,7 @@
           <div class="form-group">
             <label class="form-control-label ">Tên  phòng</label>
             <ng-select class="cursor-text scroll-ng-select"
-                       bindLabel="name" formControlName="roomID" bindValue="roomTypeId"
+                       bindLabel="roomName" formControlName="roomID" bindValue="roomId"
                        notFoundText="{{ 'common.select.notFoundText' | translate }}"
                        placeholder="{{ 'common.select.option.default' | translate }}"
                        clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
@@ -88,15 +88,8 @@
       </div>
 
       <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <div class="form-group" [ngClass]="displayFieldHasError('acTualStartDateTime')">
-              <label class="form-control-label ">Thời gian bắt đầu thực tế</label>
-              <jhi-date-time-picker formControlName="date" [disabled]="type === 'detail'"></jhi-date-time-picker>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
+
+        <div class="col-md-12">
           <div class="form-group">
             <label class="form-control-label ">Nghi chú</label>
             <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"

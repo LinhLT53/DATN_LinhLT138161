@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<CustomerEntity, Long> {
-    @Query(value = "select * from customer", nativeQuery = true)
+    @Query(value = "select * from customer where  status= 1", nativeQuery = true)
     List<CustomerEntity> findAllCustomer();
 
     @Query(value = "select * from customer where customer_id=?1 and status= 1 ", nativeQuery = true)

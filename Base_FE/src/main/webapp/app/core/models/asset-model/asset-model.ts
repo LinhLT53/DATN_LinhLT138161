@@ -10,7 +10,7 @@ export class AssetModel {
   totalRecord?: any;
   unit?: any;
   assetId?: any;
-  Roomname?: any;
+  roomName?: any;
   assetCode?: any;
 
   assetname?: any;

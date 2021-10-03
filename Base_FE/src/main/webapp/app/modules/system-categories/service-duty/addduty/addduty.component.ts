@@ -76,7 +76,7 @@ export class AdddutyComponent implements OnInit {
     this.getRoomTypeList();
   }
   getRoomTypeList() {
-    this.roomApiServiceService.getRoomTypeList().subscribe(
+    this.roomApiServiceService.getRoomList().subscribe(
       res => {
         if (res) {
           this.roomTypeList = res.data;
@@ -230,7 +230,6 @@ export class AdddutyComponent implements OnInit {
       acTualStartDateTime: [],
       acTualEndDateTime: [],
       status: 1,
-      date: [''],
       note: ['', Validators.maxLength(1000)]
     });
     if (this.id) {

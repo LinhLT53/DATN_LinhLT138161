@@ -59,7 +59,7 @@
             <label class="form-control-label ">Số tiền </label>
             <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
-                   formControlName="amount"
+                   formControlName="price"
                    type="number"/>
             <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('required')"-->
             <!--                                  [displayError]="isFieldValid('fullName')"-->
@@ -74,18 +74,26 @@
         <div class="col-md-6">
           <div class="form-group">
             <label class="form-control-label ">Phòng </label>
-            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
-                   class="form-control"
-                   formControlName="note"
-                   type="text"/>
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('required')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.required' | translate }}">-->
-            <!--              </jhi-error-messages>-->
-            <!--              <jhi-error-messages *ngIf="formControl['fullName'].hasError('maxlength')"-->
-            <!--                                  [displayError]="isFieldValid('fullName')"-->
-            <!--                                  errorMsg="{{ 'user.validate.fullName.maxlength' | translate }}">-->
-            <!--              </jhi-error-messages>-->
+<!--            <ng-select [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"-->
+<!--                   class="form-control"-->
+<!--                   formControlName="roomid"-->
+<!--                   bindLabel="fullName"  bindValue="humanResourceId"-->
+<!--                   notFoundText="{{ 'common.select.notFoundText' | translate }}"-->
+<!--                   placeholder="{{ 'common.select.option.default' | translate }}"-->
+<!--                   clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"-->
+<!--                   [items]="humanresourecsList"-->
+<!--                   [multiple]="false"-->
+<!--                   [readonly]="type === 'detail'||checkBoll"-->
+<!--                   > </ng-select>-->
+            <ng-select class="cursor-text scroll-ng-select"
+                       bindLabel="roomName" formControlName="roomid" bindValue="roomId"
+                       notFoundText="{{ 'common.select.notFoundText' | translate }}"
+                       placeholder="{{ 'common.select.option.default' | translate }}"
+                       clearAllText="{{ 'common.tooltip.action.clearNgSelect' | translate }}"
+                       [items]="roomTypeList"
+                       [multiple]="false"
+                       [readonly]="type === 'detail'||checkBoll">
+            </ng-select>
           </div>
         </div>
       </div>
@@ -95,8 +103,8 @@
             <label class="form-control-label ">Ghi chú </label>
             <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
-                   formControlName="amount"
-                   type="number"/>
+                   formControlName="note"
+                   />
 
           </div>
         </div>

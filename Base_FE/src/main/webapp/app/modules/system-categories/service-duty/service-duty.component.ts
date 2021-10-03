@@ -138,7 +138,7 @@ export class ServiceDutyComponent implements OnInit {
         this.spinner.show();
         if (res.data) {
           this.spinner.hide();
-          this.toastService.openSuccessToast('Xóa tour thành công!');
+          this.toastService.openSuccessToast('Xóa lịch thành công!');
           this.loadAll();
         }
       },

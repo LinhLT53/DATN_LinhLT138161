@@ -82,26 +82,29 @@ public class PayServiceImpl implements PayService {
             TimeBookDTO timeBookDTO = new TimeBookDTO();
             timeBookDTO.setStart(bookingRoomEntity1.getBookingCheckin());
             timeBookDTO.setEnd(bookingRoomEntity1.getBookingCheckout());
-            long time = bookingRoomEntity1.getBookingCheckout().getTime() - bookingRoomEntity1.getBookingCheckin().getTime();
+//            long time = bookingRoomEntity1.getBookingCheckout().getTime() - bookingRoomEntity1.getBookingCheckin().getTime();
+            long time = bookingRoomEntity1.getBookingCheckout().getDay() - bookingRoomEntity1.getBookingCheckin().getDay();
+
             timeBookDTO.setIdRoom(bookingRoomEntity1.getRoomId());
             timeBookDTO.setIdBookRoom(bookingRoomEntity1.getBookingroomId());
             timeBookDTO.setTypeBook(bookingRoomEntity1.getBookingType());
-            double aDouble = 0;
+            double aDouble  = Math.ceil((double) time);
+            timeBookDTO.setNameTypeBook("Theo ngày");
 
-            switch (bookingRoomEntity1.getBookingType()) {
-                case 1:
-                    timeBookDTO.setNameTypeBook("Theo giờ");
-                    aDouble = Math.ceil((double) time * 100 / (3600000)) / 100;
-                    break;
-                case 2:
-                    timeBookDTO.setNameTypeBook("Theo ngày");
-                    aDouble = Math.ceil((double) time * 100 / (86400000)) / 100;
-                    break;
-                default:
-                    timeBookDTO.setNameTypeBook("Qua đêm");
-                    aDouble = Math.ceil((double) time * 100 / (43200000)) / 100;
-                    break;
-            }
+//            switch (bookingRoomEntity1.getBookingType()) {
+//                case 1:
+//                    timeBookDTO.setNameTypeBook("Theo giờ");
+//                    aDouble = Math.ceil((double) time * 100 / (3600000)) / 100;
+//                    break;
+//                case 2:
+//                    timeBookDTO.setNameTypeBook("Theo ngày");
+//                    aDouble = Math.ceil((double) time * 100 / (86400000)) / 100;
+//                    break;
+//                default:
+//                    timeBookDTO.setNameTypeBook("Qua đêm");
+//                    aDouble = Math.ceil((double) time * 100 / (43200000)) / 100;
+//                    break;
+//            }
             if (roomTypeRepository.getType(bookingRoomEntity1.getRoomId()).size() > 0) {
                 RoomTypeEntity roomTypeEntity = roomTypeRepository.getType(bookingRoomEntity1.getRoomId()).get(0);
                 timeBookDTO.setDayPrice(roomTypeEntity.getDayPrice());
@@ -112,9 +115,12 @@ public class PayServiceImpl implements PayService {
             }
             if (roomRepository.findById(bookingRoomEntity1.getRoomId()).isPresent()) {
                 RoomEntity roomEntity = roomRepository.findById(bookingRoomEntity1.getRoomId()).get();
+                RoomTypeEntity roomTypeEntity = roomTypeRepository.findByID(roomEntity.getRoomType().longValue());
+                timeBookDTO.setDayPrice(roomEntity.getPrice());
+                timeBookDTO.setNameType(roomTypeEntity.getName());
                 timeBookDTO.setNameRoom(roomEntity.getRoomName());
             }
-            timeBookDTO.setUnit(aDouble);
+            timeBookDTO.setUnit(aDouble+1);
             timeBookDTOS.add(timeBookDTO);
         });
 
@@ -189,16 +195,64 @@ public class PayServiceImpl implements PayService {
     public List<ChartDto> getList(List<Integer> quy, Integer nam) {
         List<ChartDto> list = new ArrayList<>();
        List<Integer> month=new ArrayList<>();
-        quy.forEach(integer -> {
-            month.add((integer-1)*3+1);
-            month.add((integer-1)*3+2);
-            month.add((integer-1)*3+3);
-        });
+       if (quy.size() != 0){
+           quy.forEach(integer -> {
+               month.add((integer-1)*3+1);
+               month.add((integer-1)*3+2);
+               month.add((integer-1)*3+3);
+           });
+       }else{
+           month.add(1);
+           month.add(2);
+           month.add(3);
+           month.add(4);
+           month.add(5);
+           month.add(6);
+           month.add(7);
+           month.add(8);
+           month.add(9);
+           month.add(10);
+           month.add(11);
+           month.add(12);
+       }
+
+
         for (Integer i:month) {
 
             ChartDto dto = new ChartDto();
             dto.setMonth("Tháng " + i);
-            List<PayEntity> entities = payRepository.getLisst(nam.toString() + "/" + i + "/01", nam.toString() + "/" + i + "/31");
+            String start = nam.toString() + "/" + i + "/01";
+//            1 ,3,5,7,8,10,12
+            String end = "";
+            switch (i){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                     end = nam.toString() + "/" + i + "/31";
+                    break;
+                // các tháng 4, 6, 9 và 11 có 30 ngày
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                     end = nam.toString() + "/" + i + "/30";
+                    break;
+
+                // Riêng tháng 2 nếu là năm nhuận thì có 29 ngày, còn không thì có 28 ngày.
+                case 2:
+                    if ((nam % 4 == 0 && nam % 100 != 0) || (nam % 400 == 0)) {
+                        end = nam.toString() + "/" + i + "/29";
+                    } else {
+                        end = nam.toString() + "/" + i + "/28";
+                    }
+                    break;
+            }
+
+            List<PayEntity> entities = payRepository.getLisst(start, end );
             entities.forEach(payEntity -> {
                 Long sumbook = payEntity.getPayBook() == null ? 0L : payEntity.getPayBook();
                 dto.setSumbook(dto.getSumbook() == null ? 0L : dto.getSumbook() + sumbook);
@@ -206,6 +260,7 @@ public class PayServiceImpl implements PayService {
                 dto.setSumService(dto.getSumService() == null ? 0L : dto.getSumService() + sumService);
                 Long sum = payEntity.getSumBookRoom() == null ? 0L : payEntity.getSumBookRoom();
                 dto.setSum(dto.getSum() == null ? 0L : dto.getSum() + sum);
+
             });
             list.add(dto);
 //            for (PayEntity payEntity: entities){

@@ -39,7 +39,7 @@ public class RoomEntity extends Auditable<String> {
     private Integer status;
 
     @Column(name = "price")
-    private Integer price;
+    private Long price;
 
     @Column(name = "room_type")
     private Integer roomType;

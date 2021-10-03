@@ -69,6 +69,21 @@ public class roomController {
             return ResultResp.badRequest(ErrorCode.SERVER_ERROR);
         }
     }
+    @GetMapping("/get-room-All")
+    public ResultResp getAsset() {
+        log.info("<-- api updateAsset: start, ");
+        try {
+            return ResultResp.success(roomService.getRomlist());
+
+        } catch (CustomExceptionHandler e) {
+            return ResultResp.badRequest(ErrorCode.USERNAME_NOT_FOUND);
+        } catch (Exception e) {
+            log.error("<--- api find AssetResources: error, ");
+            e.printStackTrace();
+            return ResultResp.badRequest(ErrorCode.SERVER_ERROR);
+        }
+
+    }
 
     @GetMapping("/get-room-by-id/{id}")
     public ResultResp getOneById(@PathVariable("id") Long id) {

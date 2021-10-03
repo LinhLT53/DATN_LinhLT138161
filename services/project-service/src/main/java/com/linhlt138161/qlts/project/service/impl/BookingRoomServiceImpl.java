@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Service(value = "bookingRoomService")
 public class BookingRoomServiceImpl implements BookingRoomService {
@@ -271,6 +272,8 @@ public class BookingRoomServiceImpl implements BookingRoomService {
                     start = bookingEntity.getBookingDate();
                     end = bookingEntity.getBookingDateOut();
                 }
+                Long st = start.getTime() -(30 * 60 * 1000);
+                 start = new Date(st);
                 if (!curr.after(start)){
                     return ResultResp.serverError(new ObjectError("Error","Chưa đến thời gian nhận phòng, vui lòng kiểm tra lại"));
                 }else if (!curr.before(end)){
@@ -329,6 +332,7 @@ public class BookingRoomServiceImpl implements BookingRoomService {
                 }
             }
             dto.setListService(dtos);
+            dto.setPriceService(priceService);
             if (dto.getBookingType().equals(Enums.ADD_BOOKING_TYPE.THEO_GIO.value())){
                 DateTime start = null;
                 DateTime end = null;
@@ -359,7 +363,7 @@ public class BookingRoomServiceImpl implements BookingRoomService {
                     dates = DateUtils.getDayBetweenTwoDay(dto.getBookingDate(),dto.getBookingDateOut());
                 }
                 dates = dates + 1;
-                Long price = roomType.getDayPrice();
+                Long price = room.getPrice();
                 dto.setPrice(price);
                 dto.setTotalDate(dates);
                 dto.setPriceBooking(price);

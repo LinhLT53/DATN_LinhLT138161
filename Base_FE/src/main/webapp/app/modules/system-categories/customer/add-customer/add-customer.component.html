@@ -12,8 +12,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <label class="form-control-label required">Tên khách hàng</label>
-            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''"
-                   [readOnly]="type === 'detail'||type==='update'"
+            <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
                    formControlName="fullname"
                    maxlength="255" type="text"
@@ -56,7 +55,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label class="form-control-label ">Số cmt</label>
+            <label class="form-control-label required">Số cmt</label>
             <input [ngClass]="type === 'add' || type === 'update' ? 'form-control' : ''" [readOnly]="type === 'detail'"
                    class="form-control"
                    formControlName="cmt"

@@ -89,7 +89,7 @@ public class PromotionServiceImpl  implements PromotionService {
           //  entity.setRoomTypeID(dto.getRoomTypeID());
         }
         promotionRepository.save(entity);
-        for (Long i: promotionRoomTypeRepository.deleteroomID(entity.getRoomTypeID())) {
+        for (Long i: promotionRoomTypeRepository.findBypromotionRoomTypeID(entity.getPromotionId())) {
             promotionRoomTypeRepository.deleteById(i);
         }
         List<promotionRoomTypeEntity> list = new ArrayList<>();

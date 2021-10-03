@@ -120,11 +120,8 @@
                   <th *ngIf="this.columns[1]?.isShow" class="large-width-table" style="width: 150px">
                     <span>Tên loại phòng</span>
                   </th>
-                  <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 150px">
-                    <span>Ảnh loại phòng</span>
-                  </th>
 
-                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table"><span>ghi chú</span>
+                  <th *ngIf="this.columns[2]?.isShow" class="large-width-table"><span>ghi chú</span>
                   </th>
                 </tr>
                 </thead>
@@ -134,13 +131,13 @@
                   <td class="text-center four-icon medium-width-table">
                     <div class="group-action">
                       <button (click)="openModalAddUser('detail',item)" class="btn btn-light"
-                              ngbTooltip="Xem thông tin tài sản"
+                              ngbTooltip="Xem thông tin loại phòng"
                               placement="top">
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
-                        ngbTooltip="Sửa tài sản"
+                        ngbTooltip="Sửa thông tin loại phòng"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
@@ -155,8 +152,7 @@
                   </td>
                   <td *ngIf="this.columns[0]?.isShow">{{item.code}}</td>
                   <td *ngIf="this.columns[1]?.isShow">{{item.name}}</td>
-                  <td *ngIf="this.columns[2]?.isShow" class="text-center">{{item.image}}</td>
-                  <td *ngIf="this.columns[3]?.isShow" class="text-center">{{item.note}}</td>
+                  <td *ngIf="this.columns[2]?.isShow" class="text-center">{{item.note}}</td>
 
                 </tr>
                 </tbody>

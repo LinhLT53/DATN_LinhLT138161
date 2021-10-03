@@ -12,7 +12,7 @@
             <div class="col-md-6">
               <div class="form-group" >
                 <label class="form-control-label " style="font-size: 18px;">Nhân viên xử lý : </label>
-                <label class="form-control-label " style="font-size: 18px;">{{this.dataShow.nameEmployee}}</label>
+                <label class="form-control-label " style="font-size: 18px;">{{this.dataShow.nameEmployee ? this.dataShow.nameEmployee : ''}}</label>
 
               </div>
             </div>
@@ -20,7 +20,7 @@
               <div class="form-group">
                 <label class="form-control-label " style="font-size: 18px;">Người đặt : </label>
                 <label class="form-control-label " style="font-size: 18px;">{{this.dataShow.customName}}</label>
-              </div>  
+              </div>
             </div>
           </div>
           <div class="row">
@@ -34,12 +34,12 @@
               <div class="form-group" >
                 <label class="form-control-label " style="font-size: 18px;">Thời gian trả phòng(dự kiến) : </label>
                 <label class="form-control-label " style="font-size: 18px;">{{this.datepipe.transform(this.dataShow.bookingCheckout,"yyyy-MM-dd hh:mm")}}</label>
-              </div>  
+              </div>
             </div>
           </div>
         </form>
     </div>
-   
+
     <div class="row" style="margin-left: 10px;margin-right: 10px;">
       <label class="form-control-label " style="font-size: 18px;">Danh sách dịch vụ</label>
         <perfect-scrollbar id="scrollbarTable" class="ps">
@@ -57,17 +57,17 @@
               </th>
               <th class="large-width-table"  style="width:15%"><span>Tổng</span>
               </th>
-              
+
             </tr>
             </thead>
             <tbody *ngFor="let item of listService; index as i">
             <tr>
               <td>{{item.sum?"":i+1}}</td>
               <td>{{item.serviceName}}</td>
-              <td>{{item.quantity}}</td>
               <td>{{item.price}}</td>
+              <td>{{item.quantity}}</td>
               <td>{{this.datepipe.transform(item.modifiedDate,"yyyy-MM-dd hh:mm")}}</td>
-              <td>{{item.sum?item.sum:item.quantity*item.price }}</td>          
+              <td>{{item.sum?item.sum:item.quantity*item.price }}</td>
             </tr>
             </tbody>
           </table>
@@ -142,7 +142,7 @@
               </ng-template>
             </ng-select>
           </div>
-        </div>         
+        </div>
       </div>
       <div class="col-md-4">
         <label class="form-control-label">Tiền thanh toán trước :  {{this.bookRoomShow.advanceAmount}}</label>
@@ -151,7 +151,7 @@
         <label class="form-control-label">Số tiền còn lại thanh toán :  {{this.sumbookRoom===0?(this.sumService +this.sumBoooking-this.bookRoomShow.advanceAmount):(this.sumbookRoom)}}</label>
       </div>
       </div>
-    
+
     <div class="action-btn" style="text-align: center;margin-bottom: 30px;margin-top: 30px;">
       <button type="submit" class="btn btn-primary" (click)="onSubmit()">
         <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>Thanh Toán</span>
@@ -159,10 +159,10 @@
       <button type="submit" class="btn btn-danger" (click)="onCancel()">
         <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>Hủy</span>
       </button>
-      <button type="submit" class="btn btn-danger" (click)="print()">
-        <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>In</span>
-      </button>
-   
+<!--      <button type="submit" class="btn btn-danger" (click)="print()">-->
+<!--        <i class="fa fa-floppy-o mr-2" aria-hidden="true"></i><span>In</span>-->
+<!--      </button>-->
+
   </div>
   <ng-template #mymodal let-modal>
     <div class="modal-header">

@@ -70,7 +70,6 @@ export class AddtourComponent implements OnInit {
   onSubmitData() {
     if (this.form.invalid) {
       this.commonService.validateAllFormFields(this.form);
-      console.warn('aaaaaaa');
       return;
     }
 
@@ -187,11 +186,12 @@ export class AddtourComponent implements OnInit {
       idtour: null,
       code: ['', Validators.compose([Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-zA-Z0-9]+$/)])],
       name: ['', Validators.compose([Validators.required, Validators.maxLength(255)])],
-      venue: ['', Validators.required],
-      vehicle: ['', Validators.required],
+      venue: [''],
+      vehicle: [''],
       price: null,
-      service: ['', Validators.required],
+      service: [''],
       status: 1,
+      tourtype: '',
       note: ['', Validators.maxLength(1000)]
     });
     if (this.id) {

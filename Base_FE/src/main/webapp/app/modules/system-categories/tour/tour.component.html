@@ -107,11 +107,11 @@
                   </th>
                   <th *ngIf="this.columns[4]?.isShow" class="large-width-table" style="width: 150px">
                     <span>Giá</span>
-                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table" style="width: 150px">
-                    <span>Trạng thái</span>
-                  </th>
-                  <th *ngIf="this.columns[6]?.isShow" class="large-width-table">
-                    <span>Mô tả</span>
+<!--                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table" style="width: 150px">-->
+<!--                    <span>Trạng thái</span>-->
+<!--                  </th>-->
+                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table">
+                    <span>Điều khoản dịch vụ</span>
                   </th>
                 </tr>
                 </thead>
@@ -121,13 +121,13 @@
                   <td class="text-center four-icon medium-width-table">
                     <div class="group-action">
                       <button (click)="openModalAddUser('detail',item)" class="btn btn-light"
-                              ngbTooltip="Xem thông tin tài sản"
+                              ngbTooltip="Xem thông tin Tour"
                               placement="top">
                         <i aria-hidden="true" class="fa fa fa-info icon-color-blue"></i>
                       </button>
                       <button
                         (click)="openModalAddUser('update',item)" class="btn btn-light"
-                        ngbTooltip="Sửa tài sản"
+                        ngbTooltip="Sửa thông tin Tour"
                         placement="top">
                         <i aria-hidden="true" class="fa fa-pencil-square-o icon-update"></i></button>
 
@@ -146,11 +146,11 @@
                   <td *ngIf="this.columns[2]?.isShow" class="text-center"><p>{{item.vehicle}}</p></td>
                   <td *ngIf="this.columns[3]?.isShow" class="text-center"><p>{{item.tourtype}}</p></td>
                   <td *ngIf="this.columns[4]?.isShow" class="text-center"><p>{{item.price}}</p></td>
-                  <td *ngIf="this.columns[5]?.isShow" class="text-center">
-                    <p *ngIf="item.status == 1"> Đang diễn ra</p>
-                    <p *ngIf="item.status == 0"> Đã kết thúc</p>
-                  </td>
-                  <td *ngIf="this.columns[6]?.isShow" style="text-align: left"><p>{{item.note}}</p></td>
+<!--                  <td *ngIf="this.columns[5]?.isShow" class="text-center">-->
+<!--                    <p *ngIf="item.status == 1"> Đang diễn ra</p>-->
+<!--                    <p *ngIf="item.status == 0"> Đã kết thúc</p>-->
+<!--                  </td>-->
+                  <td *ngIf="this.columns[5]?.isShow" style="text-align: left"><p>{{item.note}}</p></td>
                 </tr>
                 </tbody>
               </table>

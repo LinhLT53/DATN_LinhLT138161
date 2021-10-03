@@ -33,10 +33,13 @@ public class AssetEntity extends Auditable<String> {
     private Integer amount;
 
     @Column(name = "room_id")
-    private Integer room_id;
+    private Integer roomid;
 
     @Column(name = "status")
     private Integer status;
+
+    @Column(name = "price")
+    private Integer price;
 
 
 }

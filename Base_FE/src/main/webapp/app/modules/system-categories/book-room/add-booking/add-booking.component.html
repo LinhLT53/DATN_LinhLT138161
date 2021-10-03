@@ -78,6 +78,7 @@
                   <div class="form-group" [ngClass]="displayFieldHasError('bookingType')">
                     <label class="form-control-label">Loại đặt phòng</label>
                     <ng-select class="cursor-text scroll-ng-select"
+                               disabled
                                bindLabel="name" formControlName="bookingType" bindValue="id"
                                notFoundText="{{ 'common.select.notFoundText' | translate }}"
                                placeholder="{{ 'common.select.option.default' | translate }}"
@@ -85,7 +86,8 @@
                                [items]="listBookingType"
                                (change)="getDataOnSelectBookType()"
                                [multiple]="false"
-                               [readonly]="type !== 'add' && type !== 'update'">
+                               [readonly]="true"
+                    >
                     </ng-select>
                     <jhi-error-messages *ngIf="formControl['bookingType'].hasError('required')"
                                         [displayError]="isFieldValid('bookingType')"

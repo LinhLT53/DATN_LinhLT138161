@@ -33,7 +33,7 @@
                   <div class="col-sm-9">
                     <input class="form-control"
                            formControlName="assetname"
-                           type="number"/>
+                           type="text"/>
 
                   </div>
                 </div>
@@ -105,14 +105,11 @@
                   <th *ngIf="this.columns[1]?.isShow" class="large-width-table" style="width: 150px">
                     <span>Tên tài sản</span>
                   </th>
-                  <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 150px">
-                    <span>Ảnh</span>
+                  <th *ngIf="this.columns[2]?.isShow" class="large-width-table" style="width: 150px"><span>Giá</span>
                   </th>
-                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 150px"><span>Giá</span>
+                  <th *ngIf="this.columns[3]?.isShow" class="large-width-table" style="width: 150px"><span>Phòng</span>
                   </th>
-                  <th *ngIf="this.columns[4]?.isShow" class="large-width-table" style="width: 150px"><span>Phòng</span>
-                  </th>
-                  <th *ngIf="this.columns[5]?.isShow" class="large-width-table"><span>Ghi chú</span>
+                  <th *ngIf="this.columns[4]?.isShow" class="large-width-table"><span>Ghi chú</span>
                   </th>
                 </tr>
                 </thead>
@@ -145,10 +142,9 @@
                   </td>
                   <td *ngIf="this.columns[0]?.isShow">{{item.assetCode}}</td>
                   <td *ngIf="this.columns[1]?.isShow">{{item.assetname}}</td>
-                  <td *ngIf="this.columns[2]?.isShow">{{item.image}}</td>
-                  <td *ngIf="this.columns[3]?.isShow">{{item.price}}</td>
-                  <td *ngIf="this.columns[4]?.isShow">{{item.Roomname}}</td>
-                  <td *ngIf="this.columns[5]?.isShow" style="text-align: left">{{item.note}}</td>
+                  <td *ngIf="this.columns[2]?.isShow">{{item.price}}</td>
+                  <td *ngIf="this.columns[3]?.isShow">{{item.roomName}}</td>
+                  <td *ngIf="this.columns[4]?.isShow" style="text-align: left">{{item.note}}</td>
                 </tr>
                 </tbody>
               </table>

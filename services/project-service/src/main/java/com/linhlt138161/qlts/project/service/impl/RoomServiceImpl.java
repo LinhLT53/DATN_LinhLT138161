@@ -91,7 +91,15 @@ public class RoomServiceImpl implements RoomService {
     public List<RoomDTO> getAll() {
         return roomMapper.toDto(roomRepository.findAllRoom());
     }
-
+    @Override
+    public List<RoomDTO> getRomlist() {
+        List<RoomEntity> list = roomRepository.findAlllist();
+        List<RoomDTO> assetDTOList = new ArrayList<>();
+        for (RoomEntity item: list) {
+            assetDTOList.add(convertEntitytoDTO(item));
+        }
+        return assetDTOList;
+    }
     @Override
     public List<AppParamDTO> getAllFloor() {
         List<AppParamEntity> list = appParamRepository.getAllFloor();

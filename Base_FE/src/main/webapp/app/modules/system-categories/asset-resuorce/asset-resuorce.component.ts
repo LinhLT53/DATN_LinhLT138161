@@ -70,7 +70,6 @@ export class AssetResuorceComponent implements OnInit {
     this.searchForm = {};
     this.loadAll();
   }
-
   // loa du lieu bang
   loadAll() {
     //this.spinner.show();
@@ -188,8 +187,6 @@ export class AssetResuorceComponent implements OnInit {
     });
     modalRef.componentInstance.type = type;
     modalRef.componentInstance.id = selectedData ? selectedData.assetId : null;
-    console.warn('tesst' + modalRef.componentInstance.id);
-
     modalRef.result
       .then(result => {
         if (result) {

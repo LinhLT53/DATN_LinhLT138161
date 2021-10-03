@@ -102,11 +102,18 @@ export class AddBookingComponent implements OnInit {
   yy: number;
   years: number[] = [];
   checkBoll = false;
+  // statusList = [
+  //   { id: 1, status: 'Đã đặt' },
+  //   { id: 2, status: 'Đang đặt' },
+  //   { id: 3, status: 'Đã thanh toán' },
+  //   { id: 4, status: 'Đã hủy' },
+  //   { id: 5, status: 'Đã chuyển phòng' }
+  // ];
   statusList = [
-    { id: 1, status: 'Đã đặt' },
-    { id: 2, status: 'Đang đặt' },
-    { id: 3, status: 'Đã thanh toán' },
-    { id: 4, status: 'Đã hủy' },
+    { id: 1, status: 'Còn trống' },
+    { id: 2, status: 'Không hoạt động' },
+    { id: 3, status: 'Đã đặt' },
+    { id: 4, status: 'Chờ dọn phòng' },
     { id: 5, status: 'Đã chuyển phòng' }
   ];
   title = '';
@@ -271,7 +278,7 @@ export class AddBookingComponent implements OnInit {
     );
   }
   getRoomList() {
-    this.roomApiService.getAll().subscribe(
+    this.roomApiService.getRoomList().subscribe(
       res => {
         if (res) {
           this.listRoom = res.data;
@@ -339,7 +346,7 @@ export class AddBookingComponent implements OnInit {
       roomCode: [],
       price: [],
       customerId: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
-      bookingType: ['', Validators.compose([Validators.required, Validators.maxLength(50)])],
+      bookingType: [2, Validators.compose([Validators.required, Validators.maxLength(50)])],
       totalDate: [],
       priceBooking: [],
       priceService: [],
@@ -451,7 +458,13 @@ export class AddBookingComponent implements OnInit {
           const d: any = res;
           this.idLoaiPhong = d.data.roomType;
           this.setValueToField('roomId', res.data.roomId);
-          this.setGiaPhong(this.idLoaiPhong, this.loaiDatPhong);
+          this.setValueToField('price', res.data.price);
+          this.setValueToField('priceBooking', res.data.price);
+          this.setValueToField('status', res.data.status);
+          this.giaPhong = res.data.price;
+          this.tienThuePhong = res.data.price;
+
+          // this.setGiaPhong(this.idLoaiPhong, this.loaiDatPhong);
         }
       },
       err => {

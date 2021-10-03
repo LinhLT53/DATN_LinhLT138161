@@ -52,7 +52,7 @@ public class promotionCustomRepository {
             sql.append(" and rt.room_type_id  = :roomType ");
         }
 
-        sql.append(" group by pr.promotion_id ");
+        sql.append(" group by s.promotion_id order by s.promotion_id desc ");
 
         Query query = em.createNativeQuery(sql.toString());
         Query queryCount = em.createNativeQuery(sql.toString());
@@ -89,7 +89,7 @@ public class promotionCustomRepository {
                 dto.setNote(obj[5].toString());
                 dto.setStatus((Integer) obj[6]);
                 dto.setPercentPromotion((Integer) obj[7]);
-                dto.setRoomNameType( obj[8].toString());
+                dto.setRoomNameType((String) obj[8]);
 
                 list.add(dto);
             }

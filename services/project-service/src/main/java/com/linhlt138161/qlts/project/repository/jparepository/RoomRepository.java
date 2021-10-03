@@ -2,6 +2,7 @@ package com.linhlt138161.qlts.project.repository.jparepository;
 
 import com.linhlt138161.qlts.project.entity.AppParamEntity;
 import com.linhlt138161.qlts.project.entity.RoomEntity;
+import com.linhlt138161.qlts.project.entity.RoomTypeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -18,6 +19,7 @@ public interface RoomRepository extends JpaRepository<RoomEntity, Long> {
 
     @Query(value = "select * from room where STATUS != 2 ", nativeQuery = true)
     List<RoomEntity> findAllRoom();
-
+    @Query(value = "select * from room where  STATUS != 0 ", nativeQuery = true)
+    List<RoomEntity> findAlllist();
 
 }

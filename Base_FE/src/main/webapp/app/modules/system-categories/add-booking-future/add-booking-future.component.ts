@@ -19,6 +19,7 @@ import { RoomTypeApiServiceService } from 'app/core/services/room-type/room-type
 import { BookingRoomApi } from 'app/core/services/booking-room-api/booking-room-api';
 import { AddBookingComponent } from 'app/modules/system-categories/book-room/add-booking/add-booking.component';
 import { BookingRoom } from 'app/core/models/booking-room/booking-room';
+import { AddAssetComponent } from 'app/modules/system-categories/asset-resuorce/add-asset/add-asset.component';
 @Component({
   selector: 'jhi-add-booking-future',
   templateUrl: './add-booking-future.component.html',
@@ -105,7 +106,7 @@ export class AddBookingFutureComponent implements OnInit {
   }
 
   getRoomList() {
-    this.roomApiService.getAll().subscribe(
+    this.roomApiService.getRoomList().subscribe(
       res => {
         if (res) {
           this.listRoom = res.data;
@@ -147,20 +148,7 @@ export class AddBookingFutureComponent implements OnInit {
     this.debouncer5.pipe(debounceTime(TIME_OUT.DUE_TIME_SEARCH)).subscribe(value => this.loadDataOnSearchUnit5(value));
   }
 
-  loadDataOnSearchUnit5(term) {
-    /*const data = {
-      keySearch: term.trim().toUpperCase(),
-      type: 'PARTNER'
-    };
-    this.humanResourcesApiService.getHumanResourcesInfo(data).subscribe(res => {
-      if (this.searchHuman) {
-        const dataRes: any = res;
-        this.listHuman = of(dataRes.sort((a, b) => a.fullName.localeCompare(b.fullName)));
-      } else {
-        this.listHuman = of([]);
-      }
-    });*/
-  }
+  loadDataOnSearchUnit5(term) {}
 
   openModalAddBookingRoom(type?: string, data?: any) {
     const modalRef = this.modalService.open(AddBookingComponent, {
@@ -170,10 +158,14 @@ export class AddBookingFutureComponent implements OnInit {
     });
     modalRef.componentInstance.type = type;
     modalRef.componentInstance.bookType = 'future';
-    modalRef.componentInstance.bookingId = data.bookingroomId;
+    if (data != null) {
+      modalRef.componentInstance.bookingId = data.bookingroomId;
+    }
     modalRef.result
       .then(result => {
-        this.loadAll();
+        if (result) {
+          this.loadAll();
+        }
       })
       .catch(() => {
         this.loadAll();
@@ -205,6 +197,8 @@ export class AddBookingFutureComponent implements OnInit {
   }
 
   openModalReceive(type?: string, data?: any) {
+    // const oned = 24 * 60 * 60 * 1000;
+    // console.log(Math.ceil(Math.abs(date2)));
     const modalRef = this.modalService.open(ConfirmModalComponent, { centered: true, backdrop: 'static' });
     modalRef.componentInstance.type = 'receiveBooking';
     modalRef.componentInstance.onCloseModal.subscribe(value => {

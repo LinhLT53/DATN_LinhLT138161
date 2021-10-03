@@ -28,8 +28,8 @@ export class TourComponent implements OnInit {
     { key: 2, value: 'Phương tiện', isShow: true },
     { key: 3, value: 'Loại hình', isShow: true },
     { key: 4, value: 'Giá', isShow: true },
-    { key: 5, value: 'Trạng thái', isShow: true },
-    { key: 6, value: 'Mô tả', isShow: true }
+    // { key: 5, value: 'Trạng thái', isShow: true },
+    { key: 5, value: 'Mô tả', isShow: true }
   ];
   quyen = QUYEN;
   form: FormGroup;

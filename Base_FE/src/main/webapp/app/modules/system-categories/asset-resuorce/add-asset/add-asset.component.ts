@@ -13,6 +13,8 @@ import { FormStoringService } from 'app/shared/services/form-storing.service';
 import { Router } from '@angular/router';
 import { AssetApiService } from 'app/core/services/asset-api/asset-api.service';
 import { STORAGE_KEYS } from 'app/shared/constants/storage-keys.constants';
+import { HumanResourcesApiService } from 'app/core/services/Human-resources-api/human-resources-api.service';
+import { RoomApiServiceService } from 'app/core/services/room-api/room-api-service.service';
 
 @Component({
   selector: 'jhi-add-asset',
@@ -36,6 +38,7 @@ export class AddAssetComponent implements OnInit {
   years: number[] = [];
   userDetail: any;
   post: Date;
+  roomTypeList: any[] = [];
 
   ////////////////////////
   constructor(
@@ -52,6 +55,7 @@ export class AddAssetComponent implements OnInit {
     private translateService: TranslateService,
     private datepipe: DatePipe,
     private formStoringService: FormStoringService,
+    private roomApiServiceService: RoomApiServiceService,
     protected router: Router
   ) {
     this.height = this.heightService.onResize();
@@ -63,6 +67,7 @@ export class AddAssetComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+    this.getRoomList();
   }
 
   /////////////////////////////////////////////////
@@ -251,11 +256,12 @@ export class AddAssetComponent implements OnInit {
     } else this.title = 'Xem chi tiết tài sản';
     this.form = this.formBuilder.group({
       assetId: null,
-      amount: null,
+      price: null,
       assetCode: ['', Validators.compose([Validators.required, Validators.maxLength(50), Validators.pattern(/^[a-zA-Z0-9]+$/)])],
       assetname: ['', Validators.compose([Validators.required, Validators.maxLength(255)])],
       status: 1,
-      note: ['', Validators.maxLength(1000)]
+      note: ['', Validators.maxLength(1000)],
+      roomid: []
     });
     if (this.id) {
       this.getUserDetail(this.id);
@@ -264,5 +270,19 @@ export class AddAssetComponent implements OnInit {
       this.xetDataUer();
     }
     this.getYear();
+  }
+  getRoomList() {
+    this.roomApiServiceService.getRoomList().subscribe(
+      res => {
+        if (res) {
+          this.roomTypeList = res.data;
+        } else {
+          this.roomTypeList = [];
+        }
+      },
+      err => {
+        this.roomTypeList = [];
+      }
+    );
   }
 }

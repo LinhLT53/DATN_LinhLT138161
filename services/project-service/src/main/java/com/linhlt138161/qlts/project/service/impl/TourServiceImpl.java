@@ -65,9 +65,10 @@ public class TourServiceImpl implements TourService {
             entity.setPrice(dto.getPrice());
             entity.setNote(dto.getNote());
             entity.setService((dto.getService()));
+            entity.setTourtype(dto.getTourtype());
             entity.setStatus(1);
         } else if (dto.getIdtour() == null) {
-            //TODO: create phong
+            //TODO: create tour
             entity = new TourEntity();
             entity.setCode(dto.getCode());
             entity.setName(dto.getName());
@@ -76,6 +77,7 @@ public class TourServiceImpl implements TourService {
             entity.setPrice(dto.getPrice());
             entity.setNote(dto.getNote());
             entity.setService((dto.getService()));
+            entity.setTourtype(dto.getTourtype());
             entity.setStatus(1);
         }
         tRepository.save(entity);
@@ -135,6 +137,7 @@ public class TourServiceImpl implements TourService {
         dto.setNote(entity.getNote());
         dto.setService((entity.getService()));
         dto.setStatus(entity.getStatus());
+        dto.setTourtype(entity.getTourtype());
         return dto;
     }
 }

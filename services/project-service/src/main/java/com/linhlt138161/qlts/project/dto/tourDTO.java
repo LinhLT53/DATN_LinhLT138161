@@ -34,6 +34,8 @@ public class tourDTO {
     private Integer pageSize;
     private Long totalRecord;
 
+    private String type;
+
     public String getVenue() {
         return venue;
     }

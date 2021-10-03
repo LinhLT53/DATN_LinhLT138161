@@ -3,29 +3,30 @@ package com.linhlt138161.qlts.project.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class AssetDTO {
 
     private Long assetId;
-
     private String assetCode;
-
     private String assetname;
-
     private String note;
-
     private Integer amount;
-
     private Integer page;
     private Integer status;
-
     private Integer pageSize;
 
     private Long totalRecord;
     private Long departmentId;
     private String tyleDto;
+    private Integer price;
+    private Integer roomid;
+    private String roomName;
+    private List<Long> roomID;
 
 
 
