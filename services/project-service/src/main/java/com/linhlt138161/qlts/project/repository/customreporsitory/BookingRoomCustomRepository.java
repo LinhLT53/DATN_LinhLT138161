@@ -31,7 +31,7 @@ public class BookingRoomCustomRepository {
                 "join room_type rt on r.room_type = rt.room_type_id " +
                 "join app_params ap on r.floor_number = ap.par_code " +
                 "join customer c on b.custormer_id = c.customer_id " +
-                "where 1=1 and b.status != 4 "
+                "where 1=1  "
         );
         if (null != dto.getRoomId()){
             sql.append(" and r.room_id = :roomId ");

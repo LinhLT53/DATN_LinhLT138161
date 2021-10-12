@@ -73,11 +73,11 @@ public class Constants {
     public static final String SUCCESS_CODE = "Đặt phòng họp thành công";
     public static final String RESET_PASSWORD_FAIL = "Reset mật khẩu thất bại, có lỗi hệ thống xảy ra";
     public static final String RESET_PASSWORD_OK = "Reset mật khẩu thành công";
-    /*TanNV*/
+
 
     public static final String EMAIL_IS_EXIST = "email đã tồn tại";
 
-    public static final String CREATE_HR_OK = "Them nhan su thanh cong!";
+    public static final String CREATE_HR_OK = "Thêm loại phòng thành công!";
     public static final String CREATE_CUSTOMER_OK = "Thêm khách hàng thành công";
     public static final String HR_CODE_EXIST = "Ma nhan su da ton tai";
     public static final String CUSTOMER_CODE_EXIST = "Mã khách hàng đã tồn tại";
@@ -130,7 +130,7 @@ public class Constants {
     public static final String GROUP_PERMISSION_INACTIVE = "Nhóm quyền không còn hoạt động không thể xóa";
     public static final String START_OR_END_PROJECT_NULL = "Ngày bắt đầu hoặc ngày kết thúc dự án đang để trống";
     public static final String ESTIMATE_NULL = "ULNL đang được để trống";
-    //hungnv
+
     public static final String OLD_PASSWORD_FAILE = "Mật khẩu hiện tại không đúng";
     public static final Integer IS_NOT_NEW = 0;
     public static final String EMAIL_NOT_FOUND = "Email không tồn tại";

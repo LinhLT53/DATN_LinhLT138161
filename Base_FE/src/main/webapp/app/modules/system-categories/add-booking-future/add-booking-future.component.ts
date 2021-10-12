@@ -128,6 +128,8 @@ export class AddBookingFutureComponent implements OnInit {
     this.spinner.show();
     this.searchForm.roomId = this.form.value.roomId;
     this.searchForm.status = this.form.value.status;
+    this.searchForm.page = this.page;
+    this.searchForm.pageSize = this.itemsPerPage;
     this.bookingRoomApi.searchBookingRoomFuture(this.searchForm).subscribe(
       res => {
         this.spinner.hide();

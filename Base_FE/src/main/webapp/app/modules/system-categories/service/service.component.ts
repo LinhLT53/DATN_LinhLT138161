@@ -102,7 +102,7 @@ export class ServiceComponent implements OnInit {
   deleteAsset(data) {
     const modalRef = this.modalService.open(ConfirmModalComponent, { centered: true, backdrop: 'static' });
     modalRef.componentInstance.type = 'delete';
-    modalRef.componentInstance.param = 'tài sản';
+    modalRef.componentInstance.param = 'dich vụ';
     modalRef.componentInstance.onCloseModal.subscribe(value => {
       if (value === true) {
         this.deleteAsset1(data.serviceId);
@@ -116,7 +116,7 @@ export class ServiceComponent implements OnInit {
         this.spinner.show();
         if (res.data) {
           this.spinner.hide();
-          this.toastService.openSuccessToast('Xóa tài sản thành công!');
+          this.toastService.openSuccessToast('Xóa dịch vụ thành công!');
           this.loadAll();
         }
       },

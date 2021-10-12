@@ -291,6 +291,8 @@ export class BookRoomComponent implements OnInit {
     this.searchForm.floorNumber = this.form.value.floorNumber;
     this.searchForm.status = this.form.value.status;
     this.searchForm.roomCode = this.form.value.roomCode;
+    this.searchForm.page = this.page;
+    this.searchForm.pageSize = this.itemsPerPage;
     this.bookingRoomApi.searchBookingRoom(this.searchForm).subscribe(
       res => {
         this.spinner.hide();

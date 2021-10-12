@@ -120,7 +120,7 @@ public class PayServiceImpl implements PayService {
                 timeBookDTO.setNameType(roomTypeEntity.getName());
                 timeBookDTO.setNameRoom(roomEntity.getRoomName());
             }
-            timeBookDTO.setUnit(aDouble+1);
+            timeBookDTO.setUnit(aDouble);
             timeBookDTOS.add(timeBookDTO);
         });
 

@@ -15,12 +15,13 @@ import org.apache.logging.log4j.Logger;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import sun.util.resources.LocaleData;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Service(value = "bookingRoomService")
@@ -232,6 +233,33 @@ public class BookingRoomServiceImpl implements BookingRoomService {
         return dtoDataPage;
     }
 
+    @Scheduled( initialDelay = 3 * 1000, fixedDelay = 6000 * 1000)
+    public void showTime() {
+        Date curr = new Date();
+
+        BookingRoomDTO dto = new BookingRoomDTO();
+        List<BookingRoomDTO> list;
+        list = bookingRoomCustomRepository.onSearch(dto);
+        list.forEach((item) ->{
+            Date start = null;
+            Date end = null;
+            if (!CommonUtils.isEqualsNullOrEmpty(item.getBookingCheckin())){
+                start = item.getBookingCheckin();
+                end = item.getBookingCheckout();
+            }else if (!CommonUtils.isEqualsNullOrEmpty(item.getBookingDate())){
+                start = item.getBookingDate();
+                end = item.getBookingDateOut();
+            }
+            Long st = start.getTime() + (30 * 60 * 1000);
+            start = new Date(st);
+            if (curr.after(start) && item.getStatus() == 1){
+                // qua han 30p tu dong huy phong
+                delete(item.getBookingroomId());
+            }
+        });
+
+    }
+
     @Override
     public ResultResp addService(BookingRoomDTO dto) {
         if (CommonUtils.isEqualsNullOrEmpty(dto.getBookingroomId())) {
@@ -362,7 +390,6 @@ public class BookingRoomServiceImpl implements BookingRoomService {
                 }else if (!CommonUtils.isEqualsNullOrEmpty(dto.getBookingDate())){
                     dates = DateUtils.getDayBetweenTwoDay(dto.getBookingDate(),dto.getBookingDateOut());
                 }
-                dates = dates + 1;
                 Long price = room.getPrice();
                 dto.setPrice(price);
                 dto.setTotalDate(dates);
